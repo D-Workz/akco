@@ -14,7 +14,7 @@ The ontology provides concepts and relations to support both of these tasks. In 
 
 The ontology can be found at: https://d-workz.github.io/hkco/
 It is provided in different notations: 
-- turtle: ontology.ttl
-- json-LD: ontology.jsonld
-- notion3: ontology.nt 
-- OWL/xml: ontology.owl
+- turtle: [ontology.ttl](ontology.ttl)
+- json-LD: [ontology.jsonld](ontology.jsonld)
+- notion3: [ontology.nt](ontology.nt) 
+- OWL/xml: [ontology.owl](ontology.)
