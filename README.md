@@ -18,3 +18,15 @@ It is provided in different notations:
 - json-LD: [ontology.jsonld](ontology.jsonld)
 - notion3: [ontology.nt](ontology.nt) 
 - OWL/xml: [ontology.owl](ontology.)
+
+### Author
+- Dennis Sommer
+
+### Sources
+
+The HTML documentation of the ontology is created using:
+- [Widoco](https://dgarijo.github.io/Widoco/) 
+
+The design uses the insights of:
+- [Ontology Development 101: A Guide to Creating Your First Ontology](https://protege.stanford.edu/publications/ontology_development/ontology101.pdf)
+- [LOT: An industrial oriented ontology engineering framework](https://www.sciencedirect.com/science/article/pii/S0952197622000525)
