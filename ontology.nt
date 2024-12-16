@@ -1,0 +1,257 @@
+<http://www.holisticKnowledgeCleaning.net> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.holisticKnowledgeCleaning.net> <http://www.w3.org/2000/01/rdf-schema#comment> "The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.\n\nThe ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.holisticKnowledgeCleaning.net#appliesLogic
+<http://www.holisticKnowledgeCleaning.net#appliesLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#appliesLogic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm> .
+<http://www.holisticKnowledgeCleaning.net#appliesLogic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#ApplicationLogic> .
+<http://www.holisticKnowledgeCleaning.net#appliesLogic> <http://www.w3.org/2000/01/rdf-schema#comment> "This property structures an application algorithm. It contains the application logic as an array. The order of the elements inside the array represent their execution order."@en .
+<http://www.holisticKnowledgeCleaning.net#appliesLogic> <http://www.w3.org/2000/01/rdf-schema#label> "appliesLogic"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#conditionalLogic
+<http://www.holisticKnowledgeCleaning.net#conditionalLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#conditionalLogic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#ApplicationCondition> .
+<http://www.holisticKnowledgeCleaning.net#conditionalLogic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#ConditionalLogic> .
+<http://www.holisticKnowledgeCleaning.net#conditionalLogic> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connexts the results of the performed application task, to the following processing."@en .
+<http://www.holisticKnowledgeCleaning.net#conditionalLogic> <http://www.w3.org/2000/01/rdf-schema#label> "conditionalLogic"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#followedLogic
+<http://www.holisticKnowledgeCleaning.net#followedLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#followedLogic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#ConditionalLogic> .
+<http://www.holisticKnowledgeCleaning.net#followedLogic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#ApplicationLogic> .
+<http://www.holisticKnowledgeCleaning.net#followedLogic> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the property that is executed if the condition is fullfilled."@en .
+<http://www.holisticKnowledgeCleaning.net#followedLogic> <http://www.w3.org/2000/01/rdf-schema#label> "followedLogic"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#hasDimension
+<http://www.holisticKnowledgeCleaning.net#hasDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#hasDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#ApplicationTask> .
+<http://www.holisticKnowledgeCleaning.net#hasDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Approach> .
+<http://www.holisticKnowledgeCleaning.net#hasDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Technique> .
+<http://www.holisticKnowledgeCleaning.net#hasDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#Dimension> .
+<http://www.holisticKnowledgeCleaning.net#hasDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Approaches and Techniques have different dimensions, i.e., characteristics. This property defines those dimensions."@en .
+<http://www.holisticKnowledgeCleaning.net#hasDimension> <http://www.w3.org/2000/01/rdf-schema#label> "hasDimension"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#hasError
+<http://www.holisticKnowledgeCleaning.net#hasError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#hasError> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#KnowledgeGraph> .
+<http://www.holisticKnowledgeCleaning.net#hasError> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#Error> .
+<http://www.holisticKnowledgeCleaning.net#hasError> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge graph can have certain types of errors. These errors need to be targeted by the cleaning process."@en .
+<http://www.holisticKnowledgeCleaning.net#hasError> <http://www.w3.org/2000/01/rdf-schema#label> "hasError"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#hasQuality
+<http://www.holisticKnowledgeCleaning.net#hasQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#hasQuality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge> .
+<http://www.holisticKnowledgeCleaning.net#hasQuality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#KnowledgeGraph> .
+<http://www.holisticKnowledgeCleaning.net#hasQuality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#QualitySpecification> .
+<http://www.holisticKnowledgeCleaning.net#hasQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge graph and background knowledge has different qualities, e.g., their completness or correctness. This property defines these different qualities."@en .
+<http://www.holisticKnowledgeCleaning.net#hasQuality> <http://www.w3.org/2000/01/rdf-schema#label> "hasQuality"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#implements
+<http://www.holisticKnowledgeCleaning.net#implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#implements> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Approach> .
+<http://www.holisticKnowledgeCleaning.net#implements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#Technique> .
+<http://www.holisticKnowledgeCleaning.net#implements> <http://www.w3.org/2000/01/rdf-schema#comment> "An approaches implements specific cleaning techniques. This property defines those used/implemented techniques."@en .
+<http://www.holisticKnowledgeCleaning.net#implements> <http://www.w3.org/2000/01/rdf-schema#label> "implements"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#isPublished
+<http://www.holisticKnowledgeCleaning.net#isPublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#isPublished> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Approach> .
+<http://www.holisticKnowledgeCleaning.net#isPublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#Publication> .
+<http://www.holisticKnowledgeCleaning.net#isPublished> <http://www.w3.org/2000/01/rdf-schema#comment> "An approach is published inside a publication. This property defines this publication."@en .
+<http://www.holisticKnowledgeCleaning.net#isPublished> <http://www.w3.org/2000/01/rdf-schema#label> "isPublished"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#performsTask
+<http://www.holisticKnowledgeCleaning.net#performsTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#performsTask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#ApplicationLogic> .
+<http://www.holisticKnowledgeCleaning.net#performsTask> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#ApplicationTask> .
+<http://www.holisticKnowledgeCleaning.net#performsTask> <http://www.w3.org/2000/01/rdf-schema#comment> "An application logic esecutes or performs a specific task. This task is defined here."@en .
+<http://www.holisticKnowledgeCleaning.net#performsTask> <http://www.w3.org/2000/01/rdf-schema#label> "performsTask"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#requires
+<http://www.holisticKnowledgeCleaning.net#requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#requires> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Dimension> .
+<http://www.holisticKnowledgeCleaning.net#requires> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#QualitySpecification> .
+<http://www.holisticKnowledgeCleaning.net#requires> <http://www.w3.org/2000/01/rdf-schema#comment> "The dimensions of approaches and techniques, determines certain characteristics of the cleaning process. This process is dependent on specific aspects of the used background knowledge or knowledge graph. These aspects are related to the quality of the used source."@en .
+<http://www.holisticKnowledgeCleaning.net#requires> <http://www.w3.org/2000/01/rdf-schema#label> "requires"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#targets
+<http://www.holisticKnowledgeCleaning.net#targets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.holisticKnowledgeCleaning.net#targets> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Dimension> .
+<http://www.holisticKnowledgeCleaning.net#targets> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.holisticKnowledgeCleaning.net#Error> .
+<http://www.holisticKnowledgeCleaning.net#targets> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the dimensions of an approach or  technique is the exact type of error it procecces. Therefore a dimension such as \"TargetedError\" could use this property, to represent this focus."@en .
+<http://www.holisticKnowledgeCleaning.net#targets> <http://www.w3.org/2000/01/rdf-schema#label> "targets"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.holisticKnowledgeCleaning.net#errorNature
+<http://www.holisticKnowledgeCleaning.net#errorNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#errorNature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Error> .
+<http://www.holisticKnowledgeCleaning.net#errorNature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#errorNature> <http://www.w3.org/2000/01/rdf-schema#comment> "The nature of an error- An error can be semantic or syntatic. A semantic error causes the error source to express wrong semantics (meaning). A syntatic error causes the error source to express no or wrong semantics."@en .
+<http://www.holisticKnowledgeCleaning.net#errorNature> <http://www.w3.org/2000/01/rdf-schema#label> "errorNature"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#errorSource
+<http://www.holisticKnowledgeCleaning.net#errorSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#errorSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Error> .
+<http://www.holisticKnowledgeCleaning.net#errorSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#errorSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The error source, in which an error originates. It is an assertion type, for example a wrong instance or property-value assertion."@en .
+<http://www.holisticKnowledgeCleaning.net#errorSource> <http://www.w3.org/2000/01/rdf-schema#label> "errorSource"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#errorType
+<http://www.holisticKnowledgeCleaning.net#errorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#errorType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Error> .
+<http://www.holisticKnowledgeCleaning.net#errorType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#errorType> <http://www.w3.org/2000/01/rdf-schema#comment> "The error type is a specific error in an error source, caused by a certain type of error nature. For example, an instance assertion might have a syntatically wrong instance identifier or a syntatically wrong type name."@en .
+<http://www.holisticKnowledgeCleaning.net#errorType> <http://www.w3.org/2000/01/rdf-schema#label> "errorType"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#implementationSource
+<http://www.holisticKnowledgeCleaning.net#implementationSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#implementationSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Publication> .
+<http://www.holisticKnowledgeCleaning.net#implementationSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#implementationSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The implementation source of a publication, for example, a github repository."@en .
+<http://www.holisticKnowledgeCleaning.net#implementationSource> <http://www.w3.org/2000/01/rdf-schema#label> "implementationSource"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#isKnowledgeGraphFeature
+<http://www.holisticKnowledgeCleaning.net#isKnowledgeGraphFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#isKnowledgeGraphFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge> .
+<http://www.holisticKnowledgeCleaning.net#isKnowledgeGraphFeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.holisticKnowledgeCleaning.net#logicCondition
+<http://www.holisticKnowledgeCleaning.net#logicCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#logicCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#ConditionalLogic> .
+<http://www.holisticKnowledgeCleaning.net#logicCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#logicCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A logic Condition that must be fulfilled for the next logic step to be executed."@en .
+<http://www.holisticKnowledgeCleaning.net#logicCondition> <http://www.w3.org/2000/01/rdf-schema#label> "logicCondition"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#measureValue
+<http://www.holisticKnowledgeCleaning.net#measureValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#measureValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#QualitySpecification> .
+<http://www.holisticKnowledgeCleaning.net#measureValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#measureValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual value of a quality specification."@en .
+<http://www.holisticKnowledgeCleaning.net#measureValue> <http://www.w3.org/2000/01/rdf-schema#label> "measureValue"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#publicationCitation
+<http://www.holisticKnowledgeCleaning.net#publicationCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#publicationCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Publication> .
+<http://www.holisticKnowledgeCleaning.net#publicationCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#publicationCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "The publcation Citation, identifies a certain publication. The reommended format is APA."@en .
+<http://www.holisticKnowledgeCleaning.net#publicationCitation> <http://www.w3.org/2000/01/rdf-schema#label> "publicationCitation"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#publicationYear
+<http://www.holisticKnowledgeCleaning.net#publicationYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#publicationYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#Publication> .
+<http://www.holisticKnowledgeCleaning.net#publicationYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.holisticKnowledgeCleaning.net#publicationYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The year of a publication."@en .
+<http://www.holisticKnowledgeCleaning.net#publicationYear> <http://www.w3.org/2000/01/rdf-schema#label> "publicationYear"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#qualityMeasure
+<http://www.holisticKnowledgeCleaning.net#qualityMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#qualityMeasure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#QualitySpecification> .
+<http://www.holisticKnowledgeCleaning.net#qualityMeasure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#qualityMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of measurement of the value of a quality specification."@en .
+<http://www.holisticKnowledgeCleaning.net#qualityMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "qualityMeasure"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#taskInput
+<http://www.holisticKnowledgeCleaning.net#taskInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#taskInput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#ApplicationTask> .
+<http://www.holisticKnowledgeCleaning.net#taskInput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#taskInput> <http://www.w3.org/2000/01/rdf-schema#comment> "An application task needs to be implemented using an approach. These approaches use an input, which is this property and compute an output, based on the performed task."@en .
+<http://www.holisticKnowledgeCleaning.net#taskInput> <http://www.w3.org/2000/01/rdf-schema#label> "taskInput"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#taskOutput
+<http://www.holisticKnowledgeCleaning.net#taskOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.holisticKnowledgeCleaning.net#taskOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.holisticKnowledgeCleaning.net#ApplicationTask> .
+<http://www.holisticKnowledgeCleaning.net#taskOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.holisticKnowledgeCleaning.net#taskOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "An application task needs to be implemented using an approach. These approaches have an output, which is defined with this property. This output is based on the input and the performed task."@en .
+<http://www.holisticKnowledgeCleaning.net#taskOutput> <http://www.w3.org/2000/01/rdf-schema#label> "taskOutput"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm
+<http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "An application algorithm structures the processing of detected errors. It represents this process, using an array of application logic. The order of the elements refers to the order of their execution."@en .
+<http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicationAlgorithm"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#ApplicationCondition
+<http://www.holisticKnowledgeCleaning.net#ApplicationCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#ApplicationCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.holisticKnowledgeCleaning.net#ApplicationLogic> .
+<http://www.holisticKnowledgeCleaning.net#ApplicationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "An application condition is a subclass of an application logic. It contains a condition that needs to be fulfilled for an application task to be executed."@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#ApplicationLogic
+<http://www.holisticKnowledgeCleaning.net#ApplicationLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#ApplicationLogic> <http://www.w3.org/2000/01/rdf-schema#comment> "The Application Logic is the central component of an Application algorithm. The logic composes the structure of the algorithm and performs different application tasks."@en .
+<http://www.holisticKnowledgeCleaning.net#ApplicationLogic> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicationLogic"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#ApplicationTask
+<http://www.holisticKnowledgeCleaning.net#ApplicationTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#ApplicationTask> <http://www.w3.org/2000/01/rdf-schema#comment> "An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction."@en .
+<http://www.holisticKnowledgeCleaning.net#ApplicationTask> <http://www.w3.org/2000/01/rdf-schema#label> "AppkicationTask"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#Approach
+<http://www.holisticKnowledgeCleaning.net#Approach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#Approach> <http://www.w3.org/2000/01/rdf-schema#comment> "Approaches are implementations of cleaning tasks. These implementations have dimensions, i.e., characterostics and use a cleaning technique for processing the task. The approaches are described inside publications and optionally provide an implementation."@en .
+<http://www.holisticKnowledgeCleaning.net#Approach> <http://www.w3.org/2000/01/rdf-schema#label> "Approach"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge
+<http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#comment> "Background Knowledge is required as a context from which a cleaning task is performed. The context is used to either determine the correctness of an assertion, i.e., for error detection, or it provides the knowledge for an correction."@en .
+<http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#label> "BackgroundKnowledge"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#ConditionalLogic
+<http://www.holisticKnowledgeCleaning.net#ConditionalLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#ConditionalLogic> <http://www.w3.org/2000/01/rdf-schema#comment> "A conditional logic step that guides the process, depending on the condtitions."@en .
+<http://www.holisticKnowledgeCleaning.net#ConditionalLogic> <http://www.w3.org/2000/01/rdf-schema#label> "Condition"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#Dimension
+<http://www.holisticKnowledgeCleaning.net#Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#Dimension> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimension is a characteristic of a cleaning approach or technique. These dimension can, for example, represent if additional sources are used for processing, i.e., an external method, or if only the given knowledge graph is used, i.e., an internal method."@en .
+<http://www.holisticKnowledgeCleaning.net#Dimension> <http://www.w3.org/2000/01/rdf-schema#label> "Dimension"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#Error
+<http://www.holisticKnowledgeCleaning.net#Error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#Error> <http://www.w3.org/2000/01/rdf-schema#comment> "An error is an assertion that is incorrect. The error source, identifies which type of assertion is wrong. Additionally, the error nature identifies if the error is semantic or syntactic. The error type is a specific error, caused by the error nature inside the error source."@en .
+<http://www.holisticKnowledgeCleaning.net#Error> <http://www.w3.org/2000/01/rdf-schema#label> "Error"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#KnowledgeGraph
+<http://www.holisticKnowledgeCleaning.net#KnowledgeGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge graph is the central data structure that is processed. It is a semantic network, also known as a knowledge base. It represents any domain and structures knowledge in a machine processable manner."@en .
+<http://www.holisticKnowledgeCleaning.net#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#label> "KnowledgeGraph"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#Publication
+<http://www.holisticKnowledgeCleaning.net#Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#Publication> <http://www.w3.org/2000/01/rdf-schema#comment> "A publication describes a cleaning approach. The publication has authors, a publication year, and potentially source code for an implementation."@en .
+<http://www.holisticKnowledgeCleaning.net#Publication> <http://www.w3.org/2000/01/rdf-schema#label> "Publication"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#QualitySpecification
+<http://www.holisticKnowledgeCleaning.net#QualitySpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#QualitySpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality specification defines the quality of a knowledge graph or background knowledge. The specifications allow in combination with the dimensions to select suitable cleaning approaches and techniques."@en .
+<http://www.holisticKnowledgeCleaning.net#QualitySpecification> <http://www.w3.org/2000/01/rdf-schema#label> "QualitySpecification"@en .
+# 
+# http://www.holisticKnowledgeCleaning.net#Technique
+<http://www.holisticKnowledgeCleaning.net#Technique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.holisticKnowledgeCleaning.net#Technique> <http://www.w3.org/2000/01/rdf-schema#comment> "An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions."@en .
+<http://www.holisticKnowledgeCleaning.net#Technique> <http://www.w3.org/2000/01/rdf-schema#label> "Technique"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

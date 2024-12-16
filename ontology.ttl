@@ -1,0 +1,289 @@
+@prefix : <http://www.holisticKnowledgeCleaning.net#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.holisticKnowledgeCleaning.net#> .
+
+<http://www.holisticKnowledgeCleaning.net> rdf:type owl:Ontology ;
+                                            rdfs:comment """The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
+
+The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."""@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.holisticKnowledgeCleaning.net#appliesLogic
+:appliesLogic rdf:type owl:ObjectProperty ;
+              rdfs:domain :ApplicationAlgorithm ;
+              rdfs:range :ApplicationLogic ;
+              rdfs:comment "This property structures an application algorithm. It contains the application logic as an array. The order of the elements inside the array represent their execution order."@en ;
+              rdfs:label "appliesLogic"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#conditionalLogic
+:conditionalLogic rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ApplicationCondition ;
+                  rdfs:range :ConditionalLogic ;
+                  rdfs:comment "This property connexts the results of the performed application task, to the following processing."@en ;
+                  rdfs:label "conditionalLogic"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#followedLogic
+:followedLogic rdf:type owl:ObjectProperty ;
+               rdfs:domain :ConditionalLogic ;
+               rdfs:range :ApplicationLogic ;
+               rdfs:comment "This is the property that is executed if the condition is fullfilled."@en ;
+               rdfs:label "followedLogic"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#hasDimension
+:hasDimension rdf:type owl:ObjectProperty ;
+              rdfs:domain :ApplicationTask ,
+                          :Approach ,
+                          :Technique ;
+              rdfs:range :Dimension ;
+              rdfs:comment "Approaches and Techniques have different dimensions, i.e., characteristics. This property defines those dimensions."@en ;
+              rdfs:label "hasDimension"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#hasError
+:hasError rdf:type owl:ObjectProperty ;
+          rdfs:domain :KnowledgeGraph ;
+          rdfs:range :Error ;
+          rdfs:comment "A knowledge graph can have certain types of errors. These errors need to be targeted by the cleaning process."@en ;
+          rdfs:label "hasError"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#hasQuality
+:hasQuality rdf:type owl:ObjectProperty ;
+            rdfs:domain :BackgroundKnowledge ,
+                        :KnowledgeGraph ;
+            rdfs:range :QualitySpecification ;
+            rdfs:comment "A knowledge graph and background knowledge has different qualities, e.g., their completness or correctness. This property defines these different qualities."@en ;
+            rdfs:label "hasQuality"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#implements
+:implements rdf:type owl:ObjectProperty ;
+            rdfs:domain :Approach ;
+            rdfs:range :Technique ;
+            rdfs:comment "An approaches implements specific cleaning techniques. This property defines those used/implemented techniques."@en ;
+            rdfs:label "implements"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#isPublished
+:isPublished rdf:type owl:ObjectProperty ;
+             rdfs:domain :Approach ;
+             rdfs:range :Publication ;
+             rdfs:comment "An approach is published inside a publication. This property defines this publication."@en ;
+             rdfs:label "isPublished"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#performsTask
+:performsTask rdf:type owl:ObjectProperty ;
+              rdfs:domain :ApplicationLogic ;
+              rdfs:range :ApplicationTask ;
+              rdfs:comment "An application logic esecutes or performs a specific task. This task is defined here."@en ;
+              rdfs:label "performsTask"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#requires
+:requires rdf:type owl:ObjectProperty ;
+          rdfs:domain :Dimension ;
+          rdfs:range :QualitySpecification ;
+          rdfs:comment "The dimensions of approaches and techniques, determines certain characteristics of the cleaning process. This process is dependent on specific aspects of the used background knowledge or knowledge graph. These aspects are related to the quality of the used source."@en ;
+          rdfs:label "requires"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#targets
+:targets rdf:type owl:ObjectProperty ;
+         rdfs:domain :Dimension ;
+         rdfs:range :Error ;
+         rdfs:comment "One of the dimensions of an approach or  technique is the exact type of error it procecces. Therefore a dimension such as \"TargetedError\" could use this property, to represent this focus."@en ;
+         rdfs:label "targets"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.holisticKnowledgeCleaning.net#errorNature
+:errorNature rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Error ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The nature of an error- An error can be semantic or syntatic. A semantic error causes the error source to express wrong semantics (meaning). A syntatic error causes the error source to express no or wrong semantics."@en ;
+             rdfs:label "errorNature"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#errorSource
+:errorSource rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Error ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The error source, in which an error originates. It is an assertion type, for example a wrong instance or property-value assertion."@en ;
+             rdfs:label "errorSource"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#errorType
+:errorType rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Error ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The error type is a specific error in an error source, caused by a certain type of error nature. For example, an instance assertion might have a syntatically wrong instance identifier or a syntatically wrong type name."@en ;
+           rdfs:label "errorType"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#implementationSource
+:implementationSource rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Publication ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "The implementation source of a publication, for example, a github repository."@en ;
+                      rdfs:label "implementationSource"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#isKnowledgeGraphFeature
+:isKnowledgeGraphFeature rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :BackgroundKnowledge ;
+                         rdfs:range xsd:boolean .
+
+
+###  http://www.holisticKnowledgeCleaning.net#logicCondition
+:logicCondition rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ConditionalLogic ;
+                rdfs:range xsd:string ;
+                rdfs:comment "A logic Condition that must be fulfilled for the next logic step to be executed."@en ;
+                rdfs:label "logicCondition"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#measureValue
+:measureValue rdf:type owl:DatatypeProperty ;
+              rdfs:domain :QualitySpecification ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The actual value of a quality specification."@en ;
+              rdfs:label "measureValue"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#publicationCitation
+:publicationCitation rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Publication ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The publcation Citation, identifies a certain publication. The reommended format is APA."@en ;
+                     rdfs:label "publicationCitation"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#publicationYear
+:publicationYear rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Publication ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "The year of a publication."@en ;
+                 rdfs:label "publicationYear"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#qualityMeasure
+:qualityMeasure rdf:type owl:DatatypeProperty ;
+                rdfs:domain :QualitySpecification ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The type of measurement of the value of a quality specification."@en ;
+                rdfs:label "qualityMeasure"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#taskInput
+:taskInput rdf:type owl:DatatypeProperty ;
+           rdfs:domain :ApplicationTask ;
+           rdfs:range xsd:string ;
+           rdfs:comment "An application task needs to be implemented using an approach. These approaches use an input, which is this property and compute an output, based on the performed task."@en ;
+           rdfs:label "taskInput"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#taskOutput
+:taskOutput rdf:type owl:DatatypeProperty ;
+            rdfs:domain :ApplicationTask ;
+            rdfs:range xsd:string ;
+            rdfs:comment "An application task needs to be implemented using an approach. These approaches have an output, which is defined with this property. This output is based on the input and the performed task."@en ;
+            rdfs:label "taskOutput"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm
+:ApplicationAlgorithm rdf:type owl:Class ;
+                      rdfs:comment "An application algorithm structures the processing of detected errors. It represents this process, using an array of application logic. The order of the elements refers to the order of their execution."@en ;
+                      rdfs:label "ApplicationAlgorithm"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#ApplicationCondition
+:ApplicationCondition rdf:type owl:Class ;
+                      rdfs:subClassOf :ApplicationLogic ;
+                      rdfs:comment "An application condition is a subclass of an application logic. It contains a condition that needs to be fulfilled for an application task to be executed."@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#ApplicationLogic
+:ApplicationLogic rdf:type owl:Class ;
+                  rdfs:comment "The Application Logic is the central component of an Application algorithm. The logic composes the structure of the algorithm and performs different application tasks."@en ;
+                  rdfs:label "ApplicationLogic"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#ApplicationTask
+:ApplicationTask rdf:type owl:Class ;
+                 rdfs:comment "An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction."@en ;
+                 rdfs:label "AppkicationTask"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#Approach
+:Approach rdf:type owl:Class ;
+          rdfs:comment "Approaches are implementations of cleaning tasks. These implementations have dimensions, i.e., characterostics and use a cleaning technique for processing the task. The approaches are described inside publications and optionally provide an implementation."@en ;
+          rdfs:label "Approach"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge
+:BackgroundKnowledge rdf:type owl:Class ;
+                     rdfs:comment "Background Knowledge is required as a context from which a cleaning task is performed. The context is used to either determine the correctness of an assertion, i.e., for error detection, or it provides the knowledge for an correction."@en ;
+                     rdfs:label "BackgroundKnowledge"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#ConditionalLogic
+:ConditionalLogic rdf:type owl:Class ;
+                  rdfs:comment "A conditional logic step that guides the process, depending on the condtitions."@en ;
+                  rdfs:label "Condition"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#Dimension
+:Dimension rdf:type owl:Class ;
+           rdfs:comment "A dimension is a characteristic of a cleaning approach or technique. These dimension can, for example, represent if additional sources are used for processing, i.e., an external method, or if only the given knowledge graph is used, i.e., an internal method."@en ;
+           rdfs:label "Dimension"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#Error
+:Error rdf:type owl:Class ;
+       rdfs:comment "An error is an assertion that is incorrect. The error source, identifies which type of assertion is wrong. Additionally, the error nature identifies if the error is semantic or syntactic. The error type is a specific error, caused by the error nature inside the error source."@en ;
+       rdfs:label "Error"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#KnowledgeGraph
+:KnowledgeGraph rdf:type owl:Class ;
+                rdfs:comment "A knowledge graph is the central data structure that is processed. It is a semantic network, also known as a knowledge base. It represents any domain and structures knowledge in a machine processable manner."@en ;
+                rdfs:label "KnowledgeGraph"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#Publication
+:Publication rdf:type owl:Class ;
+             rdfs:comment "A publication describes a cleaning approach. The publication has authors, a publication year, and potentially source code for an implementation."@en ;
+             rdfs:label "Publication"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#QualitySpecification
+:QualitySpecification rdf:type owl:Class ;
+                      rdfs:comment "A quality specification defines the quality of a knowledge graph or background knowledge. The specifications allow in combination with the dimensions to select suitable cleaning approaches and techniques."@en ;
+                      rdfs:label "QualitySpecification"@en .
+
+
+###  http://www.holisticKnowledgeCleaning.net#Technique
+:Technique rdf:type owl:Class ;
+           rdfs:comment "An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions."@en ;
+           rdfs:label "Technique"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
