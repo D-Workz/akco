@@ -207,7 +207,7 @@
 # http://www.holisticKnowledgeCleaning.net#ApplicationTask
 <http://www.holisticKnowledgeCleaning.net#ApplicationTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.holisticKnowledgeCleaning.net#ApplicationTask> <http://www.w3.org/2000/01/rdf-schema#comment> "An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction."@en .
-<http://www.holisticKnowledgeCleaning.net#ApplicationTask> <http://www.w3.org/2000/01/rdf-schema#label> "AppkicationTask"@en .
+<http://www.holisticKnowledgeCleaning.net#ApplicationTask> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicationTask"@en .
 # 
 # http://www.holisticKnowledgeCleaning.net#Approach
 <http://www.holisticKnowledgeCleaning.net#Approach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

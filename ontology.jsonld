@@ -46,7 +46,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "AppkicationTask"
+    "@value" : "ApplicationTask"
   } ]
 }, {
   "@id" : "http://www.holisticKnowledgeCleaning.net#Approach",
