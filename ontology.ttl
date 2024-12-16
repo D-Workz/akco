@@ -229,7 +229,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 ###  http://www.holisticKnowledgeCleaning.net#ApplicationTask
 :ApplicationTask rdf:type owl:Class ;
                  rdfs:comment "An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction."@en ;
-                 rdfs:label "AppkicationTask"@en .
+                 rdfs:label "ApplicationTask"@en .
 
 
 ###  http://www.holisticKnowledgeCleaning.net#Approach
