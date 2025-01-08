@@ -1,16 +1,35 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.holisticKnowledgeCleaning.net#"
-     xml:base="http://www.holisticKnowledgeCleaning.net"
+<rdf:RDF xmlns="https://d-workz.github.io/hkco/index.html#"
+     xml:base="https://d-workz.github.io/hkco/index.html"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.holisticKnowledgeCleaning.net">
+    <owl:Ontology rdf:about="https://d-workz.github.io/hkco/index.html">
         <rdfs:comment xml:lang="en">The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
 
 The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes.</rdfs:comment>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#anySimpleType -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
     
 
 
@@ -26,137 +45,147 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#appliesLogic -->
+    <!-- http://www.w3.org/ns/dqv#hasQualityMeasurement -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#appliesLogic">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationLogic"/>
-        <rdfs:comment xml:lang="en">This property structures an application algorithm. It contains the application logic as an array. The order of the elements inside the array represent their execution order.</rdfs:comment>
-        <rdfs:label xml:lang="en">appliesLogic</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#hasQualityMeasurement">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+        <rdfs:comment xml:lang="en">Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution.</rdfs:comment>
+        <rdfs:label xml:lang="en">has quality measurement</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#conditionalLogic -->
+    <!-- http://www.w3.org/ns/dqv#isMeasurementOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#conditionalLogic">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationCondition"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#ConditionalLogic"/>
-        <rdfs:comment xml:lang="en">This property connexts the results of the performed application task, to the following processing.</rdfs:comment>
-        <rdfs:label xml:lang="en">conditionalLogic</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#isMeasurementOf">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <rdfs:comment xml:lang="en">Indicates the metric being observed.</rdfs:comment>
+        <rdfs:label xml:lang="en">is measurement of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#followedLogic -->
+    <!-- https://d-workz.github.io/hkco/index.html#followedTask -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#followedLogic">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#ConditionalLogic"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationLogic"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#followedTask">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationCondition"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationTask"/>
         <rdfs:comment xml:lang="en">This is the property that is executed if the condition is fullfilled.</rdfs:comment>
-        <rdfs:label xml:lang="en">followedLogic</rdfs:label>
+        <rdfs:label xml:lang="en">followedTask</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#hasDimension -->
+    <!-- https://d-workz.github.io/hkco/index.html#hasCondition -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#hasDimension">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationTask"/>
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Approach"/>
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Technique"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#Dimension"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#hasCondition">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationCondition"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#Condition"/>
+        <rdfs:comment xml:lang="en">This property connexts the results of the performed application task, to the following processing.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://d-workz.github.io/hkco/index.html#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#hasDimension">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationTask"/>
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Approach"/>
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Technique"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#Dimension"/>
         <rdfs:comment xml:lang="en">Approaches and Techniques have different dimensions, i.e., characteristics. This property defines those dimensions.</rdfs:comment>
         <rdfs:label xml:lang="en">hasDimension</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#hasError -->
+    <!-- https://d-workz.github.io/hkco/index.html#hasError -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#hasError">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#KnowledgeGraph"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#Error"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#hasError">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#KnowledgeGraph"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#Error"/>
         <rdfs:comment xml:lang="en">A knowledge graph can have certain types of errors. These errors need to be targeted by the cleaning process.</rdfs:comment>
         <rdfs:label xml:lang="en">hasError</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#hasQuality -->
+    <!-- https://d-workz.github.io/hkco/index.html#implements -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#hasQuality">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge"/>
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#KnowledgeGraph"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#QualitySpecification"/>
-        <rdfs:comment xml:lang="en">A knowledge graph and background knowledge has different qualities, e.g., their completness or correctness. This property defines these different qualities.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasQuality</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.holisticKnowledgeCleaning.net#implements -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#implements">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Approach"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#Technique"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#implements">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Approach"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#Technique"/>
         <rdfs:comment xml:lang="en">An approaches implements specific cleaning techniques. This property defines those used/implemented techniques.</rdfs:comment>
         <rdfs:label xml:lang="en">implements</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#isPublished -->
+    <!-- https://d-workz.github.io/hkco/index.html#isPublished -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#isPublished">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Approach"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#Publication"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#isPublished">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Approach"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#Publication"/>
         <rdfs:comment xml:lang="en">An approach is published inside a publication. This property defines this publication.</rdfs:comment>
         <rdfs:label xml:lang="en">isPublished</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#performsTask -->
+    <!-- https://d-workz.github.io/hkco/index.html#performsTask -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#performsTask">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationLogic"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationTask"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#performsTask">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationAlgorithm"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationTask"/>
         <rdfs:comment xml:lang="en">An application logic esecutes or performs a specific task. This task is defined here.</rdfs:comment>
         <rdfs:label xml:lang="en">performsTask</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#requires -->
+    <!-- https://d-workz.github.io/hkco/index.html#requiresQuality -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#requires">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Dimension"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#QualitySpecification"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#requiresQuality">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Dimension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
         <rdfs:comment xml:lang="en">The dimensions of approaches and techniques, determines certain characteristics of the cleaning process. This process is dependent on specific aspects of the used background knowledge or knowledge graph. These aspects are related to the quality of the used source.</rdfs:comment>
-        <rdfs:label xml:lang="en">requires</rdfs:label>
+        <rdfs:label xml:lang="en">requiresQuality</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#targets -->
+    <!-- https://d-workz.github.io/hkco/index.html#targetsError -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.holisticKnowledgeCleaning.net#targets">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Dimension"/>
-        <rdfs:range rdf:resource="http://www.holisticKnowledgeCleaning.net#Error"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#targetsError">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Dimension"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#Error"/>
         <rdfs:comment xml:lang="en">One of the dimensions of an approach or  technique is the exact type of error it procecces. Therefore a dimension such as &quot;TargetedError&quot; could use this property, to represent this focus.</rdfs:comment>
-        <rdfs:label xml:lang="en">targets</rdfs:label>
+        <rdfs:label xml:lang="en">targetsError</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://d-workz.github.io/hkco/index.html#usesBackgroundKnowledge -->
+
+
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/index.html#usesBackgroundKnowledge">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Technique"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge"/>
+        <rdfs:comment xml:lang="en">Any cleaning technique uses a certain type of background knowledge. It is used as a context from which the processing is performed.</rdfs:comment>
+        <rdfs:label xml:lang="en">usesBackgroundKnowledge</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -173,11 +202,34 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#errorNature -->
+    <!-- http://www.w3.org/ns/dqv#expectedDataType -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#errorNature">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Error"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dqv#expectedDataType">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+        <rdfs:comment xml:lang="en">Represents the expected data type for metric&apos;s observed value (e.g. xsd:boolean, xsd:double etc...)</rdfs:comment>
+        <rdfs:label xml:lang="en">expected data type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#value -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dqv#value">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+        <rdfs:comment xml:lang="en">Refers to values computed by metric.</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://d-workz.github.io/hkco/index.html#errorNature -->
+
+
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#errorNature">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Error"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The nature of an error- An error can be semantic or syntatic. A semantic error causes the error source to express wrong semantics (meaning). A syntatic error causes the error source to express no or wrong semantics.</rdfs:comment>
         <rdfs:label xml:lang="en">errorNature</rdfs:label>
@@ -185,11 +237,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#errorSource -->
+    <!-- https://d-workz.github.io/hkco/index.html#errorSource -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#errorSource">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Error"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#errorSource">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Error"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The error source, in which an error originates. It is an assertion type, for example a wrong instance or property-value assertion.</rdfs:comment>
         <rdfs:label xml:lang="en">errorSource</rdfs:label>
@@ -197,11 +249,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#errorType -->
+    <!-- https://d-workz.github.io/hkco/index.html#errorType -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#errorType">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Error"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#errorType">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Error"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The error type is a specific error in an error source, caused by a certain type of error nature. For example, an instance assertion might have a syntatically wrong instance identifier or a syntatically wrong type name.</rdfs:comment>
         <rdfs:label xml:lang="en">errorType</rdfs:label>
@@ -209,11 +261,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#implementationSource -->
+    <!-- https://d-workz.github.io/hkco/index.html#implementationSource -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#implementationSource">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Publication"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#implementationSource">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The implementation source of a publication, for example, a github repository.</rdfs:comment>
         <rdfs:label xml:lang="en">implementationSource</rdfs:label>
@@ -221,21 +273,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#isKnowledgeGraphFeature -->
+    <!-- https://d-workz.github.io/hkco/index.html#logicCondition -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#isKnowledgeGraphFeature">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.holisticKnowledgeCleaning.net#logicCondition -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#logicCondition">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#ConditionalLogic"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#logicCondition">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Condition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A logic Condition that must be fulfilled for the next logic step to be executed.</rdfs:comment>
         <rdfs:label xml:lang="en">logicCondition</rdfs:label>
@@ -243,23 +285,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#measureValue -->
+    <!-- https://d-workz.github.io/hkco/index.html#publicationCitation -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#measureValue">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#QualitySpecification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The actual value of a quality specification.</rdfs:comment>
-        <rdfs:label xml:lang="en">measureValue</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.holisticKnowledgeCleaning.net#publicationCitation -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#publicationCitation">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Publication"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#publicationCitation">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The publcation Citation, identifies a certain publication. The reommended format is APA.</rdfs:comment>
         <rdfs:label xml:lang="en">publicationCitation</rdfs:label>
@@ -267,11 +297,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#publicationYear -->
+    <!-- https://d-workz.github.io/hkco/index.html#publicationYear -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#publicationYear">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#Publication"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#publicationYear">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">The year of a publication.</rdfs:comment>
         <rdfs:label xml:lang="en">publicationYear</rdfs:label>
@@ -279,23 +309,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#qualityMeasure -->
+    <!-- https://d-workz.github.io/hkco/index.html#taskInput -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#qualityMeasure">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#QualitySpecification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The type of measurement of the value of a quality specification.</rdfs:comment>
-        <rdfs:label xml:lang="en">qualityMeasure</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.holisticKnowledgeCleaning.net#taskInput -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#taskInput">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationTask"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#taskInput">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationTask"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">An application task needs to be implemented using an approach. These approaches use an input, which is this property and compute an output, based on the performed task.</rdfs:comment>
         <rdfs:label xml:lang="en">taskInput</rdfs:label>
@@ -303,11 +321,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#taskOutput -->
+    <!-- https://d-workz.github.io/hkco/index.html#taskOutput -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.holisticKnowledgeCleaning.net#taskOutput">
-        <rdfs:domain rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationTask"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/index.html#taskOutput">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationTask"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">An application task needs to be implemented using an approach. These approaches have an output, which is defined with this property. This output is based on the input and the performed task.</rdfs:comment>
         <rdfs:label xml:lang="en">taskOutput</rdfs:label>
@@ -327,133 +345,167 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm -->
+    <!-- http://purl.org/linked-data/cube#DataSet -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#ApplicationAlgorithm">
+    <owl:Class rdf:about="http://purl.org/linked-data/cube#DataSet"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#Metric -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Metric">
+        <rdfs:comment xml:lang="en">Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric.</rdfs:comment>
+        <rdfs:label xml:lang="en">Metric</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#QualityMeasurement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#QualityMeasurement">
+        <rdfs:comment xml:lang="en">Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quality Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://d-workz.github.io/hkco/index.html#ApplicationAlgorithm -->
+
+
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#ApplicationAlgorithm">
         <rdfs:comment xml:lang="en">An application algorithm structures the processing of detected errors. It represents this process, using an array of application logic. The order of the elements refers to the order of their execution.</rdfs:comment>
         <rdfs:label xml:lang="en">ApplicationAlgorithm</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#ApplicationCondition -->
+    <!-- https://d-workz.github.io/hkco/index.html#ApplicationCondition -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#ApplicationCondition">
-        <rdfs:subClassOf rdf:resource="http://www.holisticKnowledgeCleaning.net#ApplicationLogic"/>
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#ApplicationCondition">
+        <rdfs:subClassOf rdf:resource="https://d-workz.github.io/hkco/index.html#ApplicationTask"/>
         <rdfs:comment xml:lang="en">An application condition is a subclass of an application logic. It contains a condition that needs to be fulfilled for an application task to be executed.</rdfs:comment>
+        <rdfs:label>AnnotationCondition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#ApplicationLogic -->
+    <!-- https://d-workz.github.io/hkco/index.html#ApplicationTask -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#ApplicationLogic">
-        <rdfs:comment xml:lang="en">The Application Logic is the central component of an Application algorithm. The logic composes the structure of the algorithm and performs different application tasks.</rdfs:comment>
-        <rdfs:label xml:lang="en">ApplicationLogic</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.holisticKnowledgeCleaning.net#ApplicationTask -->
-
-
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#ApplicationTask">
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#ApplicationTask">
         <rdfs:comment xml:lang="en">An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction.</rdfs:comment>
         <rdfs:label xml:lang="en">ApplicationTask</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#Approach -->
+    <!-- https://d-workz.github.io/hkco/index.html#Approach -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#Approach">
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#Approach">
         <rdfs:comment xml:lang="en">Approaches are implementations of cleaning tasks. These implementations have dimensions, i.e., characterostics and use a cleaning technique for processing the task. The approaches are described inside publications and optionally provide an implementation.</rdfs:comment>
         <rdfs:label xml:lang="en">Approach</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge -->
+    <!-- https://d-workz.github.io/hkco/index.html#BackgroundKnowledge -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#BackgroundKnowledge">
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
         <rdfs:comment xml:lang="en">Background Knowledge is required as a context from which a cleaning task is performed. The context is used to either determine the correctness of an assertion, i.e., for error detection, or it provides the knowledge for an correction.</rdfs:comment>
         <rdfs:label xml:lang="en">BackgroundKnowledge</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#ConditionalLogic -->
+    <!-- https://d-workz.github.io/hkco/index.html#Condition -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#ConditionalLogic">
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#Condition">
         <rdfs:comment xml:lang="en">A conditional logic step that guides the process, depending on the condtitions.</rdfs:comment>
         <rdfs:label xml:lang="en">Condition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#Dimension -->
+    <!-- https://d-workz.github.io/hkco/index.html#Dimension -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#Dimension">
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#Dimension">
         <rdfs:comment xml:lang="en">A dimension is a characteristic of a cleaning approach or technique. These dimension can, for example, represent if additional sources are used for processing, i.e., an external method, or if only the given knowledge graph is used, i.e., an internal method.</rdfs:comment>
         <rdfs:label xml:lang="en">Dimension</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#Error -->
+    <!-- https://d-workz.github.io/hkco/index.html#Error -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#Error">
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#Error">
         <rdfs:comment xml:lang="en">An error is an assertion that is incorrect. The error source, identifies which type of assertion is wrong. Additionally, the error nature identifies if the error is semantic or syntactic. The error type is a specific error, caused by the error nature inside the error source.</rdfs:comment>
         <rdfs:label xml:lang="en">Error</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#KnowledgeGraph -->
+    <!-- https://d-workz.github.io/hkco/index.html#KnowledgeGraph -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#KnowledgeGraph">
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#KnowledgeGraph">
+        <rdfs:subClassOf rdf:resource="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge"/>
         <rdfs:comment xml:lang="en">A knowledge graph is the central data structure that is processed. It is a semantic network, also known as a knowledge base. It represents any domain and structures knowledge in a machine processable manner.</rdfs:comment>
         <rdfs:label xml:lang="en">KnowledgeGraph</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#Publication -->
+    <!-- https://d-workz.github.io/hkco/index.html#Publication -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#Publication">
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#Publication">
         <rdfs:comment xml:lang="en">A publication describes a cleaning approach. The publication has authors, a publication year, and potentially source code for an implementation.</rdfs:comment>
         <rdfs:label xml:lang="en">Publication</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#QualitySpecification -->
+    <!-- https://d-workz.github.io/hkco/index.html#Technique -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#QualitySpecification">
-        <rdfs:comment xml:lang="en">A quality specification defines the quality of a knowledge graph or background knowledge. The specifications allow in combination with the dimensions to select suitable cleaning approaches and techniques.</rdfs:comment>
-        <rdfs:label xml:lang="en">QualitySpecification</rdfs:label>
+    <owl:Class rdf:about="https://d-workz.github.io/hkco/index.html#Technique">
+        <rdfs:comment xml:lang="en">An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technique</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.holisticKnowledgeCleaning.net#Technique -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
 
-    <owl:Class rdf:about="http://www.holisticKnowledgeCleaning.net#Technique">
-        <rdfs:comment xml:lang="en">An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions.</rdfs:comment>
-        <rdfs:label xml:lang="en">Technique</rdfs:label>
-    </owl:Class>
+    <rdf:Description rdf:about="http://www.w3.org/ns/dqv#hasQualityMetadata">
+        <rdfs:comment xml:lang="en">Refers to a grouping of quality information such as certificates, policies, measurements and annotations as a named graph. Quality information represented in such a grouping can pertain to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution.</rdfs:comment>
+        <rdfs:label xml:lang="en">has quality metadata</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/dqv#inCategory">
+        <rdfs:comment xml:lang="en">Represents the category a dimension is grouped in.</rdfs:comment>
+        <rdfs:label xml:lang="en">in category</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/dqv#inDimension">
+        <rdfs:comment xml:lang="en">Represents the dimensions a quality metric, certificate and annotation allow a measurement of.</rdfs:comment>
+        <rdfs:label xml:lang="en">in dimension</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
