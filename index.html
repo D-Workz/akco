@@ -69,7 +69,7 @@ $(function(){
 
 <dl>
 <dt>Latest version:</dt>
-<dd><a href="https://d-workz.github.io/hkco#">https://d-workz.github.io/hkco#</a></dd>
+<dd><a href="https://d-workz.github.io/hkco#">https://d-workz.github.io/hkco</a></dd>
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
 
@@ -123,7 +123,7 @@ $(function(){
 <span class="markdown">
 
 <p>
-The <strong>Holistic Knowledge Cleaning Ontology (HKCO)</strong> provides the <em>semantics</em> for knowledge cleaning. At its core, the ontology includes two key components: the <strong>knowledge graph</strong> and the <strong>cleaning approaches</strong>. Its primary goal is to enable the selection of appropriate approaches for detecting and correcting errors within a knowledge graph.
+The <strong>Holistic Knowledge Cleaning Ontology (HKCO)</strong> provides the <em>semantics</em> for knowledge cleaning. At its core, the ontology includes two key components: the <strong>knowledge graph</strong> and the <strong>cleaning approaches</strong>. Its primary goal is to enable the selection and application of appropriate approaches for detecting and correcting errors within a knowledge graph.
 </p>
 
 <h2>Error Representation</h2>
@@ -158,7 +158,7 @@ Sources—whether internal or external—vary in <strong>quality</strong>, which
 <p>
 The ontology also represents the <strong>application process</strong> of selected approaches. This process involves:
 <ul>
-    <li>Defining logic steps, tasks, and conditions.</li>
+    <li>Tasks, and Conditions.</li>
     <li>Structuring a cleaning pipeline using application algorithms.</li>
     <li>Ensuring correctness of predicted results through additional validation and error detection processes.</li>
 </ul>
@@ -200,6 +200,8 @@ By providing well-defined semantics for errors, approaches, techniques, quality 
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+<tr><td><b>dqv</b></td><td>&lt;http://www.w3.org/ns/dqv#&gt;</td></tr>
+<tr><td><b>qb</b></td><td>&lt;http://purl.org/linked-data/cube#&gt;</td></tr>
 </tbody>
 </table>
 </div>
@@ -231,212 +233,183 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#https://d-workz.github.io/hkco#ApplicationTask"
-         title="https://d-workz.github.io/hkco#ApplicationTask">ApplicationTask</a>
+      <a href="#ApplicationCondition"
+         title="https://d-workz.github.io/hkco/index.html#ApplicationCondition">AnnotationCondition</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#ApplicationCondition"
-         title="https://d-workz.github.io/hkco#ApplicationCondition">
-         <span>Application Condition</span>
-      </a>
+      <a href="#ApplicationAlgorithm"
+         title="https://d-workz.github.io/hkco/index.html#ApplicationAlgorithm">ApplicationAlgorithm</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#ApplicationAlgorithm"
-         title="https://d-workz.github.io/hkco#ApplicationAlgorithm">ApplicationAlgorithm</a>
+      <a href="#ApplicationTask"
+         title="https://d-workz.github.io/hkco/index.html#ApplicationTask">ApplicationTask</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#ApplicationLogic"
-         title="https://d-workz.github.io/hkco#ApplicationLogic">ApplicationLogic</a>
+      <a href="#Approach"
+         title="https://d-workz.github.io/hkco/index.html#Approach">Approach</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#Approach"
-         title="https://d-workz.github.io/hkco#Approach">Approach</a>
+      <a href="#BackgroundKnowledge"
+         title="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge">BackgroundKnowledge</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#BackgroundKnowledge"
-         title="https://d-workz.github.io/hkco#BackgroundKnowledge">BackgroundKnowledge</a>
+      <a href="#Condition"
+         title="https://d-workz.github.io/hkco/index.html#Condition">Condition</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#ConditionalLogic"
-         title="https://d-workz.github.io/hkco#ConditionalLogic">Condition</a>
+      <a href="#Dimension"
+         title="https://d-workz.github.io/hkco/index.html#Dimension">Dimension</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#Dimension"
-         title="https://d-workz.github.io/hkco#Dimension">Dimension</a>
+      <a href="#Error" title="https://d-workz.github.io/hkco/index.html#Error">Error</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#Error" title="https://d-workz.github.io/hkco#Error">Error</a>
+      <a href="#KnowledgeGraph"
+         title="https://d-workz.github.io/hkco/index.html#KnowledgeGraph">KnowledgeGraph</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#KnowledgeGraph"
-         title="https://d-workz.github.io/hkco#KnowledgeGraph">KnowledgeGraph</a>
+      <a href="#http://www.w3.org/ns/dqv#Metric" title="http://www.w3.org/ns/dqv#Metric">Metric</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#Publication"
-         title="https://d-workz.github.io/hkco#Publication">Publication</a>
+      <a href="#Publication"
+         title="https://d-workz.github.io/hkco/index.html#Publication">Publication</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#QualitySpecification"
-         title="https://d-workz.github.io/hkco#QualitySpecification">QualitySpecification</a>
+      <a href="#http://www.w3.org/ns/dqv#QualityMeasurement" title="http://www.w3.org/ns/dqv#QualityMeasurement">Quality Measurement</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#Technique"
-         title="https://d-workz.github.io/hkco#Technique">Technique</a>
+      <a href="#Technique"
+         title="https://d-workz.github.io/hkco/index.html#Technique">Technique</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#https://d-workz.github.io/hkco#appliesLogic"
-         title="https://d-workz.github.io/hkco#appliesLogic">appliesLogic</a>
+      <a href="#followedTask"
+         title="https://d-workz.github.io/hkco/index.html#followedTask">followedTask</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#conditionalLogic"
-         title="https://d-workz.github.io/hkco#conditionalLogic">conditionalLogic</a>
+      <a href="#http://www.w3.org/ns/dqv#hasQualityMeasurement" title="http://www.w3.org/ns/dqv#hasQualityMeasurement">has quality measurement</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#followedLogic"
-         title="https://d-workz.github.io/hkco#followedLogic">followedLogic</a>
+      <a href="#hasCondition"
+         title="https://d-workz.github.io/hkco/index.html#hasCondition">hasCondition</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#hasDimension"
-         title="https://d-workz.github.io/hkco#hasDimension">hasDimension</a>
+      <a href="#hasDimension"
+         title="https://d-workz.github.io/hkco/index.html#hasDimension">hasDimension</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#hasError" title="https://d-workz.github.io/hkco#hasError">hasError</a>
+      <a href="#hasError"
+         title="https://d-workz.github.io/hkco/index.html#hasError">hasError</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#hasQuality"
-         title="https://d-workz.github.io/hkco#hasQuality">hasQuality</a>
+      <a href="#implements"
+         title="https://d-workz.github.io/hkco/index.html#implements">implements</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#implements"
-         title="https://d-workz.github.io/hkco#implements">implements</a>
+      <a href="#http://www.w3.org/ns/dqv#isMeasurementOf" title="http://www.w3.org/ns/dqv#isMeasurementOf">is measurement of</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#isPublished"
-         title="https://d-workz.github.io/hkco#isPublished">isPublished</a>
+      <a href="#isPublished"
+         title="https://d-workz.github.io/hkco/index.html#isPublished">isPublished</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#performsTask"
-         title="https://d-workz.github.io/hkco#performsTask">performsTask</a>
+      <a href="#performsTask"
+         title="https://d-workz.github.io/hkco/index.html#performsTask">performsTask</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#requires"
-         title="https://d-workz.github.io/hkco#requires">requires</a>
+      <a href="#requiresQuality"
+         title="https://d-workz.github.io/hkco/index.html#requiresQuality">requiresQuality</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#targets" title="https://d-workz.github.io/hkco#targets">targets</a>
+      <a href="#targetsError"
+         title="https://d-workz.github.io/hkco/index.html#targetsError">targetsError</a>
+   </li>
+   <li>
+      <a href="#usesBackgroundKnowledge"
+         title="https://d-workz.github.io/hkco/index.html#usesBackgroundKnowledge">usesBackgroundKnowledge</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#https://d-workz.github.io/hkco#errorNature"
-         title="https://d-workz.github.io/hkco#errorNature">errorNature</a>
+      <a href="#errorNature"
+         title="https://d-workz.github.io/hkco/index.html#errorNature">errorNature</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#errorSource"
-         title="https://d-workz.github.io/hkco#errorSource">errorSource</a>
+      <a href="#errorSource"
+         title="https://d-workz.github.io/hkco/index.html#errorSource">errorSource</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#errorType"
-         title="https://d-workz.github.io/hkco#errorType">errorType</a>
+      <a href="#errorType"
+         title="https://d-workz.github.io/hkco/index.html#errorType">errorType</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#implementationSource"
-         title="https://d-workz.github.io/hkco#implementationSource">implementationSource</a>
+      <a href="#http://www.w3.org/ns/dqv#expectedDataType" title="http://www.w3.org/ns/dqv#expectedDataType">expected data type</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#isKnowledgeGraphFeature"
-         title="https://d-workz.github.io/hkco#isKnowledgeGraphFeature">
-         <span>is Knowledge Graph Feature</span>
-      </a>
+      <a href="#implementationSource"
+         title="https://d-workz.github.io/hkco/index.html#implementationSource">implementationSource</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#logicCondition"
-         title="https://d-workz.github.io/hkco#logicCondition">logicCondition</a>
+      <a href="#logicCondition"
+         title="https://d-workz.github.io/hkco/index.html#logicCondition">logicCondition</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#measureValue"
-         title="https://d-workz.github.io/hkco#measureValue">measureValue</a>
+      <a href="#publicationCitation"
+         title="https://d-workz.github.io/hkco/index.html#publicationCitation">publicationCitation</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#publicationCitation"
-         title="https://d-workz.github.io/hkco#publicationCitation">publicationCitation</a>
+      <a href="#publicationYear"
+         title="https://d-workz.github.io/hkco/index.html#publicationYear">publicationYear</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#publicationYear"
-         title="https://d-workz.github.io/hkco#publicationYear">publicationYear</a>
+      <a href="#taskInput"
+         title="https://d-workz.github.io/hkco/index.html#taskInput">taskInput</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#qualityMeasure"
-         title="https://d-workz.github.io/hkco#qualityMeasure">qualityMeasure</a>
+      <a href="#taskOutput"
+         title="https://d-workz.github.io/hkco/index.html#taskOutput">taskOutput</a>
    </li>
    <li>
-      <a href="#https://d-workz.github.io/hkco#taskInput"
-         title="https://d-workz.github.io/hkco#taskInput">taskInput</a>
-   </li>
-   <li>
-      <a href="#https://d-workz.github.io/hkco#taskOutput"
-         title="https://d-workz.github.io/hkco#taskOutput">taskOutput</a>
+      <a href="#http://www.w3.org/ns/dqv#value" title="http://www.w3.org/ns/dqv#value">value</a>
    </li>
 </ul>
 </div>
-  
+
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">HolisticKnowledgeCleaningOntology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">[Ontology Name]: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
 <span class="markdown">The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
 
 The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes.</span></div>
-   
+
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for HolisticKnowledgeCleaningOntology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by HolisticKnowledgeCleaningOntology.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for [Ontology Name] classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by [Ontology Name].
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#https://d-workz.github.io/hkco#ApplicationTask" title="https://d-workz.github.io/hkco#ApplicationTask">ApplicationTask</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#ApplicationCondition" title="https://d-workz.github.io/hkco#ApplicationCondition"> <span>Application Condition</span> </a></li>
-  <li><a href="#https://d-workz.github.io/hkco#ApplicationAlgorithm" title="https://d-workz.github.io/hkco#ApplicationAlgorithm">ApplicationAlgorithm</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#ApplicationLogic" title="https://d-workz.github.io/hkco#ApplicationLogic">ApplicationLogic</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#Approach" title="https://d-workz.github.io/hkco#Approach">Approach</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#BackgroundKnowledge" title="https://d-workz.github.io/hkco#BackgroundKnowledge">BackgroundKnowledge</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#ConditionalLogic" title="https://d-workz.github.io/hkco#ConditionalLogic">Condition</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#Dimension" title="https://d-workz.github.io/hkco#Dimension">Dimension</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#Error" title="https://d-workz.github.io/hkco#Error">Error</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#KnowledgeGraph" title="https://d-workz.github.io/hkco#KnowledgeGraph">KnowledgeGraph</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#Publication" title="https://d-workz.github.io/hkco#Publication">Publication</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#QualitySpecification" title="https://d-workz.github.io/hkco#QualitySpecification">QualitySpecification</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#Technique" title="https://d-workz.github.io/hkco#Technique">Technique</a></li>
+  <li><a href="#ApplicationCondition" title="https://d-workz.github.io/hkco/index.html#ApplicationCondition">AnnotationCondition</a></li>
+  <li><a href="#ApplicationAlgorithm" title="https://d-workz.github.io/hkco/index.html#ApplicationAlgorithm">ApplicationAlgorithm</a></li>
+  <li><a href="#ApplicationTask" title="https://d-workz.github.io/hkco/index.html#ApplicationTask">ApplicationTask</a></li>
+  <li><a href="#Approach" title="https://d-workz.github.io/hkco/index.html#Approach">Approach</a></li>
+  <li><a href="#BackgroundKnowledge" title="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge">BackgroundKnowledge</a></li>
+  <li><a href="#Condition" title="https://d-workz.github.io/hkco/index.html#Condition">Condition</a></li>
+  <li><a href="#Dimension" title="https://d-workz.github.io/hkco/index.html#Dimension">Dimension</a></li>
+  <li><a href="#Error" title="https://d-workz.github.io/hkco/index.html#Error">Error</a></li>
+  <li><a href="#KnowledgeGraph" title="https://d-workz.github.io/hkco/index.html#KnowledgeGraph">KnowledgeGraph</a></li>
+  <li><a href="#http://www.w3.org/ns/dqv#Metric" title="http://www.w3.org/ns/dqv#Metric">Metric</a></li>
+  <li><a href="#Publication" title="https://d-workz.github.io/hkco/index.html#Publication">Publication</a></li>
+  <li><a href="#http://www.w3.org/ns/dqv#QualityMeasurement" title="http://www.w3.org/ns/dqv#QualityMeasurement">Quality Measurement</a></li>
+  <li><a href="#Technique" title="https://d-workz.github.io/hkco/index.html#Technique">Technique</a></li>
  </ul>
- <div class="entity" id="https://d-workz.github.io/hkco#ApplicationTask">
-  <h3>ApplicationTask<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#ApplicationTask</p>
-  <div class="comment">
-   <span class="markdown">An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#https://d-workz.github.io/hkco#hasDimension" title="https://d-workz.github.io/hkco#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#taskInput" title="https://d-workz.github.io/hkco#taskInput">taskInput</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://d-workz.github.io/hkco#taskOutput" title="https://d-workz.github.io/hkco#taskOutput">taskOutput</a> <sup class="type-dp" title="data property">dp</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#https://d-workz.github.io/hkco#performsTask" title="https://d-workz.github.io/hkco#performsTask">performsTask</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="https://d-workz.github.io/hkco#ApplicationCondition">
-  <h3>Application Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#ApplicationCondition</p>
+ <div class="entity" id="ApplicationCondition">
+  <h3>AnnotationCondition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#ApplicationCondition</p>
   <div class="comment">
    <span class="markdown">An application condition is a subclass of an application logic. It contains a condition that needs to be fulfilled for an application task to be executed.</span>
   </div>
@@ -445,19 +418,19 @@ This section provides details for each class and property defined by HolisticKno
     has super-classes
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#ApplicationLogic" title="https://d-workz.github.io/hkco#ApplicationLogic">ApplicationLogic</a> <sup class="type-c" title="class">c</sup>
+    <a href="#ApplicationTask" title="https://d-workz.github.io/hkco/index.html#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#conditionalLogic" title="https://d-workz.github.io/hkco#conditionalLogic">conditionalLogic</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#followedTask" title="https://d-workz.github.io/hkco/index.html#followedTask">followedTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCondition" title="https://d-workz.github.io/hkco/index.html#hasCondition">hasCondition</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#ApplicationAlgorithm">
+ <div class="entity" id="ApplicationAlgorithm">
   <h3>ApplicationAlgorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#ApplicationAlgorithm</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#ApplicationAlgorithm</p>
   <div class="comment">
    <span class="markdown">An application algorithm structures the processing of detected errors. It represents this process, using an array of application logic. The order of the elements refers to the order of their execution.</span>
   </div>
@@ -466,40 +439,40 @@ This section provides details for each class and property defined by HolisticKno
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#appliesLogic" title="https://d-workz.github.io/hkco#appliesLogic">appliesLogic</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#performsTask" title="https://d-workz.github.io/hkco/index.html#performsTask">performsTask</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#ApplicationLogic">
-  <h3>ApplicationLogic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#ApplicationLogic</p>
+ <div class="entity" id="ApplicationTask">
+  <h3>ApplicationTask<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#ApplicationTask</p>
   <div class="comment">
-   <span class="markdown">The Application Logic is the central component of an Application algorithm. The logic composes the structure of the algorithm and performs different application tasks.</span>
+   <span class="markdown">An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction.</span>
   </div>
   <dl class="description">
    <dt>
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#ApplicationCondition" title="https://d-workz.github.io/hkco#ApplicationCondition">Application Condition</a> <sup class="type-c" title="class">c</sup>
+    <a href="#ApplicationCondition" title="https://d-workz.github.io/hkco/index.html#ApplicationCondition">AnnotationCondition</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#performsTask" title="https://d-workz.github.io/hkco#performsTask">performsTask</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDimension" title="https://d-workz.github.io/hkco/index.html#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#taskInput" title="https://d-workz.github.io/hkco/index.html#taskInput">taskInput</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#taskOutput" title="https://d-workz.github.io/hkco/index.html#taskOutput">taskOutput</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#appliesLogic" title="https://d-workz.github.io/hkco#appliesLogic">appliesLogic</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#followedLogic" title="https://d-workz.github.io/hkco#followedLogic">followedLogic</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#followedTask" title="https://d-workz.github.io/hkco/index.html#followedTask">followedTask</a> <sup class="type-op" title="object property">op</sup>, <a href="#performsTask" title="https://d-workz.github.io/hkco/index.html#performsTask">performsTask</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#Approach">
+ <div class="entity" id="Approach">
   <h3>Approach<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#Approach</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#Approach</p>
   <div class="comment">
    <span class="markdown">Approaches are implementations of cleaning tasks. These implementations have dimensions, i.e., characterostics and use a cleaning technique for processing the task. The approaches are described inside publications and optionally provide an implementation.</span>
   </div>
@@ -508,28 +481,46 @@ This section provides details for each class and property defined by HolisticKno
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#hasDimension" title="https://d-workz.github.io/hkco#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#implements" title="https://d-workz.github.io/hkco#implements">implements</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#isPublished" title="https://d-workz.github.io/hkco#isPublished">isPublished</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDimension" title="https://d-workz.github.io/hkco/index.html#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#implements" title="https://d-workz.github.io/hkco/index.html#implements">implements</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPublished" title="https://d-workz.github.io/hkco/index.html#isPublished">isPublished</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#BackgroundKnowledge">
+ <div class="entity" id="BackgroundKnowledge">
   <h3>BackgroundKnowledge<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#BackgroundKnowledge</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#BackgroundKnowledge</p>
   <div class="comment">
    <span class="markdown">Background Knowledge is required as a context from which a cleaning task is performed. The context is used to either determine the correctness of an assertion, i.e., for error detection, or it provides the knowledge for an correction.</span>
   </div>
   <dl class="description">
    <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/linked-data/cube#DataSet" target="_blank" title="http://purl.org/linked-data/cube#DataSet">Data Set</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#KnowledgeGraph" title="https://d-workz.github.io/hkco/index.html#KnowledgeGraph">KnowledgeGraph</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#hasQuality" title="https://d-workz.github.io/hkco#hasQuality">hasQuality</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#isKnowledgeGraphFeature" title="https://d-workz.github.io/hkco#isKnowledgeGraphFeature">is Knowledge Graph Feature</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#http://www.w3.org/ns/dqv#hasQualityMeasurement" title="http://www.w3.org/ns/dqv#hasQualityMeasurement">has quality measurement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#usesBackgroundKnowledge" title="https://d-workz.github.io/hkco/index.html#usesBackgroundKnowledge">usesBackgroundKnowledge</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#ConditionalLogic">
+ <div class="entity" id="Condition">
   <h3>Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#ConditionalLogic</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#Condition</p>
   <div class="comment">
    <span class="markdown">A conditional logic step that guides the process, depending on the condtitions.</span>
   </div>
@@ -538,19 +529,19 @@ This section provides details for each class and property defined by HolisticKno
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#followedLogic" title="https://d-workz.github.io/hkco#followedLogic">followedLogic</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#logicCondition" title="https://d-workz.github.io/hkco#logicCondition">logicCondition</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#logicCondition" title="https://d-workz.github.io/hkco/index.html#logicCondition">logicCondition</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#conditionalLogic" title="https://d-workz.github.io/hkco#conditionalLogic">conditionalLogic</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasCondition" title="https://d-workz.github.io/hkco/index.html#hasCondition">hasCondition</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#Dimension">
+ <div class="entity" id="Dimension">
   <h3>Dimension<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#Dimension</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#Dimension</p>
   <div class="comment">
    <span class="markdown">A dimension is a characteristic of a cleaning approach or technique. These dimension can, for example, represent if additional sources are used for processing, i.e., an external method, or if only the given knowledge graph is used, i.e., an internal method.</span>
   </div>
@@ -559,19 +550,19 @@ This section provides details for each class and property defined by HolisticKno
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#requires" title="https://d-workz.github.io/hkco#requires">requires</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#targets" title="https://d-workz.github.io/hkco#targets">targets</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#requiresQuality" title="https://d-workz.github.io/hkco/index.html#requiresQuality">requiresQuality</a> <sup class="type-op" title="object property">op</sup>, <a href="#targetsError" title="https://d-workz.github.io/hkco/index.html#targetsError">targetsError</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#hasDimension" title="https://d-workz.github.io/hkco#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDimension" title="https://d-workz.github.io/hkco/index.html#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#Error">
+ <div class="entity" id="Error">
   <h3>Error<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#Error</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#Error</p>
   <div class="comment">
    <span class="markdown">An error is an assertion that is incorrect. The error source, identifies which type of assertion is wrong. Additionally, the error nature identifies if the error is semantic or syntactic. The error type is a specific error, caused by the error nature inside the error source.</span>
   </div>
@@ -580,34 +571,61 @@ This section provides details for each class and property defined by HolisticKno
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#errorNature" title="https://d-workz.github.io/hkco#errorNature">errorNature</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://d-workz.github.io/hkco#errorSource" title="https://d-workz.github.io/hkco#errorSource">errorSource</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://d-workz.github.io/hkco#errorType" title="https://d-workz.github.io/hkco#errorType">errorType</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#errorNature" title="https://d-workz.github.io/hkco/index.html#errorNature">errorNature</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#errorSource" title="https://d-workz.github.io/hkco/index.html#errorSource">errorSource</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#errorType" title="https://d-workz.github.io/hkco/index.html#errorType">errorType</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#hasError" title="https://d-workz.github.io/hkco#hasError">hasError</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#targets" title="https://d-workz.github.io/hkco#targets">targets</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasError" title="https://d-workz.github.io/hkco/index.html#hasError">hasError</a> <sup class="type-op" title="object property">op</sup>, <a href="#targetsError" title="https://d-workz.github.io/hkco/index.html#targetsError">targetsError</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#KnowledgeGraph">
+ <div class="entity" id="KnowledgeGraph">
   <h3>KnowledgeGraph<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#KnowledgeGraph</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#KnowledgeGraph</p>
   <div class="comment">
    <span class="markdown">A knowledge graph is the central data structure that is processed. It is a semantic network, also known as a knowledge base. It represents any domain and structures knowledge in a machine processable manner.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#BackgroundKnowledge" title="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge">BackgroundKnowledge</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasError" title="https://d-workz.github.io/hkco/index.html#hasError">hasError</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dqv#Metric">
+  <h3>Metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dqv#Metric</p>
+  <div class="comment">
+   <span class="markdown">Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric.</span>
   </div>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#hasError" title="https://d-workz.github.io/hkco#hasError">hasError</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#hasQuality" title="https://d-workz.github.io/hkco#hasQuality">hasQuality</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://www.w3.org/ns/dqv#expectedDataType" title="http://www.w3.org/ns/dqv#expectedDataType">expected data type</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dqv#isMeasurementOf" title="http://www.w3.org/ns/dqv#isMeasurementOf">is measurement of</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#Publication">
+ <div class="entity" id="Publication">
   <h3>Publication<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#Publication</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#Publication</p>
   <div class="comment">
    <span class="markdown">A publication describes a cleaning approach. The publication has authors, a publication year, and potentially source code for an implementation.</span>
   </div>
@@ -616,40 +634,40 @@ This section provides details for each class and property defined by HolisticKno
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#implementationSource" title="https://d-workz.github.io/hkco#implementationSource">implementationSource</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://d-workz.github.io/hkco#publicationCitation" title="https://d-workz.github.io/hkco#publicationCitation">publicationCitation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://d-workz.github.io/hkco#publicationYear" title="https://d-workz.github.io/hkco#publicationYear">publicationYear</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#implementationSource" title="https://d-workz.github.io/hkco/index.html#implementationSource">implementationSource</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#publicationCitation" title="https://d-workz.github.io/hkco/index.html#publicationCitation">publicationCitation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#publicationYear" title="https://d-workz.github.io/hkco/index.html#publicationYear">publicationYear</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#isPublished" title="https://d-workz.github.io/hkco#isPublished">isPublished</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isPublished" title="https://d-workz.github.io/hkco/index.html#isPublished">isPublished</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#QualitySpecification">
-  <h3>QualitySpecification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#QualitySpecification</p>
+ <div class="entity" id="http://www.w3.org/ns/dqv#QualityMeasurement">
+  <h3>Quality Measurement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dqv#QualityMeasurement</p>
   <div class="comment">
-   <span class="markdown">A quality specification defines the quality of a knowledge graph or background knowledge. The specifications allow in combination with the dimensions to select suitable cleaning approaches and techniques.</span>
+   <span class="markdown">Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric.</span>
   </div>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#measureValue" title="https://d-workz.github.io/hkco#measureValue">measureValue</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://d-workz.github.io/hkco#qualityMeasure" title="https://d-workz.github.io/hkco#qualityMeasure">qualityMeasure</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#http://www.w3.org/ns/dqv#value" title="http://www.w3.org/ns/dqv#value">value</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#hasQuality" title="https://d-workz.github.io/hkco#hasQuality">hasQuality</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://d-workz.github.io/hkco#requires" title="https://d-workz.github.io/hkco#requires">requires</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://www.w3.org/ns/dqv#hasQualityMeasurement" title="http://www.w3.org/ns/dqv#hasQualityMeasurement">has quality measurement</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresQuality" title="https://d-workz.github.io/hkco/index.html#requiresQuality">requiresQuality</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#Technique">
+ <div class="entity" id="Technique">
   <h3>Technique<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#Technique</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#Technique</p>
   <div class="comment">
    <span class="markdown">An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions.</span>
   </div>
@@ -658,80 +676,35 @@ This section provides details for each class and property defined by HolisticKno
     is in domain of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#hasDimension" title="https://d-workz.github.io/hkco#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDimension" title="https://d-workz.github.io/hkco/index.html#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesBackgroundKnowledge" title="https://d-workz.github.io/hkco/index.html#usesBackgroundKnowledge">usesBackgroundKnowledge</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://d-workz.github.io/hkco#implements" title="https://d-workz.github.io/hkco#implements">implements</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#implements" title="https://d-workz.github.io/hkco/index.html#implements">implements</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#https://d-workz.github.io/hkco#appliesLogic" title="https://d-workz.github.io/hkco#appliesLogic">appliesLogic</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#conditionalLogic" title="https://d-workz.github.io/hkco#conditionalLogic">conditionalLogic</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#followedLogic" title="https://d-workz.github.io/hkco#followedLogic">followedLogic</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#hasDimension" title="https://d-workz.github.io/hkco#hasDimension">hasDimension</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#hasError" title="https://d-workz.github.io/hkco#hasError">hasError</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#hasQuality" title="https://d-workz.github.io/hkco#hasQuality">hasQuality</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#implements" title="https://d-workz.github.io/hkco#implements">implements</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#isPublished" title="https://d-workz.github.io/hkco#isPublished">isPublished</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#performsTask" title="https://d-workz.github.io/hkco#performsTask">performsTask</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#requires" title="https://d-workz.github.io/hkco#requires">requires</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#targets" title="https://d-workz.github.io/hkco#targets">targets</a></li>
+  <li><a href="#followedTask" title="https://d-workz.github.io/hkco/index.html#followedTask">followedTask</a></li>
+  <li><a href="#http://www.w3.org/ns/dqv#hasQualityMeasurement" title="http://www.w3.org/ns/dqv#hasQualityMeasurement">has quality measurement</a></li>
+  <li><a href="#hasCondition" title="https://d-workz.github.io/hkco/index.html#hasCondition">hasCondition</a></li>
+  <li><a href="#hasDimension" title="https://d-workz.github.io/hkco/index.html#hasDimension">hasDimension</a></li>
+  <li><a href="#hasError" title="https://d-workz.github.io/hkco/index.html#hasError">hasError</a></li>
+  <li><a href="#implements" title="https://d-workz.github.io/hkco/index.html#implements">implements</a></li>
+  <li><a href="#http://www.w3.org/ns/dqv#isMeasurementOf" title="http://www.w3.org/ns/dqv#isMeasurementOf">is measurement of</a></li>
+  <li><a href="#isPublished" title="https://d-workz.github.io/hkco/index.html#isPublished">isPublished</a></li>
+  <li><a href="#performsTask" title="https://d-workz.github.io/hkco/index.html#performsTask">performsTask</a></li>
+  <li><a href="#requiresQuality" title="https://d-workz.github.io/hkco/index.html#requiresQuality">requiresQuality</a></li>
+  <li><a href="#targetsError" title="https://d-workz.github.io/hkco/index.html#targetsError">targetsError</a></li>
+  <li><a href="#usesBackgroundKnowledge" title="https://d-workz.github.io/hkco/index.html#usesBackgroundKnowledge">usesBackgroundKnowledge</a></li>
  </ul>
- <div class="entity" id="https://d-workz.github.io/hkco#appliesLogic">
-  <h3>appliesLogic<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#appliesLogic</p>
-  <div class="comment">
-   <span class="markdown">This property structures an application algorithm. It contains the application logic as an array. The order of the elements inside the array represent their execution order.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationAlgorithm" title="https://d-workz.github.io/hkco#ApplicationAlgorithm">ApplicationAlgorithm</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationLogic" title="https://d-workz.github.io/hkco#ApplicationLogic">ApplicationLogic</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://d-workz.github.io/hkco#conditionalLogic">
-  <h3>conditionalLogic<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#conditionalLogic</p>
-  <div class="comment">
-   <span class="markdown">This property connexts the results of the performed application task, to the following processing.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationCondition" title="https://d-workz.github.io/hkco#ApplicationCondition">Application Condition</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#ConditionalLogic" title="https://d-workz.github.io/hkco#ConditionalLogic">Condition</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://d-workz.github.io/hkco#followedLogic">
-  <h3>followedLogic<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#followedLogic</p>
+ <div class="entity" id="followedTask">
+  <h3>followedTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#followedTask</p>
   <div class="comment">
    <span class="markdown">This is the property that is executed if the condition is fullfilled.</span>
   </div>
@@ -741,20 +714,66 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#ConditionalLogic" title="https://d-workz.github.io/hkco#ConditionalLogic">Condition</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ApplicationCondition" title="https://d-workz.github.io/hkco/index.html#ApplicationCondition">AnnotationCondition</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationLogic" title="https://d-workz.github.io/hkco#ApplicationLogic">ApplicationLogic</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ApplicationTask" title="https://d-workz.github.io/hkco/index.html#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#hasDimension">
+ <div class="entity" id="http://www.w3.org/ns/dqv#hasQualityMeasurement">
+  <h3>has quality measurement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dqv#hasQualityMeasurement</p>
+  <div class="comment">
+   <span class="markdown">Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#BackgroundKnowledge" title="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge">BackgroundKnowledge</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dqv#QualityMeasurement" title="http://www.w3.org/ns/dqv#QualityMeasurement">Quality Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCondition">
+  <h3>hasCondition<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#hasCondition</p>
+  <div class="comment">
+   <span class="markdown">This property connexts the results of the performed application task, to the following processing.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ApplicationCondition" title="https://d-workz.github.io/hkco/index.html#ApplicationCondition">AnnotationCondition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Condition" title="https://d-workz.github.io/hkco/index.html#Condition">Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDimension">
   <h3>hasDimension<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#hasDimension</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#hasDimension</p>
   <div class="comment">
    <span class="markdown">Approaches and Techniques have different dimensions, i.e., characteristics. This property defines those dimensions.</span>
   </div>
@@ -764,26 +783,26 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationTask" title="https://d-workz.github.io/hkco#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ApplicationTask" title="https://d-workz.github.io/hkco/index.html#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Approach" title="https://d-workz.github.io/hkco#Approach">Approach</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Approach" title="https://d-workz.github.io/hkco/index.html#Approach">Approach</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Technique" title="https://d-workz.github.io/hkco#Technique">Technique</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Technique" title="https://d-workz.github.io/hkco/index.html#Technique">Technique</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Dimension" title="https://d-workz.github.io/hkco#Dimension">Dimension</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Dimension" title="https://d-workz.github.io/hkco/index.html#Dimension">Dimension</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#hasError">
+ <div class="entity" id="hasError">
   <h3>hasError<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#hasError</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#hasError</p>
   <div class="comment">
    <span class="markdown">A knowledge graph can have certain types of errors. These errors need to be targeted by the cleaning process.</span>
   </div>
@@ -793,46 +812,20 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#KnowledgeGraph" title="https://d-workz.github.io/hkco#KnowledgeGraph">KnowledgeGraph</a> <sup class="type-c" title="class">c</sup>
+     <a href="#KnowledgeGraph" title="https://d-workz.github.io/hkco/index.html#KnowledgeGraph">KnowledgeGraph</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Error" title="https://d-workz.github.io/hkco#Error">Error</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Error" title="https://d-workz.github.io/hkco/index.html#Error">Error</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#hasQuality">
-  <h3>hasQuality<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#hasQuality</p>
-  <div class="comment">
-   <span class="markdown">A knowledge graph and background knowledge has different qualities, e.g., their completness or correctness. This property defines these different qualities.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#BackgroundKnowledge" title="https://d-workz.github.io/hkco#BackgroundKnowledge">BackgroundKnowledge</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#KnowledgeGraph" title="https://d-workz.github.io/hkco#KnowledgeGraph">KnowledgeGraph</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#QualitySpecification" title="https://d-workz.github.io/hkco#QualitySpecification">QualitySpecification</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://d-workz.github.io/hkco#implements">
+ <div class="entity" id="implements">
   <h3>implements<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#implements</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#implements</p>
   <div class="comment">
    <span class="markdown">An approaches implements specific cleaning techniques. This property defines those used/implemented techniques.</span>
   </div>
@@ -842,20 +835,37 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Approach" title="https://d-workz.github.io/hkco#Approach">Approach</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Approach" title="https://d-workz.github.io/hkco/index.html#Approach">Approach</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Technique" title="https://d-workz.github.io/hkco#Technique">Technique</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Technique" title="https://d-workz.github.io/hkco/index.html#Technique">Technique</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#isPublished">
+ <div class="entity" id="http://www.w3.org/ns/dqv#isMeasurementOf">
+  <h3>is measurement of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dqv#isMeasurementOf</p>
+  <div class="comment">
+   <span class="markdown">Indicates the metric being observed.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dqv#Metric" title="http://www.w3.org/ns/dqv#Metric">Metric</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isPublished">
   <h3>isPublished<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#isPublished</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#isPublished</p>
   <div class="comment">
    <span class="markdown">An approach is published inside a publication. This property defines this publication.</span>
   </div>
@@ -865,20 +875,20 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Approach" title="https://d-workz.github.io/hkco#Approach">Approach</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Approach" title="https://d-workz.github.io/hkco/index.html#Approach">Approach</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Publication" title="https://d-workz.github.io/hkco#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Publication" title="https://d-workz.github.io/hkco/index.html#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#performsTask">
+ <div class="entity" id="performsTask">
   <h3>performsTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#performsTask</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#performsTask</p>
   <div class="comment">
    <span class="markdown">An application logic esecutes or performs a specific task. This task is defined here.</span>
   </div>
@@ -888,20 +898,20 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationLogic" title="https://d-workz.github.io/hkco#ApplicationLogic">ApplicationLogic</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ApplicationAlgorithm" title="https://d-workz.github.io/hkco/index.html#ApplicationAlgorithm">ApplicationAlgorithm</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationTask" title="https://d-workz.github.io/hkco#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ApplicationTask" title="https://d-workz.github.io/hkco/index.html#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#requires">
-  <h3>requires<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#requires</p>
+ <div class="entity" id="requiresQuality">
+  <h3>requiresQuality<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#requiresQuality</p>
   <div class="comment">
    <span class="markdown">The dimensions of approaches and techniques, determines certain characteristics of the cleaning process. This process is dependent on specific aspects of the used background knowledge or knowledge graph. These aspects are related to the quality of the used source.</span>
   </div>
@@ -911,20 +921,20 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Dimension" title="https://d-workz.github.io/hkco#Dimension">Dimension</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Dimension" title="https://d-workz.github.io/hkco/index.html#Dimension">Dimension</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#QualitySpecification" title="https://d-workz.github.io/hkco#QualitySpecification">QualitySpecification</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/ns/dqv#QualityMeasurement" title="http://www.w3.org/ns/dqv#QualityMeasurement">Quality Measurement</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#targets">
-  <h3>targets<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#targets</p>
+ <div class="entity" id="targetsError">
+  <h3>targetsError<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#targetsError</p>
   <div class="comment">
    <span class="markdown">One of the dimensions of an approach or technique is the exact type of error it procecces. Therefore a dimension such as "TargetedError" could use this property, to represent this focus.</span>
   </div>
@@ -934,13 +944,36 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Dimension" title="https://d-workz.github.io/hkco#Dimension">Dimension</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Dimension" title="https://d-workz.github.io/hkco/index.html#Dimension">Dimension</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Error" title="https://d-workz.github.io/hkco#Error">Error</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Error" title="https://d-workz.github.io/hkco/index.html#Error">Error</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usesBackgroundKnowledge">
+  <h3>usesBackgroundKnowledge<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#usesBackgroundKnowledge</p>
+  <div class="comment">
+   <span class="markdown">Any cleaning technique uses a certain type of background knowledge. It is used as a context from which the processing is performed.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Technique" title="https://d-workz.github.io/hkco/index.html#Technique">Technique</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#BackgroundKnowledge" title="https://d-workz.github.io/hkco/index.html#BackgroundKnowledge">BackgroundKnowledge</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -948,22 +981,21 @@ This section provides details for each class and property defined by HolisticKno
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
-  <li><a href="#https://d-workz.github.io/hkco#errorNature" title="https://d-workz.github.io/hkco#errorNature">errorNature</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#errorSource" title="https://d-workz.github.io/hkco#errorSource">errorSource</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#errorType" title="https://d-workz.github.io/hkco#errorType">errorType</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#implementationSource" title="https://d-workz.github.io/hkco#implementationSource">implementationSource</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#isKnowledgeGraphFeature" title="https://d-workz.github.io/hkco#isKnowledgeGraphFeature"> <span>is Knowledge Graph Feature</span> </a></li>
-  <li><a href="#https://d-workz.github.io/hkco#logicCondition" title="https://d-workz.github.io/hkco#logicCondition">logicCondition</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#measureValue" title="https://d-workz.github.io/hkco#measureValue">measureValue</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#publicationCitation" title="https://d-workz.github.io/hkco#publicationCitation">publicationCitation</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#publicationYear" title="https://d-workz.github.io/hkco#publicationYear">publicationYear</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#qualityMeasure" title="https://d-workz.github.io/hkco#qualityMeasure">qualityMeasure</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#taskInput" title="https://d-workz.github.io/hkco#taskInput">taskInput</a></li>
-  <li><a href="#https://d-workz.github.io/hkco#taskOutput" title="https://d-workz.github.io/hkco#taskOutput">taskOutput</a></li>
+  <li><a href="#errorNature" title="https://d-workz.github.io/hkco/index.html#errorNature">errorNature</a></li>
+  <li><a href="#errorSource" title="https://d-workz.github.io/hkco/index.html#errorSource">errorSource</a></li>
+  <li><a href="#errorType" title="https://d-workz.github.io/hkco/index.html#errorType">errorType</a></li>
+  <li><a href="#http://www.w3.org/ns/dqv#expectedDataType" title="http://www.w3.org/ns/dqv#expectedDataType">expected data type</a></li>
+  <li><a href="#implementationSource" title="https://d-workz.github.io/hkco/index.html#implementationSource">implementationSource</a></li>
+  <li><a href="#logicCondition" title="https://d-workz.github.io/hkco/index.html#logicCondition">logicCondition</a></li>
+  <li><a href="#publicationCitation" title="https://d-workz.github.io/hkco/index.html#publicationCitation">publicationCitation</a></li>
+  <li><a href="#publicationYear" title="https://d-workz.github.io/hkco/index.html#publicationYear">publicationYear</a></li>
+  <li><a href="#taskInput" title="https://d-workz.github.io/hkco/index.html#taskInput">taskInput</a></li>
+  <li><a href="#taskOutput" title="https://d-workz.github.io/hkco/index.html#taskOutput">taskOutput</a></li>
+  <li><a href="#http://www.w3.org/ns/dqv#value" title="http://www.w3.org/ns/dqv#value">value</a></li>
  </ul>
- <div class="entity" id="https://d-workz.github.io/hkco#errorNature">
+ <div class="entity" id="errorNature">
   <h3>errorNature<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#errorNature</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#errorNature</p>
   <div class="comment">
    <span class="markdown">The nature of an error- An error can be semantic or syntatic. A semantic error causes the error source to express wrong semantics (meaning). A syntatic error causes the error source to express no or wrong semantics.</span>
   </div>
@@ -973,7 +1005,7 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Error" title="https://d-workz.github.io/hkco#Error">Error</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Error" title="https://d-workz.github.io/hkco/index.html#Error">Error</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -984,9 +1016,9 @@ This section provides details for each class and property defined by HolisticKno
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#errorSource">
+ <div class="entity" id="errorSource">
   <h3>errorSource<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#errorSource</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#errorSource</p>
   <div class="comment">
    <span class="markdown">The error source, in which an error originates. It is an assertion type, for example a wrong instance or property-value assertion.</span>
   </div>
@@ -996,7 +1028,7 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Error" title="https://d-workz.github.io/hkco#Error">Error</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Error" title="https://d-workz.github.io/hkco/index.html#Error">Error</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1007,9 +1039,9 @@ This section provides details for each class and property defined by HolisticKno
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#errorType">
+ <div class="entity" id="errorType">
   <h3>errorType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#errorType</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#errorType</p>
   <div class="comment">
    <span class="markdown">The error type is a specific error in an error source, caused by a certain type of error nature. For example, an instance assertion might have a syntatically wrong instance identifier or a syntatically wrong type name.</span>
   </div>
@@ -1019,7 +1051,7 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Error" title="https://d-workz.github.io/hkco#Error">Error</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Error" title="https://d-workz.github.io/hkco/index.html#Error">Error</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1030,9 +1062,32 @@ This section provides details for each class and property defined by HolisticKno
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#implementationSource">
+ <div class="entity" id="http://www.w3.org/ns/dqv#expectedDataType">
+  <h3>expected data type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dqv#expectedDataType</p>
+  <div class="comment">
+   <span class="markdown">Represents the expected data type for metric's observed value (e.g. xsd:boolean, xsd:double etc...)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dqv#Metric" title="http://www.w3.org/ns/dqv#Metric">Metric</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anySimpleType" target="_blank" title="http://www.w3.org/2001/XMLSchema#anySimpleType">any Simple Type</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="implementationSource">
   <h3>implementationSource<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#implementationSource</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#implementationSource</p>
   <div class="comment">
    <span class="markdown">The implementation source of a publication, for example, a github repository.</span>
   </div>
@@ -1042,7 +1097,7 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Publication" title="https://d-workz.github.io/hkco#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Publication" title="https://d-workz.github.io/hkco/index.html#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1053,29 +1108,9 @@ This section provides details for each class and property defined by HolisticKno
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#isKnowledgeGraphFeature">
-  <h3>is Knowledge Graph Feature<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#isKnowledgeGraphFeature</p>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#BackgroundKnowledge" title="https://d-workz.github.io/hkco#BackgroundKnowledge">BackgroundKnowledge</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://d-workz.github.io/hkco#logicCondition">
+ <div class="entity" id="logicCondition">
   <h3>logicCondition<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#logicCondition</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#logicCondition</p>
   <div class="comment">
    <span class="markdown">A logic Condition that must be fulfilled for the next logic step to be executed.</span>
   </div>
@@ -1085,7 +1120,7 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#ConditionalLogic" title="https://d-workz.github.io/hkco#ConditionalLogic">Condition</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Condition" title="https://d-workz.github.io/hkco/index.html#Condition">Condition</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1096,32 +1131,9 @@ This section provides details for each class and property defined by HolisticKno
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#measureValue">
-  <h3>measureValue<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#measureValue</p>
-  <div class="comment">
-   <span class="markdown">The actual value of a quality specification.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#QualitySpecification" title="https://d-workz.github.io/hkco#QualitySpecification">QualitySpecification</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://d-workz.github.io/hkco#publicationCitation">
+ <div class="entity" id="publicationCitation">
   <h3>publicationCitation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#publicationCitation</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#publicationCitation</p>
   <div class="comment">
    <span class="markdown">The publcation Citation, identifies a certain publication. The reommended format is APA.</span>
   </div>
@@ -1131,7 +1143,7 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Publication" title="https://d-workz.github.io/hkco#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Publication" title="https://d-workz.github.io/hkco/index.html#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1142,9 +1154,9 @@ This section provides details for each class and property defined by HolisticKno
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#publicationYear">
+ <div class="entity" id="publicationYear">
   <h3>publicationYear<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#publicationYear</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#publicationYear</p>
   <div class="comment">
    <span class="markdown">The year of a publication.</span>
   </div>
@@ -1154,7 +1166,7 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#Publication" title="https://d-workz.github.io/hkco#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Publication" title="https://d-workz.github.io/hkco/index.html#Publication">Publication</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1165,32 +1177,9 @@ This section provides details for each class and property defined by HolisticKno
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#qualityMeasure">
-  <h3>qualityMeasure<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#qualityMeasure</p>
-  <div class="comment">
-   <span class="markdown">The type of measurement of the value of a quality specification.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://d-workz.github.io/hkco#QualitySpecification" title="https://d-workz.github.io/hkco#QualitySpecification">QualitySpecification</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://d-workz.github.io/hkco#taskInput">
+ <div class="entity" id="taskInput">
   <h3>taskInput<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#taskInput</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#taskInput</p>
   <div class="comment">
    <span class="markdown">An application task needs to be implemented using an approach. These approaches use an input, which is this property and compute an output, based on the performed task.</span>
   </div>
@@ -1200,7 +1189,7 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationTask" title="https://d-workz.github.io/hkco#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ApplicationTask" title="https://d-workz.github.io/hkco/index.html#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1211,9 +1200,9 @@ This section provides details for each class and property defined by HolisticKno
    </dl>
   </div>
  </div>
- <div class="entity" id="https://d-workz.github.io/hkco#taskOutput">
+ <div class="entity" id="taskOutput">
   <h3>taskOutput<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco#taskOutput</p>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/index.html#taskOutput</p>
   <div class="comment">
    <span class="markdown">An application task needs to be implemented using an approach. These approaches have an output, which is defined with this property. This output is based on the input and the performed task.</span>
   </div>
@@ -1223,13 +1212,30 @@ This section provides details for each class and property defined by HolisticKno
      has domain
     </dt>
     <dd>
-     <a href="#https://d-workz.github.io/hkco#ApplicationTask" title="https://d-workz.github.io/hkco#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ApplicationTask" title="https://d-workz.github.io/hkco/index.html#ApplicationTask">ApplicationTask</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dqv#value">
+  <h3>value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dqv#value</p>
+  <div class="comment">
+   <span class="markdown">Refers to values computed by metric.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dqv#QualityMeasurement" title="http://www.w3.org/ns/dqv#QualityMeasurement">Quality Measurement</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1243,7 +1249,7 @@ This section provides details for each class and property defined by HolisticKno
 </div>
 </div>
 </div>
-    
+
 
 <!--REFERENCES SECTION-->
   <div id="references">
