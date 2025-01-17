@@ -308,6 +308,8 @@ export class DarkModeToggle extends HTMLElement {
   }
 
   _updateRadios() {
+    console.log('Updating radios');
+    console.log('Mode:', this.mode);
     this._updateVisualization();
     if (this.mode === LIGHT) {
       this._lightRadio.checked = true;
@@ -317,11 +319,15 @@ export class DarkModeToggle extends HTMLElement {
   }
 
   _updateVisualization() {
+    console.log('Updating visualization');
     const umlImage = document.getElementById('visualization');
+    console.log('Found image element:', umlImage);
     if (this.mode === LIGHT) {
-      umlImage.src="HKCO_visualization_light.png";
+      umlImage.src = "resources/HKCO_visualization_light.png";
+      console.log('Set image to light mode');
     } else {
-      umlImage.src="HKCO_visualization_dark.png";
+      umlImage.src = "resources/HKCO_visualization_dark.png";
+      console.log('Set image to dark mode');
     }
   }
 
