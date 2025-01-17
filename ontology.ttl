@@ -1,44 +1,32 @@
-@prefix : <https://d-workz.github.io/hkco/index.html#> .
+@prefix : <https://d-workz.github.io/hkco/#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://d-workz.github.io/hkco/index.html#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cube: <http://purl.org/linked-data/cube#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@base <https://d-workz.github.io/hkco/#> .
 
-<https://d-workz.github.io/hkco/index.html> rdf:type owl:Ontology ;
+<https://d-workz.github.io/hkco/> rdf:type owl:Ontology ;
+                                             owl:imports "http://purl.org/dc/terms" ,
+                                                         "http://www.w3.org/ns/dqv#",
+                                                         "http://purl.org/linked-data/cube#";
+                                             <http://purl.org/dc/elements/1.1/creator> "Dennis Sommer" ;
+                                             <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by/4.0/"@en ;
+                                             <http://purl.org/dc/elements/1.1/source> "https://d-workz.github.io/hkco/"@en ;
+                                             <http://purl.org/dc/elements/1.1/title> "Holistic Knowledge Cleaning Ontology (HKCO)"@en ;
                                              rdfs:comment """The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
 
 The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."""@en .
-
-#################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#anySimpleType
-xsd:anySimpleType rdf:type rdfs:Datatype .
 
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.w3.org/ns/dqv#hasQualityMeasurement
-<http://www.w3.org/ns/dqv#hasQualityMeasurement> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain :BackgroundKnowledge ;
-                                                 rdfs:range <http://www.w3.org/ns/dqv#QualityMeasurement> ;
-                                                 rdfs:comment "Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en ;
-                                                 rdfs:label "has quality measurement"@en .
-
-
-###  http://www.w3.org/ns/dqv#isMeasurementOf
-<http://www.w3.org/ns/dqv#isMeasurementOf> rdf:type owl:ObjectProperty ;
-                                           rdfs:range <http://www.w3.org/ns/dqv#Metric> ;
-                                           rdfs:comment "Indicates the metric being observed."@en ;
-                                           rdfs:label "is measurement of"@en .
-
-
-###  https://d-workz.github.io/hkco/index.html#followedTask
+###  https://d-workz.github.io/hkco/#followedTask
 :followedTask rdf:type owl:ObjectProperty ;
               rdfs:domain :ApplicationCondition ;
               rdfs:range :ApplicationTask ;
@@ -46,7 +34,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
               rdfs:label "followedTask"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#hasCondition
+###  https://d-workz.github.io/hkco/#hasCondition
 :hasCondition rdf:type owl:ObjectProperty ;
               rdfs:domain :ApplicationCondition ;
               rdfs:range :Condition ;
@@ -54,7 +42,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
               rdfs:label "hasCondition"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#hasDimension
+###  https://d-workz.github.io/hkco/#hasDimension
 :hasDimension rdf:type owl:ObjectProperty ;
               rdfs:domain :ApplicationTask ,
                           :Approach ,
@@ -64,7 +52,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
               rdfs:label "hasDimension"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#hasError
+###  https://d-workz.github.io/hkco/#hasError
 :hasError rdf:type owl:ObjectProperty ;
           rdfs:domain :KnowledgeGraph ;
           rdfs:range :Error ;
@@ -72,7 +60,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
           rdfs:label "hasError"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#implements
+###  https://d-workz.github.io/hkco/#implements
 :implements rdf:type owl:ObjectProperty ;
             rdfs:domain :Approach ;
             rdfs:range :Technique ;
@@ -80,15 +68,15 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
             rdfs:label "implements"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#isPublished
+###  https://d-workz.github.io/hkco/#isPublished
 :isPublished rdf:type owl:ObjectProperty ;
              rdfs:domain :Approach ;
-             rdfs:range :Publication ;
-             rdfs:comment "An approach is published inside a publication. This property defines this publication."@en ;
+             rdfs:range <http://purl.org/dc/terms/BibliographicResource> ;
+             rdfs:comment "An approach is published inside a publication. This property defines this publication, which is of type BibliographicResource from dcterms vocabulary."@en ;
              rdfs:label "isPublished"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#performsTask
+###  https://d-workz.github.io/hkco/#performsTask
 :performsTask rdf:type owl:ObjectProperty ;
               rdfs:domain :ApplicationAlgorithm ;
               rdfs:range :ApplicationTask ;
@@ -96,7 +84,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
               rdfs:label "performsTask"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#requiresQuality
+###  https://d-workz.github.io/hkco/#requiresQuality
 :requiresQuality rdf:type owl:ObjectProperty ;
                  rdfs:domain :Dimension ;
                  rdfs:range <http://www.w3.org/ns/dqv#QualityMeasurement> ;
@@ -104,7 +92,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
                  rdfs:label "requiresQuality"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#targetsError
+###  https://d-workz.github.io/hkco/targetsError
 :targetsError rdf:type owl:ObjectProperty ;
               rdfs:domain :Dimension ;
               rdfs:range :Error ;
@@ -112,7 +100,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
               rdfs:label "targetsError"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#usesBackgroundKnowledge
+###  https://d-workz.github.io/hkco/#usesBackgroundKnowledge
 :usesBackgroundKnowledge rdf:type owl:ObjectProperty ;
                          rdfs:domain :Technique ;
                          rdfs:range :BackgroundKnowledge ;
@@ -124,22 +112,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  http://www.w3.org/ns/dqv#expectedDataType
-<http://www.w3.org/ns/dqv#expectedDataType> rdf:type owl:DatatypeProperty ;
-                                            rdfs:domain <http://www.w3.org/ns/dqv#Metric> ;
-                                            rdfs:range xsd:anySimpleType ;
-                                            rdfs:comment "Represents the expected data type for metric's observed value (e.g. xsd:boolean, xsd:double etc...)"@en ;
-                                            rdfs:label "expected data type"@en .
-
-
-###  http://www.w3.org/ns/dqv#value
-<http://www.w3.org/ns/dqv#value> rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain <http://www.w3.org/ns/dqv#QualityMeasurement> ;
-                                 rdfs:comment "Refers to values computed by metric."@en ;
-                                 rdfs:label "value"@en .
-
-
-###  https://d-workz.github.io/hkco/index.html#errorNature
+###  https://d-workz.github.io/hkco/#errorNature
 :errorNature rdf:type owl:DatatypeProperty ;
              rdfs:domain :Error ;
              rdfs:range xsd:string ;
@@ -147,7 +120,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
              rdfs:label "errorNature"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#errorSource
+###  https://d-workz.github.io/hkco/#errorSource
 :errorSource rdf:type owl:DatatypeProperty ;
              rdfs:domain :Error ;
              rdfs:range xsd:string ;
@@ -155,7 +128,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
              rdfs:label "errorSource"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#errorType
+###  https://d-workz.github.io/hkco/#errorType
 :errorType rdf:type owl:DatatypeProperty ;
            rdfs:domain :Error ;
            rdfs:range xsd:string ;
@@ -163,15 +136,8 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
            rdfs:label "errorType"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#implementationSource
-:implementationSource rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :Publication ;
-                      rdfs:range xsd:string ;
-                      rdfs:comment "The implementation source of a publication, for example, a github repository."@en ;
-                      rdfs:label "implementationSource"@en .
 
-
-###  https://d-workz.github.io/hkco/index.html#logicCondition
+###  https://d-workz.github.io/hkco/#logicCondition
 :logicCondition rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Condition ;
                 rdfs:range xsd:string ;
@@ -179,23 +145,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
                 rdfs:label "logicCondition"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#publicationCitation
-:publicationCitation rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :Publication ;
-                     rdfs:range xsd:string ;
-                     rdfs:comment "The publcation Citation, identifies a certain publication. The reommended format is APA."@en ;
-                     rdfs:label "publicationCitation"@en .
-
-
-###  https://d-workz.github.io/hkco/index.html#publicationYear
-:publicationYear rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Publication ;
-                 rdfs:range xsd:integer ;
-                 rdfs:comment "The year of a publication."@en ;
-                 rdfs:label "publicationYear"@en .
-
-
-###  https://d-workz.github.io/hkco/index.html#taskInput
+###  https://d-workz.github.io/hkco/#taskInput
 :taskInput rdf:type owl:DatatypeProperty ;
            rdfs:domain :ApplicationTask ;
            rdfs:range xsd:string ;
@@ -203,7 +153,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
            rdfs:label "taskInput"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#taskOutput
+###  https://d-workz.github.io/hkco/#taskOutput
 :taskOutput rdf:type owl:DatatypeProperty ;
             rdfs:domain :ApplicationTask ;
             rdfs:range xsd:string ;
@@ -215,105 +165,65 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://purl.org/linked-data/cube#DataSet
-<http://purl.org/linked-data/cube#DataSet> rdf:type owl:Class .
 
-
-###  http://www.w3.org/ns/dqv#Metric
-<http://www.w3.org/ns/dqv#Metric> rdf:type owl:Class ;
-                                  rdfs:comment "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en ;
-                                  rdfs:label "Metric"@en .
-
-
-###  http://www.w3.org/ns/dqv#QualityMeasurement
-<http://www.w3.org/ns/dqv#QualityMeasurement> rdf:type owl:Class ;
-                                              rdfs:comment "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en ;
-                                              rdfs:label "Quality Measurement"@en .
-
-
-###  https://d-workz.github.io/hkco/index.html#ApplicationAlgorithm
+###  https://d-workz.github.io/hkco/#ApplicationAlgorithm
 :ApplicationAlgorithm rdf:type owl:Class ;
                       rdfs:comment "An application algorithm structures the processing of detected errors. It represents this process, using an array of application logic. The order of the elements refers to the order of their execution."@en ;
                       rdfs:label "ApplicationAlgorithm"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#ApplicationCondition
+###  https://d-workz.github.io/hkco/#ApplicationCondition
 :ApplicationCondition rdf:type owl:Class ;
                       rdfs:subClassOf :ApplicationTask ;
                       rdfs:comment "An application condition is a subclass of an application logic. It contains a condition that needs to be fulfilled for an application task to be executed."@en ;
                       rdfs:label "AnnotationCondition" .
 
 
-###  https://d-workz.github.io/hkco/index.html#ApplicationTask
+###  https://d-workz.github.io/hkco/#ApplicationTask
 :ApplicationTask rdf:type owl:Class ;
                  rdfs:comment "An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction."@en ;
                  rdfs:label "ApplicationTask"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#Approach
+###  https://d-workz.github.io/hkco/#Approach
 :Approach rdf:type owl:Class ;
           rdfs:comment "Approaches are implementations of cleaning tasks. These implementations have dimensions, i.e., characterostics and use a cleaning technique for processing the task. The approaches are described inside publications and optionally provide an implementation."@en ;
           rdfs:label "Approach"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#BackgroundKnowledge
+###  https://d-workz.github.io/hkco/#BackgroundKnowledge
 :BackgroundKnowledge rdf:type owl:Class ;
                      rdfs:subClassOf <http://purl.org/linked-data/cube#DataSet> ;
                      rdfs:comment "Background Knowledge is required as a context from which a cleaning task is performed. The context is used to either determine the correctness of an assertion, i.e., for error detection, or it provides the knowledge for an correction."@en ;
                      rdfs:label "BackgroundKnowledge"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#Condition
+###  https://d-workz.github.io/hkco/#Condition
 :Condition rdf:type owl:Class ;
            rdfs:comment "A conditional logic step that guides the process, depending on the condtitions."@en ;
            rdfs:label "Condition"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#Dimension
+###  https://d-workz.github.io/hkco/#Dimension
 :Dimension rdf:type owl:Class ;
            rdfs:comment "A dimension is a characteristic of a cleaning approach or technique. These dimension can, for example, represent if additional sources are used for processing, i.e., an external method, or if only the given knowledge graph is used, i.e., an internal method."@en ;
            rdfs:label "Dimension"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#Error
+###  https://d-workz.github.io/hkco/#Error
 :Error rdf:type owl:Class ;
        rdfs:comment "An error is an assertion that is incorrect. The error source, identifies which type of assertion is wrong. Additionally, the error nature identifies if the error is semantic or syntactic. The error type is a specific error, caused by the error nature inside the error source."@en ;
        rdfs:label "Error"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#KnowledgeGraph
+###  https://d-workz.github.io/hkco/#KnowledgeGraph
 :KnowledgeGraph rdf:type owl:Class ;
                 rdfs:subClassOf :BackgroundKnowledge ;
                 rdfs:comment "A knowledge graph is the central data structure that is processed. It is a semantic network, also known as a knowledge base. It represents any domain and structures knowledge in a machine processable manner."@en ;
                 rdfs:label "KnowledgeGraph"@en .
 
 
-###  https://d-workz.github.io/hkco/index.html#Publication
-:Publication rdf:type owl:Class ;
-             rdfs:comment "A publication describes a cleaning approach. The publication has authors, a publication year, and potentially source code for an implementation."@en ;
-             rdfs:label "Publication"@en .
-
-
-###  https://d-workz.github.io/hkco/index.html#Technique
+###  https://d-workz.github.io/hkco/#Technique
 :Technique rdf:type owl:Class ;
            rdfs:comment "An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions."@en ;
            rdfs:label "Technique"@en .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-<http://www.w3.org/ns/dqv#hasQualityMetadata> rdfs:comment "Refers to a grouping of quality information such as certificates, policies, measurements and annotations as a named graph. Quality information represented in such a grouping can pertain to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en ;
-                                              rdfs:label "has quality metadata"@en .
-
-
-<http://www.w3.org/ns/dqv#inCategory> rdfs:comment "Represents the category a dimension is grouped in."@en ;
-                                      rdfs:label "in category"@en .
-
-
-<http://www.w3.org/ns/dqv#inDimension> rdfs:comment "Represents the dimensions a quality metric, certificate and annotation allow a measurement of."@en ;
-                                       rdfs:label "in dimension"@en .
-
-
-###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
