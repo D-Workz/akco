@@ -356,6 +356,8 @@ export class DarkModeToggle extends HTMLElement {
   }
 
   _updateMode() {
+    console.log("hallo");
+
     if (this.mode === LIGHT) {
       this._lightCSS.forEach((link) => {
         link.media = ALL;
