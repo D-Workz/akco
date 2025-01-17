@@ -309,12 +309,19 @@ export class DarkModeToggle extends HTMLElement {
   }
 
   _updateRadios() {
+    this._updateVisualization();
     if (this.mode === LIGHT) {
       this._lightRadio.checked = true;
-      this._visualization.src="HKCO_visualization_light"
     } else {
       this._darkRadio.checked = true;
-      this._visualization.src="HKCO_visualization_dark"
+    }
+  }
+
+  _updateVisualization() {
+    if (this.mode === LIGHT) {
+      this._visualization.src="HKCO_visualization_light.png";
+    } else {
+      this._visualization.src="HKCO_visualization_dark.png";
 
     }
   }
