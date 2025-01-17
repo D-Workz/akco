@@ -135,7 +135,6 @@ export class DarkModeToggle extends HTMLElement {
     this._darkCheckbox = shadowRoot.querySelector('[part=toggleCheckbox]');
     this._checkboxLabel = shadowRoot.querySelector('[part=toggleLabel]');
     this._legendLabel = shadowRoot.querySelector('legend');
-    this._visualization = shadowRoot.querySelector('visualization');
     this._permanentAside = shadowRoot.querySelector('aside');
     this._permanentCheckbox = shadowRoot.querySelector(
         '[part=permanentCheckbox]',
@@ -309,6 +308,7 @@ export class DarkModeToggle extends HTMLElement {
   }
 
   _updateRadios() {
+    this._updateVisualization();
     if (this.mode === LIGHT) {
       this._lightRadio.checked = true;
     } else {
@@ -317,11 +317,11 @@ export class DarkModeToggle extends HTMLElement {
   }
 
   _updateVisualization() {
+    const umlImage = document.getElementById('visualization');
     if (this.mode === LIGHT) {
-      this._visualization.src="HKCO_visualization_light.png";
+      umlImage.src="HKCO_visualization_light.png";
     } else {
-      this._visualization.src="HKCO_visualization_dark.png";
-
+      umlImage.src="HKCO_visualization_dark.png";
     }
   }
 
