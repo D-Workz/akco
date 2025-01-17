@@ -309,7 +309,6 @@ export class DarkModeToggle extends HTMLElement {
   }
 
   _updateRadios() {
-    this._updateVisualization();
     if (this.mode === LIGHT) {
       this._lightRadio.checked = true;
     } else {
