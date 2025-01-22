@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://d-workz.github.io/hkco#","image":"https://d-workz.github.io/hkco/resources/HKCO_visualization.png","name":"Holistic Knowledge Cleaning Ontology (HKCO)", "headline":"Document describing the ontology https://d-workz.github.io/hkco#", "dateReleased":"Thu Dec 12 19:24:42 CET 2024"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://d-workz.github.io/hkco#","image":"https://d-workz.github.io/hkco/resources/HKCO_visualization.png","name":"Holistic Knowledge Cleaning Ontology (HKCO)", "headline":"Document describing the ontology https://d-workz.github.io/hkco#", "dateReleased":"Tue Jan 21 19:23:20 CET 2025", "version":"1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "description":"The Holistic Knowledge Cleaning Ontology (HKCO) provides a structured semantic framework for selecting and applying knowledge cleaning approaches for cleaning Knowledge Graphs", "author":[{"@type":"Person","name":"Dennis Sommer"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -73,7 +73,7 @@ $(function(){
 <dt>Revision:</dt>
 <dd>1.0</dd>
 <dt>Issued on:</dt>
-<dd>17.01.2025</dd>
+<dd>21.01.2025</dd>
 <dt>Authors:</dt>
 <dd>Dennis Sommer</dd>
 
@@ -441,8 +441,8 @@ This section provides details for each class and property defined by HKCO.
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#ApplicationCondition" title="https://d-workz.github.io/hkco/#ApplicationCondition">ApplicationCondition</a></li>
   <li><a href="#ApplicationAlgorithm" title="https://d-workz.github.io/hkco/#ApplicationAlgorithm">ApplicationAlgorithm</a></li>
+    <li><a href="#ApplicationCondition" title="https://d-workz.github.io/hkco/#ApplicationCondition">ApplicationCondition</a></li>
   <li><a href="#ApplicationTask" title="https://d-workz.github.io/hkco/#ApplicationTask">ApplicationTask</a></li>
   <li><a href="#Approach" title="https://d-workz.github.io/hkco/#Approach">Approach</a></li>
   <li><a href="#BackgroundKnowledge" title="https://d-workz.github.io/hkco/#BackgroundKnowledge">BackgroundKnowledge</a></li>
@@ -452,11 +452,28 @@ This section provides details for each class and property defined by HKCO.
   <li><a href="#KnowledgeGraph" title="https://d-workz.github.io/hkco/#KnowledgeGraph">KnowledgeGraph</a></li>
   <li><a href="#Technique" title="https://d-workz.github.io/hkco/#Technique">Technique</a></li>
  </ul>
+
+
+ <div class="entity" id="ApplicationAlgorithm">
+  <h3>ApplicationAlgorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#ApplicationAlgorithm</p>
+  <div class="comment">
+   <span class="markdown">An application algorithm describes a cleaning process. This process consists of different tasks, which are part of the performsTask property- This propery relates the alogorithm to potentially multiple Applicaion tasks.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#performsTask" title="https://d-workz.github.io/hkco/#performsTask">performsTask</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="ApplicationCondition">
   <h3>ApplicationCondition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#ApplicationCondition</p>
   <div class="comment">
-   <span class="markdown">An application condition is a subclass of an application logic. It contains a condition that needs to be fulfilled for an application task to be executed.</span>
+   <span class="markdown">An application condition is a specific type of task. The computation determines a if a certain condition is met by the taskInput. Depending on the computation, different application tasks are triggered, as described by the Condition, which is related via the hasCondition property.</span>
   </div>
   <dl class="description">
    <dt>
@@ -473,26 +490,11 @@ This section provides details for each class and property defined by HKCO.
    </dd>
   </dl>
  </div>
- <div class="entity" id="ApplicationAlgorithm">
-  <h3>ApplicationAlgorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#ApplicationAlgorithm</p>
-  <div class="comment">
-   <span class="markdown">An application algorithm structures the processing of detected errors. It represents this process, using an array of application logic. The order of the elements refers to the order of their execution.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#performsTask" title="https://d-workz.github.io/hkco/#performsTask">performsTask</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="ApplicationTask">
   <h3>ApplicationTask<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#ApplicationTask</p>
   <div class="comment">
-   <span class="markdown">An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction.</span>
+   <span class="markdown">An application task has an input, defined by the taskInput property. It computes a certain output defined by the taskOutput property. The computation is typically a certain cleaning process like, fact-checking the correctness of an assertion.</span>
   </div>
   <dl class="description">
    <dt>
@@ -515,11 +517,11 @@ This section provides details for each class and property defined by HKCO.
    </dd>
   </dl>
  </div>
- <div class="entity" id="Approach">target="_blank"
+ <div class="entity" id="Approach">
   <h3>Approach<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#Approach</p>
   <div class="comment">
-   <span class="markdown">Approaches are implementations of cleaning tasks. These implementations have dimensions, i.e., characterostics and use a cleaning technique for processing the task. The approaches are described inside publications and optionally provide an implementation.</span>
+   <span class="markdown">An approach is a specific cleaning solution. It is a process that fulfills a specific application task. The solution is described by a scientific publication.</span>
   </div>
   <dl class="description">
    <dt>
@@ -534,7 +536,7 @@ This section provides details for each class and property defined by HKCO.
   <h3>BackgroundKnowledge<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#BackgroundKnowledge</p>
   <div class="comment">
-   <span class="markdown">Background Knowledge is required as a context from which a cleaning task is performed. The context is used to either determine the correctness of an assertion, i.e., for error detection, or it provides the knowledge for an correction.</span>
+   <span class="markdown">Background knowledge providest the necessary context, from which a cleaning process detects or corrects errors.</span>
   </div>
   <dl class="description">
    <dt>
@@ -547,7 +549,7 @@ This section provides details for each class and property defined by HKCO.
     has sub-classes
    </dt>
    <dd>
-    <a href="#KnowledgeGraph" title="https://d-workz.github.io/hkco/#KnowledgeGraph">KnowledgeGraph</a> <sup class="type-c" title="class">c</sup>
+    <a href="#KnowledgeGraph" title="https://d-workz.github.io/hkco/#KnowledgeGraph">KnowledgeGrpah</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -559,7 +561,7 @@ This section provides details for each class and property defined by HKCO.
     is in range of
    </dt>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://d-workz.github.io/hkco/#usesBackgroundKnowledge">usesBackgroundKnowledge</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#usesBackgroundKnowledge" title="https://d-workz.github.io/hkco/#usesBackgroundKnowledge">uses Background Knowledge</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -567,14 +569,14 @@ This section provides details for each class and property defined by HKCO.
   <h3>Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#Condition</p>
   <div class="comment">
-   <span class="markdown">A conditional logic step that guides the process, depending on the condtitions.</span>
+   <span class="markdown">A condition specifies the circumstances required to trigger an application task. It is defined by the logicCondition property and depends on the output of the application condition that utilizes the condition. The followedTask property links to the application task activated when the condition is satisfied.</span>
   </div>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#logicCondition" title="https://d-workz.github.io/hkco/#logicCondition">logicCondition</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#logicCondition" title="https://d-workz.github.io/hkco/#logicCondition">logic Condition</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -588,14 +590,14 @@ This section provides details for each class and property defined by HKCO.
   <h3>Dimension<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#Dimension</p>
   <div class="comment">
-   <span class="markdown">A dimension is a characteristic of a cleaning approach or technique. These dimension can, for example, represent if additional sources are used for processing, i.e., an external method, or if only the given knowledge graph is used, i.e., an internal method.</span>
+   <span class="markdown">A dimension is a specific characteristic of a cleaning approach or technique. All approaches or techniques that share a dimension, have a specific feature in common. This feature is the dimension. For example, internal approaches only use a given knowledge graph as background knowledge, while external approaches consult other (knowledge) sources.</span>
   </div>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#requiresQuality" title="https://d-workz.github.io/hkco/#requiresQuality">requiresQuality</a> <sup class="type-op" title="object property">op</sup>, <a href="#targetsError" title="https://d-workz.github.io/hkco/#targetsError">targetsError</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#requiresQuality" title="https://d-workz.github.io/hkco/#requiresQuality">requires Quality</a> <sup class="type-op" title="object property">op</sup>, <a href="#targetsError" title="https://d-workz.github.io/hkco/#targetsError">targets Error</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -622,15 +624,15 @@ This section provides details for each class and property defined by HKCO.
     is in range of
    </dt>
    <dd>
-    <a href="#hasError" title="https://d-workz.github.io/hkco/#hasError">hasError</a> <sup class="type-op" title="object property">op</sup>, <a href="#targetsError" title="https://d-workz.github.io/hkco/#targetsError">targetsError</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasError" title="https://d-workz.github.io/hkco/#hasError">hasError</a> <sup class="type-op" title="object property">op</sup>, <a href="#targetsError" title="https://d-workz.github.io/hkco/#targetsError">targets Error</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="KnowledgeGraph">
-  <h3>KnowledgeGraph<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <h3>KnowledgeGrpah<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#KnowledgeGraph</p>
   <div class="comment">
-   <span class="markdown">A knowledge graph is the central data structure that is processed. It is a semantic network, also known as a knowledge base. It represents any domain and structures knowledge in a machine processable manner.</span>
+   <span class="markdown">A knowledge graph is a data structure, that represents any type of domain. It structures the knowledge of the domain in a machine-processable manner. It is a semantic network, also known as a knowledge base.</span>
   </div>
   <dl class="description">
    <dt>
@@ -658,7 +660,7 @@ This section provides details for each class and property defined by HKCO.
     is in domain of
    </dt>
    <dd>
-    <a href="#hasDimension" title="https://d-workz.github.io/hkco/#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesBackgroundKnowledge" title="https://d-workz.github.io/hkco/#usesBackgroundKnowledge">usesBackgroundKnowledge</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDimension" title="https://d-workz.github.io/hkco/#hasDimension">hasDimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesBackgroundKnowledge" title="https://d-workz.github.io/hkco/#usesBackgroundKnowledge">uses Background Knowledge</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -686,7 +688,7 @@ This section provides details for each class and property defined by HKCO.
   <h3>followedTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#followedTask</p>
   <div class="comment">
-   <span class="markdown">This is the property that is executed if the condition is fullfilled.</span>
+   <span class="markdown">This is the property defines the application task that is triggered if a condition is met.</span>
   </div>
   <div class="description">
    <dl>
@@ -709,7 +711,7 @@ This section provides details for each class and property defined by HKCO.
   <h3>hasCondition<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#hasCondition</p>
   <div class="comment">
-   <span class="markdown">This property connexts the results of the performed application task, to the following processing.</span>
+   <span class="markdown">An application condition has specific conditions that are determined by the output of the computation. This property relates conditions to an application condition.</span>
   </div>
   <div class="description">
    <dl>
@@ -769,7 +771,7 @@ This section provides details for each class and property defined by HKCO.
      has domain
     </dt>
     <dd>
-     <a href="#KnowledgeGraph" title="https://d-workz.github.io/hkco/#KnowledgeGraph">KnowledgeGraph</a> <sup class="type-c" title="class">c</sup>
+     <a href="#KnowledgeGraph" title="https://d-workz.github.io/hkco/#KnowledgeGraph">KnowledgeGrpah</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -807,7 +809,7 @@ This section provides details for each class and property defined by HKCO.
   <h3>isPublished<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#isPublished</p>
   <div class="comment">
-   <span class="markdown">An approach is published inside a publication. This property defines this publication.</span>
+   <span class="markdown">An approach is published inside a publication. This property defines this publication, which is of type bibliographic resource.</span>
   </div>
   <div class="description">
    <dl>
@@ -830,7 +832,7 @@ This section provides details for each class and property defined by HKCO.
   <h3>performsTask<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#performsTask</p>
   <div class="comment">
-   <span class="markdown">An application logic esecutes or performs a specific task. This task is defined here.</span>
+   <span class="markdown">An application algorithm executes or performs cleaning tasks, these tasks are defined with this property. The motivation is to use the task order property, to define the order in which the properties are executed.</span>
   </div>
   <div class="description">
    <dl>
@@ -850,11 +852,8 @@ This section provides details for each class and property defined by HKCO.
   </div>
  </div>
  <div class="entity" id="requiresQuality">
-  <h3>requiresQuality<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <h3>requires Quality<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#requiresQuality</p>
-  <div class="comment">
-   <span class="markdown">The dimensions of approaches and techniques, determines certain characteristics of the cleaning process. This process is dependent on specific aspects of the used background knowledge or knowledge graph. These aspects are related to the quality of the used source.</span>
-  </div>
   <div class="description">
    <dl>
     <dt>
@@ -873,11 +872,8 @@ This section provides details for each class and property defined by HKCO.
   </div>
  </div>
  <div class="entity" id="targetsError">
-  <h3>targetsError<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <h3>targets Error<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#targetsError</p>
-  <div class="comment">
-   <span class="markdown">One of the dimensions of an approach or technique is the exact type of error it procecces. Therefore a dimension such as "TargetedError" could use this property, to represent this focus.</span>
-  </div>
   <div class="description">
    <dl>
     <dt>
@@ -896,11 +892,8 @@ This section provides details for each class and property defined by HKCO.
   </div>
  </div>
  <div class="entity" id="usesBackgroundKnowledge">
-  <h3>usesBackgroundKnowledge<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <h3>uses Background Knowledge<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#usesBackgroundKnowledge</p>
-  <div class="comment">
-   <span class="markdown">Any cleaning technique uses a certain type of background knowledge. It is used as a context from which the processing is performed.</span>
-  </div>
   <div class="description">
    <dl>
     <dt>
@@ -998,10 +991,10 @@ This section provides details for each class and property defined by HKCO.
   </div>
  </div>
  <div class="entity" id="logicCondition">
-  <h3>logicCondition<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>logic Condition<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://d-workz.github.io/hkco/#logicCondition</p>
   <div class="comment">
-   <span class="markdown">A logic Condition that must be fulfilled for the next logic step to be executed.</span>
+   <span class="markdown">A logic Condition that must be fulfilled for the related application task to be executed.</span>
   </div>
   <div class="description">
    <dl>
@@ -1066,12 +1059,15 @@ This section provides details for each class and property defined by HKCO.
    </dl>
   </div>
  </div>
+
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+<sup class="type-ep" title="External Properties">ep</sup>: External Properties
 </div>
 </div>
 </div>
