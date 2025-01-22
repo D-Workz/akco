@@ -1,10 +1,40 @@
 <https://d-workz.github.io/hkco/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://d-workz.github.io/hkco/> <http://purl.org/dc/elements/1.1/creator> "Dennis Sommer"@en .
+<https://d-workz.github.io/hkco/> <http://purl.org/dc/elements/1.1/source> "https://d-workz.github.io/hkco/"@en .
+<https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/issued> "17.01.2025"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
+<https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/title> "Holistic Knowledge Cleaning Ontology (HKCO)"@en .
 <https://d-workz.github.io/hkco/> <http://www.w3.org/2000/01/rdf-schema#comment> "The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.\n\nThe ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."@en .
-<https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/creator> "Dennis Sommer" .
-<https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/issued> "16.01.2025" .
-<https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/source> "https://d-workz.github.io/hkco/" .
-<https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/title> "Holistic Knowledge Cleaning Ontology (HKCO)" .
-<https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/rights> "https://creativecommons.org/licenses/by/4.0/"/" .
+<https://d-workz.github.io/hkco/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/source> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
 # 
 # 
 # #################################################################
@@ -14,19 +44,31 @@
 # #################################################################
 # 
 # 
+# http://www.w3.org/ns/dqv#hasQualityMeasurement
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#BackgroundKnowledge> .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#QualityMeasurement> .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "has quality measurement"@en .
+# 
+# http://www.w3.org/ns/dqv#isMeasurementOf
+<http://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#Metric> .
+<http://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the metric being observed."@en .
+<http://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#label> "is measurement of"@en .
 # 
 # https://d-workz.github.io/hkco/#followedTask
 <https://d-workz.github.io/hkco/#followedTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://d-workz.github.io/hkco/#followedTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#ApplicationCondition> .
 <https://d-workz.github.io/hkco/#followedTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://d-workz.github.io/hkco/#ApplicationTask> .
-<https://d-workz.github.io/hkco/#followedTask> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the property that is executed if the condition is fullfilled."@en .
+<https://d-workz.github.io/hkco/#followedTask> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the property defines the application task that is triggered if a condition is met."@en .
 <https://d-workz.github.io/hkco/#followedTask> <http://www.w3.org/2000/01/rdf-schema#label> "followedTask"@en .
 # 
 # https://d-workz.github.io/hkco/#hasCondition
 <https://d-workz.github.io/hkco/#hasCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://d-workz.github.io/hkco/#hasCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#ApplicationCondition> .
 <https://d-workz.github.io/hkco/#hasCondition> <http://www.w3.org/2000/01/rdf-schema#range> <https://d-workz.github.io/hkco/#Condition> .
-<https://d-workz.github.io/hkco/#hasCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connexts the results of the performed application task, to the following processing."@en .
+<https://d-workz.github.io/hkco/#hasCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "An application condition has specific conditions that are determined by the output of the computation. This property relates conditions to an application condition."@en .
 <https://d-workz.github.io/hkco/#hasCondition> <http://www.w3.org/2000/01/rdf-schema#label> "hasCondition"@en .
 # 
 # https://d-workz.github.io/hkco/#hasDimension
@@ -56,36 +98,30 @@
 <https://d-workz.github.io/hkco/#isPublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://d-workz.github.io/hkco/#isPublished> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#Approach> .
 <https://d-workz.github.io/hkco/#isPublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/BibliographicResource> .
-<https://d-workz.github.io/hkco/#isPublished> <http://www.w3.org/2000/01/rdf-schema#comment> "An approach is published inside a publication. This property defines this publication."@en .
+<https://d-workz.github.io/hkco/#isPublished> <http://www.w3.org/2000/01/rdf-schema#comment> "An approach is published inside a publication. This property defines this publication, which is of type bibliographic resource."@en .
 <https://d-workz.github.io/hkco/#isPublished> <http://www.w3.org/2000/01/rdf-schema#label> "isPublished"@en .
 # 
 # https://d-workz.github.io/hkco/#performsTask
 <https://d-workz.github.io/hkco/#performsTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://d-workz.github.io/hkco/#performsTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#ApplicationAlgorithm> .
 <https://d-workz.github.io/hkco/#performsTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://d-workz.github.io/hkco/#ApplicationTask> .
-<https://d-workz.github.io/hkco/#performsTask> <http://www.w3.org/2000/01/rdf-schema#comment> "An application logic esecutes or performs a specific task. This task is defined here."@en .
+<https://d-workz.github.io/hkco/#performsTask> <http://www.w3.org/2000/01/rdf-schema#comment> "An application algorithm executes or performs cleaning tasks, these tasks are defined with this property. The motivation is to use the task order property, to define the order in which the properties are executed."@en .
 <https://d-workz.github.io/hkco/#performsTask> <http://www.w3.org/2000/01/rdf-schema#label> "performsTask"@en .
 # 
 # https://d-workz.github.io/hkco/#requiresQuality
 <https://d-workz.github.io/hkco/#requiresQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://d-workz.github.io/hkco/#requiresQuality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#Dimension> .
 <https://d-workz.github.io/hkco/#requiresQuality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#QualityMeasurement> .
-<https://d-workz.github.io/hkco/#requiresQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "The dimensions of approaches and techniques, determines certain characteristics of the cleaning process. This process is dependent on specific aspects of the used background knowledge or knowledge graph. These aspects are related to the quality of the used source."@en .
-<https://d-workz.github.io/hkco/#requiresQuality> <http://www.w3.org/2000/01/rdf-schema#label> "requiresQuality"@en .
 # 
 # https://d-workz.github.io/hkco/#targetsError
 <https://d-workz.github.io/hkco/#targetsError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://d-workz.github.io/hkco/#targetsError> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#Dimension> .
 <https://d-workz.github.io/hkco/#targetsError> <http://www.w3.org/2000/01/rdf-schema#range> <https://d-workz.github.io/hkco/#Error> .
-<https://d-workz.github.io/hkco/#targetsError> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the dimensions of an approach or  technique is the exact type of error it procecces. Therefore a dimension such as \"TargetedError\" could use this property, to represent this focus."@en .
-<https://d-workz.github.io/hkco/#targetsError> <http://www.w3.org/2000/01/rdf-schema#label> "targetsError"@en .
 # 
 # https://d-workz.github.io/hkco/#usesBackgroundKnowledge
 <https://d-workz.github.io/hkco/#usesBackgroundKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://d-workz.github.io/hkco/#usesBackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#Technique> .
 <https://d-workz.github.io/hkco/#usesBackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#range> <https://d-workz.github.io/hkco/#BackgroundKnowledge> .
-<https://d-workz.github.io/hkco/#usesBackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#comment> "Any cleaning technique uses a certain type of background knowledge. It is used as a context from which the processing is performed."@en .
-<https://d-workz.github.io/hkco/#usesBackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#label> "usesBackgroundKnowledge"@en .
 # 
 # 
 # 
@@ -95,6 +131,12 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # http://www.w3.org/ns/dqv#expectedDataType
 <http://www.w3.org/ns/dqv#expectedDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -134,8 +176,7 @@
 <https://d-workz.github.io/hkco/#logicCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://d-workz.github.io/hkco/#logicCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#Condition> .
 <https://d-workz.github.io/hkco/#logicCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://d-workz.github.io/hkco/#logicCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A logic Condition that must be fulfilled for the next logic step to be executed."@en .
-<https://d-workz.github.io/hkco/#logicCondition> <http://www.w3.org/2000/01/rdf-schema#label> "logicCondition"@en .
+<https://d-workz.github.io/hkco/#logicCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A logic Condition that must be fulfilled for the related application task to be executed."@en .
 # 
 # https://d-workz.github.io/hkco/#taskInput
 <https://d-workz.github.io/hkco/#taskInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -143,6 +184,13 @@
 <https://d-workz.github.io/hkco/#taskInput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://d-workz.github.io/hkco/#taskInput> <http://www.w3.org/2000/01/rdf-schema#comment> "An application task needs to be implemented using an approach. These approaches use an input, which is this property and compute an output, based on the performed task."@en .
 <https://d-workz.github.io/hkco/#taskInput> <http://www.w3.org/2000/01/rdf-schema#label> "taskInput"@en .
+# 
+# https://d-workz.github.io/hkco/#taskOrder
+<https://d-workz.github.io/hkco/#taskOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://d-workz.github.io/hkco/#taskOrder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#ApplicationTask> .
+<https://d-workz.github.io/hkco/#taskOrder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://d-workz.github.io/hkco/#taskOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "The property that defines the order of tasks to be executed by the application algorithm."@en .
+<https://d-workz.github.io/hkco/#taskOrder> <http://www.w3.org/2000/01/rdf-schema#label> "taskOrder"@en .
 # 
 # https://d-workz.github.io/hkco/#taskOutput
 <https://d-workz.github.io/hkco/#taskOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -160,41 +208,58 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/terms/BibliographicResource
+<http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/linked-data/cube#DataSet
+<http://purl.org/linked-data/cube#DataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/dqv#Metric
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
+# 
+# http://www.w3.org/ns/dqv#QualityMeasurement
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://purl.org/vocab/vann/usageNote> "The unit of measure in quality measurement should be specified through the property sdmx-attribute:unitMeasure as recommended by RDF Data Cube. The Ontology of units of Measure (OM) by Rijgersberg Et Al provides a list of HTTP dereferenceable unit of measures, which can be exploited as values for sdmx-attribute:unitMeasure."@en .
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en .
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Measurement"@en .
+# 
 # https://d-workz.github.io/hkco/#ApplicationAlgorithm
 <https://d-workz.github.io/hkco/#ApplicationAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://d-workz.github.io/hkco/#ApplicationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "An application algorithm structures the processing of detected errors. It represents this process, using an array of application logic. The order of the elements refers to the order of their execution."@en .
+<https://d-workz.github.io/hkco/#ApplicationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "An application algorithm describes a cleaning process. This process consists of different tasks, which are part of the performsTask property- This propery relates the alogorithm to potentially multiple Applicaion tasks."@en .
 <https://d-workz.github.io/hkco/#ApplicationAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicationAlgorithm"@en .
 # 
 # https://d-workz.github.io/hkco/#ApplicationCondition
 <https://d-workz.github.io/hkco/#ApplicationCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://d-workz.github.io/hkco/#ApplicationCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://d-workz.github.io/hkco/#ApplicationTask> .
-<https://d-workz.github.io/hkco/#ApplicationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "An application condition is a subclass of an application logic. It contains a condition that needs to be fulfilled for an application task to be executed."@en .
-<https://d-workz.github.io/hkco/#ApplicationCondition> <http://www.w3.org/2000/01/rdf-schema#label> "AnnotationCondition" .
+<https://d-workz.github.io/hkco/#ApplicationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "An application condition is a specific type of task. The computation determines a if a certain condition is met by the taskInput. Depending on the computation, different application tasks are triggered, as described by the Condition, which is related via the hasCondition property."@en .
+<https://d-workz.github.io/hkco/#ApplicationCondition> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicationCondition"@en .
 # 
 # https://d-workz.github.io/hkco/#ApplicationTask
 <https://d-workz.github.io/hkco/#ApplicationTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://d-workz.github.io/hkco/#ApplicationTask> <http://www.w3.org/2000/01/rdf-schema#comment> "An application task needs to be implemented using an approach. These approaches have a certain input, output and task, for example, error detection or correction."@en .
+<https://d-workz.github.io/hkco/#ApplicationTask> <http://www.w3.org/2000/01/rdf-schema#comment> "An application task has an input, defined by the taskInput property. It computes a certain output defined by the taskOutput property. The computation is typically a certain cleaning process like, fact-checking the correctness of an assertion."@en .
 <https://d-workz.github.io/hkco/#ApplicationTask> <http://www.w3.org/2000/01/rdf-schema#label> "ApplicationTask"@en .
 # 
 # https://d-workz.github.io/hkco/#Approach
 <https://d-workz.github.io/hkco/#Approach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://d-workz.github.io/hkco/#Approach> <http://www.w3.org/2000/01/rdf-schema#comment> "Approaches are implementations of cleaning tasks. These implementations have dimensions, i.e., characterostics and use a cleaning technique for processing the task. The approaches are described inside publications and optionally provide an implementation."@en .
+<https://d-workz.github.io/hkco/#Approach> <http://www.w3.org/2000/01/rdf-schema#comment> "An approach is a specific cleaning solution. It is a process that fulfills a specific application task. The solution is described by a scientific publication."@en .
 <https://d-workz.github.io/hkco/#Approach> <http://www.w3.org/2000/01/rdf-schema#label> "Approach"@en .
 # 
 # https://d-workz.github.io/hkco/#BackgroundKnowledge
 <https://d-workz.github.io/hkco/#BackgroundKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://d-workz.github.io/hkco/#BackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DataSet> .
-<https://d-workz.github.io/hkco/#BackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#comment> "Background Knowledge is required as a context from which a cleaning task is performed. The context is used to either determine the correctness of an assertion, i.e., for error detection, or it provides the knowledge for an correction."@en .
+<https://d-workz.github.io/hkco/#BackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#comment> "Background knowledge providest the necessary context, from which a cleaning process detects or corrects errors."@en .
 <https://d-workz.github.io/hkco/#BackgroundKnowledge> <http://www.w3.org/2000/01/rdf-schema#label> "BackgroundKnowledge"@en .
 # 
 # https://d-workz.github.io/hkco/#Condition
 <https://d-workz.github.io/hkco/#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://d-workz.github.io/hkco/#Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "A conditional logic step that guides the process, depending on the condtitions."@en .
+<https://d-workz.github.io/hkco/#Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition specifies the circumstances required to trigger an application task. It is defined by the logicCondition property and depends on the output of the application condition that utilizes the condition. The followedTask property links to the application task activated when the condition is satisfied."@en .
 <https://d-workz.github.io/hkco/#Condition> <http://www.w3.org/2000/01/rdf-schema#label> "Condition"@en .
 # 
 # https://d-workz.github.io/hkco/#Dimension
 <https://d-workz.github.io/hkco/#Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://d-workz.github.io/hkco/#Dimension> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimension is a characteristic of a cleaning approach or technique. These dimension can, for example, represent if additional sources are used for processing, i.e., an external method, or if only the given knowledge graph is used, i.e., an internal method."@en .
+<https://d-workz.github.io/hkco/#Dimension> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimension is a specific characteristic of a cleaning approach or technique. All approaches or techniques that share a dimension, have a specific feature in common. This feature is the dimension. For example, internal approaches only use a given knowledge graph as background knowledge, while external approaches consult other (knowledge) sources."@en .
 <https://d-workz.github.io/hkco/#Dimension> <http://www.w3.org/2000/01/rdf-schema#label> "Dimension"@en .
 # 
 # https://d-workz.github.io/hkco/#Error
@@ -205,10 +270,14 @@
 # https://d-workz.github.io/hkco/#KnowledgeGraph
 <https://d-workz.github.io/hkco/#KnowledgeGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://d-workz.github.io/hkco/#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://d-workz.github.io/hkco/#BackgroundKnowledge> .
-<https://d-workz.github.io/hkco/#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge graph is the central data structure that is processed. It is a semantic network, also known as a knowledge base. It represents any domain and structures knowledge in a machine processable manner."@en .
-<https://d-workz.github.io/hkco/#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#label> "KnowledgeGraph"@en .
+<https://d-workz.github.io/hkco/#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge graph is a data structure, that represents any type of domain. It structures the knowledge of the domain in a machine-processable manner. It is a semantic network, also known as a knowledge base."@en .
+<https://d-workz.github.io/hkco/#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#label> "KnowledgeGrpah"@en .
 # 
 # https://d-workz.github.io/hkco/#Technique
 <https://d-workz.github.io/hkco/#Technique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://d-workz.github.io/hkco/#Technique> <http://www.w3.org/2000/01/rdf-schema#comment> "An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions."@en .
 <https://d-workz.github.io/hkco/#Technique> <http://www.w3.org/2000/01/rdf-schema#label> "Technique"@en .
+# 
+# 
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
