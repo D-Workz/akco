@@ -1,6 +1,6 @@
-# Holistic Knowledge Cleaning Ontology (HKCO)
+# Anatomy of Knowledge Cleaning Ontology (AKCO)
 
-The **Holistic Knowledge Cleaning Ontology** is a semantic framework for representing key aspects of knowledge cleaning. Its primary motivation is supporting the **selection** and **application** of knowledge cleaning approaches for cleaning a given graph. 
+The **Anatomy of Knowledge Cleaning Ontology** is a semantic framework for representing key aspects of knowledge cleaning. Its primary motivation is supporting the **selection** and **application** of knowledge cleaning approaches for cleaning a given graph. 
 
 The cleaning process involves the **detection** and **correction** of specific errors. An error is defined along its **source**, **nature** and **type**. Cleaning approaches use various **techniques** to process assertions, determine their correctness, or identify suitable corrections. Different types of background knowledge are used for this processing. This **background knowledge** serves as the context for error detection and correction. 
 
