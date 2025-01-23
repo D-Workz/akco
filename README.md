@@ -12,7 +12,7 @@ After the selection of the approaches, these need to be applied. This applicatio
 
 The ontology provides concepts and relations to support both of these tasks. In addition, it allows answering several subordinate questions, such as what type of error-specific approaches target or their dimensions. 
 
-The ontology can be found at: https://d-workz.github.io/hkco/
+The ontology can be found at: https://d-workz.github.io/akco/
 It is provided in different notations: 
 - turtle: [ontology.ttl](ontology.ttl)
 - json-LD: [ontology.jsonld](ontology.jsonld)
