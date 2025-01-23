@@ -6,56 +6,11 @@
 <https://d-workz.github.io/hkco/> <http://purl.org/dc/terms/title> "Holistic Knowledge Cleaning Ontology (HKCO)"@en .
 <https://d-workz.github.io/hkco/> <http://www.w3.org/2000/01/rdf-schema#comment> "The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.\n\nThe ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."@en .
 <https://d-workz.github.io/hkco/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
-# 
-# 
-# #################################################################
-# #
-# #    Annotation properties
-# #
-# #################################################################
-# 
-# http://purl.org/dc/elements/1.1/source
-<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-#
-# http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/bibliographicCitation
-<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
-<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-# 
-# http://purl.org/dc/terms/source
-<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/source> .
-<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
-# 
-# http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
-<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-# 
-# 
-# 
 # #################################################################
 # #
 # #    Object Properties
 # #
 # #################################################################
-# 
-# 
-# http://www.w3.org/ns/dqv#hasQualityMeasurement
-<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#BackgroundKnowledge> .
-<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#QualityMeasurement> .
-<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en .
-<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "has quality measurement"@en .
-# 
-# http://www.w3.org/ns/dqv#isMeasurementOf
-<http://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#Metric> .
-<http://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the metric being observed."@en .
-<http://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#label> "is measurement of"@en .
 # 
 # https://d-workz.github.io/hkco/#followedTask
 <https://d-workz.github.io/hkco/#followedTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -130,27 +85,7 @@
 # #    Data properties
 # #
 # #################################################################
-# 
-# 
-# http://purl.org/dc/terms/bibliographicCitation
-<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-# 
-# http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-# 
-# http://www.w3.org/ns/dqv#expectedDataType
-<http://www.w3.org/ns/dqv#expectedDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/ns/dqv#expectedDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dqv#Metric> .
-<http://www.w3.org/ns/dqv#expectedDataType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anySimpleType> .
-<http://www.w3.org/ns/dqv#expectedDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the expected data type for metric's observed value (e.g. xsd:boolean, xsd:double etc...)"@en .
-<http://www.w3.org/ns/dqv#expectedDataType> <http://www.w3.org/2000/01/rdf-schema#label> "expected data type"@en .
-# 
-# http://www.w3.org/ns/dqv#value
-<http://www.w3.org/ns/dqv#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/ns/dqv#value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dqv#QualityMeasurement> .
-<http://www.w3.org/ns/dqv#value> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to values computed by metric."@en .
-<http://www.w3.org/ns/dqv#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
-# 
+#
 # https://d-workz.github.io/hkco/#errorNature
 <https://d-workz.github.io/hkco/#errorNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://d-workz.github.io/hkco/#errorNature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://d-workz.github.io/hkco/#Error> .
@@ -207,23 +142,6 @@
 # #
 # #################################################################
 # 
-# 
-# http://purl.org/dc/terms/BibliographicResource
-<http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# http://purl.org/linked-data/cube#DataSet
-<http://purl.org/linked-data/cube#DataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# http://www.w3.org/ns/dqv#Metric
-<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en .
-<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
-# 
-# http://www.w3.org/ns/dqv#QualityMeasurement
-<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/dqv#QualityMeasurement> <http://purl.org/vocab/vann/usageNote> "The unit of measure in quality measurement should be specified through the property sdmx-attribute:unitMeasure as recommended by RDF Data Cube. The Ontology of units of Measure (OM) by Rijgersberg Et Al provides a list of HTTP dereferenceable unit of measures, which can be exploited as values for sdmx-attribute:unitMeasure."@en .
-<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en .
-<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Measurement"@en .
 # 
 # https://d-workz.github.io/hkco/#ApplicationAlgorithm
 <https://d-workz.github.io/hkco/#ApplicationAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
