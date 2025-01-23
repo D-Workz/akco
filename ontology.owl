@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://d-workz.github.io/hkco/#"
-     xml:base="https://d-workz.github.io/hkco/"
+<rdf:RDF xmlns="https://d-workz.github.io/akco/#"
+     xml:base="https://d-workz.github.io/akco/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,15 +8,13 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://d-workz.github.io/hkco/">
+    <owl:Ontology rdf:about="https://d-workz.github.io/akco/">
         <dc:creator xml:lang="en">Dennis Sommer</dc:creator>
-        <dc:source xml:lang="en">https://d-workz.github.io/hkco/</dc:source>
+        <dc:source xml:lang="en">https://d-workz.github.io/akco/</dc:source>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">17.01.2025</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
-        <terms:title xml:lang="en">Holistic Knowledge Cleaning Ontology (HKCO)</terms:title>
-        <rdfs:comment xml:lang="en">The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
-
-The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes.</rdfs:comment>
+        <terms:title xml:lang="en">Anatomy of Knowledge Cleaning Ontology (AKCO)</terms:title>
+        <rdfs:comment xml:lang="en">The anatomy of knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.\n\nThe ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm, task and condition classes.</rdfs:comment>
         <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -31,73 +29,73 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- https://d-workz.github.io/hkco/#followedTask -->
+    <!-- https://d-workz.github.io/akco/#followedTask -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#followedTask">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#ApplicationCondition"/>
-        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/#ApplicationTask"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#followedTask">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#ApplicationCondition"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/akco/#ApplicationTask"/>
         <rdfs:comment xml:lang="en">This is the property defines the application task that is triggered if a condition is met.</rdfs:comment>
         <rdfs:label xml:lang="en">followedTask</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#hasCondition -->
+    <!-- https://d-workz.github.io/akco/#hasCondition -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#hasCondition">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#ApplicationCondition"/>
-        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/#Condition"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#hasCondition">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#ApplicationCondition"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/akco/#Condition"/>
         <rdfs:comment xml:lang="en">An application condition has specific conditions that are determined by the output of the computation. This property relates conditions to an application condition.</rdfs:comment>
         <rdfs:label xml:lang="en">hasCondition</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#hasDimension -->
+    <!-- https://d-workz.github.io/akco/#hasDimension -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#hasDimension">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#ApplicationTask"/>
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Approach"/>
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Technique"/>
-        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/#Dimension"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#hasDimension">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#ApplicationTask"/>
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Approach"/>
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Technique"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/akco/#Dimension"/>
         <rdfs:comment xml:lang="en">Approaches and Techniques have different dimensions, i.e., characteristics. This property defines those dimensions.</rdfs:comment>
         <rdfs:label xml:lang="en">hasDimension</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#hasError -->
+    <!-- https://d-workz.github.io/akco/#hasError -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#hasError">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#KnowledgeGraph"/>
-        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/#Error"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#hasError">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#KnowledgeGraph"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/akco/#Error"/>
         <rdfs:comment xml:lang="en">A knowledge graph can have certain types of errors. These errors need to be targeted by the cleaning process.</rdfs:comment>
         <rdfs:label xml:lang="en">hasError</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#implements -->
+    <!-- https://d-workz.github.io/akco/#implements -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#implements">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Approach"/>
-        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/#Technique"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#implements">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Approach"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/akco/#Technique"/>
         <rdfs:comment xml:lang="en">An approaches implements specific cleaning techniques. This property defines those used/implemented techniques.</rdfs:comment>
         <rdfs:label xml:lang="en">implements</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#isPublished -->
+    <!-- https://d-workz.github.io/akco/#isPublished -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#isPublished">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Approach"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#isPublished">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Approach"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
         <rdfs:comment xml:lang="en">An approach is published inside a publication. This property defines this publication, which is of type bibliographic resource.</rdfs:comment>
         <rdfs:label xml:lang="en">isPublished</rdfs:label>
@@ -105,44 +103,44 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- https://d-workz.github.io/hkco/#performsTask -->
+    <!-- https://d-workz.github.io/akco/#performsTask -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#performsTask">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#ApplicationAlgorithm"/>
-        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/#ApplicationTask"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#performsTask">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#ApplicationAlgorithm"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/akco/#ApplicationTask"/>
         <rdfs:comment xml:lang="en">An application algorithm executes or performs cleaning tasks, these tasks are defined with this property. The motivation is to use the task order property, to define the order in which the properties are executed.</rdfs:comment>
         <rdfs:label xml:lang="en">performsTask</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#requiresQuality -->
+    <!-- https://d-workz.github.io/akco/#requiresQuality -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#requiresQuality">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Dimension"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#requiresQuality">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Dimension"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#targetsError -->
+    <!-- https://d-workz.github.io/akco/#targetsError -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#targetsError">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Dimension"/>
-        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/#Error"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#targetsError">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Dimension"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/akco/#Error"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#usesBackgroundKnowledge -->
+    <!-- https://d-workz.github.io/akco/#usesBackgroundKnowledge -->
 
 
-    <owl:ObjectProperty rdf:about="https://d-workz.github.io/hkco/#usesBackgroundKnowledge">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Technique"/>
-        <rdfs:range rdf:resource="https://d-workz.github.io/hkco/#BackgroundKnowledge"/>
+    <owl:ObjectProperty rdf:about="https://d-workz.github.io/akco/#usesBackgroundKnowledge">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Technique"/>
+        <rdfs:range rdf:resource="https://d-workz.github.io/akco/#BackgroundKnowledge"/>
     </owl:ObjectProperty>
     
 
@@ -157,11 +155,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 
 
 
-    <!-- https://d-workz.github.io/hkco/#errorNature -->
+    <!-- https://d-workz.github.io/akco/#errorNature -->
 
 
-    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/#errorNature">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Error"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/akco/#errorNature">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Error"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The nature of an error- An error can be semantic or syntatic. A semantic error causes the error source to express wrong semantics (meaning). A syntatic error causes the error source to express no or wrong semantics.</rdfs:comment>
         <rdfs:label xml:lang="en">errorNature</rdfs:label>
@@ -169,11 +167,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- https://d-workz.github.io/hkco/#errorSource -->
+    <!-- https://d-workz.github.io/akco/#errorSource -->
 
 
-    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/#errorSource">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Error"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/akco/#errorSource">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Error"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The error source, in which an error originates. It is an assertion type, for example a wrong instance or property-value assertion.</rdfs:comment>
         <rdfs:label xml:lang="en">errorSource</rdfs:label>
@@ -181,11 +179,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- https://d-workz.github.io/hkco/#errorType -->
+    <!-- https://d-workz.github.io/akco/#errorType -->
 
 
-    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/#errorType">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Error"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/akco/#errorType">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Error"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The error type is a specific error in an error source, caused by a certain type of error nature. For example, an instance assertion might have a syntatically wrong instance identifier or a syntatically wrong type name.</rdfs:comment>
         <rdfs:label xml:lang="en">errorType</rdfs:label>
@@ -193,22 +191,22 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- https://d-workz.github.io/hkco/#logicCondition -->
+    <!-- https://d-workz.github.io/akco/#logicCondition -->
 
 
-    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/#logicCondition">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#Condition"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/akco/#logicCondition">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#Condition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A logic Condition that must be fulfilled for the related application task to be executed.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#taskInput -->
+    <!-- https://d-workz.github.io/akco/#taskInput -->
 
 
-    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/#taskInput">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#ApplicationTask"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/akco/#taskInput">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#ApplicationTask"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">An application task needs to be implemented using an approach. These approaches use an input, which is this property and compute an output, based on the performed task.</rdfs:comment>
         <rdfs:label xml:lang="en">taskInput</rdfs:label>
@@ -216,11 +214,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- https://d-workz.github.io/hkco/#taskOrder -->
+    <!-- https://d-workz.github.io/akco/#taskOrder -->
 
 
-    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/#taskOrder">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#ApplicationTask"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/akco/#taskOrder">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#ApplicationTask"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">The property that defines the order of tasks to be executed by the application algorithm.</rdfs:comment>
         <rdfs:label xml:lang="en">taskOrder</rdfs:label>
@@ -228,11 +226,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- https://d-workz.github.io/hkco/#taskOutput -->
+    <!-- https://d-workz.github.io/akco/#taskOutput -->
 
 
-    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/hkco/#taskOutput">
-        <rdfs:domain rdf:resource="https://d-workz.github.io/hkco/#ApplicationTask"/>
+    <owl:DatatypeProperty rdf:about="https://d-workz.github.io/akco/#taskOutput">
+        <rdfs:domain rdf:resource="https://d-workz.github.io/akco/#ApplicationTask"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">An application task needs to be implemented using an approach. These approaches have an output, which is defined with this property. This output is based on the input and the performed task.</rdfs:comment>
         <rdfs:label xml:lang="en">taskOutput</rdfs:label>
@@ -249,51 +247,51 @@ The ontology proviedes means to select approaches for a custom cleaning process,
      -->
 
 
-    <!-- https://d-workz.github.io/hkco/#ApplicationAlgorithm -->
+    <!-- https://d-workz.github.io/akco/#ApplicationAlgorithm -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#ApplicationAlgorithm">
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#ApplicationAlgorithm">
         <rdfs:comment xml:lang="en">An application algorithm describes a cleaning process. This process consists of different tasks, which are part of the performsTask property- This propery relates the alogorithm to potentially multiple Applicaion tasks.</rdfs:comment>
         <rdfs:label xml:lang="en">ApplicationAlgorithm</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#ApplicationCondition -->
+    <!-- https://d-workz.github.io/akco/#ApplicationCondition -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#ApplicationCondition">
-        <rdfs:subClassOf rdf:resource="https://d-workz.github.io/hkco/#ApplicationTask"/>
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#ApplicationCondition">
+        <rdfs:subClassOf rdf:resource="https://d-workz.github.io/akco/#ApplicationTask"/>
         <rdfs:comment xml:lang="en">An application condition is a specific type of task. The computation determines a if a certain condition is met by the taskInput. Depending on the computation, different application tasks are triggered, as described by the Condition, which is related via the hasCondition property.</rdfs:comment>
         <rdfs:label xml:lang="en">ApplicationCondition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#ApplicationTask -->
+    <!-- https://d-workz.github.io/akco/#ApplicationTask -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#ApplicationTask">
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#ApplicationTask">
         <rdfs:comment xml:lang="en">An application task has an input, defined by the taskInput property. It computes a certain output defined by the taskOutput property. The computation is typically a certain cleaning process like, fact-checking the correctness of an assertion.</rdfs:comment>
         <rdfs:label xml:lang="en">ApplicationTask</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#Approach -->
+    <!-- https://d-workz.github.io/akco/#Approach -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#Approach">
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#Approach">
         <rdfs:comment xml:lang="en">An approach is a specific cleaning solution. It is a process that fulfills a specific application task. The solution is described by a scientific publication.</rdfs:comment>
         <rdfs:label xml:lang="en">Approach</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#BackgroundKnowledge -->
+    <!-- https://d-workz.github.io/akco/#BackgroundKnowledge -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#BackgroundKnowledge">
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#BackgroundKnowledge">
         <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
         <rdfs:comment xml:lang="en">Background knowledge providest the necessary context, from which a cleaning process detects or corrects errors.</rdfs:comment>
         <rdfs:label xml:lang="en">BackgroundKnowledge</rdfs:label>
@@ -301,51 +299,51 @@ The ontology proviedes means to select approaches for a custom cleaning process,
     
 
 
-    <!-- https://d-workz.github.io/hkco/#Condition -->
+    <!-- https://d-workz.github.io/akco/#Condition -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#Condition">
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#Condition">
         <rdfs:comment xml:lang="en">A condition specifies the circumstances required to trigger an application task. It is defined by the logicCondition property and depends on the output of the application condition that utilizes the condition. The followedTask property links to the application task activated when the condition is satisfied.</rdfs:comment>
         <rdfs:label xml:lang="en">Condition</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#Dimension -->
+    <!-- https://d-workz.github.io/akco/#Dimension -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#Dimension">
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#Dimension">
         <rdfs:comment xml:lang="en">A dimension is a specific characteristic of a cleaning approach or technique. All approaches or techniques that share a dimension, have a specific feature in common. This feature is the dimension. For example, internal approaches only use a given knowledge graph as background knowledge, while external approaches consult other (knowledge) sources.</rdfs:comment>
         <rdfs:label xml:lang="en">Dimension</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#Error -->
+    <!-- https://d-workz.github.io/akco/#Error -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#Error">
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#Error">
         <rdfs:comment xml:lang="en">An error is an assertion that is incorrect. The error source, identifies which type of assertion is wrong. Additionally, the error nature identifies if the error is semantic or syntactic. The error type is a specific error, caused by the error nature inside the error source.</rdfs:comment>
         <rdfs:label xml:lang="en">Error</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#KnowledgeGraph -->
+    <!-- https://d-workz.github.io/akco/#KnowledgeGraph -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#KnowledgeGraph">
-        <rdfs:subClassOf rdf:resource="https://d-workz.github.io/hkco/#BackgroundKnowledge"/>
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#KnowledgeGraph">
+        <rdfs:subClassOf rdf:resource="https://d-workz.github.io/akco/#BackgroundKnowledge"/>
         <rdfs:comment xml:lang="en">A knowledge graph is a data structure, that represents any type of domain. It structures the knowledge of the domain in a machine-processable manner. It is a semantic network, also known as a knowledge base.</rdfs:comment>
         <rdfs:label xml:lang="en">KnowledgeGrpah</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://d-workz.github.io/hkco/#Technique -->
+    <!-- https://d-workz.github.io/akco/#Technique -->
 
 
-    <owl:Class rdf:about="https://d-workz.github.io/hkco/#Technique">
+    <owl:Class rdf:about="https://d-workz.github.io/akco/#Technique">
         <rdfs:comment xml:lang="en">An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions.</rdfs:comment>
         <rdfs:label xml:lang="en">Technique</rdfs:label>
     </owl:Class>

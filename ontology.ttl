@@ -1,20 +1,18 @@
-@prefix : <https://d-workz.github.io/hkco/#> .
+@prefix : <https://d-workz.github.io/akco/#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://d-workz.github.io/hkco/#> .
+@base <https://d-workz.github.io/akco/#> .
 
-<https://d-workz.github.io/hkco/> rdf:type owl:Ontology ;
+<https://d-workz.github.io/akco/> rdf:type owl:Ontology ;
                                              <http://purl.org/dc/elements/1.1/creator> "Dennis Sommer"@en ;
-                                             <http://purl.org/dc/elements/1.1/source> "https://d-workz.github.io/hkco/"@en ;
+                                             <http://purl.org/dc/elements/1.1/source> "https://d-workz.github.io/akco/"@en ;
                                              <http://purl.org/dc/terms/issued> "17.01.2025"^^xsd:date ;
                                              <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
-                                             <http://purl.org/dc/terms/title> "Holistic Knowledge Cleaning Ontology (HKCO)"@en ;
-                                             rdfs:comment """The holistic knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
-
-The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."""@en ;
+                                             <http://purl.org/dc/terms/title> "Anatomy of Knowledge Cleaning Ontology (AKCO)"@en ;
+                                             rdfs:comment "The anatomy of knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.\n\nThe ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm, task and condition classes."@en ;
                                              owl:versionInfo "1.0"@en .
 
 
@@ -23,7 +21,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 #################################################################
 
 
-###  https://d-workz.github.io/hkco/#followedTask
+###  https://d-workz.github.io/akco/#followedTask
 :followedTask rdf:type owl:ObjectProperty ;
               rdfs:domain :ApplicationCondition ;
               rdfs:range :ApplicationTask ;
@@ -31,7 +29,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
               rdfs:label "followedTask"@en .
 
 
-###  https://d-workz.github.io/hkco/#hasCondition
+###  https://d-workz.github.io/akco/#hasCondition
 :hasCondition rdf:type owl:ObjectProperty ;
               rdfs:domain :ApplicationCondition ;
               rdfs:range :Condition ;
@@ -39,7 +37,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
               rdfs:label "hasCondition"@en .
 
 
-###  https://d-workz.github.io/hkco/#hasDimension
+###  https://d-workz.github.io/akco/#hasDimension
 :hasDimension rdf:type owl:ObjectProperty ;
               rdfs:domain :ApplicationTask ,
                           :Approach ,
@@ -49,7 +47,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
               rdfs:label "hasDimension"@en .
 
 
-###  https://d-workz.github.io/hkco/#hasError
+###  https://d-workz.github.io/akco/#hasError
 :hasError rdf:type owl:ObjectProperty ;
           rdfs:domain :KnowledgeGraph ;
           rdfs:range :Error ;
@@ -57,7 +55,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
           rdfs:label "hasError"@en .
 
 
-###  https://d-workz.github.io/hkco/#implements
+###  https://d-workz.github.io/akco/#implements
 :implements rdf:type owl:ObjectProperty ;
             rdfs:domain :Approach ;
             rdfs:range :Technique ;
@@ -65,7 +63,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
             rdfs:label "implements"@en .
 
 
-###  https://d-workz.github.io/hkco/#isPublished
+###  https://d-workz.github.io/akco/#isPublished
 :isPublished rdf:type owl:ObjectProperty ;
              rdfs:domain :Approach ;
              rdfs:range <http://purl.org/dc/terms/BibliographicResource> ;
@@ -73,7 +71,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
              rdfs:label "isPublished"@en .
 
 
-###  https://d-workz.github.io/hkco/#performsTask
+###  https://d-workz.github.io/akco/#performsTask
 :performsTask rdf:type owl:ObjectProperty ;
               rdfs:domain :ApplicationAlgorithm ;
               rdfs:range :ApplicationTask ;
@@ -81,19 +79,19 @@ The ontology proviedes means to select approaches for a custom cleaning process,
               rdfs:label "performsTask"@en .
 
 
-###  https://d-workz.github.io/hkco/#requiresQuality
+###  https://d-workz.github.io/akco/#requiresQuality
 :requiresQuality rdf:type owl:ObjectProperty ;
                  rdfs:domain :Dimension ;
                  rdfs:range <http://www.w3.org/ns/dqv#QualityMeasurement> .
 
 
-###  https://d-workz.github.io/hkco/#targetsError
+###  https://d-workz.github.io/akco/#targetsError
 :targetsError rdf:type owl:ObjectProperty ;
               rdfs:domain :Dimension ;
               rdfs:range :Error .
 
 
-###  https://d-workz.github.io/hkco/#usesBackgroundKnowledge
+###  https://d-workz.github.io/akco/#usesBackgroundKnowledge
 :usesBackgroundKnowledge rdf:type owl:ObjectProperty ;
                          rdfs:domain :Technique ;
                          rdfs:range :BackgroundKnowledge .
@@ -104,7 +102,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 #################################################################
 
 
-###  https://d-workz.github.io/hkco/#errorNature
+###  https://d-workz.github.io/akco/#errorNature
 :errorNature rdf:type owl:DatatypeProperty ;
              rdfs:domain :Error ;
              rdfs:range xsd:string ;
@@ -112,7 +110,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
              rdfs:label "errorNature"@en .
 
 
-###  https://d-workz.github.io/hkco/#errorSource
+###  https://d-workz.github.io/akco/#errorSource
 :errorSource rdf:type owl:DatatypeProperty ;
              rdfs:domain :Error ;
              rdfs:range xsd:string ;
@@ -120,7 +118,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
              rdfs:label "errorSource"@en .
 
 
-###  https://d-workz.github.io/hkco/#errorType
+###  https://d-workz.github.io/akco/#errorType
 :errorType rdf:type owl:DatatypeProperty ;
            rdfs:domain :Error ;
            rdfs:range xsd:string ;
@@ -128,14 +126,14 @@ The ontology proviedes means to select approaches for a custom cleaning process,
            rdfs:label "errorType"@en .
 
 
-###  https://d-workz.github.io/hkco/#logicCondition
+###  https://d-workz.github.io/akco/#logicCondition
 :logicCondition rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Condition ;
                 rdfs:range xsd:string ;
                 rdfs:comment "A logic Condition that must be fulfilled for the related application task to be executed."@en .
 
 
-###  https://d-workz.github.io/hkco/#taskInput
+###  https://d-workz.github.io/akco/#taskInput
 :taskInput rdf:type owl:DatatypeProperty ;
            rdfs:domain :ApplicationTask ;
            rdfs:range xsd:string ;
@@ -143,7 +141,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
            rdfs:label "taskInput"@en .
 
 
-###  https://d-workz.github.io/hkco/#taskOrder
+###  https://d-workz.github.io/akco/#taskOrder
 :taskOrder rdf:type owl:DatatypeProperty ;
            rdfs:domain :ApplicationTask ;
            rdfs:range xsd:integer ;
@@ -151,7 +149,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
            rdfs:label "taskOrder"@en .
 
 
-###  https://d-workz.github.io/hkco/#taskOutput
+###  https://d-workz.github.io/akco/#taskOutput
 :taskOutput rdf:type owl:DatatypeProperty ;
             rdfs:domain :ApplicationTask ;
             rdfs:range xsd:string ;
@@ -163,64 +161,64 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 #    Classes
 #################################################################
 
-###  https://d-workz.github.io/hkco/#ApplicationAlgorithm
+###  https://d-workz.github.io/akco/#ApplicationAlgorithm
 :ApplicationAlgorithm rdf:type owl:Class ;
                       rdfs:comment "An application algorithm describes a cleaning process. This process consists of different tasks, which are part of the performsTask property- This propery relates the alogorithm to potentially multiple Applicaion tasks."@en ;
                       rdfs:label "ApplicationAlgorithm"@en .
 
 
-###  https://d-workz.github.io/hkco/#ApplicationCondition
+###  https://d-workz.github.io/akco/#ApplicationCondition
 :ApplicationCondition rdf:type owl:Class ;
                       rdfs:subClassOf :ApplicationTask ;
                       rdfs:comment "An application condition is a specific type of task. The computation determines a if a certain condition is met by the taskInput. Depending on the computation, different application tasks are triggered, as described by the Condition, which is related via the hasCondition property."@en ;
                       rdfs:label "ApplicationCondition"@en .
 
 
-###  https://d-workz.github.io/hkco/#ApplicationTask
+###  https://d-workz.github.io/akco/#ApplicationTask
 :ApplicationTask rdf:type owl:Class ;
                  rdfs:comment "An application task has an input, defined by the taskInput property. It computes a certain output defined by the taskOutput property. The computation is typically a certain cleaning process like, fact-checking the correctness of an assertion."@en ;
                  rdfs:label "ApplicationTask"@en .
 
 
-###  https://d-workz.github.io/hkco/#Approach
+###  https://d-workz.github.io/akco/#Approach
 :Approach rdf:type owl:Class ;
           rdfs:comment "An approach is a specific cleaning solution. It is a process that fulfills a specific application task. The solution is described by a scientific publication."@en ;
           rdfs:label "Approach"@en .
 
 
-###  https://d-workz.github.io/hkco/#BackgroundKnowledge
+###  https://d-workz.github.io/akco/#BackgroundKnowledge
 :BackgroundKnowledge rdf:type owl:Class ;
                      rdfs:subClassOf <http://purl.org/linked-data/cube#DataSet> ;
                      rdfs:comment "Background knowledge providest the necessary context, from which a cleaning process detects or corrects errors."@en ;
                      rdfs:label "BackgroundKnowledge"@en .
 
 
-###  https://d-workz.github.io/hkco/#Condition
+###  https://d-workz.github.io/akco/#Condition
 :Condition rdf:type owl:Class ;
            rdfs:comment "A condition specifies the circumstances required to trigger an application task. It is defined by the logicCondition property and depends on the output of the application condition that utilizes the condition. The followedTask property links to the application task activated when the condition is satisfied."@en ;
            rdfs:label "Condition"@en .
 
 
-###  https://d-workz.github.io/hkco/#Dimension
+###  https://d-workz.github.io/akco/#Dimension
 :Dimension rdf:type owl:Class ;
            rdfs:comment "A dimension is a specific characteristic of a cleaning approach or technique. All approaches or techniques that share a dimension, have a specific feature in common. This feature is the dimension. For example, internal approaches only use a given knowledge graph as background knowledge, while external approaches consult other (knowledge) sources."@en ;
            rdfs:label "Dimension"@en .
 
 
-###  https://d-workz.github.io/hkco/#Error
+###  https://d-workz.github.io/akco/#Error
 :Error rdf:type owl:Class ;
        rdfs:comment "An error is an assertion that is incorrect. The error source, identifies which type of assertion is wrong. Additionally, the error nature identifies if the error is semantic or syntactic. The error type is a specific error, caused by the error nature inside the error source."@en ;
        rdfs:label "Error"@en .
 
 
-###  https://d-workz.github.io/hkco/#KnowledgeGraph
+###  https://d-workz.github.io/akco/#KnowledgeGraph
 :KnowledgeGraph rdf:type owl:Class ;
                 rdfs:subClassOf :BackgroundKnowledge ;
                 rdfs:comment "A knowledge graph is a data structure, that represents any type of domain. It structures the knowledge of the domain in a machine-processable manner. It is a semantic network, also known as a knowledge base."@en ;
                 rdfs:label "KnowledgeGrpah"@en .
 
 
-###  https://d-workz.github.io/hkco/#Technique
+###  https://d-workz.github.io/akco/#Technique
 :Technique rdf:type owl:Class ;
            rdfs:comment "An approach uses a cleaning technique to perform a cleaning task, i.e., error detection or correction. The technique uses different types of background knowledge as a context. The techniques differ in this background knowledge and how they access the background knowledge. Resulting in different dimensions."@en ;
            rdfs:label "Technique"@en .
