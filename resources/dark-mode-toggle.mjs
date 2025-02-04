@@ -319,9 +319,9 @@ export class DarkModeToggle extends HTMLElement {
   _updateVisualization() {
     const umlImage = document.getElementById('visualization');
     if (this.mode === LIGHT) {
-      umlImage.src = "resources/HKCO_visualization_light.png";
+      umlImage.src = "resources/AKCO_visualization.light.png";
     } else {
-      umlImage.src = "resources/HKCO_visualization_dark.png";
+      umlImage.src = "resources/AKCO_visualization.dark.png";
     }
   }
 
