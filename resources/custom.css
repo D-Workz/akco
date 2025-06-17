@@ -1,0 +1,68 @@
+
+#turtle-graph {
+    padding: 1em;
+    font-family: monospace;
+    font-size: 14px;
+    width: fit-content;
+}
+
+#turtle-graph .line-numbered {
+    counter-reset: line;
+}
+
+#turtle-graph .line-numbered div {
+    counter-increment: line;
+    padding-left: 3em;
+    position: relative;
+    break-inside: avoid;
+}
+
+#turtle-graph .line-numbered div::before {
+    content: counter(line);
+    position: absolute;
+    left: 0;
+    width: 2.5em;
+    text-align: right;
+}
+
+/* Prefix block: single column */
+#turtle-graph .prefix-block {
+    margin-bottom: 1em;
+}
+
+/* Main block: two columns */
+#turtle-graph .main-block {
+    column-count: 4;
+    column-gap: 0.1em;
+}
+
+#turtle-graph .caption {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    font-family: sans-serif;
+}
+.table-annotation-box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-annotation-box > div {
+    flex: 0 0 50%;          /* Fixed 50% width */
+    min-width: 0;           /* Allow content to shrink */
+    overflow-wrap: break-word; /* Wrap long content */
+    word-break: break-word;    /* Force breaking inside words if needed */
+}
+
+/* Optional: styling for code box */
+.table-annotation-box #code-box {
+    height: fit-content;
+    font-family: monospace;
+}
+
+.table-annotation-box pre {
+    margin: 0;
+}
