@@ -1,0 +1,112 @@
+
+<div>
+    <section>
+        <p>
+            Embedding and neural network-based approaches represent knowledge graphs internally using data-driven techniques. These methods are typically based on the structure of the knowledge graph and sometimes incorporate external background knowledge. By focusing on selected features, such as incoming and outgoing relations of nodes, they can scale to large graphs by reducing complexity.
+        </p>
+
+        <p>
+            Neural networks, especially feedforward architectures, provide the foundation for most models. They pass data through layers of interconnected nodes and learn by adjusting connection weights. In the context of knowledge graphs, neural models are used to process both structured and unstructured information, such as text and graph features.
+        </p>
+
+        <p>
+            For text-based representations, models like the Transformer and its specialized encoder, BERT <a href="#ref_bert">[BERT]</a>, are used. These models leverage self-attention mechanisms to understand context and semantics, enabling them to generate embeddings for textual properties such as names or descriptions.
+        </p>
+
+        <p>
+            Graph Neural Networks (GNNs) focus on learning from the structure of the graph itself. These models often integrate ideas from convolutional and recurrent networks, and some include attention mechanisms to enhance representation. The output is typically a <strong>Knowledge Graph Embedding (KGE)</strong>, where each node and relation is mapped to a low-dimensional vector space.
+        </p>
+
+        <p>
+            <strong>Figure 4</strong> illustrates an example of such embeddings, created for a small subgraph from the main knowledge graph (see Figure 1). In this 2-dimensional example, a translation-based embedding model—specifically, TransE <a href="#ref_transe">[TransE]</a>—is used. This model estimates the target entity vector as the sum of the vectors of the head entity and the relation, expressed as \( h + r \approx t \).
+        </p>
+
+        <p>
+            The examples in lines (6) and (7) of Figure 4 show this principle applied to the assertions that <code>beijing locatedIn china</code> and <code>china hasCapital beijing</code>. The vector calculations demonstrate how relational assertions can be evaluated for plausibility based on their position in the embedding space.
+        </p>
+
+        <p>
+            <strong>Figure 5</strong> expands on this by visualizing the 2D embeddings. It highlights how clusters form based on shared properties such as the <code>locatedIn</code> relation. Points (1a) to (1c) are grouped instances from the same country, while the triangles in (2) represent country embeddings. The distances between instances in (3a) to (3c) show how assertion similarity or conflict can be evaluated—e.g., <code>sydney</code> appears as an outlier in (3b) due to contradictory relations.
+        </p>
+
+        <p>
+            This embedding-based visualization helps explain how assertion errors, such as <code>sydney locatedIn unitedStates</code>, can be detected. Outliers in the embedding space can signal potential inconsistencies, enabling downstream tasks like error detection or entity prediction.
+        </p>
+
+        <p>
+            Finally, the prediction scenario illustrated in (4a) to (4c) shows how missing information—such as a <code>locatedIn</code> relation for <code>sydney</code>—can be inferred based on vector proximity. In this case, the embedding of <code>sydney</code> is closest to the cluster of Australian cities, suggesting its likely classification.
+        </p>
+
+        <p>
+            These embedding-based methods provide powerful tools for evaluating and predicting assertions in knowledge graphs. While the examples shown are simplified for interpretability, the general principle remains applicable to complex, high-dimensional data.
+        </p>
+    </section>
+
+</div>
+
+<div class="two-columns">
+    <div id="embed_vector">
+        <h5>Instances:</h5>
+        <p>
+            \[
+            \begin{align}
+            \text{china} &= \begin{bmatrix} 1.1 \\ 2.7 \end{bmatrix} &
+            \text{beijing} &= \begin{bmatrix} 1.7 \\ 3.1 \end{bmatrix} &
+            \text{shanghai} &= \begin{bmatrix} 1.6 \\ 3.3 \end{bmatrix} &
+            \text{hongkong} &= \begin{bmatrix} 1.2 \\ 3.2 \end{bmatrix} \tag{1} \\
+            \text{unitedStates} &= \begin{bmatrix} 1.5 \\ 3.5 \end{bmatrix} &
+            \text{newYork} &= \begin{bmatrix} 1.4 \\ 3.8 \end{bmatrix} &
+            \text{houston} &= \begin{bmatrix} 1.9 \\ 4.1 \end{bmatrix} &
+            \text{washington} &= \begin{bmatrix} 2.0 \\ 3.9 \end{bmatrix} \tag{2} \\
+            \text{australia} &= \begin{bmatrix} 3.3 \\ 2.8 \end{bmatrix} &
+            \text{perth} &= \begin{bmatrix} 3.3 \\ 3.3 \end{bmatrix} &
+            \text{canberra} &= \begin{bmatrix} 3.8 \\ 3.2 \end{bmatrix} &
+            \text{melbourne} &= \begin{bmatrix} 3.7 \\ 3.4 \end{bmatrix} \tag{3} \\
+            \text{sydney} &= \begin{bmatrix} 3.1 \\ 3.6 \end{bmatrix} \tag{4}
+            \end{align}
+            \]
+        </p>
+
+        <h5>Relations:</h5>
+        <p>
+            \[
+            \begin{align}
+            \text{locatedIn} &= \begin{bmatrix} -0.3 \\ -0.3 \end{bmatrix} &
+            \text{hasCapital} &= \begin{bmatrix} 0.5 \\ 0.4 \end{bmatrix} \tag{5}
+            \end{align}
+            \]
+        </p>
+
+        <h5>The embeddings, like TransE, use the function \( h + r \approx t \) for translating an instance into the embedding space.</h5>
+
+        <p>
+            \[
+            \begin{align}
+            \text{beijing} + \text{locatedIn} &\approx \text{china} \quad \Rightarrow
+            \begin{bmatrix} 1.7 \\ 3.1 \end{bmatrix} +
+            \begin{bmatrix} -0.3 \\ -0.3 \end{bmatrix} =
+            \begin{bmatrix} 1.4 \\ 2.8 \end{bmatrix}
+            \approx \begin{bmatrix} 1.1 \\ 2.7 \end{bmatrix} \tag{6} \\
+            \text{china} + \text{hasCapital} &\approx \text{beijing} \quad \Rightarrow
+            \begin{bmatrix} 1.1 \\ 2.7 \end{bmatrix} +
+            \begin{bmatrix} 0.5 \\ 0.4 \end{bmatrix} =
+            \begin{bmatrix} 1.6 \\ 3.1 \end{bmatrix}
+            \approx \begin{bmatrix} 1.7 \\ 3.1 \end{bmatrix} \tag{7}
+            \end{align}
+            \]
+        </p>
+        <p><strong>Figure 4</strong>: Exemplary two-dimensional embeddings (manually created) of part of the knowledge graph shown in Figure 1. (h = head/subject,
+            r = relation/predicate, t = tail/object)</p>
+    </div>
+    <div>
+        <div id="embed_img"></div>
+        <p><strong>Figure 5</strong>: Visualization of the embeddings from Figure 4. Each axis represents one of the dimensions.
+            (1) Instances locatedIn: (a) Australia, (b) United States, (c) China, (2) Instances of type Country, (3) Approximate distance of cities
+            locatedIn: (a) Australia, (b) United States, (c) China, (4) Approximate distance of cities locatedIn: (a) Australia, (b) United States, (c)
+            China (considering Sydney),</p>
+    </div>
+
+</div>
+
+
+

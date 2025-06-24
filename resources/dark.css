@@ -23,3 +23,83 @@
   --type-ni: #f3cdcd;
 }
 
+.question-heading, .activeB {
+  border-bottom: 2px solid #82E9F0; /* match your accent color */
+}
+
+#embed_img {
+  background-image: url("content/embedding_plot_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:900px;
+  height: 600px;
+}
+
+#fig_crowd{
+  background-image: url("content/crowdsourcing_crowd_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:150px;
+  height: 150px;
+}
+
+#fig_expert{
+  background-image: url("content/crowdsourcing_scientist_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:150px;
+  height: 150px;
+}
+
+#fig_context{
+  background-image: url("content/context_plot_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:750px;
+  height: 580px;
+}
+
+#visImage{
+  background-image: url("content/AKCO_visualization_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 1000px;
+  height: 670px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.menu-sidebar {
+  background-color: #535358;
+}
+
+.menu-sidebar li:hover {
+  background-color: gray;;
+}
+
+.menu-layout {
+  border: 1px solid white;
+}
+
+.menu-content {
+  background-color: transparent;
+}
+
+li.activeLi {
+  background-color: grey;
+}
+
+.tooltip-link:hover::after {
+  background-color: #333;
+  color: #fff;
+}

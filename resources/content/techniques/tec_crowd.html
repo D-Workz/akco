@@ -1,0 +1,104 @@
+<div>
+    <section>
+        <p>
+            Crowdsourcing-based approaches introduce human expertise into the knowledge graph cleaning process. These techniques complement automated methods by enabling tasks such as validating and correcting assertion errors, analyzing results, or even designing new cleaning strategies.
+        </p>
+
+        <p>
+            A key distinction among approaches lies in the type of crowd involved and the complexity of the assigned tasks. Some methods rely entirely on human evaluation, while others integrate human input to support semi-automatic workflows.
+        </p>
+
+        Adaptation of insights from <a href="#ref_crowd">[Acosta, et al., 2013]</a>,
+
+        <h4>Anonymous crowds (paid micro tasks)</h4>
+        <p>
+            These crowds consist of individuals without specialized knowledge. They are typically recruited through crowdsourcing platforms such as Amazon Mechanical Turk or Microworkers. Tasks assigned to anonymous crowds are usually short, simple, and independent — often referred to as paid microtasks. Such tasks include answering basic questions, validating assertions, or identifying obvious data issues.
+        </p>
+
+        <table border="1" cellspacing="0" cellpadding="6">
+            <tr>
+                <td rowspan="6">
+                    <div id="fig_crowd"></div>
+                </td>
+                <th>Composition</th>
+                <td>Anonymous individuals</td>
+            </tr>
+            <tr>
+                <th>Availability</th>
+                <td>Service platforms: Crowdsourcing marketplaces</td>
+            </tr>
+            <tr>
+                <th>Task Difficulty</th>
+                <td>Simple: Basic human abilities &amp; knowledge</td>
+            </tr>
+            <tr>
+                <th>Task Duration</th>
+                <td>Short: solvable in hours/days, atomic (i.e., no correlation to other tasks)</td>
+            </tr>
+            <tr>
+                <th>Task</th>
+                <td>
+                    Diverse micro tasks:
+                    <ul>
+                        <li>Answer basic questions</li>
+                        <li>Perform basic actions</li>
+                        <li>Analyze basic data/knowledge &amp; clean errors</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h4>Domain Experts</h4>
+        <p>
+            Domain experts are individuals with specialized expertise in relevant knowledge domains or in knowledge graph technologies. They are sourced through expert platforms or engaged via scientific challenges. Tasks for experts are more complex, potentially continuous, and require the ability to interpret domain-specific semantics, analyze graph structures, or refine knowledge models.
+        </p>
+
+        <p>
+            The distinction summarized in Figure 3 — adapted from <a href="#ref_30">[30]</a> — emphasizes how human input can be tailored to specific cleaning needs. Simpler, distributable tasks can be efficiently handled by anonymous crowds, while expert tasks benefit from focused knowledge and deeper reasoning capabilities.
+        </p>
+
+        <p>
+            While human-in-the-loop approaches provide valuable flexibility and semantic depth, they also face challenges in scalability and cost. Future research may focus on better integration of human insight into automated workflows and on tools that make this integration more efficient and user-friendly.
+        </p>
+
+        <table border="1" cellspacing="0" cellpadding="6">
+            <tr>
+                <td rowspan="6">
+                    <div id="fig_expert"></div>
+                </td>
+                <th>Composition</th>
+                <td>Specialized individuals</td>
+            </tr>
+            <tr>
+                <th>Availability</th>
+                <td>
+                    <ul>
+                        <li>Service platforms: Expertise finder</li>
+                        <li>Scientific contest</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Task Difficulty</th>
+                <td>Complex: (Domain) specific expertise &amp; knowledge</td>
+            </tr>
+            <tr>
+                <th>Task Duration</th>
+                <td>Medium to Long: solvable in days and longer, possibly continuous</td>
+            </tr>
+            <tr>
+                <th>Task</th>
+                <td>
+                    Specific tasks:
+                    <ul>
+                        <li>Analyze task/results/data &amp; draw conclusions</li>
+                        <li>Design &amp; implement solutions</li>
+                        <li>Evaluate results &amp; propose improvements</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+</div>
+

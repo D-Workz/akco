@@ -308,31 +308,10 @@ export class DarkModeToggle extends HTMLElement {
   }
 
   _updateRadios() {
- //   this._updateVisualization();
-    //this._updateGraph();
     if (this.mode === LIGHT) {
       this._lightRadio.checked = true;
     } else {
       this._darkRadio.checked = true;
-    }
-  }
-
-  _updateGraph(){
-    if (this.mode === LIGHT) {
-      document.querySelector("#turtle-graph").classList.add("light-mode");
-      document.querySelector("#turtle-graph").classList.remove("dark-mode");
-    } else {
-      document.querySelector("#turtle-graph").classList.add("dark-mode");
-      document.querySelector("#turtle-graph").classList.remove("light-mode");
-    }
-  }
-
-  _updateVisualization() {
-    const umlImage = document.getElementById('visualization');
-    if (this.mode === LIGHT) {
-      umlImage.src = "resources/AKCO_visualization.light.png";
-    } else {
-      umlImage.src = "resources/AKCO_visualization.dark.png";
     }
   }
 

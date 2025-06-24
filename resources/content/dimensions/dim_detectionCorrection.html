@@ -1,0 +1,75 @@
+<section id="error-detection-correction">
+    <p>
+        Knowledge cleaning consists of two distinct yet related tasks: <strong>error detection</strong> and <strong>error correction</strong>.
+        While correction typically requires prior detection, not all detection processes are followed by correction.
+        This section first outlines shared aspects, then highlights the specific characteristics of each task.
+    </p>
+
+    <p>
+        Approaches that support error correction usually also perform detection, but detection alone does not imply correction.
+        Multiple techniques may exist for detecting or correcting a particular error.
+        The primary distinction between them lies in the <a href="#sec_tec">cleaning technique</a> they employ and the type of
+        <a href="#sec_bgk">background knowledge</a> used as context.
+        Assertions are either compared to this context to verify their correctness or searched against it to identify appropriate corrections.
+    </p>
+
+    <h4>Error Detection</h4>
+
+    <p>
+        An error detection process may receive one or more knowledge graphs or isolated assertions as input.
+        If only assertions are provided, external background knowledge is essential; otherwise, the knowledge graph itself can serve that role.
+        The output is a set of potentially erroneous assertions, possibly accompanied by evidence supporting their classification.
+    </p>
+
+    <p>
+        To identify syntactic errors, approaches typically rely on syntax specifications.
+        For semantic errors, two strategies are commonly used: <strong>verification</strong> and <strong>validation</strong>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>Verification</strong> detects violations of formal specifications (e.g., ontologies, shape constraints) and can reveal both syntactic and semantic errors,
+            since syntactic flaws may cause semantic inconsistencies (see <a href="#errorNature">Error Nature</a>).
+        </li>
+        <li>
+            <strong>Validation</strong> checks whether an assertion semantically fits within the intended domain of discourse.
+        </li>
+    </ul>
+
+    <p>
+        Evaluating the correctness of detection results is critical for downstream processes.
+        Due to inherent complexity, detection methods may yield <strong>false negatives</strong>—valid assertions incorrectly flagged as erroneous—
+        or <strong>false positives</strong>—errors flagged due to other underlying issues.
+    </p>
+
+    <h4>Error Correction</h4>
+
+    <p>
+        Error correction operates on one or more erroneous assertions, supported by background knowledge.
+        It may follow error detection or work independently to clean errors in bulk.
+        The core goal is to identify and apply a suitable correction based on context.
+        If correction fails, alternatives such as manual intervention or deletion must be considered.
+    </p>
+
+    <p>
+        Like detection, correction is a non-trivial, error-prone process and should be validated before altering the knowledge graph.
+        Corrections themselves may introduce new inconsistencies, making knowledge cleaning an inherently <strong>iterative process</strong>.
+    </p>
+
+    <p>
+        Syntactic errors are corrected by ensuring that erroneous entities conform to the syntax rules or serialization format of the domain.
+        For semantic errors, different correction strategies are available depending on the type of violation:
+    </p>
+
+    <ul>
+        <li>Identifying entities supported by the formal specification</li>
+        <li>Modifying assertions to align with specification constraints</li>
+        <li>Correcting the semantic misrepresentation</li>
+        <li>Deleting the erroneous assertion</li>
+        <li>Extending the specification itself to accommodate the assertion</li>
+    </ul>
+
+    <p>
+        In cases where semantic errors arise from incorrect domain modeling (i.e., domain of discourse mismatch), the assertion must be updated to better reflect the intended real-world interpretation.
+    </p>
+</section>

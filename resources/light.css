@@ -22,3 +22,85 @@
   --type-dp: green;
   --type-ni: brown;
 }
+
+.question-heading, .activeB {
+  border-bottom: 2px solid #005A9C; /* match your accent color */
+}
+
+#embed_img {
+  background-image: url("content/embedding_plot_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:900px;
+  height: 600px;
+}
+
+#fig_crowd{
+  background-image: url("content/crowdsourcing_crowd_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:150px;
+  height: 150px;
+}
+
+#fig_expert{
+  background-image: url("content/crowdsourcing_scientist_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:150px;
+  height: 150px;
+}
+
+#fig_context{
+  background-image: url("content/context_plot_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:750px;
+  height: 580px;
+}
+
+#visImage{
+  background-image: url("content/AKCO_visualization_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 1000px;
+  height: 670px;
+  border-radius: 8px;
+  border: 1px solid #444;
+
+}
+
+.menu-sidebar {
+  background-color: #F4FFFF;
+}
+
+.menu-sidebar li:hover {
+  background-color: #ffa;;
+}
+
+.menu-layout {
+  border: 1px solid #444;
+}
+
+.menu-content {
+  background-color: transparent;
+}
+
+li.activeLi {
+  background-color: #ffa;
+}
+
+.tooltip-link:hover::after {
+  background-color:  #F4FFFF;
+  color: black;
+}

@@ -1,0 +1,213 @@
+<div class="two-columns">
+    <div style="max-width: 870px">
+        <section id="targeted-error">
+            <p>
+                Most knowledge graphs use three types of assertions:
+            </p>
+            <ul>
+                <li><strong>Instance assertions</strong>: define the type of an instance</li>
+                <li><strong>Property-value assertions </strong>: define the relationship between two instances (instances of classes or datatypes)</li>
+                <li><strong>Equality assertions </strong>: link two instances that describe the same object of discourse, also known as identity links</li>
+            </ul>
+
+            <p>
+                These assertions may contain <strong>syntactic</strong> or <strong>semantic</strong> errors, referred to as the <strong>error nature</strong>.
+                The <strong>error source</strong> refers to the specific type of assertion that is affected, while the <strong>error type</strong> results from combining the error source with the error nature.
+                It identifies which <strong>entity</strong> (subject, predicate, or object) in the triple is erroneous.
+            </p>
+
+            <p>
+                The erroneous entity is pinpointed through specific <strong>operands</strong>, which are defined by the associated <strong>operator</strong>.
+                For instance, the <code>isElementOf</code> predicate expresses an instantiation relationship between an instance identifier <em>i</em> and a type <em>t</em>, both of which are operands.
+            </p>
+
+            <p>
+                <a href="#ref_paulheimRefine">[Paulheim, 2017]</a> refers to the targeting of different errors as <em>targeted information</em>.
+                <a href="#fig_error_sources">Table&nbsp;1</a> presents the relevant combinations of error sources, types, and their nature as defined by <a href="#ref_fensel2020">[Fensel et al., 2020]</a>.
+            </p>
+
+
+            <h4>Syntactic Errors</h4>
+
+            <p>
+                Syntactic errors violate formal syntax specifications that govern the allowed symbols and combinations in RDF serializations.
+                These include formats such as
+                <a href="https://www.w3.org/TeamSubmission/turtle/" target="_blank" rel="noopener">Turtle</a>,
+                <a href="https://www.w3.org/TR/rdf-syntax-grammar/" target="_blank" rel="noopener">RDF/XML</a>,
+                datatypes defined by
+                <a href="https://www.w3.org/TR/xmlschema11-1/" target="_blank" rel="noopener">XML Schema (XSD)</a>,
+                and identifiers conforming to
+                <a href="https://www.w3.org/Addressing/URL/uri-spec.html" target="_blank" rel="noopener">W3C's IRI specification</a>.
+            </p>
+
+            <h4>Semantic Errors</h4>
+
+            <p>
+                Semantic errors occur when assertions violate domain semantics or formal constraints.
+                These constraints may be defined through ontologies or integrity rules, such as SHACL shapes.
+                They describe desired graph structures and valid uses of concepts and properties.
+            </p>
+
+            <p>
+                Some formal violations may appear syntactic—for instance, a typo in a type name may result in a range violation.
+                Likewise, regional spelling variations like “color” vs. “colour” may lead to invalid IRIs.
+            </p>
+
+            <p>
+                Semantic errors may also conflict with the intended domain of discourse.
+                For example, the statement “Sydney is located in the United States” may be contextually wrong depending on the graph’s intended interpretation.
+                In such cases, <a href="#sec_bgk">background knowledge</a> is required to understand the domain context and validate assertions.
+            </p>
+        </section>
+    </div>
+    <div style="min-width: 510px">
+        <figure id="fig_error_sources">
+                    <h5>Enumeration of error sources, nature and types</h5>
+
+                    <table border="1" cellspacing="0" cellpadding="5">
+                        <thead>
+                        <tr>
+                            <th rowspan="2">Error source &amp; <code>Operator</code></th>
+                            <th rowspan="2">Error Type</th>
+                            <th colspan="2">Error nature</th>
+                        </tr>
+                        <tr>
+                            <th>syn</th>
+                            <th>sem</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="group-cell" rowspan="3" data-group="grp1"><strong>wrong instance assertion</strong><br><code>isElementOf(i,t)</code></td>
+                            <td><a class="tooltip-link" href="#akco_i_not_identifier"
+                                                      data-tooltip="🔍 The identifier 'i' does not match the expected instance format.">
+                                <strong>i</strong> is not a proper instance identifier
+                            </a></td>
+                            <td>x</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 Type 't' is either misspelled or not part of the supported ontology.">
+                                    <strong>t</strong> is not an existing type name
+                            </a></td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 The assertion does not express a valid type relation within the domain context.">
+                                    The instance assertion is semantically wrong
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>x</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6"><strong>wrong property value assertion</strong><br><code>p(i<sub>1</sub>, i<sub>2</sub>)</code></td>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 Property 'p' is not defined or recognized in the supported ontology.">
+                                    <strong>p</strong> is not an existing property name
+                                </a>
+                            </td>
+                            <td>x</td>
+                            <td>x</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 The identifier 'i₁' does not conform to the expected instance format.">
+                                    <strong>i<sub>1</sub></strong> is not a proper instance identifier
+                                </a>
+                            </td>
+                            <td>x</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 Instance 'i₁' is not valid as a subject for property 'p' based on its domain specification.">
+                                    <strong>i<sub>1</sub></strong> is not in any domain of <strong>p</strong>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>x</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 The identifier 'i₂' does not conform to the expected instance format.">
+                                    <strong>i<sub>2</sub></strong> is not a proper instance identifier
+                                </a>
+                            </td>
+                            <td>x</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 Instance 'i₂' is not valid as an object for property 'p' based on its range specification.">
+                                    <strong>i<sub>2</sub></strong> is not in any range of <strong>p</strong>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>x</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 The property-value pair does not reflect a valid or meaningful relationship in the domain of discourse.">
+                                    The property value assertion is semantically wrong
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>x</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="3"><strong>wrong equality assertion</strong><br><code>isSameAs(i<sub>1</sub>, i<sub>2</sub>)</code></td>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 The identifier 'i₁' does not conform to the expected instance format.">
+                                    <strong>i<sub>1</sub></strong> is not a proper instance identifier
+                                </a>
+                            </td>
+                            <td>x</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 The identifier 'i₂' does not conform to the expected instance format.">
+                                    <strong>i<sub>2</sub></strong> is not a proper instance identifier
+                                </a>
+                            </td>
+                            <td>x</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="tooltip-link" href="#" onclick="event.preventDefault()"
+                                   data-tooltip="🔍 The assertion falsely claims that two distinct entities refer to the same real-world object.">
+                                    The identity assertion is semantically wrong
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>x</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                <figcaption>
+                    <p><strong>Table 1:</strong> Error sources and types identified by <a href="#ref_fensel2020">[Fensel et al., 2020]</a>, highlighting their error nature.
+                        (i=instance, t=type, p=property; syn=syntactic, sem=semantic)</p>                </figcaption>
+                <!-- Actual table image or HTML goes here -->
+        </figure>
+    </div>
+
+</div>

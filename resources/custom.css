@@ -45,13 +45,11 @@
 .table-annotation-box {
     display: flex;
     flex-direction: row;
-    gap: 20px;
     max-width: 100%;
     overflow-x: auto;
 }
 
 .table-annotation-box > div {
-    flex: 0 0 50%;          /* Fixed 50% width */
     min-width: 0;           /* Allow content to shrink */
     overflow-wrap: break-word; /* Wrap long content */
     word-break: break-word;    /* Force breaking inside words if needed */
@@ -61,8 +59,134 @@
 .table-annotation-box #code-box {
     height: fit-content;
     font-family: monospace;
+    width: 1000px;
+}
+
+#table-container{
+    width:550px;
 }
 
 .table-annotation-box pre {
     margin: 0;
+    white-space: pre-wrap;       /* Allow wrapping */
+    word-break: break-word;      /* Break long words */
+    overflow-wrap: break-word;   /* Extra safety */
+    max-width: 95%;             /* Prevent overflow */
+    overflow-x: auto;
+}
+
+.question-heading {
+    font-weight: 600;
+    font-size: 1.2em;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+}
+
+
+.menu-layout {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 250px;
+
+}
+
+.menu-layout.large{
+    min-height: 900px;
+}
+.menu-layout.medium{
+    min-height: 400px;
+}
+
+.menu-sidebar {
+    width: 340px;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-sidebar li {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.menu-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+#visualizationBox{
+    height: 760px;
+}
+
+.two-columns {
+    display: flex;
+    gap: 40px; /* Add controlled spacing instead of relying on flex */
+    align-items: flex-start;
+}
+
+button {
+    font-size: 1rem;        /* Increase font size (e.g., 16px) */
+    padding: 4px 8px;      /* Add inner spacing */
+    border-radius: 4px;     /* Optional: rounded corners */
+    margin: 4px;            /* Spacing between buttons */
+    cursor: pointer;
+}
+
+.technique-list {
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.technique-list li {
+    margin-bottom: 0.3rem;
+}
+
+#embed_vector{
+}
+
+#embed_img img{
+    width:900px;
+    height: auto;
+}
+
+.tooltip-link {
+    text-decoration: underline;
+    cursor: help;
+    position: relative;
+}
+
+.tooltip-link:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 100;
+    background-color: #333;
+    color: #fff;
+    padding: 0.4em 0.6em;
+    white-space: pre-line;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    max-width: 300px;
+}
+
+pre, code {
+    font-size: 1.1em !important;
+}
+
+table, #turtle-graph, .backgroundBox{
+    background-color: var(--bg-hlist);
+    border: 1px solid var(--border);
+    margin: 20px;
+    vertical-align: middle;
 }

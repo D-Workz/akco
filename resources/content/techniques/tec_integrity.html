@@ -1,0 +1,82 @@
+<p><strong>Definition of integrity constraints</strong></p>
+
+<figure id="fig_tech_integrity_constraints">
+  <pre class="backgroundBox">
+<code>@prefix sh:&lt;http://www.w3.org/ns/shacl#&gt;.
+@prefix :&lt;http://example.com/#&gt;.
+@prefix xsd:&lt;http://www.w3.org/2001/XMLSchema#&gt;.
+
+:CityConstraint
+  sh:name "Constraints for Cities" ;
+  a sh:NodeShape ;
+  sh:targetClass :City ;
+  sh:property  :CurrencyConstraint ;
+  sh:property  :PopulationPropertyConstraint .
+
+:PopulationPropertyConstraint
+  sh:name "Property population constraint" ;
+  sh:path :population ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 .
+
+:CurrencyPropertyConstraint
+  sh:name "Property officialCurrency constraint" ;
+  sh:path :officialCurrency ;
+  sh:class :Currency ;
+  sh:minCount 1 ;
+  sh:maxCount 1 .
+</code>
+  </pre>
+    <figcaption style="font-size: 0.95em; margin-top: 0.5em;">
+        <strong>Figure:</strong> SHACL-based integrity constraints expressed in Turtle syntax. The constraints target the knowledge graph in
+        <a href="#lst:sample_kg">Figure&nbsp;X</a> and nodes of type <code>City</code> (specified via <code>sh:NodeShape</code>) and their properties (via <code>sh:property</code>).
+    </figcaption>
+</figure>
+
+<figure id="fig_tech_integrity_validation">
+    <div>
+        <p><strong>(1) Range error: Not an IRI instance</strong></p>
+        <pre class="backgroundBox"><code>
+[	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+	sh:sourceShape &lt;http://example.com/#CurrencyPropertyConstraint&gt; ;
+	sh:focusNode &lt;http://example.com/#houston&gt; ;
+	sh:value "Dollar" ;
+	sh:resultPath &lt;http://example.com/#officialCurrency&gt; ;
+	sh:resultMessage "Value does not have class &lt;http://example.com/#Currency&gt;" ;
+] .
+    </code></pre>
+
+        <p><strong>(2) Range error: Wrong type of literal value</strong></p>
+        <pre class="backgroundBox"><code>
+[	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+	sh:sourceShape &lt;http://example.com/#PopulationPropertyConstraint&gt; ;
+	sh:focusNode &lt;http://example.com/#australia&gt; ;
+	sh:value "26832900y" ;
+	sh:resultPath &lt;http://example.com/#population&gt; ;
+	sh:resultMessage "Value does not have datatype xsd:integer" ;
+] .
+    </code></pre>
+
+        <p><strong>(3) Missing property</strong></p>
+        <pre class="backgroundBox"><code>
+[	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+	sh:sourceShape &lt;http://example.com/#CurrencyPropertyConstraint&gt; ;
+	sh:focusNode &lt;http://example.com/#newYork&gt; ;
+	sh:resultPath &lt;http://example.com/#officialCurrency&gt; ;
+	sh:resultMessage "Less than 1 values" ;
+] .
+    </code></pre>
+    </div>
+
+    <figcaption>
+        <strong>Figure:</strong> Verification results obtained by applying the integrity constraints
+        (<a href="#fig_tech_integrity_constraints">Figure&nbsp;X</a>) to the example knowledge graph
+        (<a href="#lst:sample_kg">Figure&nbsp;Y</a>), using <code>shacl.org/playground</code>.
+    </figcaption>
+</figure>
