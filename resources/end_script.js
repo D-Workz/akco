@@ -81,21 +81,21 @@ function showContent(key) {
     }
 }
 
-const visualizations = {
-    chowlk: `                <div class="column_one">
-                   <p>Visualization of the ontology, following the notation of the <a href="https://chowlk.linkeddata.es/notation.html" target="_blank">Chowlk Visual Notation </a> <a href="#ref_chavez">(Chávez-Feria, et al., 2021)</a>.</p>
-                   <p>The classes and properties that are from external ontologies, are highlighted with different colors.</p>
-                </div>
-                <div align="center" id="visBox" class="column_two">
-                    <div id="visImage"></div>
-                </div>`,
-    webvowl: `<iframe src="../webvowl/index.html"></iframe>`
-};
+
 
 function showContentVisualization(key) {
-    document.getElementById('visualizationBox').innerHTML = visualizations[key];
-}
+    // Hide all visualizations
+    const allVisuals = document.querySelectorAll('#visualizationBox .visualization');
+    allVisuals.forEach(div => {
+        div.style.display = 'none';
+    });
 
+    // Show the selected one
+    const selected = document.getElementById(key);
+    if (selected) {
+        selected.style.display = 'block';
+    }
+}
 
 // Formating
 
