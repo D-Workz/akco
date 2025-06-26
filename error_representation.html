@@ -1,14 +1,18 @@
-<p>
-    All error instances are modeled as instances of <code>akco:Error</code>, using three core properties:
-    (1) <a href="#errorNature">akco:errorNature</a>, (2) <code>akco:errorSource</code>, and (3) <code>akco:errorType</code>.
-    The values of these properties specify the nature, location, and classification of each error.
-</p>
+
 
 
 <div class="table-annotation-box">
     <div id="table-container">
-        <h5></h5>
-
+        <p>
+            Errors can be are modeled using <a href="#Error">akco:Error</a>.
+            A human readable description can be provided using <a href="https://www.w3.org/TR/rdf-schema/#ch_comment">rdfs:comment</a>.
+            An error is defined, by its error source, nature, and type, which can be defined using the properties:
+            <ul>
+                <li><a href="#errorSource">akco:errorSource</a></li>
+                <li><a href="#errorNature">akco:errorNature</a></li>
+                <li><a href="#errorType">akco:errorType</a></li>
+            </ul>
+        </p>
         <table id="error-table" border="1" cellspacing="0" cellpadding="5">
             <thead>
             <tr>
@@ -43,8 +47,9 @@
 
 <h5 class="question-heading">How can I represent more specific errors, like errors in tail verticals?</h5>
 
-<p>Errors are a subclass of <a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept" target="_blank">skos:concept</a> to highlight the fact that error can be relatable, for example via <a href="https://www.w3.org/TR/skos-reference/#narrower" target="_blank"> skos:narrower</a> or <a href="https://www.w3.org/TR/skos-reference/#broader" target="_blank">skos:broader</a>.
-To annotate a tail vertical, one can define a new error of type tail vertical and then relate it via skos:narrower to an existing error.
+<p><a href="#Error">akco:Error</a> are subclass of <a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept" target="_blank">skos:concept</a> to highlight the relatability of errors and their notion of being a concept within knowledge cleaning.
+    It is therefore possible to specify any type of more specific or general error class and relate them using <a href="https://www.w3.org/TR/skos-reference/#narrower" target="_blank"> skos:narrower</a> or <a href="https://www.w3.org/TR/skos-reference/#broader" target="_blank">skos:broader</a>.
+The following demonstrates the definition of an error inside a tail vertical domain. Therefore, one can define a new error of type tail vertical and then relate it via a matching skos property to an existing error.
 </p>
 
 <pre  style="width: fit-content" class="backgroundBox">

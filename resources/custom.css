@@ -44,9 +44,11 @@
 }
 .table-annotation-box {
     display: flex;
+    gap: 40px;
     flex-direction: row;
     max-width: 100%;
     overflow-x: auto;
+    min-height: 422px;
 }
 
 .table-annotation-box > div {
@@ -122,6 +124,7 @@
 .menu-content {
     flex: 1;
     padding: 1rem;
+    overflow: scroll;
 }
 
 #visualizationBox{
@@ -130,8 +133,21 @@
 
 .two-columns {
     display: flex;
-    gap: 40px; /* Add controlled spacing instead of relying on flex */
+    gap: 40px;
     align-items: flex-start;
+    flex-direction: row;
+}
+
+/* Stack the columns on smaller screens */
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+    }
+}
+
+.two-columns > div {
+    flex: 1;
+    min-width: 0;
 }
 
 button {
@@ -149,6 +165,13 @@ button {
 
 .technique-list li {
     margin-bottom: 0.3rem;
+}
+
+#fig_tech_integrity_validation{
+    padding: 2em;
+    width: 820px;
+    word-break: break-word;      /* Break long words */
+    overflow-wrap: break-word;
 }
 
 #embed_vector{
@@ -189,4 +212,72 @@ table, #turtle-graph, .backgroundBox{
     border: 1px solid var(--border);
     margin: 20px;
     vertical-align: middle;
+}
+
+.image-wrapper {
+    display: block;
+    margin: auto;
+    /* vertical centering */
+}
+
+.three-columns {
+    display: flex;
+
+}
+
+.column {
+    flex: 1;
+}
+
+.brace {
+    font-size: 80px;
+    font-family: monospace;
+    line-height: 1;
+    padding: 0 10px;
+    align-self: center;
+}
+#fig_exampleKG{
+    background-image: url("content/knowledgeGraph_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 290px;
+    height: 250px;
+}
+
+.menu-layout.large {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Sidebar */
+.menu-sidebar {
+    width: 310px;
+    transition: width 0.3s ease;
+}
+
+/* Collapse sidebar when hidden */
+.menu-hidden .menu-sidebar {
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Content stretches to fill remaining space */
+.menu-content {
+    flex: 1;
+}
+
+/* Toggle button styling */
+#menuToggle {
+    background: transparent;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+/* Shrink space when menu is hidden */
+.menu-hidden #menuToggle {
+    margin-right: 0;
 }

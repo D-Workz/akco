@@ -1,4 +1,4 @@
-function loadContent(file, cat) {
+function loadContent(file, cat, callback) {
     let displayArea;
     if(cat==="dim"){
         file = "resources/content/dimensions/"+file;
@@ -20,11 +20,27 @@ function loadContent(file, cat) {
         .then(html => {
             displayArea.innerHTML = html;
             MathJax.typesetPromise([displayArea]);
-
+            if (callback) {
+                callback(); // run the scroll after content is loaded
+            }
         })
         .catch(error => {
             document.getElementById('content-area').innerHTML = `<p>Error loading content: ${error.message}</p>`;
         });
+}
+
+function jumpToExampleKnowledgeGraph() {
+    console.log("jaa")
+    const menuItem = document.getElementById('menu_exampleKG');
+    if (!menuItem) return;
+
+    // Deselect others
+    document.querySelectorAll('.tag-list-kg li').forEach(el => el.classList.remove('activeLi'));
+    menuItem.classList.add('activeLi');
+
+    loadContent('example_kg.html', 'tec', function () {
+        menuItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
 }
 
 const representations = {
@@ -35,6 +51,27 @@ const representations = {
     knowledgeGraph: `<h5 class="question-heading">How can I represent relevant features of my knowledge graph?</h5>
                     <div id="kg-container" >Loading...</div>`
 };
+
+function toggleMenu() {
+    const wrapper = document.getElementById('menuWrapper');
+    const button = document.getElementById('menuToggle');
+
+    wrapper.classList.toggle('menu-hidden');
+
+    if (wrapper.classList.contains('menu-hidden')) {
+        button.textContent = '📂'; // menu closed
+    } else {
+        button.textContent = '📁'; // menu open
+    }
+}
+
+function showOverview (){
+    fetch('overview.html?nocache=' + new Date().getTime())
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('overviewBox').innerHTML = html;
+        });
+}
 
 function showContent(key) {
     document.getElementById('contentBox').innerHTML = representations[key];
@@ -61,9 +98,7 @@ function showContent(key) {
                     row.addEventListener('mouseenter', () => {
                         output.textContent = annotations[id] || '// No annotation';
                     });
-                    row.addEventListener('mouseleave', () => {
-                        output.textContent = '// Hover over a row to see annotation here';
-                    });
+
                 });
             });
     } else if(key==="approaches"){
@@ -146,4 +181,5 @@ window.addEventListener('load', () => {
     loadContent('dim_internalExternal.html', 'dim');
     loadContent('bgk_contextualGraphs.html', 'bgk');
     showContent('errors');
+    showOverview();
 });

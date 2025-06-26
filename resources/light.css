@@ -84,11 +84,12 @@
   background-color: #F4FFFF;
 }
 
-.menu-sidebar li:hover {
+.menu-sidebar li:hover, #exampleKGLink:hover, #menuToggle:hover {
   background-color: #ffa;;
 }
 
-.menu-layout {
+.menu-layout, #fig_tech_integrity_validation {
+
   border: 1px solid #444;
 }
 

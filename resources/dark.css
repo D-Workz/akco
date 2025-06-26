@@ -79,15 +79,17 @@
   border: 1px solid #f0f0f0;
 }
 
+
+
 .menu-sidebar {
   background-color: #535358;
 }
 
-.menu-sidebar li:hover {
+.menu-sidebar li:hover, #exampleKGLink:hover, #menuToggle:hover {
   background-color: gray;;
 }
 
-.menu-layout {
+.menu-layout, #fig_tech_integrity_validation {
   border: 1px solid white;
 }
 
