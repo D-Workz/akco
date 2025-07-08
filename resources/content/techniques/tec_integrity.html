@@ -1,13 +1,12 @@
 
+<h2>Integrity constraint-based</h2>
 <div style="min-height: 500px">
     <div>
-        <h2>Integrity Constraint-Based Approaches</h2>
-
         <p>
             Integrity constraints validate knowledge graph (KG) assertions by checking them against expected semantic and syntactic features. These features include domain and range constraints, cardinalities, and supported entity types. Constraints are typically defined manually by domain experts.
         </p>
 
-        <h3>Figure: Expressing Constraints Using SHACL</h3>
+        <h4>Figure: Expressing Constraints Using SHACL</h4>
 
         <p>
             Figure <code>tech_integrity_constraints</code> demonstrates how SHACL constraints are defined in Turtle syntax for a knowledge graph (see Figure <code>lst:sample_kg</code>). The shape <code>CityConstraint</code> targets nodes of type <code>City</code> using <code>sh:NodeShape</code> and <code>sh:targetClass</code>. It includes:
@@ -25,7 +24,7 @@
             </li>
         </ul>
 
-        <h3>Constraint Languages and Tools</h3>
+        <h4>Constraint Languages and Tools</h4>
 
         <p>
             SHACL is a prominent constraint language supported by several tools:
@@ -53,7 +52,7 @@
             <li><strong>ShEx</strong>: Focuses on human readability and compact syntax <a href="#boneva2014validating">[7]</a>, <a href="#prud2014shape">[8]</a>.</li>
         </ul>
 
-        <h3>Figure: Validation Report</h3>
+        <h4>Figure: Validation Report</h4>
 
         <p>
             Figure <code>tech_integrity_validation</code> presents the output of applying SHACL constraints (from Figure <code>tech_integrity_constraints</code>) to the knowledge graph (Figure <code>lst:sample_kg</code>) using SHACL Playground. The report includes:
@@ -67,13 +66,13 @@
 
         <p>Examples of violations include:</p>
 
-        <ul>
+        <ol class="custom-ol">
             <li>A range error due to a datatype instead of an IRI in the <code>officialCurrency</code> property.</li>
             <li>A syntactic type mismatch for the <code>population</code> property.</li>
             <li>A missing mandatory <code>officialCurrency</code> property for the node <code>newYork</code>.</li>
-        </ul>
+        </ol>
 
-        <h3>Constraint Application</h3>
+        <h4>Constraint Application</h4>
 
         <p>Constraints can be applied through different methods:</p>
 
@@ -102,7 +101,7 @@
     </div>
 
 </div>
-<h3>Example: Verification using integrity constraints</h3>
+<h4>Example: Verification using integrity constraints</h4>
 
 <div class="three-columns">
     <div class="column">
@@ -199,9 +198,13 @@
 ] .
     </code></pre>
             </div>
-
+            <figcaption>
+                <strong style="align-content: center">Figure: Validation Report</strong>
+            </figcaption>
 
         </figure>
+
+
     </div>
 </div>
 

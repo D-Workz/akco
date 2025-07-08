@@ -67,6 +67,26 @@
   height: 580px;
 }
 
+#fig_ontology{
+  background-image: url("content/ontology.light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 854px;
+  height: 700px;
+}
+
+#fig_path{
+  background-image: url("content/path_plot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 854px;
+  height: 410px;
+}
+
 #visImage{
   background-image: url("content/AKCO_visualization_light.png");
   background-size: contain;

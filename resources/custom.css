@@ -145,6 +145,24 @@
     }
 }
 
+.custom-ol {
+    list-style-type: none;
+    counter-reset: item;
+    padding-left: 1.5em; /* Indent list */
+}
+
+.custom-ol li {
+    counter-increment: item;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+.custom-ol li::before {
+    content: "(" counter(item) ") ";
+    position: absolute;
+    left: -1.5em;
+}
+
 .two-columns > div {
     flex: 1;
     min-width: 0;

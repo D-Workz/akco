@@ -59,9 +59,9 @@ function toggleMenu() {
     wrapper.classList.toggle('menu-hidden');
 
     if (wrapper.classList.contains('menu-hidden')) {
-        button.textContent = '📂'; // menu closed
+        button.textContent = '☰'; // menu closed
     } else {
-        button.textContent = '📁'; // menu open
+        button.textContent = '← Hide menu'; // menu open
     }
 }
 

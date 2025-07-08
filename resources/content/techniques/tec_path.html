@@ -1,1 +1,71 @@
-path
+<h2>Path-Based Approaches</h2>
+<div class="two-columns">
+    <div>
+        <p>
+            Path-based approaches are internal, data-driven methods that validate property-value assertions by analyzing graph structure. A <strong>path</strong> is an alternative subgraph connecting the subject and object of an assertion. These paths may be <strong>directed</strong> (following edge direction) or <strong>undirected</strong> (allowing traversal in both directions).
+        </p>
+
+        <p>
+            Directed paths typically reflect semantic relationships more accurately. Some methods use the ontology to identify <em>schema-level paths</em> based on reasoning and predicate relatedness — a metric that measures how often predicates co-occur in context <a href="#ref95">[95]</a>. Paths are evaluated by:
+        </p>
+
+        <ul>
+            <li><strong>Frequency</strong>: How often a path pattern is observed.</li>
+            <li><strong>Specificity</strong>: How narrowly a path applies, with more specific paths connecting fewer nodes and carrying more information.</li>
+        </ul>
+
+        <p>
+            Supervised learning approaches, such as <strong>PredPath</strong> and <strong>OGFC</strong>, use labeled assertions to learn discriminative or supportive path patterns:
+        </p>
+
+        <ul>
+            <li><strong>PredPath</strong>: Learns predicate-specific paths that uniquely identify a predicate's semantics <a href="#ref96">[96]</a>.</li>
+            <li><strong>OGFC</strong>: Combines pattern mining with semantic similarity from ontologies (e.g., synonyms, subclasses) to support or refute assertions <a href="#ref97">[97]</a>.</li>
+        </ul>
+
+        <p>
+            Unsupervised approaches extract paths up to a certain depth without labeled data. They rely on general structural patterns.
+        </p>
+
+        <h4>Figure: Paths Between Assertion Nodes</h4>
+
+        <p>
+            Figure 9 presents a subgraph from the example knowledge graph in Figure 1. It shows different types of paths between assertion nodes, distinguished by color:
+        </p>
+
+        <ul>
+            <li><strong>Green path:</strong> Connects <code>sydney</code> and <code>unitedStates</code> via three intermediate nodes. It is long (length 4) and unique.</li>
+            <li><strong>Blue paths:</strong> Correspond to the <code>locatedIn</code> property. One path goes through <code>aud</code>, while the other directly connects <code>australia</code> and <code>canberra</code> using the <code>hasCapital</code> property. These paths are shorter and more numerous than the green path.</li>
+            <li><strong>Orange candidate property:</strong> Has two dotted paths of length two, suggesting it might be a more likely correct assertion than the green property.</li>
+        </ul>
+
+        <p>
+            The figure demonstrates two key insights:
+        </p>
+
+        <ul>
+            <li><strong>Number of paths</strong> can indicate stronger support for an assertion <a href="#ref99">[99]</a>.</li>
+            <li><strong>Path length</strong> can suggest confidence — shorter paths typically indicate stronger support <a href="#ref100">[100]</a>.</li>
+        </ul>
+
+        <h4>Extended Path-Based Methods</h4>
+
+        <p>
+            Some methods refine the path-based validation using additional semantic cues:
+        </p>
+
+        <ul>
+            <li><strong>Relational Knowledge Linker:</strong> Introduces a path cost metric. It prefers paths that go through specific (less-connected) nodes rather than general nodes with many relations, which may be too broad to validate specific facts <a href="#ref101">[101]</a>.</li>
+            <li><strong>COPAAL:</strong> Integrates RDFS semantics such as domain and range restrictions. It also compares path directionality and concludes that <em>undirected paths outperform directed ones</em> due to their broader reach. However, this flexibility can also lead to <em>false positives</em> when validating erroneous assertions.</li>
+        </ul>
+
+        <p>
+            Overall, path-based approaches offer powerful, structure-aware mechanisms for assertion validation. Their performance depends on the number, direction, and specificity of the paths connecting assertion nodes.
+        </p>
+    </div>
+    <div>
+        <div id="fig_path"></div>
+        <p style="text-align: center"><strong>Figure: Paths Between Assertion Nodes</strong></p>
+    </div>
+
+</div>

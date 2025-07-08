@@ -1,1 +1,72 @@
-Ontology
+<h2>Ontology-based</h3>
+
+<div class="two-columns">
+    <div>
+
+        <p>
+            Ontology-based approaches use formal ontologies as background knowledge to detect and correct assertion errors in knowledge graphs. These ontologies, defined in languages like RDFS or OWL, describe the semantics of classes, properties, and their relationships. When applied systematically to a graph, this process is known as <strong>reasoning</strong>.
+        </p>
+
+        <h4>Figure: Ontology-based reasoning</h4>
+
+        <p>
+            Figure 8 illustrates a generalized workflow for reasoning-based techniques. The workflow begins with the ontology and the input assertions <strong>(1)</strong>. Reasoning can be conducted under either the open-world assumption (OWA) or the closed-world assumption (CWA):
+        </p>
+
+        <ul>
+            <li><strong>Open-world assumption (OWA):</strong> Anything not stated is considered unknown, not false. For instance, an entity can be both <code>Person</code> and <code>City</code> unless explicitly forbidden. Disjointness axioms (e.g., <code>owl:disjointWith</code>) are used to enforce contradictions.</li>
+            <li><strong>Closed-world assumption (CWA):</strong> Anything not known is assumed false. Here, ontology restrictions can be used as constraints, similar to integrity constraint checking.</li>
+        </ul>
+
+        <p>
+            If disjointness axioms are not present, they can be added via optional enrichment <strong>(2)</strong>. This can be done in two ways:
+        </p>
+
+        <ul>
+            <li><strong>Machine learning methods:</strong> These include rule mining to find disjoint class pairs or vector-space models that define disjointness based on low property similarity <a href="#ref78">[78]</a>.</li>
+            <li><strong>Ontology alignment:</strong> Enrich the ontology by aligning it with foundational ontologies like DOLCE-Zero or UMBEL <a href="#ref79">[79]</a>.</li>
+        </ul>
+
+        <p>
+            The reasoner then derives implicit knowledge from explicit assertions <strong>(3)</strong>. This process, known as <strong>closure computation</strong>, results in a graph where all entailed types and relationships are made explicit. If this process introduces contradictions, the output includes inconsistent contextual graphs. For example, if <code>sydney</code> is inferred to be both a <code>Person</code> and a <code>City</code> (which are disjoint), an inconsistency is flagged.
+        </p>
+
+        <p>
+            These inconsistencies must be analyzed to locate the actual error. Possible corrections include:
+        </p>
+
+        <ul>
+            <li>Removing or relaxing disjointness axioms</li>
+            <li>Adjusting domain/range assignments</li>
+            <li>Replacing a misused property <a href="#ref84">[84]</a></li>
+        </ul>
+
+        <p>
+            Under the <strong>closed-world assumption</strong>, violations are identified directly using ontology-based constraints <strong>(4)</strong>. In this mode, tools like Astrea can generate SHACL constraints from an ontology for validation purposes.
+        </p>
+
+        <h4>Correcting Equality Assertion Errors</h4>
+
+        <p>
+            Some ontology-based methods also address semantic errors in equality assertions. These approaches identify when equality relations like <code>owl:sameAs</code> are too strict and suggest alternative identity types based on context. Proposed solutions include:
+        </p>
+
+        <ul>
+            <li><strong>Identity Ontology (IO)</strong>: Introduces nuanced identity properties derived from SKOS axioms <a href="#ref90">[90]</a>.</li>
+            <li><strong>Identity on the Web (IOTW)</strong>: Uses context-specific sub-properties of <code>owl:sameAs</code> <a href="#ref91">[91]</a>.</li>
+            <li><strong>DECIDE</strong>: Suggests named-graph-scoped equality links for context-sensitive identity <a href="#ref92">[92]</a>.</li>
+        </ul>
+
+        <h4>Entity Correction via Ontology Matching</h4>
+
+        <p>
+            Ontology matching techniques are used to replace non-existing or misaligned entity names with suitable equivalents from related ontologies. Data-driven systems like <strong>LaKERMap</strong> and <strong>OLaLa</strong> use large language models (LLMs) for scalable alignment <a href="#ref93">[93]</a>, <a href="#ref94">[94]</a>.
+        </p>
+    </div>
+    <div>
+        <div id="fig_ontology"></div>
+        <p style="text-align: center"><strong>Figure: Ontology-based reasoning</strong></p>
+    </div>
+
+
+</div>
