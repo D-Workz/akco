@@ -1,0 +1,4485 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://purl.archive.org/akco", "http://www.w3.org/ns/dqv", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://purl.org/linked-data/cube", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "Anatomy of Knowledge Cleaning Ontology (AKCO)"
+    },
+    "iri" : "https://purl.archive.org/akco#",
+    "version" : "1.1.0",
+    "author" : [ "Dennis Sommer" ],
+    "description" : {
+      "en" : "The AKCO is an ontology for representing relevant aspects of knowledge cleaning, including approaches, techniques, background knowledge, errors, and dimensions."
+    },
+    "comments" : {
+      "en" : "The anatomy of knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.\n\nThe ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Dennis Sommer",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "28.05.2025",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "akco",
+        "type" : "label"
+      } ],
+      "language" : [ {
+        "identifier" : "language",
+        "language" : "en",
+        "value" : "English",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://purl.archive.org/akco",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Anatomy of Knowledge Cleaning Ontology (AKCO)",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/dc/terms/BibliographicResource",
+    "baseIri" : "http://purl.org/dc/terms",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2008-01-14",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BibliographicResource",
+      "en" : "Bibliographic Resource"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.archive.org/akco#publMTM",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Yu, D., Huang, H., Cassidy, T., Ji, H., Wang, C., Zhi, S., Han, J., Voss, C., & Magdon-Ismail, M. (2014). The wisdom of minority: Unsupervised slot filling validation based on multi-dimensional truth-finding. Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers, 1567–1578.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "The wisdom of minority: Unsupervised slot filling validation based on multi-dimensional truth-finding",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publMTM",
+        "en" : "publMTM"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publDojuanenbyitnaEntyuslamo",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Biswas, R., Sofronova, R., Alam, M., Heist, N., Paulheim, H., & Sack, H. (2021). Do judge an entity by its name! Entity typing using language models. European Semantic Web Conference, 65–70.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Do judge an entity by its name! Entity typing using language models",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2021",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publDojuanenbyitnaEntyuslamo",
+        "en" : "publDojuanenbyitnaEntyuslamo"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publDBOnEnfoInDe",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Töpper, G., Knuth, M., & Sack, H. (2012). DBpedia ontology enrichment for inconsistency detection. Proceedings of the 8th International Conference on Semantic Systems, 33–40.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2012",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "DBpedia Ontology Enrichment for Inconsistency Detection.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publDBOnEnfoInDe",
+        "en" : "publDBOnEnfoInDe"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publDeFacto",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Gerber, D., Esteves, D., Lehmann, J., Bühmann, L., Usbeck, R., Ngomo, A.-C. N., & Speck, R. (2015). Defacto—temporal and multilingual deep fact validation. Journal of Web Semantics, 35, 85–101.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/DeFacto/DeFacto",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "DeFacto - Temporal and multilingual Deep Fact Validation",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2015",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publDeFacto",
+        "en" : "publDeFacto"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publRDvase",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Prud’hommeaux, E. (2007). RDF validation service. W3C. https://www.w3.org/RDF/Validator/documentation",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://www.w3.org/RDF/Validator/",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "RDF validation service",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "null",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publRDvase",
+        "en" : "publRDvase"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publCorhist",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/Tpt/corhist",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Pellissier Tanon, T., Bourgaux, C., & Suchanek, F. (2019). Learning how to correct a knowledge base from the edit history. The World Wide Web Conference, 1465–1475.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Learning How to Correct a Knowledge Base from the Edit History",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publCorhist",
+        "en" : "publCorhist"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publrdfvalidator",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "http://rdfvalidator-rdfvalidation.rhcloud.com/rdfvalidator",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Hartmann, T. (2016). Validation framework for rdf-based constraint languages [Phdthesis]. Karlsruhe Institute of Technology, Germany.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Validation Framework for RDF-based Constraint Languages",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2016",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publrdfvalidator",
+        "en" : "publrdfvalidator"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publToDeSePrfoRDusSPasInLa",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Bosch, T., & Eckert, K. (2014). Towards description set profiles for RDF using SPARQL as intermediate language. International Conference on Dublin Core and Metadata Applications, 129–137.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Towards Description Set Profiles for RDF using SPARQL as Intermediate Language",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publToDeSePrfoRDusSPasInLa",
+        "en" : "publToDeSePrfoRDusSPasInLa"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publIOTW",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Beek, W., Schlobach, S., & Harmelen, F. van. (2016). A contextualised semantics for owl: sameAs. European Semantic Web Conference, 405–419.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/wouterbeek/IOTW/",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2016",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "A contextualised semantics for owl: sameAs",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publIOTW",
+        "en" : "publIOTW"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publTripleNet",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Liu, Y. (2021). Error Detection in Knowledge Graphs [Phdthesis].",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/TripleNetCodes/TripleNet",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Error Detection in Knowledge Graphs",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2021",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publTripleNet",
+        "en" : "publTripleNet"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publVGFD",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Yu, Y., & Heflin, J. (2011). Extending functional dependency to detect abnormal data in RDF graphs. International Semantic Web Conference, 794–809.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2011",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Extending functional dependency to detect abnormal data in RDF graphs",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publVGFD",
+        "en" : "publVGFD"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publJSAE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Munne, R. F., & Ichise, R. (2020). Joint entity summary and attribute embeddings for entity alignment between knowledge graphs. Hybrid Artificial Intelligent Systems: 15th International Conference, HAIS 2020, Gijón, Spain, November 11-13, 2020, Proceedings, 107–119.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2020",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Joint Entity Summary and Attribute Embeddings for Entity Alignment Between Knowledge Graphs",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publJSAE",
+        "en" : "publJSAE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publDeerinnulidauscroude",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Fleischhacker, D., Paulheim, H., Bryl, V., Völker, J., & Bizer, C. (2014). Detecting errors in numerical linked data using cross-checked outlier detection. International Semantic Web Conference, 357–372.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Detecting errors in numerical linked data using cross-checked outlier detection",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publDeerinnulidauscroude",
+        "en" : "publDeerinnulidauscroude"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publVRP",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Tolle, K. (2000). Validating RDF Parser (VRP)\\pmAnalyzing and Parsing RDF. Heraklion, April.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2000",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Validating RDF Parser (VRP) - Analyzing and Parsing RDF",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publVRP",
+        "en" : "publVRP"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publDeanCoTyErinOpKnGrUsSeReofEn",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Caminhas, D. D. (2019). Detecting and correcting typing errors in open-domain knowledge graphs using semantic representation of entities.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Detecting and Correcting Typing Errors in Open-Domain Knowledge Graphs Using Semantic Representation of Entities",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publDeanCoTyErinOpKnGrUsSeReofEn",
+        "en" : "publDeanCoTyErinOpKnGrUsSeReofEn"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publS3K",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Metzger, S., Elbassuoni, S., Hose, K., & Schenkel, R. (2011). S3K: seeking statement-supporting top-K witnesses. Proceedings of the 20th ACM International Conference on Information and Knowledge Management, 37–46.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2011",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "S3K: seeking statement-supporting top-K witnesses",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publS3K",
+        "en" : "publS3K"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publWhEvlidahewiaquthclupDB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Waitelonis, J., Ludwig, N., Knuth, M., & Sack, H. (2011). Whoknows? evaluating linked data heuristics with a quiz that cleans up dbpedia. Interactive Technology and Smart Education.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2011",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "WhoKnows? Evaluating linked data heuristics with a quiz that cleans up DBpedia",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publWhEvlidahewiaquthclupDB",
+        "en" : "publWhEvlidahewiaquthclupDB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publFACTY",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Li, F., Dong, X. L., Langen, A., & Li, Y. (2017). Knowledge verification for long-tail verticals. Proceedings of the VLDB Endowment, 10(11), 1370–1381.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Knowledge verification for long-tail verticals",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2017",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publFACTY",
+        "en" : "publFACTY"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publNotquitethesame",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "De Melo, G. (2013). Not quite the same: Identity constraints for the web of linked data. Twenty-Seventh AAAI Conference on Artificial Intelligence.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2013",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Not quite the same: Identity constraints for the web of linked data",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publNotquitethesame",
+        "en" : "publNotquitethesame"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publHMGCN",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Jin, H., Hou, L., Li, J., & Dong, T. (2019). Fine-grained entity typing via hierarchical multi graph convolutional networks. Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), 4969–4978.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/SIGKDD/HMGCN",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Fine-grained entity typing via hierarchical multi graph convolutional network",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publHMGCN",
+        "en" : "publHMGCN"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publFEA",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Pirrò, G. (2020). Fact Checking via Path Embedding and Aggregation. arXiv Preprint arXiv:2011.08028.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2020",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Fact-checking via Path Embedding and Aggregation",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publFEA",
+        "en" : "publFEA"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publDECIDE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Raad, J., Pernelle, N., & Saı̈s, F. (2017). Detection of contextual identity links in a knowledge base. Proceedings of the Knowledge Capture Conference, 1–8.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/raadjoe/DECIDE_v2",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Detection of Contextual Identity Links in a Knowledge Base",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2017",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publDECIDE",
+        "en" : "publDECIDE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publIncoinOW",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Tao, J., Sirin, E., Bao, J., & McGuinness, D. (2010). Integrity constraints in OWL. Proceedings of the AAAI Conference on Artificial Intelligence, 24(1), 1443–1448.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2010",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Integrity constraints in OWL",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publIncoinOW",
+        "en" : "publIncoinOW"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publGeneralCorrectionFramework",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Chen, J., Jiménez-Ruiz, E., Horrocks, I., Chen, X., & Myklebust, E. B. (2021). Correcting Assertions and Alignments of Large Scale Knowledge Bases.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/ChenJiaoyan/KG_Curation",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Correcting Assertions and Alignments of Large Scale Knowledge Bases",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2021",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publGeneralCorrectionFramework",
+        "en" : "publGeneralCorrectionFramework"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publBioGRER",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Zhao, S., Qin, B., Liu, T., & Wang, F. (2020). Biomedical knowledge graph refinement with embedding and logic rules. arXiv Preprint arXiv:2012.01031.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2020",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Biomedical Knowledge Graph Refinement with Embedding and Logic Rules",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publBioGRER",
+        "en" : "publBioGRER"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publKV-rule",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/machinereading/KV-rule",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Kim, J.-S., & Choi, K.-S. (2021). Fact checking in knowledge graphs by logical consistency.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Fact Checking in Knowledge Graphs by Logical Consistency",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2021",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publKV-rule",
+        "en" : "publKV-rule"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publFacTify",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "http://qweb.cs.aau.dk/factify/",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Ercan, G., Elbassuoni, S., & Hose, K. (2019). Retrieving textual evidence for knowledge graph facts. European Semantic Web Conference, 52–67.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Retrieving Textual Evidence for Knowledge Graph Facts",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publFacTify",
+        "en" : "publFacTify"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publAPE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Jin, H., Hou, L., Li, J., & Dong, T. (2018). Attributed and predictive entity embedding for fine-grained entity typing in knowledge bases. Proceedings of the 27th International Conference on Computational Linguistics, 282–292.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2018",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Attributed and predictive entity embedding for fine-grained entity typing in knowledge bases",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publAPE",
+        "en" : "publAPE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publHybridFC",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Qudus, U., Röder, M., Saleem, M., & Ngonga Ngomo, A.-C. (2022). HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs. International Semantic Web Conference, 462–480.",
+          "type" : "label"
+        }, {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Qudus, U., Röder, M., Saleem, M., &amp;amp; Ngonga Ngomo, A.-C. (2022). HybridFC: A hybrid fact-checking approach for knowledge graphs. In International Semantic Web Conference (pp. 462–480). Springer. - annotation",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/dice-group/HybridFC",
+          "type" : "label"
+        }, {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/dice-group/HybridFC - annotation",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs - datatype",
+          "type" : "label"
+        }, {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs - annotation",
+          "type" : "label"
+        }, {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2022",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publHybridFC",
+        "en" : "publHybridFC"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publTyPrfoEfCoReinHeSeGr",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Sleeman, J., & Finin, T. (2013). Type prediction for efficient coreference resolution in heterogeneous semantic graphs. 2013 IEEE Seventh International Conference on Semantic Computing, 78–85.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2013",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publTyPrfoEfCoReinHeSeGr",
+        "en" : "publTyPrfoEfCoReinHeSeGr"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publAttributE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Trisedya, B. D., Qi, J., & Zhang, R. (2019). Entity alignment between knowledge graphs using attribute embeddings. Proceedings of the AAAI Conference on Artificial Intelligence, 33(01), 297–304.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Entity alignment between knowledge graphs using attribute embedding",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publAttributE",
+        "en" : "publAttributE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publSiApCofoRDMo",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Simister, S., & Brickley, D. (2013). Simple application-specific constraints for rdf models. RDF Validation Workshop. Practical Assurances for Quality RDF Data, Cambridge, Ma, Boston.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://www.w3.org/RDF/Validator/",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Simple Application-Specific Constraints for RDF Models",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2013",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publSiApCofoRDMo",
+        "en" : "publSiApCofoRDMo"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publLODLaundromat",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/LOD-Laundromat/LOD-Laundromat",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Beek, W., Rietveld, L., Bazoobandi, H. R., Wielemaker, J., & Schlobach, S. (2014). LOD laundromat: a uniform way of publishing other people’s dirty data. International Semantic Web Conference, 213–228.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "LOD Laundromat: A Uniform Way of publishing other people’s dirty data",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publLODLaundromat",
+        "en" : "publLODLaundromat"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publRDFDoctor",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Hemid, A., Halilaj, L., Khiat, A., & Lohmann, S. (2019). RDF Doctor: A Holistic Approach for Syntax Error Detection and Correction of RDF Data. KEOD, 508–516.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/ahemaid/RDF-Doctor",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "RDF Doctor: A Holistic Approach for Syntax Error Detection and Correction of RDF Data",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publRDFDoctor",
+        "en" : "publRDFDoctor"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publKS",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/shiralkarprashant/knowledgestream",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Shiralkar, P., Flammini, A., Menczer, F., & Ciampaglia, G. L. (2017). Finding streams in knowledge graphs to support fact checking. 2017 IEEE International Conference on Data Mining (ICDM), 859–864.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Finding Streams in Knowledge Graphs to Support Fact Checking",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2017",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publKS",
+        "en" : "publKS"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publOptimalABoxRepairw.r.t.StaticELTBoxes",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Baader, F., Koopmann, P., Kriegel, F., & Nuradiansyah, A. (n.d.). Optimal ABox Repair wrt Static EL TBoxes: from Quantified ABoxes back to ABoxes.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Optimal ABox Repair w.r.t. Static EL TBoxes: from Quantified ABoxes back to ABoxes",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2022",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publOptimalABoxRepairw.r.t.StaticELTBoxes",
+        "en" : "publOptimalABoxRepairw.r.t.StaticELTBoxes"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publRUGE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Guo, S., Wang, Q., Wang, L., Wang, B., & Guo, L. (2018). Knowledge graph embedding with iterative guidance from soft rules. Proceedings of the AAAI Conference on Artificial Intelligence, 32(1).",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/iieir-km/RUGE",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Knowledge graph embedding with iterative guidance from soft rules",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2018",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publRUGE",
+        "en" : "publRUGE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publGRR",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Cheng, Y., Chen, L., Yuan, Y., & Wang, G. (2018). Rule-based graph repairing: Semantic and efficient repairing methods. 2018 IEEE 34th International Conference on Data Engineering (ICDE), 773–784.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Rule-based graph repairing: Semantic and efficient repairing methods",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2018",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publGRR",
+        "en" : "publGRR"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publDecefitogr",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Fan, W., Lu, P., Tian, C., & Zhou, J. (2019). Deducing certain fixes to graphs. Proceedings of the VLDB Endowment, 12(7), 752–765.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Deducing certain fixes to graphs",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publDecefitogr",
+        "en" : "publDecefitogr"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publValidata",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Baungard Hansen, J., Beveridge, A., Farmer, R., Gehrmann, L., Gray, A., Khutan, S., Robertson, T., Val, J., Malone, J., Stevens, R., & others. (2015). Validata: an online tool for testing RDF data conformance. Proceedings of the 8th Semantic Web Applications and Tools for Life Sciences International Conference, Cambridge UK, 1546, 157–166.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/HW-SWeL/Validata",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Validata: an online tool for testing RDF data conformance",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2015",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publValidata",
+        "en" : "publValidata"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publReRaViinDB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Lertvittayakumjorn, P., Kertkeidkachorn, N., & Ichise, R. (2017). Resolving range violations in DBpedia. Joint International Semantic Technology Conference, 121–137.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2017",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Resolving Range Violations in DBpedia",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publReRaViinDB",
+        "en" : "publReRaViinDB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publChanHaInofDB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Sheng, Z., Wang, X., Shi, H., & Feng, Z. (2012). Checking and handling inconsistency of DBpedia. International Conference on Web Information Systems and Mining, 480–488.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2012",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Checking and Handling Inconsistency of DBpedia",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publChanHaInofDB",
+        "en" : "publChanHaInofDB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publGAT",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/PetarV-/GAT",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., & Bengio, Y. (2017). Graph attention networks. arXiv Preprint arXiv:1710.10903.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2017",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Graph attention networks",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publGAT",
+        "en" : "publGAT"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publRDFUnit",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Kontokostas, D., Westphal, P., Auer, S., Hellmann, S., Lehmann, J., Cornelissen, R., & Zaveri, A. (2014). Test-driven evaluation of linked data quality. Proceedings of the 23rd International Conference on World Wide Web, 747–758.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/AKSW/RDFUnit",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Test-driven Evaluation of Linked Data Quality",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publRDFUnit",
+        "en" : "publRDFUnit"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publSDValidate",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Paulheim, H., & Bizer, C. (2014). Improving the quality of linked data using statistical distributions. International Journal on Semantic Web and Information Systems (IJSWIS), 10(2), 63–86.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/HeikoPaulheim/sd-type-validate",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Improving the Quality of Linked Data Using Statistical Distributions",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publSDValidate",
+        "en" : "publSDValidate"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publAPrInToImLiDaQuUsDiOuDe",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Debattista, J., Lange, C., & Auer, S. (2016). A preliminary investigation towards improving linked data quality using distance-based outlier detection. Joint International Semantic Technology Conference, 116–124.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2016",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "A Preliminary Investigation Towards Improving Linked Data Quality Using Distance-Based Outlier Detection",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publAPrInToImLiDaQuUsDiOuDe",
+        "en" : "publAPrInToImLiDaQuUsDiOuDe"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publDeInNuDainDB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Wienand, D., & Paulheim, H. (2014). Detecting incorrect numerical data in dbpedia. European Semantic Web Conference, 504–518.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Detecting Incorrect Numerical Data in DBpedia",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publDeInNuDainDB",
+        "en" : "publDeInNuDainDB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publPrerdemofokngrre",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Jeyaraj, M. N., Perera, S., Jayasinghe, M., & Jihan, N. (2019). Probabilistic error detection model for knowledge graph refinement. Proceedings of the International Conference on Computational Linguistics and Intelligent Text Processing (CiCLing’19).",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Probabilistic error detection model for knowledge graph refinement",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publPrerdemofokngrre",
+        "en" : "publPrerdemofokngrre"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publCoCKG",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/aolimelo/cockg",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Melo, A., & Paulheim, H. (2020). Automatic detection of relation assertion errors and induction of relation constraints. Semantic Web, 11(5), 801–830.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Automatic Detection of Relation Assertion Errors and Induction of Relation Constraints",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2020",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publCoCKG",
+        "en" : "publCoCKG"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publKD2R",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Pernelle, N., Saı̈s, F., & Symeonidou, D. (2013). An automatic key discovery approach for data linking. Journal of Web Semantics, 23, 16–30.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "An automatic key discovery approach for data linking",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2013",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publKD2R",
+        "en" : "publKD2R"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publIdwrlibedabymuoude",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Paulheim, H. (2014). Identifying wrong links between datasets by multi-dimensional outlier detection. WoDOOM, 27–38.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Identifying wrong links between datasets by multi-dimensional outlier detection",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publIdwrlibedabymuoude",
+        "en" : "publIdwrlibedabymuoude"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publLediaxwiasrumianitaptoindeoflida",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Ma, Y., Gao, H., Wu, T., & Qi, G. (2014). Learning disjointness axioms with association rule mining and its application to inconsistency detection of linked data. Chinese Semantic Web and Web Science Conference, 29–41.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Learning disjointness axioms with association rule mining and its application to inconsistency detection of linked data",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publLediaxwiasrumianitaptoindeoflida",
+        "en" : "publLediaxwiasrumianitaptoindeoflida"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publLeRiXt",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Tonon, A., Catasta, M., Demartini, G., & Cudré-Mauroux, P. (2015). Fixing the Domain and Range of Properties in Linked Data by Context Disambiguation. LDOW@ WWW, 1409.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2015",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Fixing the Domain and Range of Properties in Linked Data by Context Disambiguation.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publLeRiXt",
+        "en" : "publLeRiXt"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publFaVawiKnGrEm",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Ammar, A., & Celebi, R. (2019). Fact Validation with Knowledge Graph Embeddings. ISWC (Satellites), 125–128.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Fact Validation with Knowledge Graph Embeddings",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publFaVawiKnGrEm",
+        "en" : "publFaVawiKnGrEm"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publExfakt",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/mhmgad/ExFaKT",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Gad-Elrab, M. H., Stepanova, D., Urbani, J., & Weikum, G. (2019). Exfakt: A framework for explaining facts over knowledge graphs and text. Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining, 87–95.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Exfakt: A framework for explaining facts over knowledge graphs and text",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publExfakt",
+        "en" : "publExfakt"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publRDD-Checker",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "http://dbis.informatik.uni-freiburg.de/forschung/projekte/rdd/",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Fischer, P. M., Lausen, G., Schätzle, A., & Schmidt, M. (2015). RDF constraint checking.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2015",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "RDF Constraint Checking",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publRDD-Checker",
+        "en" : "publRDD-Checker"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publFactCheck",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Syed, Z. H., Röder, M., & Ngonga Ngomo, A.-C. (2018). Factcheck: Validating rdf triples using textual evidence. Proceedings of the 27th ACM International Conference on Information and Knowledge Management, 1599–1602.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/dice-group/FactCheck",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "FactCheck: Validating RDF Triples Using Textual Evidence",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2018",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publFactCheck",
+        "en" : "publFactCheck"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publLodeofinSastinRDda",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Papaleo, L., Pernelle, N., Saı̈s, F., & Dumont, C. (2014). Logical detection of invalid sameas statements in RDF data. International Conference on Knowledge Engineering and Knowledge Management, 373–384.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Logical detection of invalid SameAs statements in RDF data",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publLodeofinSastinRDda",
+        "en" : "publLodeofinSastinRDda"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publKGTtm",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Jia, S., Xiang, Y., Chen, X., & Wang, K. (2019). Triple trustworthiness measurement for knowledge graph. The World Wide Web Conference, 2865–2871.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Triple Trustworthiness Measurement for Knowledge Graph",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publKGTtm",
+        "en" : "publKGTtm"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publServDBpediaDOLCE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Paulheim, H., & Gangemi, A. (2015). Serving DBpedia with DOLCE–more than just adding a cherry on top. International Semantic Web Conference, 180–196.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2015",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Serving DBpedia with DOLCE – More than Just Adding A Cherry on Top",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publServDBpediaDOLCE",
+        "en" : "publServDBpediaDOLCE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publSDType",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/HeikoPaulheim/sd-type-validate",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Paulheim, H., & Bizer, C. (2013). Type inference on noisy RDF data. International Semantic Web Conference, 510–525.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Type Inference on Noisy RDF Data.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2013",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publSDType",
+        "en" : "publSDType"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publCOPAAL",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/dice-group/COPAAL",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Syed, Z. H., Röder, M., & Ngomo, A.-C. N. (2019). Unsupervised discovery of corroborative paths for fact validation. International Semantic Web Conference, 630–646.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Unsupervised Discovery of Corroborative Paths for Fact Validation",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publCOPAAL",
+        "en" : "publCOPAAL"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publVeriGraph",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/semantifyit/VeriGraph",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Fensel, D., Şimşek, U., Angele, K., Huaman, E., Kärle, E., Panasiuk, O., & Omar, H. (2020). VeriGraph: A verification framework for Knowledge Integrity [Report]. MindLab.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "VeriGraph: A verification framework for Knowledge Integrity",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2020",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publVeriGraph",
+        "en" : "publVeriGraph"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publGltyfoliinrdtrwiaptoensu",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Gunaratna, K., Thirunarayan, K., Sheth, A., & Cheng, G. (2016). Gleaning types for literals in rdf triples with application to entity summarization. European Semantic Web Conference, 85–100.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Gleaning types for literals in rdf triples with application to entity summarization",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2016",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publGltyfoliinrdtrwiaptoensu",
+        "en" : "publGltyfoliinrdtrwiaptoensu"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publSLCN",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Melo, A., Völker, J., & Paulheim, H. (2017). Type prediction in noisy RDF knowledge bases using hierarchical multilabel classification with graph and latent features. International Journal on Artificial Intelligence Tools, 26(02), 1760011.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Type Prediction in Noisy RDF Knowledge Bases using Hierarchical Multilabel Classification with Graph and Latent Features",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2017",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publSLCN",
+        "en" : "publSLCN"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publIDLabTurtleValidator",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "error-cit",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/IDLabResearch/TurtleValidator",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "IDLab Turtle Validator",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "null",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publIDLabTurtleValidator",
+        "en" : "publIDLabTurtleValidator"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publUsReofInKnBa",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Arioua, A., & Bonifati, A. (2018). User-guided repairing of inconsistent knowledge bases. EDBT 2018-21st International Conference on Extending Database Technology, 133–144.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "null",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "User-guided Repairing of Inconsistent Knowledge Bases",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publUsReofInKnBa",
+        "en" : "publUsReofInKnBa"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publWhenowl",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Halpin, H., Hayes, P. J., McCusker, J. P., McGuinness, D. L., & Thompson, H. S. (2010). When owl: sameas isn’t the same: An analysis of identity in linked data. International Semantic Web Conference, 305–320.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2010",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "When owl:sameAs Isn’t the Same: An Analysis of Identity in Linked Data",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publWhenowl",
+        "en" : "publWhenowl"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publTISCO",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Rula, A., Palmonari, M., Rubinacci, S., Ngomo, A.-C. N., Lehmann, J., Maurino, A., & Esteves, D. (2019). TISCO: Temporal scoping of facts. Journal of Web Semantics, 54, 72–86.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/anisaR",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "TISCO: Temporal Scoping of Facts",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2019",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publTISCO",
+        "en" : "publTISCO"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publCOLIBRI",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Ngonga Ngomo, A.-C., Sherif, M. A., & Lyko, K. (2014). Unsupervised link discovery through knowledge base repair. European Semantic Web Conference, 380–394.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Unsupervised Link Discovery through Knowledge Base Repair",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2014",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publCOLIBRI",
+        "en" : "publCOLIBRI"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publFachvievpa",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Fionda, V., & Pirrò, G. (2018). Fact checking via evidence patterns. Proceedings of the 27th International Joint Conference on Artificial Intelligence, 3755–3761.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Fact checking via evidence patterns",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2018",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publFachvievpa",
+        "en" : "publFachvievpa"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publADianReFrfoDLKB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Chortis, M., & Flouris, G. (2015). A diagnosis and repair framework for DL-LiteA KBs. European Semantic Web Conference, 199–214.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2015",
+          "type" : "label"
+        } ],
+        "type" : [ {
+          "identifier" : "type",
+          "language" : "undefined",
+          "value" : "http://purl.org/eprint/type/Report",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "A Diagnosis and Repair Framework for DL-LiteA KBs.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publADianReFrfoDLKB",
+        "en" : "publADianReFrfoDLKB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publLOD-Community-Detection",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/raadjoe/LOD-Community-Detection",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Raad, J., Beek, W., Harmelen, F. van, Pernelle, N., & Saı̈s, F. (2018). Detecting erroneous identity links on the web using network metrics. International Semantic Web Conference, 391–407.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Detecting Erroneous Identity Links on the Web using Network Metrics",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2018",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publLOD-Community-Detection",
+        "en" : "publLOD-Community-Detection"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publKGClean",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Ge, C., Gao, Y., Weng, H., Zhang, C., Miao, X., & Zheng, B. (2020). Kgclean: An embedding powered knowledge graph cleaning framework. arXiv Preprint arXiv:2004.14478.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/ZJU-DAILY/ZHEClean",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2020",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "KGClean:An Embedding Powered Knowledge Graph Cleaning Framework",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publKGClean",
+        "en" : "publKGClean"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publKefogr",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Fan, W., Fan, Z., Tian, C., & Dong, X. L. (2015). Keys for graphs. Proceedings of the VLDB Endowment, 8(12), 1590–1601.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2015",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Keys for graphs",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publKefogr",
+        "en" : "publKefogr"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publPredPath",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/nddsg/KGMiner",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Shi, B., & Weninger, T. (2016). Discriminative predicate path mining for fact checking in knowledge graphs. Knowledge-Based Systems, 104, 123–133.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Discriminative Predicate Path Mining for Fact Checking in Knowledge Graphs",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2016",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publPredPath",
+        "en" : "publPredPath"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publCEDAL",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Valdestilhas, A., Soru, T., & Ngomo, A.-C. N. (2017). Cedal: time-efficient detection of erroneous links in large-scale link repositories. Proceedings of the International Conference on Web Intelligence, 106–113.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/firmao/CEDAL",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2017",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "CEDAL: Time-Efficient Detection of Erroneous Links in Large-Scale Link Repositories",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publCEDAL",
+        "en" : "publCEDAL"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publIO",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "http://purl.org/twc/ontologies/identity.owl",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "McCusker, J. P., & McGuinness, D. L. (2010). Towards Identity in Linked Data. OWLED.",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Towards identity in linked data",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2010",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publIO",
+        "en" : "publIO"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publOGFC",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Lin, P., Song, Q., & Wu, Y. (2018). Fact checking in knowledge graphs with ontological subgraph patterns. Data Science and Engineering, 3(4), 341–358.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Fact Checking in Knowledge Graphs with Ontological Subgraph Patterns",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2018",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publOGFC",
+        "en" : "publOGFC"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publValidatrr",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/IDLabResearch/validatrr",
+          "type" : "label"
+        } ],
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "De Meester, B., Heyvaert, P., Arndt, D., Dimou, A., & Verborgh, R. (2021). RDF graph validation using rule-based reasoning. Semantic Web, 12(1), 117–142.",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "2021",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "RDF Graph Validation Using Rule-Based Reasoning",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publValidatrr",
+        "en" : "publValidatrr"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#publTypingErrorsinFactualKnowledgeGraphs",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "bibliographicCitation" : [ {
+          "identifier" : "bibliographicCitation",
+          "language" : "en",
+          "value" : "Yao, P., & Barbosa, D. (2021). Typing errors in factual knowledge graphs: Severity and possible ways out. Proceedings of the Web Conference 2021, 3305–3313.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "en",
+          "value" : "https://github.com/U-Alberta/KG-Type-Correction",
+          "type" : "label"
+        } ],
+        "issued" : [ {
+          "identifier" : "issued",
+          "language" : "undefined",
+          "value" : "null",
+          "type" : "label"
+        } ],
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Typing Errors in Factual Knowledge Graphs: Severity and Possible Ways Out",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "publTypingErrorsinFactualKnowledgeGraphs",
+        "en" : "publTypingErrorsinFactualKnowledgeGraphs"
+      }
+    } ],
+    "comment" : {
+      "en" : "A book, article, or other documentary resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://purl.archive.org/akco#BackgroundKnowledge",
+    "baseIri" : "https://purl.archive.org/akco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BackgroundKnowledge",
+      "en" : "BackgroundKnowledge"
+    },
+    "subClasses" : [ "5", "6" ],
+    "comment" : {
+      "en" : "Background knowledge provides the necessary context for a cleaning technique to detect or correct errors."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "https://purl.archive.org/akco#Technique",
+    "baseIri" : "https://purl.archive.org/akco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Technique",
+      "en" : "Technique"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Embedding- and neural network-based techniques use supervised machine-learning, involving a training phase and an inference phase. In the training phase, a curated dataset is used to train a model for a specific cleaning task, i.e., error detection or correction of a specific type of error. During inference, the trained model is applied to unseen data to perform the trained task. Neural networks that process knowledge graphs embed the graph into a lower-dimensional vector space, also known as knowledge graph embeddings. This embedding process is based on selected features—for example, a node’s incoming and outgoing relationships as in TransE. The technique allows to target any type of assertion, i.e., instance -, property-value -, and equality assertion."
+      },
+      "labels" : {
+        "IRI-based" : "tecEmbeddingAndNeuralNetwork-based",
+        "en" : "tecEmbeddingAndNeuralNetwork-based"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecStatistical",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Statistical techniques address both instance and property-value assertions by leveraging a statistical context derived from the knowledge graph. This context may include other property-value assertions or the incoming and outgoing relations of a node. By comparing observed data to expected statistical patterns, outliers—unexpected deviations from the context—can be identified and flagged as potential errors."
+      },
+      "labels" : {
+        "IRI-based" : "tecStatistical",
+        "en" : "tecStatistical"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecOntology-based",
+      "baseIri" : "https://purl.archive.org/akco",
+      "annotations" : {
+        "backwardCompatibleWith" : [ {
+          "identifier" : "backwardCompatibleWith",
+          "language" : "en",
+          "value" : "Ontology-based techniques use an ontology that describes assertions in order to detect and correct errors. Error detection typically involves reasoning over the ontology and the associated assertions. To identify inconsistencies, the ontology must include &amp;apos;negative inclusions&amp;apos; (disjoint axioms) that specify which entities or classes cannot co-occur—for example, the classes Human and Boat are usually mutually exclusive, so no individual should be assigned both types. When correcting errors in equality assertions, new or more appropriate relations may be introduced into the ontology if two instances are not semantically identical. This technique allows to target any type of assertion, i.e., instance -, property-value -, and equality assertion.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "tecOntology-based",
+        "en" : "tecOntology-based"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecCrowdsourcing-based",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Crowdsourcing-based techniques incorporate human interaction into the knowledge-cleaning process. A crowd can be engaged to detect and correct errors, leveraging either (1) domain experts or (2) anonymous contributors. Domain experts are capable of setting up and maintaining the cleaning process as well as handling complex, domain-specific issues. Anonymous crowds, on the other hand, excel at completing simpler, more generalized tasks that typically involve common knowledge and do not require specialized expertise. The technique allows to target all types of assertions, i.e., instance-, property-value -, and equality assertions."
+      },
+      "labels" : {
+        "IRI-based" : "tecCrowdsourcing-based",
+        "en" : "tecCrowdsourcing-based"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecPath-based",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Path-based techniques use a knowledge graph&amp;apos;s structure or semantic features to detect errors, focusing on both property-value and equality assertions.\n\nTo validate property-value assertions, these techniques identify alternative paths between the relation’s two nodes, considering measures such as path length and path count. The paths can also be constrained by semantic attributes or direction.\n\nTo validate equality assertions, path-based techniques construct contextual subgraphs around the involved instances—based, for example, on distance or on semantic properties such as transitivity. These subgraphs are then compared against each other to determine whether the two instances truly represent the same object of discourse."
+      },
+      "labels" : {
+        "IRI-based" : "tecPath-based",
+        "en" : "tecPath-based"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecIntegrityConstraint-based",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Integrity constraint-based techniques use constraints to verify the correctness of assertions, i.e., detect errors. Integrity constraints can be provided, for example, via SHACL shapes, or generated from the ontology. They define a desired graph structure and the detection process verifies that the assertions conform to this structure. This technique allows to target instance - and property-value assertions."
+      },
+      "labels" : {
+        "IRI-based" : "tecIntegrityConstraint-based",
+        "en" : "tecIntegrityConstraint-based"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecSyntactic",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Syntactic techniques take advantage of syntax specifications to parse knowledge graph serializations. Serializations are &amp;quot;downloaded&amp;quot; versions of a knowledge graph, i.e., a Resource Description Framework graph. Typical formats are Turtle or OWL/RDF. The syntax specifications define expected symbols and their arrangement. A parser loads a specification and then parses an input, for example, a Turtle file. It reports violations, i.e., detects syntactic errors; sometimes, a correction is attempted by updating a specific syntax part."
+      },
+      "labels" : {
+        "IRI-based" : "tecSyntactic",
+        "en" : "tecSyntactic"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecRuleMining-based",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Rule mining-based techniques can detect and correct errors in both property-value and instance assertions by identifying recurring patterns in the knowledge graph’s structure. These patterns serve as the contextual ‘rules’ for detecting or correcting errors. For example, it may be typical for a Human entity to have a social security number and a date of birth; these attributes can then be used as a rule for a common graph structure around humans. In this case, counterexamples are humans that do not conform to this common structure. These examples could indicate errors or exceptions to the rule."
+      },
+      "labels" : {
+        "IRI-based" : "tecRuleMining-based",
+        "en" : "tecRuleMining-based"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecHybrid",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Hybrid techniques combine multiple other methods to detect and correct errors in any type of assertion— instance, property-value, or equality. They merge outputs from independent processes into a single evaluation, enhancing accuracy and increasing complexity due to the need to maintain and integrate multiple techniques."
+      },
+      "labels" : {
+        "IRI-based" : "tecHybrid",
+        "en" : "tecHybrid"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#tecVerbalization-based",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Verbalization-based techniques are based on external natural language sources, such as the Web or documents. They validate property-value assertions by translating them, i.e., verbalizing, into a natural language claim. This process can, for example, use templates or machine learning. The claim is then used to search a given external source. The result is natural language evidence, which is then analyzed, using typically crowdsourcing or machine learning. This technique includes using any large-language model, like ChatGPT."
+      },
+      "labels" : {
+        "IRI-based" : "tecVerbalization-based",
+        "en" : "tecVerbalization-based"
+      }
+    } ],
+    "comment" : {
+      "en" : "A cleaning technique describes a specific methodology used for detecting or correcting errors. It uses different types of background knowledge as a context. The techniques differ in their background knowledge and how each technique utilizes it."
+    },
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An idea or notion; a unit of thought.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "subClasses" : [ "7", "10", "12", "13" ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://purl.archive.org/akco#Dimension",
+    "baseIri" : "https://purl.archive.org/akco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dimension",
+      "en" : "Dimension"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.archive.org/akco#dimData-driven",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "The data-driven dimension describes approaches and techniques that leverage statistical methods and machine learning to detect and correct errors. For example, embeddings use other assertions in the knowledge graph as context when transforming an assertion into a low-dimensional vector representation. Additionally, outlier-detection methods can identify anomalies in numerical property values, assuming a consistent domain and context."
+      },
+      "labels" : {
+        "IRI-based" : "dimData-driven",
+        "en" : "dimData-driven"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#dimKnowledge-driven",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "The knowledge-driven dimension describes approaches and techniques that rely on domain knowledge—such as ontology-based reasoning or human expertise—to detect and correct errors."
+      },
+      "labels" : {
+        "IRI-based" : "dimKnowledge-driven",
+        "en" : "dimKnowledge-driven"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#dimDetection",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "The error-detection dimension describes approaches and techniques aimed at identifying errors within a knowledge graph or a specific assertion. When the focus is on a single assertion, this process is often referred to as fact-checking"
+      },
+      "labels" : {
+        "IRI-based" : "dimDetection",
+        "en" : "dimDetection"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#dimCorrection",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "The error-correction dimension describes approaches and techniques that determine a replacement entity for an erroneous entity in an assertion. Typical examples for this dimension are type or link-prediction approaches."
+      },
+      "labels" : {
+        "IRI-based" : "dimCorrection",
+        "en" : "dimCorrection"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#dimExternal",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "The external dimension describes approaches and techniques that rely on background knowledge from sources external to the given knowledge graph."
+      },
+      "labels" : {
+        "IRI-based" : "dimExternal",
+        "en" : "dimExternal"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#dimInternal",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "The internal dimension describes approaches and techniques that rely solely on the given knowledge graph for background knowledge."
+      },
+      "labels" : {
+        "IRI-based" : "dimInternal",
+        "en" : "dimInternal"
+      }
+    } ],
+    "comment" : {
+      "en" : "A dimension is a specific characteristic of a cleaning approach or technique. All approaches or techniques that share a dimension have a specific feature in common. For example, internal approaches only use a given knowledge graph as background knowledge, while external approaches consult other (knowledge) sources."
+    },
+    "id" : "26"
+  }, {
+    "iri" : "https://purl.archive.org/akco#ExpertKnowledge",
+    "baseIri" : "https://purl.archive.org/akco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExpertKnowledge",
+      "en" : "ExpertKnowledge"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.archive.org/akco#extSrcDomaInExpertise",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for\nvalidation where additional contextual knowledge might be required. Human interaction is typically included to allow for semi-automatic cleaning in combination with various cleaning techniques."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcDomaInExpertise",
+        "en" : "extSrcDomaInExpertise"
+      }
+    } ],
+    "comment" : {
+      "en" : "Expert knowledge is provided by human expertise; It includes (domain) expertise, expertise about the cleaning process in general, and involved (semantic) technologies. Different types of expertise may be required to apply specific approaches and techniques successfully."
+    },
+    "id" : "5",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://purl.archive.org/akco#Error",
+    "baseIri" : "https://purl.archive.org/akco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Error",
+      "en" : "Error"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.archive.org/akco#errPVSynNotPIdentIR",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of syntactic nature, afflicting property-value assertions, and causing that the instance at the range position uses not a proper instance identifier."
+      },
+      "labels" : {
+        "IRI-based" : "errPVSynNotPIdentIR",
+        "en" : "errPVSynNotPIdentIR"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errTailVertical",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "A tail vertical is a domain that is not well covered by a knowledge graph. Entities in these domains are typically sparse."
+      },
+      "labels" : {
+        "IRI-based" : "errTailVertical",
+        "en" : "errTailVertical"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errPVSemSynNotEProperty",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of semantic or syntactic nature, afflicting property-value assertions, and causing that the assertion uses a not existing property name.."
+      },
+      "labels" : {
+        "IRI-based" : "errPVSemSynNotEProperty",
+        "en" : "errPVSemSynNotEProperty"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errPVSemSemWrong",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of semantic nature, afflicting property-value assertions, and causing a semantically wrong property-value assertion."
+      },
+      "labels" : {
+        "IRI-based" : "errPVSemSemWrong",
+        "en" : "errPVSemSemWrong"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errESynNotPIdentIR",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of syntactic nature, afflicting equality assertions, and causing that the instance at the range position uses not a proper instance identifier."
+      },
+      "labels" : {
+        "IRI-based" : "errESynNotPIdentIR",
+        "en" : "errESynNotPIdentIR"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errPVSemNotARange",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of semantic nature, afflicting property-value assertions, and causing that the instance at the range position uses a type that is not in any domain of the property."
+      },
+      "labels" : {
+        "IRI-based" : "errPVSemNotARange",
+        "en" : "errPVSemNotARange"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errPVSynNotPIdentID",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of syntactic nature, afflicting property-value assertions, and causing that the instance at the domain position uses not a proper instance identifier."
+      },
+      "labels" : {
+        "IRI-based" : "errPVSynNotPIdentID",
+        "en" : "errPVSynNotPIdentID"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errSystematic",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "A systematic error is an error that occurs during the knowledge creation process or was part of the original source. It is characterized by the same source and occurence."
+      },
+      "labels" : {
+        "IRI-based" : "errSystematic",
+        "en" : "errSystematic"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errISemSynNotEType",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of semantic or syntactic nature, afflicting instance assertions, and causing that the assertion uses a not existing type name.."
+      },
+      "labels" : {
+        "IRI-based" : "errISemSynNotEType",
+        "en" : "errISemSynNotEType"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errISynNotPIdent",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of syntactic nature, afflicting instance assertions, and causing that the instance at the domain position uses not a proper instance identifier."
+      },
+      "labels" : {
+        "IRI-based" : "errISynNotPIdent",
+        "en" : "errISynNotPIdent"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errPVSemNotADomain",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of semantic nature, afflicting property-value assertions, and causing that the instance at the domain position uses a type that is not in any domain of the property."
+      },
+      "labels" : {
+        "IRI-based" : "errPVSemNotADomain",
+        "en" : "errPVSemNotADomain"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errISemSemWrong",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of semantic nature, afflicting instance assertions, and causing a semantically wrong instance assertion."
+      },
+      "labels" : {
+        "IRI-based" : "errISemSemWrong",
+        "en" : "errISemSemWrong"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errESynNotPIdentID",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of syntactic nature, afflicting equality assertions, and causing that the instance at the domain position uses not a proper instance identifier."
+      },
+      "labels" : {
+        "IRI-based" : "errESynNotPIdentID",
+        "en" : "errESynNotPIdentID"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#errESemSemWrong",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Error is of semantic nature, afflicting equality assertions, and causing a semantically wrong equality assertion."
+      },
+      "labels" : {
+        "IRI-based" : "errESemSemWrong",
+        "en" : "errESemSemWrong"
+      }
+    } ],
+    "comment" : {
+      "en" : "An error is an incorrect assertion. The error source, error nature, and error type further define it. The source identifies the type of assertion that is incorrect. The nature identifies if the error is semantic or syntactic. The combination of the error nature inside the error source defines the error type."
+    },
+    "id" : "10",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "2",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://purl.archive.org/akco#ExternalSource",
+    "baseIri" : "https://purl.archive.org/akco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExternalSource",
+      "en" : "ExternalSource"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph.  The aspects can include an expected graph structure, like cardinality, syntax rules of the domain and modeling language, or semantic features of a property. Specifications are independent of the quality of the assertions. Typical formal specifications are ontologies, integrity constraints, and logic rules. Typical syntax specifications are the RDF specification , or Turtle specification ."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcFormalAndSyntaxSpecifications",
+        "en" : "extSrcFormalAndSyntaxSpecifications"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#extSrcAny",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "An external source is any source outside of a given knowledge graph. This individual represents any of those sources."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcAny",
+        "en" : "extSrcAny"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#extSrcKnowledgeGraph",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Another Knowledge graph not yet part of the given knowledge graph, in a related domain."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcKnowledgeGraph",
+        "en" : "extSrcKnowledgeGraph"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#extSrcQueryLogs",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Query logs represent the context of entities, generated by a user."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcQueryLogs",
+        "en" : "extSrcQueryLogs"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#extSrcDBpedia",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "DBpedia is the central knowledge graph of the Linked Open Data cloud. Its source is Wikipedia."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcDBpedia",
+        "en" : "extSrcDBpedia"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#extSrcWikipedia",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Wikipedia is a free online encyclopedia that is written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. It provides structured (tables, annotations) and unstructured information about many domains."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcWikipedia",
+        "en" : "extSrcWikipedia"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#extSrcWeb",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcWeb",
+        "en" : "extSrcWeb"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#extSrcHornClauses",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Horn clauses, obtain from rule mining, that rewrite a fact into a set of easier-to-spot facts."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcHornClauses",
+        "en" : "extSrcHornClauses"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#extSrcTextCorpus",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "A text corpus that contains information about the domain of a given knowledge graph."
+      },
+      "labels" : {
+        "IRI-based" : "extSrcTextCorpus",
+        "en" : "extSrcTextCorpus"
+      }
+    } ],
+    "comment" : {
+      "en" : "An external source contains domain-relevant information that is not part of the given knowledge graph."
+    },
+    "id" : "12",
+    "superClasses" : [ "6", "8" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#QualityMeasurement",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualityMeasurement",
+      "en" : "Quality Measurement"
+    },
+    "comment" : {
+      "en" : "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."
+    },
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://purl.org/linked-data/cube#DataSet",
+    "baseIri" : "http://purl.org/linked-data/cube",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataSet"
+    },
+    "subClasses" : [ "12", "19" ],
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://purl.archive.org/akco#Approach",
+    "baseIri" : "https://purl.archive.org/akco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Approach",
+      "en" : "Approach"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.archive.org/akco#appOptimalABoxRepairw.r.t.StaticELTBoxes",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appOptimalABoxRepairw.r.t.StaticELTBoxes",
+        "en" : "appOptimalABoxRepairw.r.t.StaticELTBoxes"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appVGFD",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appVGFD",
+        "en" : "appVGFD"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appGRR",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appGRR",
+        "en" : "appGRR"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appRDFUnit",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appRDFUnit",
+        "en" : "appRDFUnit"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appWhEvlidahewiaquthclupDB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appWhEvlidahewiaquthclupDB",
+        "en" : "appWhEvlidahewiaquthclupDB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appLeRiXt",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appLeRiXt",
+        "en" : "appLeRiXt"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appSiApCofoRDMo",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appSiApCofoRDMo",
+        "en" : "appSiApCofoRDMo"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appDECIDE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appDECIDE",
+        "en" : "appDECIDE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appCOPAAL",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appCOPAAL",
+        "en" : "appCOPAAL"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appRDFDoctor",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appRDFDoctor",
+        "en" : "appRDFDoctor"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appOGFC",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appOGFC",
+        "en" : "appOGFC"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appKV-rule",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appKV-rule",
+        "en" : "appKV-rule"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appGAT",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appGAT",
+        "en" : "appGAT"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appIDLabTurtleValidator",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appIDLabTurtleValidator",
+        "en" : "appIDLabTurtleValidator"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appHMGCN",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appHMGCN",
+        "en" : "appHMGCN"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appCOLIBRI",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appCOLIBRI",
+        "en" : "appCOLIBRI"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appAttributE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appAttributE",
+        "en" : "appAttributE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appKS",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appKS",
+        "en" : "appKS"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appFachvievpa",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appFachvievpa",
+        "en" : "appFachvievpa"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appDeerinnulidauscroude",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appDeerinnulidauscroude",
+        "en" : "appDeerinnulidauscroude"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appValidatrr",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appValidatrr",
+        "en" : "appValidatrr"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appRDvase",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appRDvase",
+        "en" : "appRDvase"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appServDBpediaDOLCE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appServDBpediaDOLCE",
+        "en" : "appServDBpediaDOLCE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appKGTtm",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appKGTtm",
+        "en" : "appKGTtm"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appRDD-Checker",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appRDD-Checker",
+        "en" : "appRDD-Checker"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appLODLaundromat",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appLODLaundromat",
+        "en" : "appLODLaundromat"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appCoCKG",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appCoCKG",
+        "en" : "appCoCKG"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appFEA",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appFEA",
+        "en" : "appFEA"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appReRaViinDB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appReRaViinDB",
+        "en" : "appReRaViinDB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appDeFacto",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appDeFacto",
+        "en" : "appDeFacto"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appPaTyBRED",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appPaTyBRED",
+        "en" : "appPaTyBRED"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appGeneralCorrectionFramework",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appGeneralCorrectionFramework",
+        "en" : "appGeneralCorrectionFramework"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appADianReFrfoDLKB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appADianReFrfoDLKB",
+        "en" : "appADianReFrfoDLKB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appJSAE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appJSAE",
+        "en" : "appJSAE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appIncoinOW",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appIncoinOW",
+        "en" : "appIncoinOW"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appIOTW",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appIOTW",
+        "en" : "appIOTW"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appIdwrlibedabymuoude",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appIdwrlibedabymuoude",
+        "en" : "appIdwrlibedabymuoude"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appDojuanenbyitnaEntyuslamo",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appDojuanenbyitnaEntyuslamo",
+        "en" : "appDojuanenbyitnaEntyuslamo"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appSDValidate",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appSDValidate",
+        "en" : "appSDValidate"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appCorhist",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appCorhist",
+        "en" : "appCorhist"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appMTM",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appMTM",
+        "en" : "appMTM"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appExfakt",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appExfakt",
+        "en" : "appExfakt"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appTripleNet",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appTripleNet",
+        "en" : "appTripleNet"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appFaVawiKnGrEm",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appFaVawiKnGrEm",
+        "en" : "appFaVawiKnGrEm"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appSDType",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appSDType",
+        "en" : "appSDType"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appWhenowl",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appWhenowl",
+        "en" : "appWhenowl"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appCEDAL",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appCEDAL",
+        "en" : "appCEDAL"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appPrerdemofokngrre",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appPrerdemofokngrre",
+        "en" : "appPrerdemofokngrre"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appNotquitethesame",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appNotquitethesame",
+        "en" : "appNotquitethesame"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appLediaxwiasrumianitaptoindeoflida",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appLediaxwiasrumianitaptoindeoflida",
+        "en" : "appLediaxwiasrumianitaptoindeoflida"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appAPE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appAPE",
+        "en" : "appAPE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appUsReofInKnBa",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appUsReofInKnBa",
+        "en" : "appUsReofInKnBa"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#apprdfvalidator",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "apprdfvalidator",
+        "en" : "apprdfvalidator"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appBioGRER",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appBioGRER",
+        "en" : "appBioGRER"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appHybridFC",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appHybridFC",
+        "en" : "appHybridFC"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appKGClean",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appKGClean",
+        "en" : "appKGClean"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appDeInNuDainDB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appDeInNuDainDB",
+        "en" : "appDeInNuDainDB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appFACTY",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appFACTY",
+        "en" : "appFACTY"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appSLCN",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appSLCN",
+        "en" : "appSLCN"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appIO",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appIO",
+        "en" : "appIO"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appTISCO",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appTISCO",
+        "en" : "appTISCO"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appDeanCoTyErinOpKnGrUsSeReofEn",
+        "en" : "appDeanCoTyErinOpKnGrUsSeReofEn"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appVeriGraph",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appVeriGraph",
+        "en" : "appVeriGraph"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appChanHaInofDB",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appChanHaInofDB",
+        "en" : "appChanHaInofDB"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appLodeofinSastinRDda",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appLodeofinSastinRDda",
+        "en" : "appLodeofinSastinRDda"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appFactCheck",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appFactCheck",
+        "en" : "appFactCheck"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appLOD-Community-Detection",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appLOD-Community-Detection",
+        "en" : "appLOD-Community-Detection"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appKD2R",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appKD2R",
+        "en" : "appKD2R"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appPredPath",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appPredPath",
+        "en" : "appPredPath"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appVRP",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appVRP",
+        "en" : "appVRP"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appFacTify",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appFacTify",
+        "en" : "appFacTify"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appTyPrfoEfCoReinHeSeGr",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appTyPrfoEfCoReinHeSeGr",
+        "en" : "appTyPrfoEfCoReinHeSeGr"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appTypingErrorsinFactualKnowledgeGraphs",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appTypingErrorsinFactualKnowledgeGraphs",
+        "en" : "appTypingErrorsinFactualKnowledgeGraphs"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appToDeSePrfoRDusSPasInLa",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appToDeSePrfoRDusSPasInLa",
+        "en" : "appToDeSePrfoRDusSPasInLa"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appRUGE",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appRUGE",
+        "en" : "appRUGE"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appValidata",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appValidata",
+        "en" : "appValidata"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appS3K",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appS3K",
+        "en" : "appS3K"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appDBOnEnfoInDe",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appDBOnEnfoInDe",
+        "en" : "appDBOnEnfoInDe"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appDecefitogr",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appDecefitogr",
+        "en" : "appDecefitogr"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appGltyfoliinrdtrwiaptoensu",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appGltyfoliinrdtrwiaptoensu",
+        "en" : "appGltyfoliinrdtrwiaptoensu"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appKefogr",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appKefogr",
+        "en" : "appKefogr"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#appAPrInToImLiDaQuUsDiOuDe",
+      "baseIri" : "https://purl.archive.org/akco",
+      "labels" : {
+        "IRI-based" : "appAPrInToImLiDaQuUsDiOuDe",
+        "en" : "appAPrInToImLiDaQuUsDiOuDe"
+      }
+    } ],
+    "comment" : {
+      "en" : "An approach is a cleaning solution that targets a specific error type and source, performing error detection and/or correction. Each approach employs a particular technique and leverages background knowledge."
+    },
+    "id" : "13",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://purl.archive.org/akco#KnowledgeGraph",
+    "baseIri" : "https://purl.archive.org/akco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KnowledgeGraph",
+      "en" : "KnowledgeGraph"
+    },
+    "individuals" : [ {
+      "iri" : "https://purl.archive.org/akco#kGGraphStructure",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp; completeness) of the overall KG since it is typically used with data-driven measures."
+      },
+      "labels" : {
+        "IRI-based" : "kGGraphStructure",
+        "en" : "kGGraphStructure"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#kGContextualGraph",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge.\nA contextual graph can also be be beneficial to provide a context for clarifying the domain of an assertion during error detection. They are generated in various ways, for example, by selecting all assertions conforming to specific semantics, such as transitive properties, or constructing it as an undirected identity network (Raad, Beek, Harmelen, et al., 2018)."
+      },
+      "labels" : {
+        "IRI-based" : "kGContextualGraph",
+        "en" : "kGContextualGraph"
+      }
+    }, {
+      "iri" : "https://purl.archive.org/akco#kGValuesOfPV",
+      "baseIri" : "https://purl.archive.org/akco",
+      "comment" : {
+        "en" : "The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches."
+      },
+      "labels" : {
+        "IRI-based" : "kGValuesOfPV",
+        "en" : "kGValuesOfPV"
+      }
+    } ],
+    "comment" : {
+      "en" : "A knowledge graph is a data structure that can represent any domain or subject area. It structures domain knowledge in a machine-processable manner. It is a semantic network, also known as a knowledge base."
+    },
+    "id" : "19",
+    "superClasses" : [ "6" ]
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://purl.org/dc/terms/issued",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2000-07-11",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "issued",
+      "en" : "Date Issued"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Date of formal issuance of the resource."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://purl.archive.org/akco#errorNature",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "errorNature",
+      "en" : "errorNature"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "The nature of an error- An error can be semantic or syntatic. A semantic error causes the error source to express wrong semantics (meaning). A syntatic error causes the error source to express no or wrong semantics."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#hasQualityMeasurement",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasQualityMeasurement",
+      "en" : "has quality measurement"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://purl.org/dc/terms/bibliographicCitation",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "17",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2003-02-15",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "bibliographicCitation",
+      "en" : "Bibliographic Citation"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "A bibliographic reference for the resource."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://purl.archive.org/akco#hasError",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasError",
+      "en" : "hasError"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "A knowledge graph can have certain errors."
+    },
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrower",
+      "en" : "has narrower"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a concept to a concept that is more specific in meaning."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://purl.archive.org/akco#errorType",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "errorType",
+      "en" : "errorType"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "\"The error type is a specific error in an error source, caused by a certain type of error nature. For example, an instance assertion might have a syntatically wrong instance identifier or a syntatically wrong type name.\""
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broader",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broader",
+      "en" : "has broader"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#related",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "related",
+      "en" : "has related"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a concept to a concept with which there is an associative semantic relationship."
+    },
+    "attributes" : [ "external", "object", "symmetric" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://purl.archive.org/akco#hasDimension",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasDimension",
+      "en" : "hasDimension"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Approaches have different dimensions, i.e., characteristics. For example, if an approach is data- or knowledge-driven."
+    },
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://purl.archive.org/akco#usesBackgroundKnowledge",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "usesBackgroundKnowledge",
+      "en" : "usesBackgroundKnowledge"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "A cleaning technique leverages a specific type of background knowledge as context."
+    },
+    "attributes" : [ "object" ],
+    "id" : "27"
+  }, {
+    "range" : "6",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "8",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "6",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://purl.archive.org/akco#targetsError",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "targetsError",
+      "en" : "targetsError"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "A cleaning approach targets a specific type of error."
+    },
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "range" : "8",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://purl.archive.org/akco#isPublished",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "isPublished",
+      "en" : "isPublished"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "An approach is published inside a publication."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "7",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://purl.archive.org/akco#usesTechnique",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "usesTechnique",
+      "en" : "usesTechnique"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "An approaches implements specific cleaning techniques. This property defines those used/implemented techniques."
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://purl.archive.org/akco#errorSource",
+    "baseIri" : "https://purl.archive.org/akco",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "errorSource",
+      "en" : "errorSource"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "The error source, in which an error originates. It is an assertion type, for example a wrong instance or property-value assertion."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://purl.org/dc/terms/title",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "title"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "43"
+  } ]
+}

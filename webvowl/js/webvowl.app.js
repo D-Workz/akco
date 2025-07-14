@@ -8729,8 +8729,11 @@ webvowl.app =
 	      
 	    } else {
 	      // read the file name
-	      
-	      var fileToRead = "./data/" + ontology + ".json";
+
+			var urlParam = new URLSearchParams(window.location.search).get("url");
+
+			var fileToRead = urlParam || "./data/" + ontology + ".json";
+	      //var fileToRead = "./data/" + ontology + ".json";
 	      if ( f2r ) {
 	        fileToRead = f2r;
 	      } // overwrite the newOntology Index

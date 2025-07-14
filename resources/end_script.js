@@ -123,14 +123,35 @@ function showContentVisualization(key) {
     const allVisuals = document.querySelectorAll('#visualizationBox .visualization');
     allVisuals.forEach(div => {
         div.style.display = 'none';
+
+        // 🧹 Optional: Clean up lingering iframes (like stale WebVOWL views)
+        const iframe = div.querySelector('iframe');
+        if (iframe) iframe.remove();
     });
 
     // Show the selected one
     const selected = document.getElementById(key);
     if (selected) {
         selected.style.display = 'block';
+
+        // ♻️ Reinject WebVOWL iframe only if needed
+        if (key === 'webvowl') {
+            const container = selected.querySelector('#webvowl-container');
+            if (container) {
+                // Clean up container again to be safe
+                container.innerHTML = '';
+                const iframe = document.createElement('iframe');
+                iframe.src = `webvowl/index.html?url=../versions/${window.ontologyVersion}/ontology.json&ts=${Date.now()}`;
+                iframe.width = '100%';
+                iframe.height = '600';
+                iframe.loading = 'lazy';
+                iframe.style.border = 'none';
+                container.appendChild(iframe);
+            }
+        }
     }
 }
+
 
 // Formating
 
@@ -176,6 +197,33 @@ tagItems.forEach(item => {
     });
 });
 
+function loadChangelog(version) {
+    const changelogPath = `versions/${version}/changelog.html`;
+    fetch(changelogPath)
+        .then(res => {
+            if (!res.ok) throw new Error("No changelog");
+            return res.text();
+        })
+        .then(html => {
+            document.getElementById('changelog-content').innerHTML = html;
+            document.getElementById('changelogBox').style.display = 'block';
+            document.getElementById('changelog-content').style.display = 'none'; // ensure collapsed by default
+            document.getElementById('changelog-toggle').textContent = '▶';       // reset icon
+        })
+        .catch(() => {
+            document.getElementById('changelogBox').style.display = 'none';
+        });
+}
+
+function toggleChangelog() {
+    const content = document.getElementById('changelog-content');
+    const toggleIcon = document.getElementById('changelog-toggle');
+    const isVisible = content.style.display === 'block';
+
+    content.style.display = isVisible ? 'none' : 'block';
+    toggleIcon.textContent = isVisible ? '▶' : '▼';
+}
+
 window.addEventListener('load', () => {
     loadContent('example_kg.html', 'tec');
     loadContent('dim_internalExternal.html', 'dim');
@@ -183,3 +231,84 @@ window.addEventListener('load', () => {
     showContent('errors');
     showOverview();
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const selector = document.getElementById('versionSelector');
+    const defaultVersion = window.ontologyVersion || selector?.value || '1.0.0';
+    window.ontologyVersion = defaultVersion;
+
+    function updateVersionedContent(version) {
+        window.ontologyVersion = version;
+
+        const webvowlContainer = document.getElementById('webvowl-container');
+        webvowlContainer.innerHTML = '';
+        loadChangelog(version);
+        const loadingMsg = document.createElement('p');
+        loadingMsg.textContent = `Loading WebVOWL visualization for version ${version}...`;
+        loadingMsg.style.color = 'gray';
+        webvowlContainer.appendChild(loadingMsg);
+
+        fetch(`versions/${version}/ontology.json`)
+            .then(res => {
+                if (!res.ok) throw new Error("ontology.json not found or invalid");
+
+                webvowlContainer.innerHTML = '';
+
+                const iframe = document.createElement('iframe');
+                iframe.src = `webvowl/index.html?url=../versions/${version}/ontology.json&ts=${Date.now()}`;
+                iframe.width = '100%';
+                iframe.height = '600';
+                iframe.loading = 'lazy';
+                iframe.style.border = 'none';
+
+                webvowlContainer.appendChild(iframe);
+            })
+            .catch(err => {
+                console.error("WebVOWL loading failed:", err);
+                webvowlContainer.innerHTML = `<p style="color:red;">Failed to load WebVOWL for version ${version}</p>`;
+            });
+
+        // ✅ Reload metadata script block
+        loadVersionedContent('script[type="application/ld+json"]', 'schema-metadata');
+
+        // ✅ Reload metadata list block and rewrite links
+        loadVersionedContent('.container .head dl', 'versioned-info', {
+            transform: (content) => {
+                content.querySelectorAll('a[href]').forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href?.match(/^ontology\.(jsonld|owl|nt|ttl)$/)) {
+                        link.setAttribute('href', `versions/${version}/${href}`);
+                    } else if (href?.includes('webvowl/index.html')) {
+                        link.setAttribute('href', `webvowl/index.html?url=../versions/${version}/ontology.json`);
+                    }
+                });
+                return content;
+            }
+        });
+
+        // ✅ Reload other versioned content
+        loadVersionedContent('#namespacedeclarations table', 'namespace-overview');
+        loadVersionedContent('#crossref', 'crossref-box');
+        loadVersionedContent('#overview', 'overviewBox', {
+            transform: (content) => {
+                // Remove rogue iframe if it exists
+                const rogueIframe = content.querySelector('iframe');
+                if (rogueIframe) rogueIframe.remove();
+                return content;
+            }
+        });
+    }
+
+
+    // Initial load
+    updateVersionedContent(window.ontologyVersion);
+
+    // Version change listener
+    if (selector) {
+        selector.value = window.ontologyVersion;
+        selector.addEventListener('change', (e) => {
+            updateVersionedContent(e.target.value);
+        });
+    }
+});
+
+
