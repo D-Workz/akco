@@ -64,14 +64,6 @@ function toggleMenu() {
     }
 }
 
-function showOverview (){
-    fetch('overview.html?nocache=' + new Date().getTime())
-        .then(res => res.text())
-        .then(html => {
-            document.getElementById('overviewBox').innerHTML = html;
-        });
-}
-
 function showContent(key) {
     document.getElementById('contentBox').innerHTML = representations[key];
     let annotations = {};
