@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const href = link.getAttribute('href');
                     if (href?.match(/^ontology\.(jsonld|owl|nt|ttl)$/)) {
                         link.setAttribute('href', `versions/${version}/${href}`);
-                    } else if (href?.includes('webvowl/index.html')) {
+                    } else if (href?.includes('webvowl/index-en.html')) {
                         link.setAttribute('href', `webvowl/index.html?url=../versions/${version}/ontology.json`);
                     }
                 });

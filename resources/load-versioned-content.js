@@ -8,7 +8,7 @@ const ontologyVersion = window.ontologyVersion;
  */
 async function loadVersionedContent(selector, targetId, options = { mode: "replace" }) {
     try {
-        const res = await fetch(`versions/${window.ontologyVersion}/index.html`);
+        const res = await fetch(`versions/${window.ontologyVersion}/index-en.html`);
         const html = await res.text();
 
         const parser = new DOMParser();
