@@ -30,7 +30,6 @@ function loadContent(file, cat, callback) {
 }
 
 function jumpToExampleKnowledgeGraph() {
-    console.log("jaa")
     const menuItem = document.getElementById('menu_exampleKG');
     if (!menuItem) return;
 
@@ -288,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // ✅ Reload other versioned content
         loadVersionedContent('#namespacedeclarations table', 'namespace-overview');
         loadVersionedContent('#crossref', 'crossref-box');
+        loadVersionedContent('.container .head h2', 'releaseBox');
         loadVersionedContent('#overview', 'overviewBox', {
             transform: (content) => {
                 // Remove rogue iframe if it exists

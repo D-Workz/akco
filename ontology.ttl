@@ -1,57 +1,46 @@
-@prefix : <https://d-workz.github.io/akco#> .
+@prefix : <https://purl.archive.org/akco#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://d-workz.github.io/akco#> .
+@base <https://purl.archive.org/akco#> .
 
-<https://d-workz.github.io/akco#> rdf:type owl:Ontology ;
-                                   <http://purl.org/dc/elements/1.1/creator> "Dennis Sommer"@en ;
-                                   <http://purl.org/dc/elements/1.1/language> "English"@en ;
-                                   <http://purl.org/dc/terms/bibliographicCitation> "Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco"^^<http://purl.org/dc/terms/URI> ;
-                                   <http://purl.org/dc/terms/description> "The AKCO is an ontology for representing relevant aspects of knowledge cleaning, including approaches, techniques, background knowledge, errors, and dimensions."@en ;
-                                   <http://purl.org/dc/terms/issued> "28.05.2025"^^xsd:date ;
-                                   <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^<http://purl.org/dc/terms/URI> ;
-                                   <http://purl.org/dc/terms/title> "Anatomy of Knowledge Cleaning Ontology (AKCO)"@en ;
-                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "akco"@en ;
-                                   <http://purl.org/vocab/vann/preferredNamespaceUri> "https://purl.archive.org/akco"^^<http://purl.org/dc/terms/URI> ;
-                                   rdfs:comment """The anatomy of knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
+<https://purl.archive.org/akco#> rdf:type owl:Ontology ;
+                                  <http://purl.org/dc/terms/bibliographicCitation> "Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco"^^<http://purl.org/dc/terms/URI> ;
+                                  <http://purl.org/dc/terms/contributor> "https://orcid.org/0009-0009-8524-9182"@en ;
+                                  <http://purl.org/dc/terms/created> "14.07.2025"^^xsd:date ;
+                                  <http://purl.org/dc/terms/creator> "https://orcid.org/0009-0009-8524-9182"@en ;
+                                  <http://purl.org/dc/terms/description> """The anatomy of knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
 
 The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."""@en ;
-                                   owl:versionInfo "1.0"@en .
+                                  <http://purl.org/dc/terms/language> "English"@en ;
+                                  <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^<http://purl.org/dc/terms/URI> ;
+                                  <http://purl.org/dc/terms/title> "Anatomy of Knowledge Cleaning Ontology (AKCO)"@en ;
+                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "akco"@en ;
+                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://purl.archive.org/akco"^^<http://purl.org/dc/terms/URI> ;
+                                  owl:priorVersion "https://purl.archive.org/akco/versions/1.0.0" ;
+                                  owl:versionInfo "1.1.0"^^xsd:date .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/language
-<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/source
-<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/type
-<http://purl.org/dc/elements/1.1/type> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/bibliographicCitation
 <http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty ;
                                                  rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
@@ -60,13 +49,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 
 ###  http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                   rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/language
-<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/language> .
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
@@ -74,19 +61,20 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 
 
 ###  http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
-                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> ;
                                  rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/type
-<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty ;
-                                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/type> .
+<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -164,7 +152,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                  rdfs:label "has quality measurement"@en .
 
 
-###  https://d-workz.github.io/akco#hasDimension
+###  https://purl.archive.org/akco#hasDimension
 :hasDimension rdf:type owl:ObjectProperty ;
               rdfs:domain :Approach ;
               rdfs:range :Dimension ;
@@ -172,7 +160,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "hasDimension"@en .
 
 
-###  https://d-workz.github.io/akco#hasError
+###  https://purl.archive.org/akco#hasError
 :hasError rdf:type owl:ObjectProperty ;
           rdfs:domain :KnowledgeGraph ;
           rdfs:range :Error ;
@@ -180,7 +168,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "hasError"@en .
 
 
-###  https://d-workz.github.io/akco#isPublished
+###  https://purl.archive.org/akco#isPublished
 :isPublished rdf:type owl:ObjectProperty ;
              rdfs:domain :Approach ;
              rdfs:range <http://purl.org/dc/terms/BibliographicResource> ;
@@ -188,7 +176,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "isPublished"@en .
 
 
-###  https://d-workz.github.io/akco#targetsError
+###  https://purl.archive.org/akco#targetsError
 :targetsError rdf:type owl:ObjectProperty ;
               rdfs:domain :Approach ;
               rdfs:range :Error ;
@@ -196,7 +184,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "targetsError"@en .
 
 
-###  https://d-workz.github.io/akco#usesBackgroundKnowledge
+###  https://purl.archive.org/akco#usesBackgroundKnowledge
 :usesBackgroundKnowledge rdf:type owl:ObjectProperty ;
                          rdfs:domain :Technique ;
                          rdfs:range :BackgroundKnowledge ;
@@ -204,7 +192,7 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:label "usesBackgroundKnowledge"@en .
 
 
-###  https://d-workz.github.io/akco#usesTechnique
+###  https://purl.archive.org/akco#usesTechnique
 :usesTechnique rdf:type owl:ObjectProperty ;
                rdfs:domain :Approach ;
                rdfs:range :Technique ;
@@ -228,7 +216,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty .
 
 
-###  https://d-workz.github.io/akco#errorNature
+###  https://purl.archive.org/akco#errorNature
 :errorNature rdf:type owl:DatatypeProperty ;
              rdfs:domain :Error ;
              rdfs:range xsd:string ;
@@ -236,7 +224,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "errorNature"@en .
 
 
-###  https://d-workz.github.io/akco#errorSource
+###  https://purl.archive.org/akco#errorSource
 :errorSource rdf:type owl:DatatypeProperty ;
              rdfs:domain :Error ;
              rdfs:range xsd:string ;
@@ -244,7 +232,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "errorSource"@en .
 
 
-###  https://d-workz.github.io/akco#errorType
+###  https://purl.archive.org/akco#errorType
 :errorType rdf:type owl:DatatypeProperty ;
            rdfs:domain :Error ;
            rdfs:range xsd:string ;
@@ -278,7 +266,7 @@ xsd:date rdf:type rdfs:Datatype .
                                               rdfs:label "Quality Measurement"@en .
 
 
-###  https://d-workz.github.io/akco#Approach
+###  https://purl.archive.org/akco#Approach
 :Approach rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
           owl:disjointWith :Technique ;
@@ -286,33 +274,33 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "Approach"@en .
 
 
-###  https://d-workz.github.io/akco#BackgroundKnowledge
+###  https://purl.archive.org/akco#BackgroundKnowledge
 :BackgroundKnowledge rdf:type owl:Class ;
                      rdfs:comment "Background knowledge provides the necessary context for a cleaning technique to detect or correct errors."@en ;
                      rdfs:label "BackgroundKnowledge"@en .
 
 
-###  https://d-workz.github.io/akco#Dimension
+###  https://purl.archive.org/akco#Dimension
 :Dimension rdf:type owl:Class ;
            rdfs:comment "A dimension is a specific characteristic of a cleaning approach or technique. All approaches or techniques that share a dimension have a specific feature in common. For example, internal approaches only use a given knowledge graph as background knowledge, while external approaches consult other (knowledge) sources."@en ;
            rdfs:label "Dimension"@en .
 
 
-###  https://d-workz.github.io/akco#Error
+###  https://purl.archive.org/akco#Error
 :Error rdf:type owl:Class ;
        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
        rdfs:comment "An error is an incorrect assertion. The error source, error nature, and error type further define it. The source identifies the type of assertion that is incorrect. The nature identifies if the error is semantic or syntactic. The combination of the error nature inside the error source defines the error type."@en ;
        rdfs:label "Error"@en .
 
 
-###  https://d-workz.github.io/akco#ExpertKnowledge
+###  https://purl.archive.org/akco#ExpertKnowledge
 :ExpertKnowledge rdf:type owl:Class ;
                  rdfs:subClassOf :BackgroundKnowledge ;
                  rdfs:comment "Expert knowledge is provided by human expertise; It includes (domain) expertise, expertise about the cleaning process in general, and involved (semantic) technologies. Different types of expertise may be required to apply specific approaches and techniques successfully."@en ;
                  rdfs:label "ExpertKnowledge"@en .
 
 
-###  https://d-workz.github.io/akco#ExternalSource
+###  https://purl.archive.org/akco#ExternalSource
 :ExternalSource rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.org/linked-data/cube#DataSet> ,
                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -320,14 +308,14 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:label "ExternalSource"@en .
 
 
-###  https://d-workz.github.io/akco#KnowledgeGraph
+###  https://purl.archive.org/akco#KnowledgeGraph
 :KnowledgeGraph rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.org/linked-data/cube#DataSet> ;
                 rdfs:comment "A knowledge graph is a data structure that can represent any domain or subject area. It structures domain knowledge in a machine-processable manner. It is a semantic network, also known as a knowledge base."@en ;
                 rdfs:label "KnowledgeGraph"@en .
 
 
-###  https://d-workz.github.io/akco#Technique
+###  https://purl.archive.org/akco#Technique
 :Technique rdf:type owl:Class ;
            rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
            rdfs:comment "A cleaning technique describes a specific methodology used for detecting or correcting errors. It uses different types of background knowledge as a context. The techniques differ in their background knowledge and how each technique utilizes it."@en ;
@@ -375,7 +363,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/source> rdf:type owl:NamedIndividual .
 
 
-###  https://d-workz.github.io/akco#appADianReFrfoDLKB
+###  https://purl.archive.org/akco#appADianReFrfoDLKB
 :appADianReFrfoDLKB rdf:type owl:NamedIndividual ,
                              :Approach ;
                     :hasDimension :dimCorrection ,
@@ -390,7 +378,7 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "appADianReFrfoDLKB"@en .
 
 
-###  https://d-workz.github.io/akco#appAPE
+###  https://purl.archive.org/akco#appAPE
 :appAPE rdf:type owl:NamedIndividual ,
                  :Approach ;
         :hasDimension :dimCorrection ,
@@ -404,7 +392,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "appAPE"@en .
 
 
-###  https://d-workz.github.io/akco#appAPrInToImLiDaQuUsDiOuDe
+###  https://purl.archive.org/akco#appAPrInToImLiDaQuUsDiOuDe
 :appAPrInToImLiDaQuUsDiOuDe rdf:type owl:NamedIndividual ,
                                      :Approach ;
                             :hasDimension :dimData-driven ,
@@ -416,7 +404,7 @@ xsd:date rdf:type rdfs:Datatype .
                             rdfs:label "appAPrInToImLiDaQuUsDiOuDe"@en .
 
 
-###  https://d-workz.github.io/akco#appAttributE
+###  https://purl.archive.org/akco#appAttributE
 :appAttributE rdf:type owl:NamedIndividual ,
                        :Approach ;
               :hasDimension :dimData-driven ,
@@ -428,7 +416,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "appAttributE"@en .
 
 
-###  https://d-workz.github.io/akco#appBioGRER
+###  https://purl.archive.org/akco#appBioGRER
 :appBioGRER rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimData-driven ,
@@ -442,7 +430,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appBioGRER"@en .
 
 
-###  https://d-workz.github.io/akco#appCEDAL
+###  https://purl.archive.org/akco#appCEDAL
 :appCEDAL rdf:type owl:NamedIndividual ,
                    :Approach ;
           :hasDimension :dimData-driven ,
@@ -454,7 +442,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "appCEDAL"@en .
 
 
-###  https://d-workz.github.io/akco#appCOLIBRI
+###  https://purl.archive.org/akco#appCOLIBRI
 :appCOLIBRI rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimCorrection ,
@@ -467,7 +455,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appCOLIBRI"@en .
 
 
-###  https://d-workz.github.io/akco#appCOPAAL
+###  https://purl.archive.org/akco#appCOPAAL
 :appCOPAAL rdf:type owl:NamedIndividual ,
                     :Approach ;
            :hasDimension :dimData-driven ,
@@ -480,7 +468,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "appCOPAAL"@en .
 
 
-###  https://d-workz.github.io/akco#appChanHaInofDB
+###  https://purl.archive.org/akco#appChanHaInofDB
 :appChanHaInofDB rdf:type owl:NamedIndividual ,
                           :Approach ;
                  :hasDimension :dimDetection ,
@@ -495,7 +483,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "appChanHaInofDB"@en .
 
 
-###  https://d-workz.github.io/akco#appCoCKG
+###  https://purl.archive.org/akco#appCoCKG
 :appCoCKG rdf:type owl:NamedIndividual ,
                    :Approach ;
           <http://www.w3.org/2004/02/skos/core#related> :appPaTyBRED ;
@@ -511,7 +499,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "appCoCKG"@en .
 
 
-###  https://d-workz.github.io/akco#appCorhist
+###  https://purl.archive.org/akco#appCorhist
 :appCorhist rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimCorrection ,
@@ -524,7 +512,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appCorhist"@en .
 
 
-###  https://d-workz.github.io/akco#appDBOnEnfoInDe
+###  https://purl.archive.org/akco#appDBOnEnfoInDe
 :appDBOnEnfoInDe rdf:type owl:NamedIndividual ,
                           :Approach ;
                  :hasDimension :dimData-driven ,
@@ -539,7 +527,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "appDBOnEnfoInDe"@en .
 
 
-###  https://d-workz.github.io/akco#appDECIDE
+###  https://purl.archive.org/akco#appDECIDE
 :appDECIDE rdf:type owl:NamedIndividual ,
                     :Approach ;
            :hasDimension :dimCorrection ,
@@ -551,7 +539,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "appDECIDE"@en .
 
 
-###  https://d-workz.github.io/akco#appDeFacto
+###  https://purl.archive.org/akco#appDeFacto
 :appDeFacto rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimData-driven ,
@@ -565,7 +553,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appDeFacto"@en .
 
 
-###  https://d-workz.github.io/akco#appDeInNuDainDB
+###  https://purl.archive.org/akco#appDeInNuDainDB
 :appDeInNuDainDB rdf:type owl:NamedIndividual ,
                           :Approach ;
                  :hasDimension :dimData-driven ,
@@ -577,7 +565,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "appDeInNuDainDB"@en .
 
 
-###  https://d-workz.github.io/akco#appDeanCoTyErinOpKnGrUsSeReofEn
+###  https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn
 :appDeanCoTyErinOpKnGrUsSeReofEn rdf:type owl:NamedIndividual ,
                                           :Approach ;
                                  :hasDimension :dimCorrection ,
@@ -592,7 +580,7 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:label "appDeanCoTyErinOpKnGrUsSeReofEn"@en .
 
 
-###  https://d-workz.github.io/akco#appDecefitogr
+###  https://purl.archive.org/akco#appDecefitogr
 :appDecefitogr rdf:type owl:NamedIndividual ,
                         :Approach ;
                :hasDimension :dimCorrection ,
@@ -606,7 +594,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "appDecefitogr"@en .
 
 
-###  https://d-workz.github.io/akco#appDeerinnulidauscroude
+###  https://purl.archive.org/akco#appDeerinnulidauscroude
 :appDeerinnulidauscroude rdf:type owl:NamedIndividual ,
                                   :Approach ;
                          :hasDimension :dimData-driven ,
@@ -620,7 +608,7 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:label "appDeerinnulidauscroude"@en .
 
 
-###  https://d-workz.github.io/akco#appDojuanenbyitnaEntyuslamo
+###  https://purl.archive.org/akco#appDojuanenbyitnaEntyuslamo
 :appDojuanenbyitnaEntyuslamo rdf:type owl:NamedIndividual ,
                                       :Approach ;
                              :hasDimension :dimCorrection ,
@@ -633,7 +621,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:label "appDojuanenbyitnaEntyuslamo"@en .
 
 
-###  https://d-workz.github.io/akco#appExfakt
+###  https://purl.archive.org/akco#appExfakt
 :appExfakt rdf:type owl:NamedIndividual ,
                     :Approach ;
            :hasDimension :dimData-driven ,
@@ -651,7 +639,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "appExfakt"@en .
 
 
-###  https://d-workz.github.io/akco#appFACTY
+###  https://purl.archive.org/akco#appFACTY
 :appFACTY rdf:type owl:NamedIndividual ,
                    :Approach ;
           :hasDimension :dimData-driven ,
@@ -668,7 +656,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "appFACTY"@en .
 
 
-###  https://d-workz.github.io/akco#appFEA
+###  https://purl.archive.org/akco#appFEA
 :appFEA rdf:type owl:NamedIndividual ,
                  :Approach ;
         :hasDimension :dimData-driven ,
@@ -681,7 +669,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "appFEA"@en .
 
 
-###  https://d-workz.github.io/akco#appFaVawiKnGrEm
+###  https://purl.archive.org/akco#appFaVawiKnGrEm
 :appFaVawiKnGrEm rdf:type owl:NamedIndividual ,
                           :Approach ;
                  :hasDimension :dimData-driven ,
@@ -693,7 +681,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "appFaVawiKnGrEm"@en .
 
 
-###  https://d-workz.github.io/akco#appFacTify
+###  https://purl.archive.org/akco#appFacTify
 :appFacTify rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimData-driven ,
@@ -705,7 +693,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appFacTify"@en .
 
 
-###  https://d-workz.github.io/akco#appFachvievpa
+###  https://purl.archive.org/akco#appFachvievpa
 :appFachvievpa rdf:type owl:NamedIndividual ,
                         :Approach ;
                :hasDimension :dimDetection ,
@@ -717,7 +705,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "appFachvievpa"@en .
 
 
-###  https://d-workz.github.io/akco#appFactCheck
+###  https://purl.archive.org/akco#appFactCheck
 :appFactCheck rdf:type owl:NamedIndividual ,
                        :Approach ;
               :hasDimension :dimData-driven ,
@@ -732,7 +720,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "appFactCheck"@en .
 
 
-###  https://d-workz.github.io/akco#appGAT
+###  https://purl.archive.org/akco#appGAT
 :appGAT rdf:type owl:NamedIndividual ,
                  :Approach ;
         :hasDimension :dimCorrection ,
@@ -744,7 +732,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "appGAT"@en .
 
 
-###  https://d-workz.github.io/akco#appGRR
+###  https://purl.archive.org/akco#appGRR
 :appGRR rdf:type owl:NamedIndividual ,
                  :Approach ;
         :hasDimension :dimCorrection ,
@@ -762,7 +750,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "appGRR"@en .
 
 
-###  https://d-workz.github.io/akco#appGeneralCorrectionFramework
+###  https://purl.archive.org/akco#appGeneralCorrectionFramework
 :appGeneralCorrectionFramework rdf:type owl:NamedIndividual ,
                                         :Approach ;
                                :hasDimension :dimCorrection ,
@@ -776,7 +764,7 @@ xsd:date rdf:type rdfs:Datatype .
                                rdfs:label "appGeneralCorrectionFramework"@en .
 
 
-###  https://d-workz.github.io/akco#appGltyfoliinrdtrwiaptoensu
+###  https://purl.archive.org/akco#appGltyfoliinrdtrwiaptoensu
 :appGltyfoliinrdtrwiaptoensu rdf:type owl:NamedIndividual ,
                                       :Approach ;
                              :hasDimension :dimCorrection ,
@@ -788,7 +776,7 @@ xsd:date rdf:type rdfs:Datatype .
                              rdfs:label "appGltyfoliinrdtrwiaptoensu"@en .
 
 
-###  https://d-workz.github.io/akco#appHMGCN
+###  https://purl.archive.org/akco#appHMGCN
 :appHMGCN rdf:type owl:NamedIndividual ,
                    :Approach ;
           :hasDimension :dimCorrection ,
@@ -801,7 +789,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "appHMGCN"@en .
 
 
-###  https://d-workz.github.io/akco#appHybridFC
+###  https://purl.archive.org/akco#appHybridFC
 :appHybridFC rdf:type owl:NamedIndividual ,
                       :Approach ;
              :hasDimension :dimData-driven ,
@@ -816,7 +804,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "appHybridFC"@en .
 
 
-###  https://d-workz.github.io/akco#appIDLabTurtleValidator
+###  https://purl.archive.org/akco#appIDLabTurtleValidator
 :appIDLabTurtleValidator rdf:type owl:NamedIndividual ,
                                   :Approach ;
                          :hasDimension :dimDetection ,
@@ -830,7 +818,7 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:label "appIDLabTurtleValidator"@en .
 
 
-###  https://d-workz.github.io/akco#appIO
+###  https://purl.archive.org/akco#appIO
 :appIO rdf:type owl:NamedIndividual ,
                 :Approach ;
        :hasDimension :dimCorrection ,
@@ -842,7 +830,7 @@ xsd:date rdf:type rdfs:Datatype .
        rdfs:label "appIO"@en .
 
 
-###  https://d-workz.github.io/akco#appIOTW
+###  https://purl.archive.org/akco#appIOTW
 :appIOTW rdf:type owl:NamedIndividual ,
                   :Approach ;
          :hasDimension :dimCorrection ,
@@ -854,7 +842,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "appIOTW"@en .
 
 
-###  https://d-workz.github.io/akco#appIdwrlibedabymuoude
+###  https://purl.archive.org/akco#appIdwrlibedabymuoude
 :appIdwrlibedabymuoude rdf:type owl:NamedIndividual ,
                                 :Approach ;
                        :hasDimension :dimData-driven ,
@@ -866,7 +854,7 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:label "appIdwrlibedabymuoude"@en .
 
 
-###  https://d-workz.github.io/akco#appIncoinOW
+###  https://purl.archive.org/akco#appIncoinOW
 :appIncoinOW rdf:type owl:NamedIndividual ,
                       :Approach ;
              :hasDimension :dimDetection ,
@@ -881,7 +869,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "appIncoinOW"@en .
 
 
-###  https://d-workz.github.io/akco#appJSAE
+###  https://purl.archive.org/akco#appJSAE
 :appJSAE rdf:type owl:NamedIndividual ,
                   :Approach ;
          :hasDimension :dimData-driven ,
@@ -893,7 +881,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "appJSAE"@en .
 
 
-###  https://d-workz.github.io/akco#appKD2R
+###  https://purl.archive.org/akco#appKD2R
 :appKD2R rdf:type owl:NamedIndividual ,
                   :Approach ;
          :hasDimension :dimDetection ,
@@ -904,7 +892,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "appKD2R"@en .
 
 
-###  https://d-workz.github.io/akco#appKGClean
+###  https://purl.archive.org/akco#appKGClean
 :appKGClean rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimCorrection ,
@@ -917,7 +905,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appKGClean"@en .
 
 
-###  https://d-workz.github.io/akco#appKGTtm
+###  https://purl.archive.org/akco#appKGTtm
 :appKGTtm rdf:type owl:NamedIndividual ,
                    :Approach ;
           :hasDimension :dimData-driven ,
@@ -930,7 +918,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "appKGTtm"@en .
 
 
-###  https://d-workz.github.io/akco#appKS
+###  https://purl.archive.org/akco#appKS
 :appKS rdf:type owl:NamedIndividual ,
                 :Approach ;
        :hasDimension :dimData-driven ,
@@ -942,7 +930,7 @@ xsd:date rdf:type rdfs:Datatype .
        rdfs:label "appKS"@en .
 
 
-###  https://d-workz.github.io/akco#appKV-rule
+###  https://purl.archive.org/akco#appKV-rule
 :appKV-rule rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimData-driven ,
@@ -954,7 +942,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appKV-rule"@en .
 
 
-###  https://d-workz.github.io/akco#appKefogr
+###  https://purl.archive.org/akco#appKefogr
 :appKefogr rdf:type owl:NamedIndividual ,
                     :Approach ;
            :hasDimension :dimData-driven ,
@@ -966,7 +954,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "appKefogr"@en .
 
 
-###  https://d-workz.github.io/akco#appLOD-Community-Detection
+###  https://purl.archive.org/akco#appLOD-Community-Detection
 :appLOD-Community-Detection rdf:type owl:NamedIndividual ,
                                      :Approach ;
                             :hasDimension :dimData-driven ,
@@ -978,7 +966,7 @@ xsd:date rdf:type rdfs:Datatype .
                             rdfs:label "appLOD-Community-Detection"@en .
 
 
-###  https://d-workz.github.io/akco#appLODLaundromat
+###  https://purl.archive.org/akco#appLODLaundromat
 :appLODLaundromat rdf:type owl:NamedIndividual ,
                            :Approach ;
                   :hasDimension :dimCorrection ,
@@ -992,7 +980,7 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:label "appLODLaundromat"@en .
 
 
-###  https://d-workz.github.io/akco#appLeRiXt
+###  https://purl.archive.org/akco#appLeRiXt
 :appLeRiXt rdf:type owl:NamedIndividual ,
                     :Approach ;
            :hasDimension :dimCorrection ,
@@ -1006,7 +994,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "appLeRiXt"@en .
 
 
-###  https://d-workz.github.io/akco#appLediaxwiasrumianitaptoindeoflida
+###  https://purl.archive.org/akco#appLediaxwiasrumianitaptoindeoflida
 :appLediaxwiasrumianitaptoindeoflida rdf:type owl:NamedIndividual ,
                                               :Approach ;
                                      :hasDimension :dimData-driven ,
@@ -1019,7 +1007,7 @@ xsd:date rdf:type rdfs:Datatype .
                                      rdfs:label "appLediaxwiasrumianitaptoindeoflida"@en .
 
 
-###  https://d-workz.github.io/akco#appLodeofinSastinRDda
+###  https://purl.archive.org/akco#appLodeofinSastinRDda
 :appLodeofinSastinRDda rdf:type owl:NamedIndividual ,
                                 :Approach ;
                        :hasDimension :dimCorrection ,
@@ -1032,7 +1020,7 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:label "appLodeofinSastinRDda"@en .
 
 
-###  https://d-workz.github.io/akco#appMTM
+###  https://purl.archive.org/akco#appMTM
 :appMTM rdf:type owl:NamedIndividual ,
                  :Approach ;
         :hasDimension :dimData-driven ,
@@ -1044,7 +1032,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "appMTM"@en .
 
 
-###  https://d-workz.github.io/akco#appNotquitethesame
+###  https://purl.archive.org/akco#appNotquitethesame
 :appNotquitethesame rdf:type owl:NamedIndividual ,
                              :Approach ;
                     :hasDimension :dimDetection ,
@@ -1056,7 +1044,7 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "appNotquitethesame"@en .
 
 
-###  https://d-workz.github.io/akco#appOGFC
+###  https://purl.archive.org/akco#appOGFC
 :appOGFC rdf:type owl:NamedIndividual ,
                   :Approach ;
          :hasDimension :dimData-driven ,
@@ -1068,7 +1056,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "appOGFC"@en .
 
 
-###  https://d-workz.github.io/akco#appOptimalABoxRepairw.r.t.StaticELTBoxes
+###  https://purl.archive.org/akco#appOptimalABoxRepairw.r.t.StaticELTBoxes
 :appOptimalABoxRepairw.r.t.StaticELTBoxes rdf:type owl:NamedIndividual ,
                                                    :Approach ;
                                           :hasDimension :dimCorrection ,
@@ -1080,7 +1068,7 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:label "appOptimalABoxRepairw.r.t.StaticELTBoxes"@en .
 
 
-###  https://d-workz.github.io/akco#appPaTyBRED
+###  https://purl.archive.org/akco#appPaTyBRED
 :appPaTyBRED rdf:type owl:NamedIndividual ,
                       :Approach ;
              :hasDimension :dimDetection ,
@@ -1092,7 +1080,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "appPaTyBRED"@en .
 
 
-###  https://d-workz.github.io/akco#appPredPath
+###  https://purl.archive.org/akco#appPredPath
 :appPredPath rdf:type owl:NamedIndividual ,
                       :Approach ;
              :hasDimension :dimData-driven ,
@@ -1105,7 +1093,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "appPredPath"@en .
 
 
-###  https://d-workz.github.io/akco#appPrerdemofokngrre
+###  https://purl.archive.org/akco#appPrerdemofokngrre
 :appPrerdemofokngrre rdf:type owl:NamedIndividual ,
                               :Approach ;
                      :hasDimension :dimData-driven ,
@@ -1117,7 +1105,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "appPrerdemofokngrre"@en .
 
 
-###  https://d-workz.github.io/akco#appRDD-Checker
+###  https://purl.archive.org/akco#appRDD-Checker
 :appRDD-Checker rdf:type owl:NamedIndividual ,
                          :Approach ;
                 :hasDimension :dimDetection ,
@@ -1131,7 +1119,7 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:label "appRDD-Checker"@en .
 
 
-###  https://d-workz.github.io/akco#appRDFDoctor
+###  https://purl.archive.org/akco#appRDFDoctor
 :appRDFDoctor rdf:type owl:NamedIndividual ,
                        :Approach ;
               :hasDimension :dimCorrection ,
@@ -1145,7 +1133,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "appRDFDoctor"@en .
 
 
-###  https://d-workz.github.io/akco#appRDFUnit
+###  https://purl.archive.org/akco#appRDFUnit
 :appRDFUnit rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimDetection ,
@@ -1160,7 +1148,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appRDFUnit"@en .
 
 
-###  https://d-workz.github.io/akco#appRDvase
+###  https://purl.archive.org/akco#appRDvase
 :appRDvase rdf:type owl:NamedIndividual ,
                     :Approach ;
            :hasDimension :dimDetection ,
@@ -1174,7 +1162,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "appRDvase"@en .
 
 
-###  https://d-workz.github.io/akco#appRUGE
+###  https://purl.archive.org/akco#appRUGE
 :appRUGE rdf:type owl:NamedIndividual ,
                   :Approach ;
          :hasDimension :dimData-driven ,
@@ -1186,7 +1174,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "appRUGE"@en .
 
 
-###  https://d-workz.github.io/akco#appReRaViinDB
+###  https://purl.archive.org/akco#appReRaViinDB
 :appReRaViinDB rdf:type owl:NamedIndividual ,
                         :Approach ;
                :hasDimension :dimCorrection ,
@@ -1198,7 +1186,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "appReRaViinDB"@en .
 
 
-###  https://d-workz.github.io/akco#appS3K
+###  https://purl.archive.org/akco#appS3K
 :appS3K rdf:type owl:NamedIndividual ,
                  :Approach ;
         :hasDimension :dimData-driven ,
@@ -1210,7 +1198,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "appS3K"@en .
 
 
-###  https://d-workz.github.io/akco#appSDType
+###  https://purl.archive.org/akco#appSDType
 :appSDType rdf:type owl:NamedIndividual ,
                     :Approach ;
            :hasDimension :dimCorrection ,
@@ -1222,7 +1210,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "appSDType"@en .
 
 
-###  https://d-workz.github.io/akco#appSDValidate
+###  https://purl.archive.org/akco#appSDValidate
 :appSDValidate rdf:type owl:NamedIndividual ,
                         :Approach ;
                :hasDimension :dimData-driven ,
@@ -1234,7 +1222,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "appSDValidate"@en .
 
 
-###  https://d-workz.github.io/akco#appSLCN
+###  https://purl.archive.org/akco#appSLCN
 :appSLCN rdf:type owl:NamedIndividual ,
                   :Approach ;
          :hasDimension :dimCorrection ,
@@ -1247,7 +1235,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "appSLCN"@en .
 
 
-###  https://d-workz.github.io/akco#appServDBpediaDOLCE
+###  https://purl.archive.org/akco#appServDBpediaDOLCE
 :appServDBpediaDOLCE rdf:type owl:NamedIndividual ,
                               :Approach ;
                      :hasDimension :dimData-driven ,
@@ -1262,7 +1250,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "appServDBpediaDOLCE"@en .
 
 
-###  https://d-workz.github.io/akco#appSiApCofoRDMo
+###  https://purl.archive.org/akco#appSiApCofoRDMo
 :appSiApCofoRDMo rdf:type owl:NamedIndividual ,
                           :Approach ;
                  :hasDimension :dimDetection ,
@@ -1274,7 +1262,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "appSiApCofoRDMo"@en .
 
 
-###  https://d-workz.github.io/akco#appTISCO
+###  https://purl.archive.org/akco#appTISCO
 :appTISCO rdf:type owl:NamedIndividual ,
                    :Approach ;
           :hasDimension :dimData-driven ,
@@ -1288,7 +1276,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "appTISCO"@en .
 
 
-###  https://d-workz.github.io/akco#appToDeSePrfoRDusSPasInLa
+###  https://purl.archive.org/akco#appToDeSePrfoRDusSPasInLa
 :appToDeSePrfoRDusSPasInLa rdf:type owl:NamedIndividual ,
                                     :Approach ;
                            :hasDimension :dimDetection ,
@@ -1300,7 +1288,7 @@ xsd:date rdf:type rdfs:Datatype .
                            rdfs:label "appToDeSePrfoRDusSPasInLa"@en .
 
 
-###  https://d-workz.github.io/akco#appTripleNet
+###  https://purl.archive.org/akco#appTripleNet
 :appTripleNet rdf:type owl:NamedIndividual ,
                        :Approach ;
               :hasDimension :dimData-driven ,
@@ -1312,7 +1300,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "appTripleNet"@en .
 
 
-###  https://d-workz.github.io/akco#appTyPrfoEfCoReinHeSeGr
+###  https://purl.archive.org/akco#appTyPrfoEfCoReinHeSeGr
 :appTyPrfoEfCoReinHeSeGr rdf:type owl:NamedIndividual ,
                                   :Approach ;
                          :hasDimension :dimCorrection ,
@@ -1324,7 +1312,7 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:label "appTyPrfoEfCoReinHeSeGr"@en .
 
 
-###  https://d-workz.github.io/akco#appTypingErrorsinFactualKnowledgeGraphs
+###  https://purl.archive.org/akco#appTypingErrorsinFactualKnowledgeGraphs
 :appTypingErrorsinFactualKnowledgeGraphs rdf:type owl:NamedIndividual ,
                                                   :Approach ;
                                          :hasDimension :dimData-driven ,
@@ -1336,7 +1324,7 @@ xsd:date rdf:type rdfs:Datatype .
                                          rdfs:label "appTypingErrorsinFactualKnowledgeGraphs"@en .
 
 
-###  https://d-workz.github.io/akco#appUsReofInKnBa
+###  https://purl.archive.org/akco#appUsReofInKnBa
 :appUsReofInKnBa rdf:type owl:NamedIndividual ,
                           :Approach ;
                  :hasDimension :dimCorrection ,
@@ -1349,7 +1337,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "appUsReofInKnBa"@en .
 
 
-###  https://d-workz.github.io/akco#appVGFD
+###  https://purl.archive.org/akco#appVGFD
 :appVGFD rdf:type owl:NamedIndividual ,
                   :Approach ;
          :hasDimension :dimData-driven ,
@@ -1361,7 +1349,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "appVGFD"@en .
 
 
-###  https://d-workz.github.io/akco#appVRP
+###  https://purl.archive.org/akco#appVRP
 :appVRP rdf:type owl:NamedIndividual ,
                  :Approach ;
         :hasDimension :dimDetection ,
@@ -1375,7 +1363,7 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "appVRP"@en .
 
 
-###  https://d-workz.github.io/akco#appValidata
+###  https://purl.archive.org/akco#appValidata
 :appValidata rdf:type owl:NamedIndividual ,
                       :Approach ;
              :hasDimension :dimDetection ,
@@ -1390,7 +1378,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "appValidata"@en .
 
 
-###  https://d-workz.github.io/akco#appValidatrr
+###  https://purl.archive.org/akco#appValidatrr
 :appValidatrr rdf:type owl:NamedIndividual ,
                        :Approach ;
               :hasDimension :dimDetection ,
@@ -1406,7 +1394,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "appValidatrr"@en .
 
 
-###  https://d-workz.github.io/akco#appVeriGraph
+###  https://purl.archive.org/akco#appVeriGraph
 :appVeriGraph rdf:type owl:NamedIndividual ,
                        :Approach ;
               :hasDimension :dimDetection ,
@@ -1421,7 +1409,7 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "appVeriGraph"@en .
 
 
-###  https://d-workz.github.io/akco#appWhEvlidahewiaquthclupDB
+###  https://purl.archive.org/akco#appWhEvlidahewiaquthclupDB
 :appWhEvlidahewiaquthclupDB rdf:type owl:NamedIndividual ,
                                      :Approach ;
                             :hasDimension :dimCorrection ,
@@ -1436,7 +1424,7 @@ xsd:date rdf:type rdfs:Datatype .
                             rdfs:label "appWhEvlidahewiaquthclupDB"@en .
 
 
-###  https://d-workz.github.io/akco#appWhenowl
+###  https://purl.archive.org/akco#appWhenowl
 :appWhenowl rdf:type owl:NamedIndividual ,
                      :Approach ;
             :hasDimension :dimCorrection ,
@@ -1448,7 +1436,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "appWhenowl"@en .
 
 
-###  https://d-workz.github.io/akco#apprdfvalidator
+###  https://purl.archive.org/akco#apprdfvalidator
 :apprdfvalidator rdf:type owl:NamedIndividual ,
                           :Approach ;
                  :hasDimension :dimDetection ,
@@ -1461,21 +1449,21 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "apprdfvalidator"@en .
 
 
-###  https://d-workz.github.io/akco#dimCorrection
+###  https://purl.archive.org/akco#dimCorrection
 :dimCorrection rdf:type owl:NamedIndividual ,
                         :Dimension ;
                rdfs:comment "The error-correction dimension describes approaches and techniques that determine a replacement entity for an erroneous entity in an assertion. Typical examples for this dimension are type or link-prediction approaches."@en ;
                rdfs:label "dimCorrection"@en .
 
 
-###  https://d-workz.github.io/akco#dimData-driven
+###  https://purl.archive.org/akco#dimData-driven
 :dimData-driven rdf:type owl:NamedIndividual ,
                          :Dimension ;
                 rdfs:comment "The data-driven dimension describes approaches and techniques that leverage statistical methods and machine learning to detect and correct errors. For example, embeddings use other assertions in the knowledge graph as context when transforming an assertion into a low-dimensional vector representation. Additionally, outlier-detection methods can identify anomalies in numerical property values, assuming a consistent domain and context."@en ;
                 rdfs:label "dimData-driven"@en .
 
 
-###  https://d-workz.github.io/akco#dimDetection
+###  https://purl.archive.org/akco#dimDetection
 :dimDetection rdf:type owl:NamedIndividual ,
                        :Dimension ;
               :hasDimension :dimDetection ;
@@ -1483,28 +1471,28 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "dimDetection"@en .
 
 
-###  https://d-workz.github.io/akco#dimExternal
+###  https://purl.archive.org/akco#dimExternal
 :dimExternal rdf:type owl:NamedIndividual ,
                       :Dimension ;
              rdfs:comment "The external dimension describes approaches and techniques that rely on background knowledge from sources external to the given knowledge graph."@en ;
              rdfs:label "dimExternal"@en .
 
 
-###  https://d-workz.github.io/akco#dimInternal
+###  https://purl.archive.org/akco#dimInternal
 :dimInternal rdf:type owl:NamedIndividual ,
                       :Dimension ;
              rdfs:comment "The internal dimension describes approaches and techniques that rely solely on the given knowledge graph for background knowledge."@en ;
              rdfs:label "dimInternal"@en .
 
 
-###  https://d-workz.github.io/akco#dimKnowledge-driven
+###  https://purl.archive.org/akco#dimKnowledge-driven
 :dimKnowledge-driven rdf:type owl:NamedIndividual ,
                               :Dimension ;
                      rdfs:comment "The knowledge-driven dimension describes approaches and techniques that rely on domain knowledge—such as ontology-based reasoning or human expertise—to detect and correct errors."@en ;
                      rdfs:label "dimKnowledge-driven"@en .
 
 
-###  https://d-workz.github.io/akco#errESemSemWrong
+###  https://purl.archive.org/akco#errESemSemWrong
 :errESemSemWrong rdf:type owl:NamedIndividual ,
                           :Error ;
                  :errorNature "Semantic"@en ;
@@ -1514,7 +1502,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "errESemSemWrong"@en .
 
 
-###  https://d-workz.github.io/akco#errESynNotPIdentID
+###  https://purl.archive.org/akco#errESynNotPIdentID
 :errESynNotPIdentID rdf:type owl:NamedIndividual ,
                              :Error ;
                     :errorNature "Syntactic"@en ;
@@ -1524,7 +1512,7 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "errESynNotPIdentID"@en .
 
 
-###  https://d-workz.github.io/akco#errESynNotPIdentIR
+###  https://purl.archive.org/akco#errESynNotPIdentIR
 :errESynNotPIdentIR rdf:type owl:NamedIndividual ,
                              :Error ;
                     :errorNature "Syntactic"@en ;
@@ -1534,7 +1522,7 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "errESynNotPIdentIR"@en .
 
 
-###  https://d-workz.github.io/akco#errISemSemWrong
+###  https://purl.archive.org/akco#errISemSemWrong
 :errISemSemWrong rdf:type owl:NamedIndividual ,
                           :Error ;
                  :errorNature "Semantic"@en ;
@@ -1544,7 +1532,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "errISemSemWrong"@en .
 
 
-###  https://d-workz.github.io/akco#errISemSynNotEType
+###  https://purl.archive.org/akco#errISemSynNotEType
 :errISemSynNotEType rdf:type owl:NamedIndividual ,
                              :Error ;
                     :errorNature "Semantic"@en ,
@@ -1555,7 +1543,7 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "errISemSynNotEType"@en .
 
 
-###  https://d-workz.github.io/akco#errISynNotPIdent
+###  https://purl.archive.org/akco#errISynNotPIdent
 :errISynNotPIdent rdf:type owl:NamedIndividual ,
                            :Error ;
                   :errorNature "Syntactic"@en ;
@@ -1565,7 +1553,7 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:label "errISynNotPIdent"@en .
 
 
-###  https://d-workz.github.io/akco#errPVSemNotADomain
+###  https://purl.archive.org/akco#errPVSemNotADomain
 :errPVSemNotADomain rdf:type owl:NamedIndividual ,
                              :Error ;
                     :errorNature "Semantic"@en ;
@@ -1575,7 +1563,7 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "errPVSemNotADomain"@en .
 
 
-###  https://d-workz.github.io/akco#errPVSemNotARange
+###  https://purl.archive.org/akco#errPVSemNotARange
 :errPVSemNotARange rdf:type owl:NamedIndividual ,
                             :Error ;
                    :errorNature "Semantic"@en ;
@@ -1585,7 +1573,7 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:label "errPVSemNotARange"@en .
 
 
-###  https://d-workz.github.io/akco#errPVSemSemWrong
+###  https://purl.archive.org/akco#errPVSemSemWrong
 :errPVSemSemWrong rdf:type owl:NamedIndividual ,
                            :Error ;
                   <http://www.w3.org/2004/02/skos/core#narrower> :errSystematic ,
@@ -1597,7 +1585,7 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:label "errPVSemSemWrong"@en .
 
 
-###  https://d-workz.github.io/akco#errPVSemSynNotEProperty
+###  https://purl.archive.org/akco#errPVSemSynNotEProperty
 :errPVSemSynNotEProperty rdf:type owl:NamedIndividual ,
                                   :Error ;
                          :errorNature "Semantic"@en ,
@@ -1608,7 +1596,7 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:label "errPVSemSynNotEProperty"@en .
 
 
-###  https://d-workz.github.io/akco#errPVSynNotPIdentID
+###  https://purl.archive.org/akco#errPVSynNotPIdentID
 :errPVSynNotPIdentID rdf:type owl:NamedIndividual ,
                               :Error ;
                      :errorNature "Syntactic"@en ;
@@ -1618,7 +1606,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "errPVSynNotPIdentID"@en .
 
 
-###  https://d-workz.github.io/akco#errPVSynNotPIdentIR
+###  https://purl.archive.org/akco#errPVSynNotPIdentIR
 :errPVSynNotPIdentIR rdf:type owl:NamedIndividual ,
                               :Error ;
                      :errorNature "Syntactic"@en ;
@@ -1628,7 +1616,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "errPVSynNotPIdentIR"@en .
 
 
-###  https://d-workz.github.io/akco#errSystematic
+###  https://purl.archive.org/akco#errSystematic
 :errSystematic rdf:type owl:NamedIndividual ,
                         :Error ;
                <http://www.w3.org/2004/02/skos/core#broader> :errPVSemSemWrong ;
@@ -1636,7 +1624,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "errSystematic"@en .
 
 
-###  https://d-workz.github.io/akco#errTailVertical
+###  https://purl.archive.org/akco#errTailVertical
 :errTailVertical rdf:type owl:NamedIndividual ,
                           :Error ;
                  <http://www.w3.org/2004/02/skos/core#broader> :errPVSemSemWrong ;
@@ -1644,7 +1632,7 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "errTailVertical"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcAny
+###  https://purl.archive.org/akco#extSrcAny
 :extSrcAny rdf:type owl:NamedIndividual ,
                     :ExternalSource ;
            <http://www.w3.org/2004/02/skos/core#narrower> :extSrcFormalAndSyntaxSpecifications ,
@@ -1656,7 +1644,7 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:label "extSrcAny"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcDBpedia
+###  https://purl.archive.org/akco#extSrcDBpedia
 :extSrcDBpedia rdf:type owl:NamedIndividual ,
                         :ExternalSource ;
                <http://www.w3.org/2004/02/skos/core#broader> :extSrcKnowledgeGraph ;
@@ -1664,7 +1652,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "extSrcDBpedia"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcDomaInExpertise
+###  https://purl.archive.org/akco#extSrcDomaInExpertise
 :extSrcDomaInExpertise rdf:type owl:NamedIndividual ,
                                 :ExpertKnowledge ;
                        rdfs:comment """Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for
@@ -1672,13 +1660,13 @@ validation where additional contextual knowledge might be required. Human intera
                        rdfs:label "extSrcDomaInExpertise"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcExternalSources
+###  https://purl.archive.org/akco#extSrcExternalSources
 :extSrcExternalSources rdf:type owl:NamedIndividual ;
                        rdfs:comment "External sources are any sources outside the KG. Typical background knowledge is websites, large language models, documents, other knowledge graphs, and databases. The success of using the sources for knowledge cleaning depends on the quality of the sources and the acquisition process. The latter includes the alignment of the assertion(s) with the external source and the correct interpretation of the received results."@en ;
                        rdfs:label "extSrcExternalSources"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcFormalAndSyntaxSpecifications
+###  https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications
 :extSrcFormalAndSyntaxSpecifications rdf:type owl:NamedIndividual ,
                                               :ExternalSource ;
                                      <http://www.w3.org/2004/02/skos/core#broader> :extSrcAny ;
@@ -1686,7 +1674,7 @@ validation where additional contextual knowledge might be required. Human intera
                                      rdfs:label "extSrcFormalAndSyntaxSpecifications"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcHornClauses
+###  https://purl.archive.org/akco#extSrcHornClauses
 :extSrcHornClauses rdf:type owl:NamedIndividual ,
                             :ExternalSource ;
                    <http://www.w3.org/2004/02/skos/core#broader> :extSrcAny ;
@@ -1694,7 +1682,7 @@ validation where additional contextual knowledge might be required. Human intera
                    rdfs:label "extSrcHornClauses"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcKnowledgeGraph
+###  https://purl.archive.org/akco#extSrcKnowledgeGraph
 :extSrcKnowledgeGraph rdf:type owl:NamedIndividual ,
                                :ExternalSource ;
                       <http://www.w3.org/2004/02/skos/core#broader> :extSrcAny ;
@@ -1703,7 +1691,7 @@ validation where additional contextual knowledge might be required. Human intera
                       rdfs:label "extSrcKnowledgeGraph"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcQueryLogs
+###  https://purl.archive.org/akco#extSrcQueryLogs
 :extSrcQueryLogs rdf:type owl:NamedIndividual ,
                           :ExternalSource ;
                  <http://www.w3.org/2004/02/skos/core#broader> :extSrcAny ;
@@ -1711,7 +1699,7 @@ validation where additional contextual knowledge might be required. Human intera
                  rdfs:label "extSrcQueryLogs"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcTextCorpus
+###  https://purl.archive.org/akco#extSrcTextCorpus
 :extSrcTextCorpus rdf:type owl:NamedIndividual ,
                            :ExternalSource ;
                   <http://www.w3.org/2004/02/skos/core#broader> :extSrcAny ;
@@ -1719,7 +1707,7 @@ validation where additional contextual knowledge might be required. Human intera
                   rdfs:label "extSrcTextCorpus"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcWeb
+###  https://purl.archive.org/akco#extSrcWeb
 :extSrcWeb rdf:type owl:NamedIndividual ,
                     :ExternalSource ;
            <http://www.w3.org/2004/02/skos/core#broader> :extSrcAny ;
@@ -1728,7 +1716,7 @@ validation where additional contextual knowledge might be required. Human intera
            rdfs:label "extSrcWeb"@en .
 
 
-###  https://d-workz.github.io/akco#extSrcWikipedia
+###  https://purl.archive.org/akco#extSrcWikipedia
 :extSrcWikipedia rdf:type owl:NamedIndividual ,
                           :ExternalSource ;
                  <http://www.w3.org/2004/02/skos/core#broader> :extSrcWeb ;
@@ -1736,7 +1724,7 @@ validation where additional contextual knowledge might be required. Human intera
                  rdfs:label "extSrcWikipedia"@en .
 
 
-###  https://d-workz.github.io/akco#kGContextualGraph
+###  https://purl.archive.org/akco#kGContextualGraph
 :kGContextualGraph rdf:type owl:NamedIndividual ,
                             :KnowledgeGraph ;
                    rdfs:comment """Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge.
@@ -1744,836 +1732,836 @@ A contextual graph can also be be beneficial to provide a context for clarifying
                    rdfs:label "kGContextualGraph"@en .
 
 
-###  https://d-workz.github.io/akco#kGGraphStructure
+###  https://purl.archive.org/akco#kGGraphStructure
 :kGGraphStructure rdf:type owl:NamedIndividual ,
                            :KnowledgeGraph ;
                   rdfs:comment "Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp; completeness) of the overall KG since it is typically used with data-driven measures."@en ;
                   rdfs:label "kGGraphStructure"@en .
 
 
-###  https://d-workz.github.io/akco#kGValuesOfPV
+###  https://purl.archive.org/akco#kGValuesOfPV
 :kGValuesOfPV rdf:type owl:NamedIndividual ,
                        :KnowledgeGraph ;
               rdfs:comment "The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches."@en ;
               rdfs:label "kGValuesOfPV"@en .
 
 
-###  https://d-workz.github.io/akco#publADianReFrfoDLKB
+###  https://purl.archive.org/akco#publADianReFrfoDLKB
 :publADianReFrfoDLKB rdf:type owl:NamedIndividual ,
                               <http://purl.org/dc/terms/BibliographicResource> ;
-                     <http://purl.org/dc/elements/1.1/source> ""@en ;
-                     <http://purl.org/dc/elements/1.1/title> "A Diagnosis and Repair Framework for DL-LiteA KBs."@en ;
-                     <http://purl.org/dc/elements/1.1/type> "http://purl.org/eprint/type/Report" ;
                      <http://purl.org/dc/terms/bibliographicCitation> "Chortis, M., & Flouris, G. (2015). A diagnosis and repair framework for DL-LiteA KBs. European Semantic Web Conference, 199–214."@en ;
                      <http://purl.org/dc/terms/issued> "2015"^^xsd:date ;
+                     <http://purl.org/dc/terms/source> ""@en ;
+                     <http://purl.org/dc/terms/title> "A Diagnosis and Repair Framework for DL-LiteA KBs."@en ;
+                     <http://purl.org/dc/terms/type> "http://purl.org/eprint/type/Report" ;
                      rdfs:label "publADianReFrfoDLKB"@en .
 
 
-###  https://d-workz.github.io/akco#publAPE
+###  https://purl.archive.org/akco#publAPE
 :publAPE rdf:type owl:NamedIndividual ,
                   <http://purl.org/dc/terms/BibliographicResource> ;
-         <http://purl.org/dc/elements/1.1/source> ""@en ;
-         <http://purl.org/dc/elements/1.1/title> "Attributed and predictive entity embedding for fine-grained entity typing in knowledge bases"@en ;
          <http://purl.org/dc/terms/bibliographicCitation> "Jin, H., Hou, L., Li, J., & Dong, T. (2018). Attributed and predictive entity embedding for fine-grained entity typing in knowledge bases. Proceedings of the 27th International Conference on Computational Linguistics, 282–292."@en ;
          <http://purl.org/dc/terms/issued> "2018"^^xsd:date ;
+         <http://purl.org/dc/terms/source> ""@en ;
+         <http://purl.org/dc/terms/title> "Attributed and predictive entity embedding for fine-grained entity typing in knowledge bases"@en ;
          rdfs:label "publAPE"@en .
 
 
-###  https://d-workz.github.io/akco#publAPrInToImLiDaQuUsDiOuDe
+###  https://purl.archive.org/akco#publAPrInToImLiDaQuUsDiOuDe
 :publAPrInToImLiDaQuUsDiOuDe rdf:type owl:NamedIndividual ,
                                       <http://purl.org/dc/terms/BibliographicResource> ;
-                             <http://purl.org/dc/elements/1.1/source> ""@en ;
-                             <http://purl.org/dc/elements/1.1/title> "A Preliminary Investigation Towards Improving Linked Data Quality Using Distance-Based Outlier Detection"@en ;
                              <http://purl.org/dc/terms/bibliographicCitation> "Debattista, J., Lange, C., & Auer, S. (2016). A preliminary investigation towards improving linked data quality using distance-based outlier detection. Joint International Semantic Technology Conference, 116–124."@en ;
                              <http://purl.org/dc/terms/issued> "2016"^^xsd:date ;
+                             <http://purl.org/dc/terms/source> ""@en ;
+                             <http://purl.org/dc/terms/title> "A Preliminary Investigation Towards Improving Linked Data Quality Using Distance-Based Outlier Detection"@en ;
                              rdfs:label "publAPrInToImLiDaQuUsDiOuDe"@en .
 
 
-###  https://d-workz.github.io/akco#publAttributE
+###  https://purl.archive.org/akco#publAttributE
 :publAttributE rdf:type owl:NamedIndividual ,
                         <http://purl.org/dc/terms/BibliographicResource> ;
-               <http://purl.org/dc/elements/1.1/source> ""@en ;
-               <http://purl.org/dc/elements/1.1/title> "Entity alignment between knowledge graphs using attribute embedding"@en ;
                <http://purl.org/dc/terms/bibliographicCitation> "Trisedya, B. D., Qi, J., & Zhang, R. (2019). Entity alignment between knowledge graphs using attribute embeddings. Proceedings of the AAAI Conference on Artificial Intelligence, 33(01), 297–304."@en ;
                <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+               <http://purl.org/dc/terms/source> ""@en ;
+               <http://purl.org/dc/terms/title> "Entity alignment between knowledge graphs using attribute embedding"@en ;
                rdfs:label "publAttributE"@en .
 
 
-###  https://d-workz.github.io/akco#publBioGRER
+###  https://purl.archive.org/akco#publBioGRER
 :publBioGRER rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> ""@en ;
-             <http://purl.org/dc/elements/1.1/title> "Biomedical Knowledge Graph Refinement with Embedding and Logic Rules"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Zhao, S., Qin, B., Liu, T., & Wang, F. (2020). Biomedical knowledge graph refinement with embedding and logic rules. arXiv Preprint arXiv:2012.01031."@en ;
              <http://purl.org/dc/terms/issued> "2020"^^xsd:date ;
+             <http://purl.org/dc/terms/source> ""@en ;
+             <http://purl.org/dc/terms/title> "Biomedical Knowledge Graph Refinement with Embedding and Logic Rules"@en ;
              rdfs:label "publBioGRER"@en .
 
 
-###  https://d-workz.github.io/akco#publCEDAL
+###  https://purl.archive.org/akco#publCEDAL
 :publCEDAL rdf:type owl:NamedIndividual ,
                     <http://purl.org/dc/terms/BibliographicResource> ;
-           <http://purl.org/dc/elements/1.1/source> "https://github.com/firmao/CEDAL"@en ;
-           <http://purl.org/dc/elements/1.1/title> "CEDAL: Time-Efficient Detection of Erroneous Links in Large-Scale Link Repositories"@en ;
            <http://purl.org/dc/terms/bibliographicCitation> "Valdestilhas, A., Soru, T., & Ngomo, A.-C. N. (2017). Cedal: time-efficient detection of erroneous links in large-scale link repositories. Proceedings of the International Conference on Web Intelligence, 106–113."@en ;
            <http://purl.org/dc/terms/issued> "2017"^^xsd:date ;
+           <http://purl.org/dc/terms/source> "https://github.com/firmao/CEDAL"@en ;
+           <http://purl.org/dc/terms/title> "CEDAL: Time-Efficient Detection of Erroneous Links in Large-Scale Link Repositories"@en ;
            rdfs:label "publCEDAL"@en .
 
 
-###  https://d-workz.github.io/akco#publCOLIBRI
+###  https://purl.archive.org/akco#publCOLIBRI
 :publCOLIBRI rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> ""@en ;
-             <http://purl.org/dc/elements/1.1/title> "Unsupervised Link Discovery through Knowledge Base Repair"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Ngonga Ngomo, A.-C., Sherif, M. A., & Lyko, K. (2014). Unsupervised link discovery through knowledge base repair. European Semantic Web Conference, 380–394."@en ;
              <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+             <http://purl.org/dc/terms/source> ""@en ;
+             <http://purl.org/dc/terms/title> "Unsupervised Link Discovery through Knowledge Base Repair"@en ;
              rdfs:label "publCOLIBRI"@en .
 
 
-###  https://d-workz.github.io/akco#publCOPAAL
+###  https://purl.archive.org/akco#publCOPAAL
 :publCOPAAL rdf:type owl:NamedIndividual ,
                      <http://purl.org/dc/terms/BibliographicResource> ;
-            <http://purl.org/dc/elements/1.1/source> "https://github.com/dice-group/COPAAL"@en ;
-            <http://purl.org/dc/elements/1.1/title> "Unsupervised Discovery of Corroborative Paths for Fact Validation"@en ;
             <http://purl.org/dc/terms/bibliographicCitation> "Syed, Z. H., Röder, M., & Ngomo, A.-C. N. (2019). Unsupervised discovery of corroborative paths for fact validation. International Semantic Web Conference, 630–646."@en ;
             <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+            <http://purl.org/dc/terms/source> "https://github.com/dice-group/COPAAL"@en ;
+            <http://purl.org/dc/terms/title> "Unsupervised Discovery of Corroborative Paths for Fact Validation"@en ;
             rdfs:label "publCOPAAL"@en .
 
 
-###  https://d-workz.github.io/akco#publChanHaInofDB
+###  https://purl.archive.org/akco#publChanHaInofDB
 :publChanHaInofDB rdf:type owl:NamedIndividual ,
                            <http://purl.org/dc/terms/BibliographicResource> ;
-                  <http://purl.org/dc/elements/1.1/source> ""@en ;
-                  <http://purl.org/dc/elements/1.1/title> "Checking and Handling Inconsistency of DBpedia"@en ;
                   <http://purl.org/dc/terms/bibliographicCitation> "Sheng, Z., Wang, X., Shi, H., & Feng, Z. (2012). Checking and handling inconsistency of DBpedia. International Conference on Web Information Systems and Mining, 480–488."@en ;
                   <http://purl.org/dc/terms/issued> "2012"^^xsd:date ;
+                  <http://purl.org/dc/terms/source> ""@en ;
+                  <http://purl.org/dc/terms/title> "Checking and Handling Inconsistency of DBpedia"@en ;
                   rdfs:label "publChanHaInofDB"@en .
 
 
-###  https://d-workz.github.io/akco#publCoCKG
+###  https://purl.archive.org/akco#publCoCKG
 :publCoCKG rdf:type owl:NamedIndividual ,
                     <http://purl.org/dc/terms/BibliographicResource> ;
-           <http://purl.org/dc/elements/1.1/source> "https://github.com/aolimelo/cockg"@en ;
-           <http://purl.org/dc/elements/1.1/title> "Automatic Detection of Relation Assertion Errors and Induction of Relation Constraints"@en ;
            <http://purl.org/dc/terms/bibliographicCitation> "Melo, A., & Paulheim, H. (2020). Automatic detection of relation assertion errors and induction of relation constraints. Semantic Web, 11(5), 801–830."@en ;
            <http://purl.org/dc/terms/issued> "2020"^^xsd:date ;
+           <http://purl.org/dc/terms/source> "https://github.com/aolimelo/cockg"@en ;
+           <http://purl.org/dc/terms/title> "Automatic Detection of Relation Assertion Errors and Induction of Relation Constraints"@en ;
            rdfs:label "publCoCKG"@en .
 
 
-###  https://d-workz.github.io/akco#publCorhist
+###  https://purl.archive.org/akco#publCorhist
 :publCorhist rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> "https://github.com/Tpt/corhist"@en ;
-             <http://purl.org/dc/elements/1.1/title> "Learning How to Correct a Knowledge Base from the Edit History"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Pellissier Tanon, T., Bourgaux, C., & Suchanek, F. (2019). Learning how to correct a knowledge base from the edit history. The World Wide Web Conference, 1465–1475."@en ;
              <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+             <http://purl.org/dc/terms/source> "https://github.com/Tpt/corhist"@en ;
+             <http://purl.org/dc/terms/title> "Learning How to Correct a Knowledge Base from the Edit History"@en ;
              rdfs:label "publCorhist"@en .
 
 
-###  https://d-workz.github.io/akco#publDBOnEnfoInDe
+###  https://purl.archive.org/akco#publDBOnEnfoInDe
 :publDBOnEnfoInDe rdf:type owl:NamedIndividual ,
                            <http://purl.org/dc/terms/BibliographicResource> ;
-                  <http://purl.org/dc/elements/1.1/source> ""@en ;
-                  <http://purl.org/dc/elements/1.1/title> "DBpedia Ontology Enrichment for Inconsistency Detection."@en ;
                   <http://purl.org/dc/terms/bibliographicCitation> "Töpper, G., Knuth, M., & Sack, H. (2012). DBpedia ontology enrichment for inconsistency detection. Proceedings of the 8th International Conference on Semantic Systems, 33–40."@en ;
                   <http://purl.org/dc/terms/issued> "2012"^^xsd:date ;
+                  <http://purl.org/dc/terms/source> ""@en ;
+                  <http://purl.org/dc/terms/title> "DBpedia Ontology Enrichment for Inconsistency Detection."@en ;
                   rdfs:label "publDBOnEnfoInDe"@en .
 
 
-###  https://d-workz.github.io/akco#publDECIDE
+###  https://purl.archive.org/akco#publDECIDE
 :publDECIDE rdf:type owl:NamedIndividual ,
                      <http://purl.org/dc/terms/BibliographicResource> ;
-            <http://purl.org/dc/elements/1.1/source> "https://github.com/raadjoe/DECIDE_v2"@en ;
-            <http://purl.org/dc/elements/1.1/title> "Detection of Contextual Identity Links in a Knowledge Base"@en ;
             <http://purl.org/dc/terms/bibliographicCitation> "Raad, J., Pernelle, N., & Saı̈s, F. (2017). Detection of contextual identity links in a knowledge base. Proceedings of the Knowledge Capture Conference, 1–8."@en ;
             <http://purl.org/dc/terms/issued> "2017"^^xsd:date ;
+            <http://purl.org/dc/terms/source> "https://github.com/raadjoe/DECIDE_v2"@en ;
+            <http://purl.org/dc/terms/title> "Detection of Contextual Identity Links in a Knowledge Base"@en ;
             rdfs:label "publDECIDE"@en .
 
 
-###  https://d-workz.github.io/akco#publDeFacto
+###  https://purl.archive.org/akco#publDeFacto
 :publDeFacto rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> "https://github.com/DeFacto/DeFacto"@en ;
-             <http://purl.org/dc/elements/1.1/title> "DeFacto - Temporal and multilingual Deep Fact Validation"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Gerber, D., Esteves, D., Lehmann, J., Bühmann, L., Usbeck, R., Ngomo, A.-C. N., & Speck, R. (2015). Defacto—temporal and multilingual deep fact validation. Journal of Web Semantics, 35, 85–101."@en ;
              <http://purl.org/dc/terms/issued> "2015"^^xsd:date ;
+             <http://purl.org/dc/terms/source> "https://github.com/DeFacto/DeFacto"@en ;
+             <http://purl.org/dc/terms/title> "DeFacto - Temporal and multilingual Deep Fact Validation"@en ;
              rdfs:label "publDeFacto"@en .
 
 
-###  https://d-workz.github.io/akco#publDeInNuDainDB
+###  https://purl.archive.org/akco#publDeInNuDainDB
 :publDeInNuDainDB rdf:type owl:NamedIndividual ,
                            <http://purl.org/dc/terms/BibliographicResource> ;
-                  <http://purl.org/dc/elements/1.1/source> ""@en ;
-                  <http://purl.org/dc/elements/1.1/title> "Detecting Incorrect Numerical Data in DBpedia"@en ;
                   <http://purl.org/dc/terms/bibliographicCitation> "Wienand, D., & Paulheim, H. (2014). Detecting incorrect numerical data in dbpedia. European Semantic Web Conference, 504–518."@en ;
                   <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+                  <http://purl.org/dc/terms/source> ""@en ;
+                  <http://purl.org/dc/terms/title> "Detecting Incorrect Numerical Data in DBpedia"@en ;
                   rdfs:label "publDeInNuDainDB"@en .
 
 
-###  https://d-workz.github.io/akco#publDeanCoTyErinOpKnGrUsSeReofEn
+###  https://purl.archive.org/akco#publDeanCoTyErinOpKnGrUsSeReofEn
 :publDeanCoTyErinOpKnGrUsSeReofEn rdf:type owl:NamedIndividual ,
                                            <http://purl.org/dc/terms/BibliographicResource> ;
-                                  <http://purl.org/dc/elements/1.1/source> ""@en ;
-                                  <http://purl.org/dc/elements/1.1/title> "Detecting and Correcting Typing Errors in Open-Domain Knowledge Graphs Using Semantic Representation of Entities"@en ;
                                   <http://purl.org/dc/terms/bibliographicCitation> "Caminhas, D. D. (2019). Detecting and correcting typing errors in open-domain knowledge graphs using semantic representation of entities."@en ;
                                   <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+                                  <http://purl.org/dc/terms/source> ""@en ;
+                                  <http://purl.org/dc/terms/title> "Detecting and Correcting Typing Errors in Open-Domain Knowledge Graphs Using Semantic Representation of Entities"@en ;
                                   rdfs:label "publDeanCoTyErinOpKnGrUsSeReofEn"@en .
 
 
-###  https://d-workz.github.io/akco#publDecefitogr
+###  https://purl.archive.org/akco#publDecefitogr
 :publDecefitogr rdf:type owl:NamedIndividual ,
                          <http://purl.org/dc/terms/BibliographicResource> ;
-                <http://purl.org/dc/elements/1.1/source> ""@en ;
-                <http://purl.org/dc/elements/1.1/title> "Deducing certain fixes to graphs"@en ;
                 <http://purl.org/dc/terms/bibliographicCitation> "Fan, W., Lu, P., Tian, C., & Zhou, J. (2019). Deducing certain fixes to graphs. Proceedings of the VLDB Endowment, 12(7), 752–765."@en ;
                 <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+                <http://purl.org/dc/terms/source> ""@en ;
+                <http://purl.org/dc/terms/title> "Deducing certain fixes to graphs"@en ;
                 rdfs:label "publDecefitogr"@en .
 
 
-###  https://d-workz.github.io/akco#publDeerinnulidauscroude
+###  https://purl.archive.org/akco#publDeerinnulidauscroude
 :publDeerinnulidauscroude rdf:type owl:NamedIndividual ,
                                    <http://purl.org/dc/terms/BibliographicResource> ;
-                          <http://purl.org/dc/elements/1.1/source> ""@en ;
-                          <http://purl.org/dc/elements/1.1/title> "Detecting errors in numerical linked data using cross-checked outlier detection"@en ;
                           <http://purl.org/dc/terms/bibliographicCitation> "Fleischhacker, D., Paulheim, H., Bryl, V., Völker, J., & Bizer, C. (2014). Detecting errors in numerical linked data using cross-checked outlier detection. International Semantic Web Conference, 357–372."@en ;
                           <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+                          <http://purl.org/dc/terms/source> ""@en ;
+                          <http://purl.org/dc/terms/title> "Detecting errors in numerical linked data using cross-checked outlier detection"@en ;
                           rdfs:label "publDeerinnulidauscroude"@en .
 
 
-###  https://d-workz.github.io/akco#publDojuanenbyitnaEntyuslamo
+###  https://purl.archive.org/akco#publDojuanenbyitnaEntyuslamo
 :publDojuanenbyitnaEntyuslamo rdf:type owl:NamedIndividual ,
                                        <http://purl.org/dc/terms/BibliographicResource> ;
-                              <http://purl.org/dc/elements/1.1/source> ""@en ;
-                              <http://purl.org/dc/elements/1.1/title> "Do judge an entity by its name! Entity typing using language models"@en ;
                               <http://purl.org/dc/terms/bibliographicCitation> "Biswas, R., Sofronova, R., Alam, M., Heist, N., Paulheim, H., & Sack, H. (2021). Do judge an entity by its name! Entity typing using language models. European Semantic Web Conference, 65–70."@en ;
                               <http://purl.org/dc/terms/issued> "2021"^^xsd:date ;
+                              <http://purl.org/dc/terms/source> ""@en ;
+                              <http://purl.org/dc/terms/title> "Do judge an entity by its name! Entity typing using language models"@en ;
                               rdfs:label "publDojuanenbyitnaEntyuslamo"@en .
 
 
-###  https://d-workz.github.io/akco#publExfakt
+###  https://purl.archive.org/akco#publExfakt
 :publExfakt rdf:type owl:NamedIndividual ,
                      <http://purl.org/dc/terms/BibliographicResource> ;
-            <http://purl.org/dc/elements/1.1/source> "https://github.com/mhmgad/ExFaKT"@en ;
-            <http://purl.org/dc/elements/1.1/title> "Exfakt: A framework for explaining facts over knowledge graphs and text"@en ;
             <http://purl.org/dc/terms/bibliographicCitation> "Gad-Elrab, M. H., Stepanova, D., Urbani, J., & Weikum, G. (2019). Exfakt: A framework for explaining facts over knowledge graphs and text. Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining, 87–95."@en ;
             <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+            <http://purl.org/dc/terms/source> "https://github.com/mhmgad/ExFaKT"@en ;
+            <http://purl.org/dc/terms/title> "Exfakt: A framework for explaining facts over knowledge graphs and text"@en ;
             rdfs:label "publExfakt"@en .
 
 
-###  https://d-workz.github.io/akco#publFACTY
+###  https://purl.archive.org/akco#publFACTY
 :publFACTY rdf:type owl:NamedIndividual ,
                     <http://purl.org/dc/terms/BibliographicResource> ;
-           <http://purl.org/dc/elements/1.1/source> ""@en ;
-           <http://purl.org/dc/elements/1.1/title> "Knowledge verification for long-tail verticals"@en ;
            <http://purl.org/dc/terms/bibliographicCitation> "Li, F., Dong, X. L., Langen, A., & Li, Y. (2017). Knowledge verification for long-tail verticals. Proceedings of the VLDB Endowment, 10(11), 1370–1381."@en ;
            <http://purl.org/dc/terms/issued> "2017"^^xsd:date ;
+           <http://purl.org/dc/terms/source> ""@en ;
+           <http://purl.org/dc/terms/title> "Knowledge verification for long-tail verticals"@en ;
            rdfs:label "publFACTY"@en .
 
 
-###  https://d-workz.github.io/akco#publFEA
+###  https://purl.archive.org/akco#publFEA
 :publFEA rdf:type owl:NamedIndividual ,
                   <http://purl.org/dc/terms/BibliographicResource> ;
-         <http://purl.org/dc/elements/1.1/source> ""@en ;
-         <http://purl.org/dc/elements/1.1/title> "Fact-checking via Path Embedding and Aggregation"@en ;
          <http://purl.org/dc/terms/bibliographicCitation> "Pirrò, G. (2020). Fact Checking via Path Embedding and Aggregation. arXiv Preprint arXiv:2011.08028."@en ;
          <http://purl.org/dc/terms/issued> "2020"^^xsd:date ;
+         <http://purl.org/dc/terms/source> ""@en ;
+         <http://purl.org/dc/terms/title> "Fact-checking via Path Embedding and Aggregation"@en ;
          rdfs:label "publFEA"@en .
 
 
-###  https://d-workz.github.io/akco#publFaVawiKnGrEm
+###  https://purl.archive.org/akco#publFaVawiKnGrEm
 :publFaVawiKnGrEm rdf:type owl:NamedIndividual ,
                            <http://purl.org/dc/terms/BibliographicResource> ;
-                  <http://purl.org/dc/elements/1.1/source> ""@en ;
-                  <http://purl.org/dc/elements/1.1/title> "Fact Validation with Knowledge Graph Embeddings"@en ;
                   <http://purl.org/dc/terms/bibliographicCitation> "Ammar, A., & Celebi, R. (2019). Fact Validation with Knowledge Graph Embeddings. ISWC (Satellites), 125–128."@en ;
                   <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+                  <http://purl.org/dc/terms/source> ""@en ;
+                  <http://purl.org/dc/terms/title> "Fact Validation with Knowledge Graph Embeddings"@en ;
                   rdfs:label "publFaVawiKnGrEm"@en .
 
 
-###  https://d-workz.github.io/akco#publFacTify
+###  https://purl.archive.org/akco#publFacTify
 :publFacTify rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> "http://qweb.cs.aau.dk/factify/"@en ;
-             <http://purl.org/dc/elements/1.1/title> "Retrieving Textual Evidence for Knowledge Graph Facts"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Ercan, G., Elbassuoni, S., & Hose, K. (2019). Retrieving textual evidence for knowledge graph facts. European Semantic Web Conference, 52–67."@en ;
              <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+             <http://purl.org/dc/terms/source> "http://qweb.cs.aau.dk/factify/"@en ;
+             <http://purl.org/dc/terms/title> "Retrieving Textual Evidence for Knowledge Graph Facts"@en ;
              rdfs:label "publFacTify"@en .
 
 
-###  https://d-workz.github.io/akco#publFachvievpa
+###  https://purl.archive.org/akco#publFachvievpa
 :publFachvievpa rdf:type owl:NamedIndividual ,
                          <http://purl.org/dc/terms/BibliographicResource> ;
-                <http://purl.org/dc/elements/1.1/source> ""@en ;
-                <http://purl.org/dc/elements/1.1/title> "Fact checking via evidence patterns"@en ;
                 <http://purl.org/dc/terms/bibliographicCitation> "Fionda, V., & Pirrò, G. (2018). Fact checking via evidence patterns. Proceedings of the 27th International Joint Conference on Artificial Intelligence, 3755–3761."@en ;
                 <http://purl.org/dc/terms/issued> "2018"^^xsd:date ;
+                <http://purl.org/dc/terms/source> ""@en ;
+                <http://purl.org/dc/terms/title> "Fact checking via evidence patterns"@en ;
                 rdfs:label "publFachvievpa"@en .
 
 
-###  https://d-workz.github.io/akco#publFactCheck
+###  https://purl.archive.org/akco#publFactCheck
 :publFactCheck rdf:type owl:NamedIndividual ,
                         <http://purl.org/dc/terms/BibliographicResource> ;
-               <http://purl.org/dc/elements/1.1/source> "https://github.com/dice-group/FactCheck"@en ;
-               <http://purl.org/dc/elements/1.1/title> "FactCheck: Validating RDF Triples Using Textual Evidence"@en ;
                <http://purl.org/dc/terms/bibliographicCitation> "Syed, Z. H., Röder, M., & Ngonga Ngomo, A.-C. (2018). Factcheck: Validating rdf triples using textual evidence. Proceedings of the 27th ACM International Conference on Information and Knowledge Management, 1599–1602."@en ;
                <http://purl.org/dc/terms/issued> "2018"^^xsd:date ;
+               <http://purl.org/dc/terms/source> "https://github.com/dice-group/FactCheck"@en ;
+               <http://purl.org/dc/terms/title> "FactCheck: Validating RDF Triples Using Textual Evidence"@en ;
                rdfs:label "publFactCheck"@en .
 
 
-###  https://d-workz.github.io/akco#publGAT
+###  https://purl.archive.org/akco#publGAT
 :publGAT rdf:type owl:NamedIndividual ,
                   <http://purl.org/dc/terms/BibliographicResource> ;
-         <http://purl.org/dc/elements/1.1/source> "https://github.com/PetarV-/GAT"@en ;
-         <http://purl.org/dc/elements/1.1/title> "Graph attention networks"@en ;
          <http://purl.org/dc/terms/bibliographicCitation> "Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., & Bengio, Y. (2017). Graph attention networks. arXiv Preprint arXiv:1710.10903."@en ;
          <http://purl.org/dc/terms/issued> "2017"^^xsd:date ;
+         <http://purl.org/dc/terms/source> "https://github.com/PetarV-/GAT"@en ;
+         <http://purl.org/dc/terms/title> "Graph attention networks"@en ;
          rdfs:label "publGAT"@en .
 
 
-###  https://d-workz.github.io/akco#publGRR
+###  https://purl.archive.org/akco#publGRR
 :publGRR rdf:type owl:NamedIndividual ,
                   <http://purl.org/dc/terms/BibliographicResource> ;
-         <http://purl.org/dc/elements/1.1/source> ""@en ;
-         <http://purl.org/dc/elements/1.1/title> "Rule-based graph repairing: Semantic and efficient repairing methods"@en ;
          <http://purl.org/dc/terms/bibliographicCitation> "Cheng, Y., Chen, L., Yuan, Y., & Wang, G. (2018). Rule-based graph repairing: Semantic and efficient repairing methods. 2018 IEEE 34th International Conference on Data Engineering (ICDE), 773–784."@en ;
          <http://purl.org/dc/terms/issued> "2018"^^xsd:date ;
+         <http://purl.org/dc/terms/source> ""@en ;
+         <http://purl.org/dc/terms/title> "Rule-based graph repairing: Semantic and efficient repairing methods"@en ;
          rdfs:label "publGRR"@en .
 
 
-###  https://d-workz.github.io/akco#publGeneralCorrectionFramework
+###  https://purl.archive.org/akco#publGeneralCorrectionFramework
 :publGeneralCorrectionFramework rdf:type owl:NamedIndividual ,
                                          <http://purl.org/dc/terms/BibliographicResource> ;
-                                <http://purl.org/dc/elements/1.1/source> "https://github.com/ChenJiaoyan/KG_Curation"@en ;
-                                <http://purl.org/dc/elements/1.1/title> "Correcting Assertions and Alignments of Large Scale Knowledge Bases"@en ;
                                 <http://purl.org/dc/terms/bibliographicCitation> "Chen, J., Jiménez-Ruiz, E., Horrocks, I., Chen, X., & Myklebust, E. B. (2021). Correcting Assertions and Alignments of Large Scale Knowledge Bases."@en ;
                                 <http://purl.org/dc/terms/issued> "2021"^^xsd:date ;
+                                <http://purl.org/dc/terms/source> "https://github.com/ChenJiaoyan/KG_Curation"@en ;
+                                <http://purl.org/dc/terms/title> "Correcting Assertions and Alignments of Large Scale Knowledge Bases"@en ;
                                 rdfs:label "publGeneralCorrectionFramework"@en .
 
 
-###  https://d-workz.github.io/akco#publGltyfoliinrdtrwiaptoensu
+###  https://purl.archive.org/akco#publGltyfoliinrdtrwiaptoensu
 :publGltyfoliinrdtrwiaptoensu rdf:type owl:NamedIndividual ,
                                        <http://purl.org/dc/terms/BibliographicResource> ;
-                              <http://purl.org/dc/elements/1.1/source> ""@en ;
-                              <http://purl.org/dc/elements/1.1/title> "Gleaning types for literals in rdf triples with application to entity summarization"@en ;
                               <http://purl.org/dc/terms/bibliographicCitation> "Gunaratna, K., Thirunarayan, K., Sheth, A., & Cheng, G. (2016). Gleaning types for literals in rdf triples with application to entity summarization. European Semantic Web Conference, 85–100."@en ;
                               <http://purl.org/dc/terms/issued> "2016"^^xsd:date ;
+                              <http://purl.org/dc/terms/source> ""@en ;
+                              <http://purl.org/dc/terms/title> "Gleaning types for literals in rdf triples with application to entity summarization"@en ;
                               rdfs:label "publGltyfoliinrdtrwiaptoensu"@en .
 
 
-###  https://d-workz.github.io/akco#publHMGCN
+###  https://purl.archive.org/akco#publHMGCN
 :publHMGCN rdf:type owl:NamedIndividual ,
                     <http://purl.org/dc/terms/BibliographicResource> ;
-           <http://purl.org/dc/elements/1.1/source> "https://github.com/SIGKDD/HMGCN"@en ;
-           <http://purl.org/dc/elements/1.1/title> "Fine-grained entity typing via hierarchical multi graph convolutional network"@en ;
            <http://purl.org/dc/terms/bibliographicCitation> "Jin, H., Hou, L., Li, J., & Dong, T. (2019). Fine-grained entity typing via hierarchical multi graph convolutional networks. Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), 4969–4978."@en ;
            <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+           <http://purl.org/dc/terms/source> "https://github.com/SIGKDD/HMGCN"@en ;
+           <http://purl.org/dc/terms/title> "Fine-grained entity typing via hierarchical multi graph convolutional network"@en ;
            rdfs:label "publHMGCN"@en .
 
 
-###  https://d-workz.github.io/akco#publHybridFC
+###  https://purl.archive.org/akco#publHybridFC
 :publHybridFC rdf:type owl:NamedIndividual ,
                        <http://purl.org/dc/terms/BibliographicResource> ;
-              <http://purl.org/dc/elements/1.1/source> "https://github.com/dice-group/HybridFC"@en ,
-                                                       "https://github.com/dice-group/HybridFC - annotation"@en ;
-              <http://purl.org/dc/elements/1.1/title> "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs"@en ,
-                                                      "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs - annotation"@en ;
               <http://purl.org/dc/terms/bibliographicCitation> "Qudus, U., Röder, M., Saleem, M., & Ngonga Ngomo, A.-C. (2022). HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs. International Semantic Web Conference, 462–480."@en ,
                                                                "Qudus, U., Röder, M., Saleem, M., &amp;amp; Ngonga Ngomo, A.-C. (2022). HybridFC: A hybrid fact-checking approach for knowledge graphs. In International Semantic Web Conference (pp. 462–480). Springer. - annotation"@en ;
               <http://purl.org/dc/terms/issued> "2022"^^xsd:date ;
-              <http://purl.org/dc/terms/title> "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs - datatype"@en ;
+              <http://purl.org/dc/terms/source> "https://github.com/dice-group/HybridFC"@en ,
+                                                "https://github.com/dice-group/HybridFC - annotation"@en ;
+              <http://purl.org/dc/terms/title> "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs"@en ,
+                                               "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs - annotation"@en ,
+                                               "HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs - datatype"@en ;
               rdfs:label "publHybridFC"@en .
 
 
-###  https://d-workz.github.io/akco#publIDLabTurtleValidator
+###  https://purl.archive.org/akco#publIDLabTurtleValidator
 :publIDLabTurtleValidator rdf:type owl:NamedIndividual ,
                                    <http://purl.org/dc/terms/BibliographicResource> ;
-                          <http://purl.org/dc/elements/1.1/source> "https://github.com/IDLabResearch/TurtleValidator"@en ;
-                          <http://purl.org/dc/elements/1.1/title> "IDLab Turtle Validator"@en ;
                           <http://purl.org/dc/terms/bibliographicCitation> "error-cit"@en ;
                           <http://purl.org/dc/terms/issued> "null"^^xsd:date ;
+                          <http://purl.org/dc/terms/source> "https://github.com/IDLabResearch/TurtleValidator"@en ;
+                          <http://purl.org/dc/terms/title> "IDLab Turtle Validator"@en ;
                           rdfs:label "publIDLabTurtleValidator"@en .
 
 
-###  https://d-workz.github.io/akco#publIO
+###  https://purl.archive.org/akco#publIO
 :publIO rdf:type owl:NamedIndividual ,
                  <http://purl.org/dc/terms/BibliographicResource> ;
-        <http://purl.org/dc/elements/1.1/source> "http://purl.org/twc/ontologies/identity.owl"@en ;
-        <http://purl.org/dc/elements/1.1/title> "Towards identity in linked data"@en ;
         <http://purl.org/dc/terms/bibliographicCitation> "McCusker, J. P., & McGuinness, D. L. (2010). Towards Identity in Linked Data. OWLED."@en ;
         <http://purl.org/dc/terms/issued> "2010"^^xsd:date ;
+        <http://purl.org/dc/terms/source> "http://purl.org/twc/ontologies/identity.owl"@en ;
+        <http://purl.org/dc/terms/title> "Towards identity in linked data"@en ;
         rdfs:label "publIO"@en .
 
 
-###  https://d-workz.github.io/akco#publIOTW
+###  https://purl.archive.org/akco#publIOTW
 :publIOTW rdf:type owl:NamedIndividual ,
                    <http://purl.org/dc/terms/BibliographicResource> ;
-          <http://purl.org/dc/elements/1.1/source> "https://github.com/wouterbeek/IOTW/"@en ;
-          <http://purl.org/dc/elements/1.1/title> "A contextualised semantics for owl: sameAs"@en ;
           <http://purl.org/dc/terms/bibliographicCitation> "Beek, W., Schlobach, S., & Harmelen, F. van. (2016). A contextualised semantics for owl: sameAs. European Semantic Web Conference, 405–419."@en ;
           <http://purl.org/dc/terms/issued> "2016"^^xsd:date ;
+          <http://purl.org/dc/terms/source> "https://github.com/wouterbeek/IOTW/"@en ;
+          <http://purl.org/dc/terms/title> "A contextualised semantics for owl: sameAs"@en ;
           rdfs:label "publIOTW"@en .
 
 
-###  https://d-workz.github.io/akco#publIdwrlibedabymuoude
+###  https://purl.archive.org/akco#publIdwrlibedabymuoude
 :publIdwrlibedabymuoude rdf:type owl:NamedIndividual ,
                                  <http://purl.org/dc/terms/BibliographicResource> ;
-                        <http://purl.org/dc/elements/1.1/source> ""@en ;
-                        <http://purl.org/dc/elements/1.1/title> "Identifying wrong links between datasets by multi-dimensional outlier detection"@en ;
                         <http://purl.org/dc/terms/bibliographicCitation> "Paulheim, H. (2014). Identifying wrong links between datasets by multi-dimensional outlier detection. WoDOOM, 27–38."@en ;
                         <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+                        <http://purl.org/dc/terms/source> ""@en ;
+                        <http://purl.org/dc/terms/title> "Identifying wrong links between datasets by multi-dimensional outlier detection"@en ;
                         rdfs:label "publIdwrlibedabymuoude"@en .
 
 
-###  https://d-workz.github.io/akco#publIncoinOW
+###  https://purl.archive.org/akco#publIncoinOW
 :publIncoinOW rdf:type owl:NamedIndividual ,
                        <http://purl.org/dc/terms/BibliographicResource> ;
-              <http://purl.org/dc/elements/1.1/source> ""@en ;
-              <http://purl.org/dc/elements/1.1/title> "Integrity constraints in OWL"@en ;
               <http://purl.org/dc/terms/bibliographicCitation> "Tao, J., Sirin, E., Bao, J., & McGuinness, D. (2010). Integrity constraints in OWL. Proceedings of the AAAI Conference on Artificial Intelligence, 24(1), 1443–1448."@en ;
               <http://purl.org/dc/terms/issued> "2010"^^xsd:date ;
+              <http://purl.org/dc/terms/source> ""@en ;
+              <http://purl.org/dc/terms/title> "Integrity constraints in OWL"@en ;
               rdfs:label "publIncoinOW"@en .
 
 
-###  https://d-workz.github.io/akco#publJSAE
+###  https://purl.archive.org/akco#publJSAE
 :publJSAE rdf:type owl:NamedIndividual ,
                    <http://purl.org/dc/terms/BibliographicResource> ;
-          <http://purl.org/dc/elements/1.1/source> ""@en ;
-          <http://purl.org/dc/elements/1.1/title> "Joint Entity Summary and Attribute Embeddings for Entity Alignment Between Knowledge Graphs"@en ;
           <http://purl.org/dc/terms/bibliographicCitation> "Munne, R. F., & Ichise, R. (2020). Joint entity summary and attribute embeddings for entity alignment between knowledge graphs. Hybrid Artificial Intelligent Systems: 15th International Conference, HAIS 2020, Gijón, Spain, November 11-13, 2020, Proceedings, 107–119."@en ;
           <http://purl.org/dc/terms/issued> "2020"^^xsd:date ;
+          <http://purl.org/dc/terms/source> ""@en ;
+          <http://purl.org/dc/terms/title> "Joint Entity Summary and Attribute Embeddings for Entity Alignment Between Knowledge Graphs"@en ;
           rdfs:label "publJSAE"@en .
 
 
-###  https://d-workz.github.io/akco#publKD2R
+###  https://purl.archive.org/akco#publKD2R
 :publKD2R rdf:type owl:NamedIndividual ,
                    <http://purl.org/dc/terms/BibliographicResource> ;
-          <http://purl.org/dc/elements/1.1/source> ""@en ;
-          <http://purl.org/dc/elements/1.1/title> "An automatic key discovery approach for data linking"@en ;
           <http://purl.org/dc/terms/bibliographicCitation> "Pernelle, N., Saı̈s, F., & Symeonidou, D. (2013). An automatic key discovery approach for data linking. Journal of Web Semantics, 23, 16–30."@en ;
           <http://purl.org/dc/terms/issued> "2013"^^xsd:date ;
+          <http://purl.org/dc/terms/source> ""@en ;
+          <http://purl.org/dc/terms/title> "An automatic key discovery approach for data linking"@en ;
           rdfs:label "publKD2R"@en .
 
 
-###  https://d-workz.github.io/akco#publKGClean
+###  https://purl.archive.org/akco#publKGClean
 :publKGClean rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> "https://github.com/ZJU-DAILY/ZHEClean"@en ;
-             <http://purl.org/dc/elements/1.1/title> "KGClean:An Embedding Powered Knowledge Graph Cleaning Framework"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Ge, C., Gao, Y., Weng, H., Zhang, C., Miao, X., & Zheng, B. (2020). Kgclean: An embedding powered knowledge graph cleaning framework. arXiv Preprint arXiv:2004.14478."@en ;
              <http://purl.org/dc/terms/issued> "2020"^^xsd:date ;
+             <http://purl.org/dc/terms/source> "https://github.com/ZJU-DAILY/ZHEClean"@en ;
+             <http://purl.org/dc/terms/title> "KGClean:An Embedding Powered Knowledge Graph Cleaning Framework"@en ;
              rdfs:label "publKGClean"@en .
 
 
-###  https://d-workz.github.io/akco#publKGTtm
+###  https://purl.archive.org/akco#publKGTtm
 :publKGTtm rdf:type owl:NamedIndividual ,
                     <http://purl.org/dc/terms/BibliographicResource> ;
-           <http://purl.org/dc/elements/1.1/source> ""@en ;
-           <http://purl.org/dc/elements/1.1/title> "Triple Trustworthiness Measurement for Knowledge Graph"@en ;
            <http://purl.org/dc/terms/bibliographicCitation> "Jia, S., Xiang, Y., Chen, X., & Wang, K. (2019). Triple trustworthiness measurement for knowledge graph. The World Wide Web Conference, 2865–2871."@en ;
            <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+           <http://purl.org/dc/terms/source> ""@en ;
+           <http://purl.org/dc/terms/title> "Triple Trustworthiness Measurement for Knowledge Graph"@en ;
            rdfs:label "publKGTtm"@en .
 
 
-###  https://d-workz.github.io/akco#publKS
+###  https://purl.archive.org/akco#publKS
 :publKS rdf:type owl:NamedIndividual ,
                  <http://purl.org/dc/terms/BibliographicResource> ;
-        <http://purl.org/dc/elements/1.1/source> "https://github.com/shiralkarprashant/knowledgestream"@en ;
-        <http://purl.org/dc/elements/1.1/title> "Finding Streams in Knowledge Graphs to Support Fact Checking"@en ;
         <http://purl.org/dc/terms/bibliographicCitation> "Shiralkar, P., Flammini, A., Menczer, F., & Ciampaglia, G. L. (2017). Finding streams in knowledge graphs to support fact checking. 2017 IEEE International Conference on Data Mining (ICDM), 859–864."@en ;
         <http://purl.org/dc/terms/issued> "2017"^^xsd:date ;
+        <http://purl.org/dc/terms/source> "https://github.com/shiralkarprashant/knowledgestream"@en ;
+        <http://purl.org/dc/terms/title> "Finding Streams in Knowledge Graphs to Support Fact Checking"@en ;
         rdfs:label "publKS"@en .
 
 
-###  https://d-workz.github.io/akco#publKV-rule
+###  https://purl.archive.org/akco#publKV-rule
 :publKV-rule rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> "https://github.com/machinereading/KV-rule"@en ;
-             <http://purl.org/dc/elements/1.1/title> "Fact Checking in Knowledge Graphs by Logical Consistency"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Kim, J.-S., & Choi, K.-S. (2021). Fact checking in knowledge graphs by logical consistency."@en ;
              <http://purl.org/dc/terms/issued> "2021"^^xsd:date ;
+             <http://purl.org/dc/terms/source> "https://github.com/machinereading/KV-rule"@en ;
+             <http://purl.org/dc/terms/title> "Fact Checking in Knowledge Graphs by Logical Consistency"@en ;
              rdfs:label "publKV-rule"@en .
 
 
-###  https://d-workz.github.io/akco#publKefogr
+###  https://purl.archive.org/akco#publKefogr
 :publKefogr rdf:type owl:NamedIndividual ,
                      <http://purl.org/dc/terms/BibliographicResource> ;
-            <http://purl.org/dc/elements/1.1/source> ""@en ;
-            <http://purl.org/dc/elements/1.1/title> "Keys for graphs"@en ;
             <http://purl.org/dc/terms/bibliographicCitation> "Fan, W., Fan, Z., Tian, C., & Dong, X. L. (2015). Keys for graphs. Proceedings of the VLDB Endowment, 8(12), 1590–1601."@en ;
             <http://purl.org/dc/terms/issued> "2015"^^xsd:date ;
+            <http://purl.org/dc/terms/source> ""@en ;
+            <http://purl.org/dc/terms/title> "Keys for graphs"@en ;
             rdfs:label "publKefogr"@en .
 
 
-###  https://d-workz.github.io/akco#publLOD-Community-Detection
+###  https://purl.archive.org/akco#publLOD-Community-Detection
 :publLOD-Community-Detection rdf:type owl:NamedIndividual ,
                                       <http://purl.org/dc/terms/BibliographicResource> ;
-                             <http://purl.org/dc/elements/1.1/source> "https://github.com/raadjoe/LOD-Community-Detection"@en ;
-                             <http://purl.org/dc/elements/1.1/title> "Detecting Erroneous Identity Links on the Web using Network Metrics"@en ;
                              <http://purl.org/dc/terms/bibliographicCitation> "Raad, J., Beek, W., Harmelen, F. van, Pernelle, N., & Saı̈s, F. (2018). Detecting erroneous identity links on the web using network metrics. International Semantic Web Conference, 391–407."@en ;
                              <http://purl.org/dc/terms/issued> "2018"^^xsd:date ;
+                             <http://purl.org/dc/terms/source> "https://github.com/raadjoe/LOD-Community-Detection"@en ;
+                             <http://purl.org/dc/terms/title> "Detecting Erroneous Identity Links on the Web using Network Metrics"@en ;
                              rdfs:label "publLOD-Community-Detection"@en .
 
 
-###  https://d-workz.github.io/akco#publLODLaundromat
+###  https://purl.archive.org/akco#publLODLaundromat
 :publLODLaundromat rdf:type owl:NamedIndividual ,
                             <http://purl.org/dc/terms/BibliographicResource> ;
-                   <http://purl.org/dc/elements/1.1/source> "https://github.com/LOD-Laundromat/LOD-Laundromat"@en ;
-                   <http://purl.org/dc/elements/1.1/title> "LOD Laundromat: A Uniform Way of publishing other people’s dirty data"@en ;
                    <http://purl.org/dc/terms/bibliographicCitation> "Beek, W., Rietveld, L., Bazoobandi, H. R., Wielemaker, J., & Schlobach, S. (2014). LOD laundromat: a uniform way of publishing other people’s dirty data. International Semantic Web Conference, 213–228."@en ;
                    <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+                   <http://purl.org/dc/terms/source> "https://github.com/LOD-Laundromat/LOD-Laundromat"@en ;
+                   <http://purl.org/dc/terms/title> "LOD Laundromat: A Uniform Way of publishing other people’s dirty data"@en ;
                    rdfs:label "publLODLaundromat"@en .
 
 
-###  https://d-workz.github.io/akco#publLeRiXt
+###  https://purl.archive.org/akco#publLeRiXt
 :publLeRiXt rdf:type owl:NamedIndividual ,
                      <http://purl.org/dc/terms/BibliographicResource> ;
-            <http://purl.org/dc/elements/1.1/source> ""@en ;
-            <http://purl.org/dc/elements/1.1/title> "Fixing the Domain and Range of Properties in Linked Data by Context Disambiguation."@en ;
             <http://purl.org/dc/terms/bibliographicCitation> "Tonon, A., Catasta, M., Demartini, G., & Cudré-Mauroux, P. (2015). Fixing the Domain and Range of Properties in Linked Data by Context Disambiguation. LDOW@ WWW, 1409."@en ;
             <http://purl.org/dc/terms/issued> "2015"^^xsd:date ;
+            <http://purl.org/dc/terms/source> ""@en ;
+            <http://purl.org/dc/terms/title> "Fixing the Domain and Range of Properties in Linked Data by Context Disambiguation."@en ;
             rdfs:label "publLeRiXt"@en .
 
 
-###  https://d-workz.github.io/akco#publLediaxwiasrumianitaptoindeoflida
+###  https://purl.archive.org/akco#publLediaxwiasrumianitaptoindeoflida
 :publLediaxwiasrumianitaptoindeoflida rdf:type owl:NamedIndividual ,
                                                <http://purl.org/dc/terms/BibliographicResource> ;
-                                      <http://purl.org/dc/elements/1.1/source> ""@en ;
-                                      <http://purl.org/dc/elements/1.1/title> "Learning disjointness axioms with association rule mining and its application to inconsistency detection of linked data"@en ;
                                       <http://purl.org/dc/terms/bibliographicCitation> "Ma, Y., Gao, H., Wu, T., & Qi, G. (2014). Learning disjointness axioms with association rule mining and its application to inconsistency detection of linked data. Chinese Semantic Web and Web Science Conference, 29–41."@en ;
                                       <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+                                      <http://purl.org/dc/terms/source> ""@en ;
+                                      <http://purl.org/dc/terms/title> "Learning disjointness axioms with association rule mining and its application to inconsistency detection of linked data"@en ;
                                       rdfs:label "publLediaxwiasrumianitaptoindeoflida"@en .
 
 
-###  https://d-workz.github.io/akco#publLodeofinSastinRDda
+###  https://purl.archive.org/akco#publLodeofinSastinRDda
 :publLodeofinSastinRDda rdf:type owl:NamedIndividual ,
                                  <http://purl.org/dc/terms/BibliographicResource> ;
-                        <http://purl.org/dc/elements/1.1/source> ""@en ;
-                        <http://purl.org/dc/elements/1.1/title> "Logical detection of invalid SameAs statements in RDF data"@en ;
                         <http://purl.org/dc/terms/bibliographicCitation> "Papaleo, L., Pernelle, N., Saı̈s, F., & Dumont, C. (2014). Logical detection of invalid sameas statements in RDF data. International Conference on Knowledge Engineering and Knowledge Management, 373–384."@en ;
                         <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+                        <http://purl.org/dc/terms/source> ""@en ;
+                        <http://purl.org/dc/terms/title> "Logical detection of invalid SameAs statements in RDF data"@en ;
                         rdfs:label "publLodeofinSastinRDda"@en .
 
 
-###  https://d-workz.github.io/akco#publMTM
+###  https://purl.archive.org/akco#publMTM
 :publMTM rdf:type owl:NamedIndividual ,
                   <http://purl.org/dc/terms/BibliographicResource> ;
-         <http://purl.org/dc/elements/1.1/source> ""@en ;
-         <http://purl.org/dc/elements/1.1/title> "The wisdom of minority: Unsupervised slot filling validation based on multi-dimensional truth-finding"@en ;
          <http://purl.org/dc/terms/bibliographicCitation> "Yu, D., Huang, H., Cassidy, T., Ji, H., Wang, C., Zhi, S., Han, J., Voss, C., & Magdon-Ismail, M. (2014). The wisdom of minority: Unsupervised slot filling validation based on multi-dimensional truth-finding. Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers, 1567–1578."@en ;
          <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+         <http://purl.org/dc/terms/source> ""@en ;
+         <http://purl.org/dc/terms/title> "The wisdom of minority: Unsupervised slot filling validation based on multi-dimensional truth-finding"@en ;
          rdfs:label "publMTM"@en .
 
 
-###  https://d-workz.github.io/akco#publNotquitethesame
+###  https://purl.archive.org/akco#publNotquitethesame
 :publNotquitethesame rdf:type owl:NamedIndividual ,
                               <http://purl.org/dc/terms/BibliographicResource> ;
-                     <http://purl.org/dc/elements/1.1/source> ""@en ;
-                     <http://purl.org/dc/elements/1.1/title> "Not quite the same: Identity constraints for the web of linked data"@en ;
                      <http://purl.org/dc/terms/bibliographicCitation> "De Melo, G. (2013). Not quite the same: Identity constraints for the web of linked data. Twenty-Seventh AAAI Conference on Artificial Intelligence."@en ;
                      <http://purl.org/dc/terms/issued> "2013"^^xsd:date ;
+                     <http://purl.org/dc/terms/source> ""@en ;
+                     <http://purl.org/dc/terms/title> "Not quite the same: Identity constraints for the web of linked data"@en ;
                      rdfs:label "publNotquitethesame"@en .
 
 
-###  https://d-workz.github.io/akco#publOGFC
+###  https://purl.archive.org/akco#publOGFC
 :publOGFC rdf:type owl:NamedIndividual ,
                    <http://purl.org/dc/terms/BibliographicResource> ;
-          <http://purl.org/dc/elements/1.1/source> ""@en ;
-          <http://purl.org/dc/elements/1.1/title> "Fact Checking in Knowledge Graphs with Ontological Subgraph Patterns"@en ;
           <http://purl.org/dc/terms/bibliographicCitation> "Lin, P., Song, Q., & Wu, Y. (2018). Fact checking in knowledge graphs with ontological subgraph patterns. Data Science and Engineering, 3(4), 341–358."@en ;
           <http://purl.org/dc/terms/issued> "2018"^^xsd:date ;
+          <http://purl.org/dc/terms/source> ""@en ;
+          <http://purl.org/dc/terms/title> "Fact Checking in Knowledge Graphs with Ontological Subgraph Patterns"@en ;
           rdfs:label "publOGFC"@en .
 
 
-###  https://d-workz.github.io/akco#publOptimalABoxRepairw.r.t.StaticELTBoxes
+###  https://purl.archive.org/akco#publOptimalABoxRepairw.r.t.StaticELTBoxes
 :publOptimalABoxRepairw.r.t.StaticELTBoxes rdf:type owl:NamedIndividual ,
                                                     <http://purl.org/dc/terms/BibliographicResource> ;
-                                           <http://purl.org/dc/elements/1.1/source> ""@en ;
-                                           <http://purl.org/dc/elements/1.1/title> "Optimal ABox Repair w.r.t. Static EL TBoxes: from Quantified ABoxes back to ABoxes"@en ;
                                            <http://purl.org/dc/terms/bibliographicCitation> "Baader, F., Koopmann, P., Kriegel, F., & Nuradiansyah, A. (n.d.). Optimal ABox Repair wrt Static EL TBoxes: from Quantified ABoxes back to ABoxes."@en ;
                                            <http://purl.org/dc/terms/issued> "2022"^^xsd:date ;
+                                           <http://purl.org/dc/terms/source> ""@en ;
+                                           <http://purl.org/dc/terms/title> "Optimal ABox Repair w.r.t. Static EL TBoxes: from Quantified ABoxes back to ABoxes"@en ;
                                            rdfs:label "publOptimalABoxRepairw.r.t.StaticELTBoxes"@en .
 
 
-###  https://d-workz.github.io/akco#publPredPath
+###  https://purl.archive.org/akco#publPredPath
 :publPredPath rdf:type owl:NamedIndividual ,
                        <http://purl.org/dc/terms/BibliographicResource> ;
-              <http://purl.org/dc/elements/1.1/source> "https://github.com/nddsg/KGMiner"@en ;
-              <http://purl.org/dc/elements/1.1/title> "Discriminative Predicate Path Mining for Fact Checking in Knowledge Graphs"@en ;
               <http://purl.org/dc/terms/bibliographicCitation> "Shi, B., & Weninger, T. (2016). Discriminative predicate path mining for fact checking in knowledge graphs. Knowledge-Based Systems, 104, 123–133."@en ;
               <http://purl.org/dc/terms/issued> "2016"^^xsd:date ;
+              <http://purl.org/dc/terms/source> "https://github.com/nddsg/KGMiner"@en ;
+              <http://purl.org/dc/terms/title> "Discriminative Predicate Path Mining for Fact Checking in Knowledge Graphs"@en ;
               rdfs:label "publPredPath"@en .
 
 
-###  https://d-workz.github.io/akco#publPrerdemofokngrre
+###  https://purl.archive.org/akco#publPrerdemofokngrre
 :publPrerdemofokngrre rdf:type owl:NamedIndividual ,
                                <http://purl.org/dc/terms/BibliographicResource> ;
-                      <http://purl.org/dc/elements/1.1/source> ""@en ;
-                      <http://purl.org/dc/elements/1.1/title> "Probabilistic error detection model for knowledge graph refinement"@en ;
                       <http://purl.org/dc/terms/bibliographicCitation> "Jeyaraj, M. N., Perera, S., Jayasinghe, M., & Jihan, N. (2019). Probabilistic error detection model for knowledge graph refinement. Proceedings of the International Conference on Computational Linguistics and Intelligent Text Processing (CiCLing’19)."@en ;
                       <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+                      <http://purl.org/dc/terms/source> ""@en ;
+                      <http://purl.org/dc/terms/title> "Probabilistic error detection model for knowledge graph refinement"@en ;
                       rdfs:label "publPrerdemofokngrre"@en .
 
 
-###  https://d-workz.github.io/akco#publRDD-Checker
+###  https://purl.archive.org/akco#publRDD-Checker
 :publRDD-Checker rdf:type owl:NamedIndividual ,
                           <http://purl.org/dc/terms/BibliographicResource> ;
-                 <http://purl.org/dc/elements/1.1/source> "http://dbis.informatik.uni-freiburg.de/forschung/projekte/rdd/"@en ;
-                 <http://purl.org/dc/elements/1.1/title> "RDF Constraint Checking"@en ;
                  <http://purl.org/dc/terms/bibliographicCitation> "Fischer, P. M., Lausen, G., Schätzle, A., & Schmidt, M. (2015). RDF constraint checking."@en ;
                  <http://purl.org/dc/terms/issued> "2015"^^xsd:date ;
+                 <http://purl.org/dc/terms/source> "http://dbis.informatik.uni-freiburg.de/forschung/projekte/rdd/"@en ;
+                 <http://purl.org/dc/terms/title> "RDF Constraint Checking"@en ;
                  rdfs:label "publRDD-Checker"@en .
 
 
-###  https://d-workz.github.io/akco#publRDFDoctor
+###  https://purl.archive.org/akco#publRDFDoctor
 :publRDFDoctor rdf:type owl:NamedIndividual ,
                         <http://purl.org/dc/terms/BibliographicResource> ;
-               <http://purl.org/dc/elements/1.1/source> "https://github.com/ahemaid/RDF-Doctor"@en ;
-               <http://purl.org/dc/elements/1.1/title> "RDF Doctor: A Holistic Approach for Syntax Error Detection and Correction of RDF Data"@en ;
                <http://purl.org/dc/terms/bibliographicCitation> "Hemid, A., Halilaj, L., Khiat, A., & Lohmann, S. (2019). RDF Doctor: A Holistic Approach for Syntax Error Detection and Correction of RDF Data. KEOD, 508–516."@en ;
                <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+               <http://purl.org/dc/terms/source> "https://github.com/ahemaid/RDF-Doctor"@en ;
+               <http://purl.org/dc/terms/title> "RDF Doctor: A Holistic Approach for Syntax Error Detection and Correction of RDF Data"@en ;
                rdfs:label "publRDFDoctor"@en .
 
 
-###  https://d-workz.github.io/akco#publRDFUnit
+###  https://purl.archive.org/akco#publRDFUnit
 :publRDFUnit rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> "https://github.com/AKSW/RDFUnit"@en ;
-             <http://purl.org/dc/elements/1.1/title> "Test-driven Evaluation of Linked Data Quality"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Kontokostas, D., Westphal, P., Auer, S., Hellmann, S., Lehmann, J., Cornelissen, R., & Zaveri, A. (2014). Test-driven evaluation of linked data quality. Proceedings of the 23rd International Conference on World Wide Web, 747–758."@en ;
              <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+             <http://purl.org/dc/terms/source> "https://github.com/AKSW/RDFUnit"@en ;
+             <http://purl.org/dc/terms/title> "Test-driven Evaluation of Linked Data Quality"@en ;
              rdfs:label "publRDFUnit"@en .
 
 
-###  https://d-workz.github.io/akco#publRDvase
+###  https://purl.archive.org/akco#publRDvase
 :publRDvase rdf:type owl:NamedIndividual ,
                      <http://purl.org/dc/terms/BibliographicResource> ;
-            <http://purl.org/dc/elements/1.1/source> "https://www.w3.org/RDF/Validator/"@en ;
-            <http://purl.org/dc/elements/1.1/title> "RDF validation service"@en ;
             <http://purl.org/dc/terms/bibliographicCitation> "Prud’hommeaux, E. (2007). RDF validation service. W3C. https://www.w3.org/RDF/Validator/documentation"@en ;
             <http://purl.org/dc/terms/issued> "null"^^xsd:date ;
+            <http://purl.org/dc/terms/source> "https://www.w3.org/RDF/Validator/"@en ;
+            <http://purl.org/dc/terms/title> "RDF validation service"@en ;
             rdfs:label "publRDvase"@en .
 
 
-###  https://d-workz.github.io/akco#publRUGE
+###  https://purl.archive.org/akco#publRUGE
 :publRUGE rdf:type owl:NamedIndividual ,
                    <http://purl.org/dc/terms/BibliographicResource> ;
-          <http://purl.org/dc/elements/1.1/source> "https://github.com/iieir-km/RUGE"@en ;
-          <http://purl.org/dc/elements/1.1/title> "Knowledge graph embedding with iterative guidance from soft rules"@en ;
           <http://purl.org/dc/terms/bibliographicCitation> "Guo, S., Wang, Q., Wang, L., Wang, B., & Guo, L. (2018). Knowledge graph embedding with iterative guidance from soft rules. Proceedings of the AAAI Conference on Artificial Intelligence, 32(1)."@en ;
           <http://purl.org/dc/terms/issued> "2018"^^xsd:date ;
+          <http://purl.org/dc/terms/source> "https://github.com/iieir-km/RUGE"@en ;
+          <http://purl.org/dc/terms/title> "Knowledge graph embedding with iterative guidance from soft rules"@en ;
           rdfs:label "publRUGE"@en .
 
 
-###  https://d-workz.github.io/akco#publReRaViinDB
+###  https://purl.archive.org/akco#publReRaViinDB
 :publReRaViinDB rdf:type owl:NamedIndividual ,
                          <http://purl.org/dc/terms/BibliographicResource> ;
-                <http://purl.org/dc/elements/1.1/source> ""@en ;
-                <http://purl.org/dc/elements/1.1/title> "Resolving Range Violations in DBpedia"@en ;
                 <http://purl.org/dc/terms/bibliographicCitation> "Lertvittayakumjorn, P., Kertkeidkachorn, N., & Ichise, R. (2017). Resolving range violations in DBpedia. Joint International Semantic Technology Conference, 121–137."@en ;
                 <http://purl.org/dc/terms/issued> "2017"^^xsd:date ;
+                <http://purl.org/dc/terms/source> ""@en ;
+                <http://purl.org/dc/terms/title> "Resolving Range Violations in DBpedia"@en ;
                 rdfs:label "publReRaViinDB"@en .
 
 
-###  https://d-workz.github.io/akco#publS3K
+###  https://purl.archive.org/akco#publS3K
 :publS3K rdf:type owl:NamedIndividual ,
                   <http://purl.org/dc/terms/BibliographicResource> ;
-         <http://purl.org/dc/elements/1.1/source> ""@en ;
-         <http://purl.org/dc/elements/1.1/title> "S3K: seeking statement-supporting top-K witnesses"@en ;
          <http://purl.org/dc/terms/bibliographicCitation> "Metzger, S., Elbassuoni, S., Hose, K., & Schenkel, R. (2011). S3K: seeking statement-supporting top-K witnesses. Proceedings of the 20th ACM International Conference on Information and Knowledge Management, 37–46."@en ;
          <http://purl.org/dc/terms/issued> "2011"^^xsd:date ;
+         <http://purl.org/dc/terms/source> ""@en ;
+         <http://purl.org/dc/terms/title> "S3K: seeking statement-supporting top-K witnesses"@en ;
          rdfs:label "publS3K"@en .
 
 
-###  https://d-workz.github.io/akco#publSDType
+###  https://purl.archive.org/akco#publSDType
 :publSDType rdf:type owl:NamedIndividual ,
                      <http://purl.org/dc/terms/BibliographicResource> ;
-            <http://purl.org/dc/elements/1.1/source> "https://github.com/HeikoPaulheim/sd-type-validate"@en ;
-            <http://purl.org/dc/elements/1.1/title> "Type Inference on Noisy RDF Data."@en ;
             <http://purl.org/dc/terms/bibliographicCitation> "Paulheim, H., & Bizer, C. (2013). Type inference on noisy RDF data. International Semantic Web Conference, 510–525."@en ;
             <http://purl.org/dc/terms/issued> "2013"^^xsd:date ;
+            <http://purl.org/dc/terms/source> "https://github.com/HeikoPaulheim/sd-type-validate"@en ;
+            <http://purl.org/dc/terms/title> "Type Inference on Noisy RDF Data."@en ;
             rdfs:label "publSDType"@en .
 
 
-###  https://d-workz.github.io/akco#publSDValidate
+###  https://purl.archive.org/akco#publSDValidate
 :publSDValidate rdf:type owl:NamedIndividual ,
                          <http://purl.org/dc/terms/BibliographicResource> ;
-                <http://purl.org/dc/elements/1.1/source> "https://github.com/HeikoPaulheim/sd-type-validate"@en ;
-                <http://purl.org/dc/elements/1.1/title> "Improving the Quality of Linked Data Using Statistical Distributions"@en ;
                 <http://purl.org/dc/terms/bibliographicCitation> "Paulheim, H., & Bizer, C. (2014). Improving the quality of linked data using statistical distributions. International Journal on Semantic Web and Information Systems (IJSWIS), 10(2), 63–86."@en ;
                 <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+                <http://purl.org/dc/terms/source> "https://github.com/HeikoPaulheim/sd-type-validate"@en ;
+                <http://purl.org/dc/terms/title> "Improving the Quality of Linked Data Using Statistical Distributions"@en ;
                 rdfs:label "publSDValidate"@en .
 
 
-###  https://d-workz.github.io/akco#publSLCN
+###  https://purl.archive.org/akco#publSLCN
 :publSLCN rdf:type owl:NamedIndividual ,
                    <http://purl.org/dc/terms/BibliographicResource> ;
-          <http://purl.org/dc/elements/1.1/source> ""@en ;
-          <http://purl.org/dc/elements/1.1/title> "Type Prediction in Noisy RDF Knowledge Bases using Hierarchical Multilabel Classification with Graph and Latent Features"@en ;
           <http://purl.org/dc/terms/bibliographicCitation> "Melo, A., Völker, J., & Paulheim, H. (2017). Type prediction in noisy RDF knowledge bases using hierarchical multilabel classification with graph and latent features. International Journal on Artificial Intelligence Tools, 26(02), 1760011."@en ;
           <http://purl.org/dc/terms/issued> "2017"^^xsd:date ;
+          <http://purl.org/dc/terms/source> ""@en ;
+          <http://purl.org/dc/terms/title> "Type Prediction in Noisy RDF Knowledge Bases using Hierarchical Multilabel Classification with Graph and Latent Features"@en ;
           rdfs:label "publSLCN"@en .
 
 
-###  https://d-workz.github.io/akco#publServDBpediaDOLCE
+###  https://purl.archive.org/akco#publServDBpediaDOLCE
 :publServDBpediaDOLCE rdf:type owl:NamedIndividual ,
                                <http://purl.org/dc/terms/BibliographicResource> ;
-                      <http://purl.org/dc/elements/1.1/source> ""@en ;
-                      <http://purl.org/dc/elements/1.1/title> "Serving DBpedia with DOLCE – More than Just Adding A Cherry on Top"@en ;
                       <http://purl.org/dc/terms/bibliographicCitation> "Paulheim, H., & Gangemi, A. (2015). Serving DBpedia with DOLCE–more than just adding a cherry on top. International Semantic Web Conference, 180–196."@en ;
                       <http://purl.org/dc/terms/issued> "2015"^^xsd:date ;
+                      <http://purl.org/dc/terms/source> ""@en ;
+                      <http://purl.org/dc/terms/title> "Serving DBpedia with DOLCE – More than Just Adding A Cherry on Top"@en ;
                       rdfs:label "publServDBpediaDOLCE"@en .
 
 
-###  https://d-workz.github.io/akco#publSiApCofoRDMo
+###  https://purl.archive.org/akco#publSiApCofoRDMo
 :publSiApCofoRDMo rdf:type owl:NamedIndividual ,
                            <http://purl.org/dc/terms/BibliographicResource> ;
-                  <http://purl.org/dc/elements/1.1/source> "https://www.w3.org/RDF/Validator/"@en ;
-                  <http://purl.org/dc/elements/1.1/title> "Simple Application-Specific Constraints for RDF Models"@en ;
                   <http://purl.org/dc/terms/bibliographicCitation> "Simister, S., & Brickley, D. (2013). Simple application-specific constraints for rdf models. RDF Validation Workshop. Practical Assurances for Quality RDF Data, Cambridge, Ma, Boston."@en ;
                   <http://purl.org/dc/terms/issued> "2013"^^xsd:date ;
+                  <http://purl.org/dc/terms/source> "https://www.w3.org/RDF/Validator/"@en ;
+                  <http://purl.org/dc/terms/title> "Simple Application-Specific Constraints for RDF Models"@en ;
                   rdfs:label "publSiApCofoRDMo"@en .
 
 
-###  https://d-workz.github.io/akco#publTISCO
+###  https://purl.archive.org/akco#publTISCO
 :publTISCO rdf:type owl:NamedIndividual ,
                     <http://purl.org/dc/terms/BibliographicResource> ;
-           <http://purl.org/dc/elements/1.1/source> "https://github.com/anisaR"@en ;
-           <http://purl.org/dc/elements/1.1/title> "TISCO: Temporal Scoping of Facts"@en ;
            <http://purl.org/dc/terms/bibliographicCitation> "Rula, A., Palmonari, M., Rubinacci, S., Ngomo, A.-C. N., Lehmann, J., Maurino, A., & Esteves, D. (2019). TISCO: Temporal scoping of facts. Journal of Web Semantics, 54, 72–86."@en ;
            <http://purl.org/dc/terms/issued> "2019"^^xsd:date ;
+           <http://purl.org/dc/terms/source> "https://github.com/anisaR"@en ;
+           <http://purl.org/dc/terms/title> "TISCO: Temporal Scoping of Facts"@en ;
            rdfs:label "publTISCO"@en .
 
 
-###  https://d-workz.github.io/akco#publToDeSePrfoRDusSPasInLa
+###  https://purl.archive.org/akco#publToDeSePrfoRDusSPasInLa
 :publToDeSePrfoRDusSPasInLa rdf:type owl:NamedIndividual ,
                                      <http://purl.org/dc/terms/BibliographicResource> ;
-                            <http://purl.org/dc/elements/1.1/source> ""@en ;
-                            <http://purl.org/dc/elements/1.1/title> "Towards Description Set Profiles for RDF using SPARQL as Intermediate Language"@en ;
                             <http://purl.org/dc/terms/bibliographicCitation> "Bosch, T., & Eckert, K. (2014). Towards description set profiles for RDF using SPARQL as intermediate language. International Conference on Dublin Core and Metadata Applications, 129–137."@en ;
                             <http://purl.org/dc/terms/issued> "2014"^^xsd:date ;
+                            <http://purl.org/dc/terms/source> ""@en ;
+                            <http://purl.org/dc/terms/title> "Towards Description Set Profiles for RDF using SPARQL as Intermediate Language"@en ;
                             rdfs:label "publToDeSePrfoRDusSPasInLa"@en .
 
 
-###  https://d-workz.github.io/akco#publTripleNet
+###  https://purl.archive.org/akco#publTripleNet
 :publTripleNet rdf:type owl:NamedIndividual ,
                         <http://purl.org/dc/terms/BibliographicResource> ;
-               <http://purl.org/dc/elements/1.1/source> "https://github.com/TripleNetCodes/TripleNet"@en ;
-               <http://purl.org/dc/elements/1.1/title> "Error Detection in Knowledge Graphs"@en ;
                <http://purl.org/dc/terms/bibliographicCitation> "Liu, Y. (2021). Error Detection in Knowledge Graphs [Phdthesis]."@en ;
                <http://purl.org/dc/terms/issued> "2021"^^xsd:date ;
+               <http://purl.org/dc/terms/source> "https://github.com/TripleNetCodes/TripleNet"@en ;
+               <http://purl.org/dc/terms/title> "Error Detection in Knowledge Graphs"@en ;
                rdfs:label "publTripleNet"@en .
 
 
-###  https://d-workz.github.io/akco#publTyPrfoEfCoReinHeSeGr
+###  https://purl.archive.org/akco#publTyPrfoEfCoReinHeSeGr
 :publTyPrfoEfCoReinHeSeGr rdf:type owl:NamedIndividual ,
                                    <http://purl.org/dc/terms/BibliographicResource> ;
-                          <http://purl.org/dc/elements/1.1/source> ""@en ;
-                          <http://purl.org/dc/elements/1.1/title> "Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs"@en ;
                           <http://purl.org/dc/terms/bibliographicCitation> "Sleeman, J., & Finin, T. (2013). Type prediction for efficient coreference resolution in heterogeneous semantic graphs. 2013 IEEE Seventh International Conference on Semantic Computing, 78–85."@en ;
                           <http://purl.org/dc/terms/issued> "2013"^^xsd:date ;
+                          <http://purl.org/dc/terms/source> ""@en ;
+                          <http://purl.org/dc/terms/title> "Type Prediction for Efficient Coreference Resolution in Heterogeneous Semantic Graphs"@en ;
                           rdfs:label "publTyPrfoEfCoReinHeSeGr"@en .
 
 
-###  https://d-workz.github.io/akco#publTypingErrorsinFactualKnowledgeGraphs
+###  https://purl.archive.org/akco#publTypingErrorsinFactualKnowledgeGraphs
 :publTypingErrorsinFactualKnowledgeGraphs rdf:type owl:NamedIndividual ,
                                                    <http://purl.org/dc/terms/BibliographicResource> ;
-                                          <http://purl.org/dc/elements/1.1/source> "https://github.com/U-Alberta/KG-Type-Correction"@en ;
-                                          <http://purl.org/dc/elements/1.1/title> "Typing Errors in Factual Knowledge Graphs: Severity and Possible Ways Out"@en ;
                                           <http://purl.org/dc/terms/bibliographicCitation> "Yao, P., & Barbosa, D. (2021). Typing errors in factual knowledge graphs: Severity and possible ways out. Proceedings of the Web Conference 2021, 3305–3313."@en ;
                                           <http://purl.org/dc/terms/issued> "null"^^xsd:date ;
+                                          <http://purl.org/dc/terms/source> "https://github.com/U-Alberta/KG-Type-Correction"@en ;
+                                          <http://purl.org/dc/terms/title> "Typing Errors in Factual Knowledge Graphs: Severity and Possible Ways Out"@en ;
                                           rdfs:label "publTypingErrorsinFactualKnowledgeGraphs"@en .
 
 
-###  https://d-workz.github.io/akco#publUsReofInKnBa
+###  https://purl.archive.org/akco#publUsReofInKnBa
 :publUsReofInKnBa rdf:type owl:NamedIndividual ,
                            <http://purl.org/dc/terms/BibliographicResource> ;
-                  <http://purl.org/dc/elements/1.1/source> ""@en ;
-                  <http://purl.org/dc/elements/1.1/title> "User-guided Repairing of Inconsistent Knowledge Bases"@en ;
                   <http://purl.org/dc/terms/bibliographicCitation> "Arioua, A., & Bonifati, A. (2018). User-guided repairing of inconsistent knowledge bases. EDBT 2018-21st International Conference on Extending Database Technology, 133–144."@en ;
                   <http://purl.org/dc/terms/issued> "null"^^xsd:date ;
+                  <http://purl.org/dc/terms/source> ""@en ;
+                  <http://purl.org/dc/terms/title> "User-guided Repairing of Inconsistent Knowledge Bases"@en ;
                   rdfs:label "publUsReofInKnBa"@en .
 
 
-###  https://d-workz.github.io/akco#publVGFD
+###  https://purl.archive.org/akco#publVGFD
 :publVGFD rdf:type owl:NamedIndividual ,
                    <http://purl.org/dc/terms/BibliographicResource> ;
-          <http://purl.org/dc/elements/1.1/source> ""@en ;
-          <http://purl.org/dc/elements/1.1/title> "Extending functional dependency to detect abnormal data in RDF graphs"@en ;
           <http://purl.org/dc/terms/bibliographicCitation> "Yu, Y., & Heflin, J. (2011). Extending functional dependency to detect abnormal data in RDF graphs. International Semantic Web Conference, 794–809."@en ;
           <http://purl.org/dc/terms/issued> "2011"^^xsd:date ;
+          <http://purl.org/dc/terms/source> ""@en ;
+          <http://purl.org/dc/terms/title> "Extending functional dependency to detect abnormal data in RDF graphs"@en ;
           rdfs:label "publVGFD"@en .
 
 
-###  https://d-workz.github.io/akco#publVRP
+###  https://purl.archive.org/akco#publVRP
 :publVRP rdf:type owl:NamedIndividual ,
                   <http://purl.org/dc/terms/BibliographicResource> ;
-         <http://purl.org/dc/elements/1.1/source> ""@en ;
-         <http://purl.org/dc/elements/1.1/title> "Validating RDF Parser (VRP) - Analyzing and Parsing RDF"@en ;
          <http://purl.org/dc/terms/bibliographicCitation> "Tolle, K. (2000). Validating RDF Parser (VRP)\\pmAnalyzing and Parsing RDF. Heraklion, April."@en ;
          <http://purl.org/dc/terms/issued> "2000"^^xsd:date ;
+         <http://purl.org/dc/terms/source> ""@en ;
+         <http://purl.org/dc/terms/title> "Validating RDF Parser (VRP) - Analyzing and Parsing RDF"@en ;
          rdfs:label "publVRP"@en .
 
 
-###  https://d-workz.github.io/akco#publValidata
+###  https://purl.archive.org/akco#publValidata
 :publValidata rdf:type owl:NamedIndividual ,
                        <http://purl.org/dc/terms/BibliographicResource> ;
-              <http://purl.org/dc/elements/1.1/source> "https://github.com/HW-SWeL/Validata"@en ;
-              <http://purl.org/dc/elements/1.1/title> "Validata: an online tool for testing RDF data conformance"@en ;
               <http://purl.org/dc/terms/bibliographicCitation> "Baungard Hansen, J., Beveridge, A., Farmer, R., Gehrmann, L., Gray, A., Khutan, S., Robertson, T., Val, J., Malone, J., Stevens, R., & others. (2015). Validata: an online tool for testing RDF data conformance. Proceedings of the 8th Semantic Web Applications and Tools for Life Sciences International Conference, Cambridge UK, 1546, 157–166."@en ;
               <http://purl.org/dc/terms/issued> "2015"^^xsd:date ;
+              <http://purl.org/dc/terms/source> "https://github.com/HW-SWeL/Validata"@en ;
+              <http://purl.org/dc/terms/title> "Validata: an online tool for testing RDF data conformance"@en ;
               rdfs:label "publValidata"@en .
 
 
-###  https://d-workz.github.io/akco#publValidatrr
+###  https://purl.archive.org/akco#publValidatrr
 :publValidatrr rdf:type owl:NamedIndividual ,
                         <http://purl.org/dc/terms/BibliographicResource> ;
-               <http://purl.org/dc/elements/1.1/source> "https://github.com/IDLabResearch/validatrr"@en ;
-               <http://purl.org/dc/elements/1.1/title> "RDF Graph Validation Using Rule-Based Reasoning"@en ;
                <http://purl.org/dc/terms/bibliographicCitation> "De Meester, B., Heyvaert, P., Arndt, D., Dimou, A., & Verborgh, R. (2021). RDF graph validation using rule-based reasoning. Semantic Web, 12(1), 117–142."@en ;
                <http://purl.org/dc/terms/issued> "2021"^^xsd:date ;
+               <http://purl.org/dc/terms/source> "https://github.com/IDLabResearch/validatrr"@en ;
+               <http://purl.org/dc/terms/title> "RDF Graph Validation Using Rule-Based Reasoning"@en ;
                rdfs:label "publValidatrr"@en .
 
 
-###  https://d-workz.github.io/akco#publVeriGraph
+###  https://purl.archive.org/akco#publVeriGraph
 :publVeriGraph rdf:type owl:NamedIndividual ,
                         <http://purl.org/dc/terms/BibliographicResource> ;
-               <http://purl.org/dc/elements/1.1/source> "https://github.com/semantifyit/VeriGraph"@en ;
-               <http://purl.org/dc/elements/1.1/title> "VeriGraph: A verification framework for Knowledge Integrity"@en ;
                <http://purl.org/dc/terms/bibliographicCitation> "Fensel, D., Şimşek, U., Angele, K., Huaman, E., Kärle, E., Panasiuk, O., & Omar, H. (2020). VeriGraph: A verification framework for Knowledge Integrity [Report]. MindLab."@en ;
                <http://purl.org/dc/terms/issued> "2020"^^xsd:date ;
+               <http://purl.org/dc/terms/source> "https://github.com/semantifyit/VeriGraph"@en ;
+               <http://purl.org/dc/terms/title> "VeriGraph: A verification framework for Knowledge Integrity"@en ;
                rdfs:label "publVeriGraph"@en .
 
 
-###  https://d-workz.github.io/akco#publWhEvlidahewiaquthclupDB
+###  https://purl.archive.org/akco#publWhEvlidahewiaquthclupDB
 :publWhEvlidahewiaquthclupDB rdf:type owl:NamedIndividual ,
                                       <http://purl.org/dc/terms/BibliographicResource> ;
-                             <http://purl.org/dc/elements/1.1/source> ""@en ;
-                             <http://purl.org/dc/elements/1.1/title> "WhoKnows? Evaluating linked data heuristics with a quiz that cleans up DBpedia"@en ;
                              <http://purl.org/dc/terms/bibliographicCitation> "Waitelonis, J., Ludwig, N., Knuth, M., & Sack, H. (2011). Whoknows? evaluating linked data heuristics with a quiz that cleans up dbpedia. Interactive Technology and Smart Education."@en ;
                              <http://purl.org/dc/terms/issued> "2011"^^xsd:date ;
+                             <http://purl.org/dc/terms/source> ""@en ;
+                             <http://purl.org/dc/terms/title> "WhoKnows? Evaluating linked data heuristics with a quiz that cleans up DBpedia"@en ;
                              rdfs:label "publWhEvlidahewiaquthclupDB"@en .
 
 
-###  https://d-workz.github.io/akco#publWhenowl
+###  https://purl.archive.org/akco#publWhenowl
 :publWhenowl rdf:type owl:NamedIndividual ,
                       <http://purl.org/dc/terms/BibliographicResource> ;
-             <http://purl.org/dc/elements/1.1/source> ""@en ;
-             <http://purl.org/dc/elements/1.1/title> "When owl:sameAs Isn’t the Same: An Analysis of Identity in Linked Data"@en ;
              <http://purl.org/dc/terms/bibliographicCitation> "Halpin, H., Hayes, P. J., McCusker, J. P., McGuinness, D. L., & Thompson, H. S. (2010). When owl: sameas isn’t the same: An analysis of identity in linked data. International Semantic Web Conference, 305–320."@en ;
              <http://purl.org/dc/terms/issued> "2010"^^xsd:date ;
+             <http://purl.org/dc/terms/source> ""@en ;
+             <http://purl.org/dc/terms/title> "When owl:sameAs Isn’t the Same: An Analysis of Identity in Linked Data"@en ;
              rdfs:label "publWhenowl"@en .
 
 
-###  https://d-workz.github.io/akco#publrdfvalidator
+###  https://purl.archive.org/akco#publrdfvalidator
 :publrdfvalidator rdf:type owl:NamedIndividual ,
                            <http://purl.org/dc/terms/BibliographicResource> ;
-                  <http://purl.org/dc/elements/1.1/source> "http://rdfvalidator-rdfvalidation.rhcloud.com/rdfvalidator"@en ;
-                  <http://purl.org/dc/elements/1.1/title> "Validation Framework for RDF-based Constraint Languages"@en ;
                   <http://purl.org/dc/terms/bibliographicCitation> "Hartmann, T. (2016). Validation framework for rdf-based constraint languages [Phdthesis]. Karlsruhe Institute of Technology, Germany."@en ;
                   <http://purl.org/dc/terms/issued> "2016"^^xsd:date ;
+                  <http://purl.org/dc/terms/source> "http://rdfvalidator-rdfvalidation.rhcloud.com/rdfvalidator"@en ;
+                  <http://purl.org/dc/terms/title> "Validation Framework for RDF-based Constraint Languages"@en ;
                   rdfs:label "publrdfvalidator"@en .
 
 
-###  https://d-workz.github.io/akco#tecCrowdsourcing-based
+###  https://purl.archive.org/akco#tecCrowdsourcing-based
 :tecCrowdsourcing-based rdf:type owl:NamedIndividual ,
                                  :Technique ;
                         :usesBackgroundKnowledge :extSrcDomaInExpertise ;
@@ -2581,7 +2569,7 @@ A contextual graph can also be be beneficial to provide a context for clarifying
                         rdfs:label "tecCrowdsourcing-based"@en .
 
 
-###  https://d-workz.github.io/akco#tecEmbeddingAndNeuralNetwork-based
+###  https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based
 :tecEmbeddingAndNeuralNetwork-based rdf:type owl:NamedIndividual ,
                                              :Technique ;
                                     :usesBackgroundKnowledge :extSrcExternalSources ,
@@ -2590,7 +2578,7 @@ A contextual graph can also be be beneficial to provide a context for clarifying
                                     rdfs:label "tecEmbeddingAndNeuralNetwork-based"@en .
 
 
-###  https://d-workz.github.io/akco#tecHybrid
+###  https://purl.archive.org/akco#tecHybrid
 :tecHybrid rdf:type owl:NamedIndividual ,
                     :Technique ;
            :usesBackgroundKnowledge :extSrcDomaInExpertise ,
@@ -2603,7 +2591,7 @@ A contextual graph can also be be beneficial to provide a context for clarifying
            rdfs:label "tecHybrid"@en .
 
 
-###  https://d-workz.github.io/akco#tecIntegrityConstraint-based
+###  https://purl.archive.org/akco#tecIntegrityConstraint-based
 :tecIntegrityConstraint-based rdf:type owl:NamedIndividual ,
                                        :Technique ;
                               :usesBackgroundKnowledge :extSrcFormalAndSyntaxSpecifications ;
@@ -2611,7 +2599,7 @@ A contextual graph can also be be beneficial to provide a context for clarifying
                               rdfs:label "tecIntegrityConstraint-based"@en .
 
 
-###  https://d-workz.github.io/akco#tecOntology-based
+###  https://purl.archive.org/akco#tecOntology-based
 :tecOntology-based rdf:type owl:NamedIndividual ,
                             :Technique ;
                    <http://www.w3.org/2004/02/skos/core#related> :tecIntegrityConstraint-based ;
@@ -2620,7 +2608,7 @@ A contextual graph can also be be beneficial to provide a context for clarifying
                    owl:backwardCompatibleWith "Ontology-based techniques use an ontology that describes assertions in order to detect and correct errors. Error detection typically involves reasoning over the ontology and the associated assertions. To identify inconsistencies, the ontology must include &amp;apos;negative inclusions&amp;apos; (disjoint axioms) that specify which entities or classes cannot co-occur—for example, the classes Human and Boat are usually mutually exclusive, so no individual should be assigned both types. When correcting errors in equality assertions, new or more appropriate relations may be introduced into the ontology if two instances are not semantically identical. This technique allows to target any type of assertion, i.e., instance -, property-value -, and equality assertion."@en .
 
 
-###  https://d-workz.github.io/akco#tecPath-based
+###  https://purl.archive.org/akco#tecPath-based
 :tecPath-based rdf:type owl:NamedIndividual ,
                         :Technique ;
                <http://www.w3.org/2004/02/skos/core#related> :tecEmbeddingAndNeuralNetwork-based ;
@@ -2634,7 +2622,7 @@ To validate equality assertions, path-based techniques construct contextual subg
                rdfs:label "tecPath-based"@en .
 
 
-###  https://d-workz.github.io/akco#tecRuleMining-based
+###  https://purl.archive.org/akco#tecRuleMining-based
 :tecRuleMining-based rdf:type owl:NamedIndividual ,
                               :Technique ;
                      <http://www.w3.org/2004/02/skos/core#related> :tecOntology-based ;
@@ -2643,14 +2631,14 @@ To validate equality assertions, path-based techniques construct contextual subg
                      rdfs:label "tecRuleMining-based"@en .
 
 
-###  https://d-workz.github.io/akco#tecStatistical
+###  https://purl.archive.org/akco#tecStatistical
 :tecStatistical rdf:type owl:NamedIndividual ,
                          :Technique ;
                 rdfs:comment "Statistical techniques address both instance and property-value assertions by leveraging a statistical context derived from the knowledge graph. This context may include other property-value assertions or the incoming and outgoing relations of a node. By comparing observed data to expected statistical patterns, outliers—unexpected deviations from the context—can be identified and flagged as potential errors."@en ;
                 rdfs:label "tecStatistical"@en .
 
 
-###  https://d-workz.github.io/akco#tecSyntactic
+###  https://purl.archive.org/akco#tecSyntactic
 :tecSyntactic rdf:type owl:NamedIndividual ,
                        :Technique ;
               :usesBackgroundKnowledge :extSrcFormalAndSyntaxSpecifications ;
@@ -2658,7 +2646,7 @@ To validate equality assertions, path-based techniques construct contextual subg
               rdfs:label "tecSyntactic"@en .
 
 
-###  https://d-workz.github.io/akco#tecVerbalization-based
+###  https://purl.archive.org/akco#tecVerbalization-based
 :tecVerbalization-based rdf:type owl:NamedIndividual ,
                                  :Technique ;
                         :usesBackgroundKnowledge :extSrcAny ;

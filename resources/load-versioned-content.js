@@ -15,7 +15,6 @@ async function loadVersionedContent(selector, targetId, options = { mode: "repla
         const doc = parser.parseFromString(html, 'text/html');
         const fragment = doc.querySelector(selector);
         const target = document.getElementById(targetId);
-        console.log(ontologyVersion)
         if (fragment && target) {
             const content = fragment.cloneNode(true);
 
@@ -38,6 +37,7 @@ async function loadVersionedContent(selector, targetId, options = { mode: "repla
             }
         } else {
             console.warn(`Element not found: ${selector} or target #${targetId}`);
+            target.innerHTML="";
         }
     } catch (err) {
         console.error(`Failed to load versioned content (${selector}):`, err);

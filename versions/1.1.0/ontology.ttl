@@ -8,43 +8,31 @@
 
 <https://purl.archive.org/akco#> rdf:type owl:Ontology ;
                                   <http://purl.org/dc/terms/bibliographicCitation> "Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco"^^<http://purl.org/dc/terms/URI> ;
-                                  <http://purl.org/dc/terms/created> "28.05.2025"^^xsd:date ;
-                                  <http://purl.org/dc/terms/creator> "Dennis Sommer"@en ;
-                                  <http://purl.org/dc/terms/description> "The AKCO is an ontology for representing relevant aspects of knowledge cleaning, including approaches, techniques, background knowledge, errors, and dimensions."@en ;
+                                  <http://purl.org/dc/terms/contributor> "https://orcid.org/0009-0009-8524-9182"@en ;
+                                  <http://purl.org/dc/terms/created> "14.07.2025"^^xsd:date ;
+                                  <http://purl.org/dc/terms/creator> "https://orcid.org/0009-0009-8524-9182"@en ;
+                                  <http://purl.org/dc/terms/description> """The anatomy of knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
+
+The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."""@en ;
                                   <http://purl.org/dc/terms/language> "English"@en ;
                                   <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^<http://purl.org/dc/terms/URI> ;
                                   <http://purl.org/dc/terms/title> "Anatomy of Knowledge Cleaning Ontology (AKCO)"@en ;
                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "akco"@en ;
                                   <http://purl.org/vocab/vann/preferredNamespaceUri> "https://purl.archive.org/akco"^^<http://purl.org/dc/terms/URI> ;
-                                  rdfs:comment """The anatomy of knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
-
-The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes."""@en ;
-                                  owl:versionIRI "https://purl.archive.org/akco/versions/1.1.0" ;
+                                  owl:priorVersion "https://purl.archive.org/akco/versions/1.0.0" ;
                                   owl:versionInfo "1.1.0"^^xsd:date .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/language
-<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/type
-<http://purl.org/dc/elements/1.1/type> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/bibliographicCitation
 <http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty ;
                                                  rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
@@ -55,23 +43,17 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/date
-<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                   rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/language
-<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/language> .
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
@@ -79,8 +61,7 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 
 
 ###  http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/source
@@ -89,13 +70,11 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
-                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> ;
                                  rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/type
-<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty ;
-                                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/type> .
+<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -104,10 +83,6 @@ The ontology proviedes means to select approaches for a custom cleaning process,
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#versionIRI
-owl:versionIRI rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
