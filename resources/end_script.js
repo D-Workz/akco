@@ -220,7 +220,6 @@ window.addEventListener('load', () => {
     loadContent('dim_internalExternal.html', 'dim');
     loadContent('bgk_contextualGraphs.html', 'bgk');
     showContent('errors');
-    showOverview();
 });
 document.addEventListener('DOMContentLoaded', () => {
     const selector = document.getElementById('versionSelector');
