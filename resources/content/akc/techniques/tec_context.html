@@ -1,0 +1,64 @@
+<h3>Context-based</h3>
+<div class="two-columns">
+    <div>
+        <section id="tech_context">
+            <p>
+                Context-based approaches construct a <a href="#bgk_contextual">contextual graph</a> to detect semantically incorrect equality assertions and correct range violations in property-value assertions. These graphs are dynamically created using data- and knowledge-driven measures tailored to the specific task.
+            </p>
+
+            <h4>Challenges in Equality Assertion Validation</h4>
+
+            <p>
+                Among the three assertion error types, <strong>equality assertions</strong> are the most semantically complex. Their correctness depends not only on the two instances themselves, but also on the correctness and semantic equivalence of their surrounding contextual graphs. Defining such a context—including its size, boundaries, and composition—is a non-trivial task.
+            </p>
+
+            <p>
+                Analyzing these contexts requires resolving semantic ambiguities, tolerating variations in graph structure, naming, and values, and managing the scale of large, interconnected knowledge graphs. Each of these challenges is complex on its own; combined, they make equality assertion validation both conceptually and computationally demanding. As a result, all existing approaches adopt simplification strategies.
+            </p>
+
+            <h4>Example: Contextual Graph Visualization</h4>
+
+            <p>
+                For example, <a href="#fig:tech_context">Figure&nbsp;X</a> shows a contextual graph built around two instances involved in an equality assertion. One part (Knowledge Graph A) is taken from the sample graph in <a href="#lst:sample_kg">Figure&nbsp;Y</a>, while the second part (Knowledge Graph B) extends it to highlight differences in instance contexts. The contextual graph includes related properties, instances, and classes up to a depth of two, capturing differences in features such as the property names <code>population</code> and <code>numberOfCitizens</code>, their values, and structural surroundings. This depth-based construction is used by <a href="#ref_papaleo2014">Papaleo et al.</a>, and analyzed using reasoning (see <a href="#tech_ontology">ontology-based techniques</a>).
+            </p>
+
+            <h4>Simplification Strategies</h4>
+
+            <p>
+                One simplification strategy is to define <strong>keys</strong> for instances based on their type. A key may consist of one or more properties—for instance, a Social Security Number, or a combination such as name, date of birth, and birthplace. Examples include the KD2R approach (<a href="#ref_symeonidou2011">Symeonidou et al.</a>, <a href="#ref_pernelle2013">Pernelle et al.</a>) and the method by <a href="#ref_fan2015">Fan et al.</a>. KD2R employs the KeyFinder algorithm (<a href="#ref_sismanis2006">Sismanis et al.</a>) using prefix trees, while Fan et al. use subgraph isomorphism, which also applies to property-value assertion validation (see <a href="#tech_path">path-based techniques</a>).
+            </p>
+
+            <p>
+                Another simplification involves analyzing the <strong>identity network</strong> induced by equality assertions—treating entities as nodes and equality axioms as edges. For instance, LOD-Community-Detection (<a href="#ref_raad2018">Raad et al.</a>) applies the Louvain algorithm (<a href="#ref_blondel2008">Blondel et al.</a>) to identify dense communities. Other methods include <a href="#ref_de2013not">de Melo (2013)</a> and CEDAL (<a href="#ref_valdestilhas2017">Valdestilhas et al.</a>), which exploit the unique name assumption and use the Union-Find algorithm (<a href="#ref_tarjan1975">Tarjan, 1975</a>) for graph partitioning.
+            </p>
+
+            <h5>Overview of Simplification Strategies</h5>
+            <ul>
+                <li><strong>Local context construction</strong> – bounding instance neighborhoods (e.g., <a href="#ref_papaleo2014">Papaleo et al.</a>)</li>
+                <li><strong>Key-based identification</strong> – equality via property value combinations (e.g., <a href="#ref_fan2015">Fan et al.</a>, KD2R)</li>
+                <li><strong>Global graph analysis</strong> – using identity networks (e.g., <a href="#ref_de2013not">de Melo</a>) or partitioning (e.g., CEDAL)</li>
+            </ul>
+
+            <p>
+                Each strategy balances semantic depth and scalability, underscoring the difficulty of validating equality assertions and the risk of false negatives or false positives (see <a href="#error-detection-correction">Error Detection vs. Correction</a>).
+            </p>
+
+            <h3>Context in Property-Value Assertion Validation</h3>
+
+            <p>
+                In contrast to equality-focused methods, <a href="#ref_lertvittayakumjorn2017">Lertvittayakumjorn et al.</a> address range violations in property-value assertions. Their approach constructs a search space of directly related and keyword-matching instances to find replacements, combining graph- and keyword-based reasoning.
+            </p>
+        </section>
+
+
+
+    </div>
+    <div>
+        <div class="fig_border">
+            <div id="fig_context"></div>
+            <p style="text-align: center"><strong>Figure 2</strong></p>
+            <p>Symbolic illustration of a contextual graph constructed around two instances involved in an equality assertion. The graph is
+                constructed and analyzed as, for example, part of a validation process</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<h3>Rule mining-based</h3>
+<div class="two-columns">
+    <div>
+        <p>
+            Rule mining-based approaches analyze the structure of a knowledge graph to identify frequently occurring patterns—i.e., reoccurring subgraphs—and express these patterns as logic rules. These rules help verify or correct property-value assertions by generalizing observed correlations. The approach draws on ideas from grammar induction and association rule mining in databases <a href="#ref-agrawal1993mining">[1]</a>.
+        </p>
+
+        <p>
+            Knowledge graphs present unique challenges for rule mining due to their large scale and the open-world assumption, which allows missing values to be interpreted as unknown. To address this, <strong>AMIE3</strong> introduces optimizations such as pruning, parallelization, and the Partial Completeness Assumption (PCA), which assumes that if some properties are known, all relevant ones are known <a href="#ref-lajus2020fast">[2]</a>.
+        </p>
+
+        <h4>Figure: Deriving Logic Rules from Subgraphs</h4>
+
+        <p>
+            Figure 10 illustrates the core concept of rule mining. At the top, a small subgraph from the knowledge graph (originally from Figure 1) shows three entities (<code>x</code>, <code>y</code>, <code>z</code>) connected via <code>locatedIn</code> and <code>officialCurrency</code> relationships. This correlation is translated into a logic rule, shown in the second row:
+        </p>
+
+        <blockquote>
+            <code>officialCurrency(x, z) ∧ locatedIn(x, y) ⇒ officialCurrency(y, z)</code>
+        </blockquote>
+
+        <p>
+            This rule states that if a node <code>x</code> has currency <code>z</code> and is located in <code>y</code>, then <code>y</code> is likely to also use currency <code>z</code>. Multiple rules can be generated from the same subgraph. For instance:
+        </p>
+
+        <blockquote>
+            <code>officialCurrency(x, z) ∧ officialCurrency(y, z) ⇒ locatedIn(x, y)</code>
+        </blockquote>
+
+        <p>
+            The ability to derive several plausible rules from a small subgraph increases the complexity of rule mining and necessitates efficient algorithms. These rules often take the form of <strong>Horn rules</strong>, which offer a good balance between expressivity and computational scalability <a href="#ref-krotzsch2013complexities">[3]</a>.
+        </p>
+
+        <h4>Evaluating Rule Validity</h4>
+
+        <p>
+            The row below the rule in Figure 10 shows its <strong>validity score</strong>, which is based on how often the rule holds true. This score is computed by identifying <em>counterexamples</em>—instances where the premise holds, but the conclusion does not. In this case, the validity is <code>7/9</code>, meaning two out of nine matched subgraphs do not support the rule.
+        </p>
+
+        <p>
+            One such counterexample is shown at the bottom of the figure: <code>sydney</code> is connected to <code>aud</code> and <code>unitedStates</code>, but <code>unitedStates</code> does not use <code>aud</code> as currency, violating the rule. Identifying such patterns under the open-world assumption is complex, as not all missing values are true negatives. Methods like KV-rule attempt to detect these inconsistencies reliably <a href="#ref-kim2021fact">[4]</a>.
+        </p>
+
+        <h4>Rule-Based Corrections</h4>
+
+        <p>
+            Rules are also used to suggest corrections to erroneous assertions. For example:
+        </p>
+
+        <ul>
+            <li><strong>CorHist</strong>: Learns correction patterns from the edit history of a knowledge graph <a href="#ref-pellissier2019learning">[5]</a>.</li>
+            <li><strong>GRR</strong>: Extends AMIE3 to handle incompleteness, conflicts, and redundancies in graph structures <a href="#ref-cheng2018rule">[6]</a>.</li>
+        </ul>
+
+        <p>
+            Rule mining remains a promising area for improving both verification and correction of knowledge graphs. Future work could enhance scalability, interpretability, and better support for the open-world assumption.
+        </p>
+    </div>
+    <div>
+        <div class="fig_border">
+            <div id="fig_ruleM"></div>
+            <p style="text-align: center"><strong>Figure: Deriving Logic Rules from Subgraphs</strong></p>
+            <p style="width: 550px">
+                Rule mining-based approaches detect prevalent correlations within the assertions. The detected patterns are formulated into logic rules, indicating their validity, which measures the occurrence of counterexamples. A counterexample is an example of a subgraph where the premise, i.e., condition, is met, but the conclusion is false.
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<h3>Syntatic</h3>
+
+<div class="two-columns">
+    <div>
+        <p>
+            Syntactic cleaning approaches are external and knowledge-driven, comparing the serialization of a knowledge graph (KG) to a defined syntax specification. Similar to grammar parsing in text or schema validation in relational databases, these approaches ensure that a KG's structure follows serialization rules, such as those for Turtle or RDF/XML.
+        </p>
+
+        <h4>Figure: Parser-Based Syntax Validation</h4>
+
+        <p>
+            Figure 1 illustrates how a parser processes a KG serialization in Turtle format to identify syntactic violations. The process involves three steps:
+        </p>
+
+        <ol>
+            <li><strong>Parser Configuration:</strong> The parser can be a standard tool like Apache Jena <a href="#ref-mcbride2002">[1]</a>, which supports various RDF formats (e.g., Turtle, RDF/XML), or a custom-built parser using tools such as CUP.</li>
+            <li><strong>Parsing Input:</strong> A KG serialization is passed to the parser and matched against the syntax specification line by line.</li>
+            <li><strong>Error Reporting:</strong> Violations are logged in a report. The parser may either continue checking or stop at the first detected error.</li>
+        </ol>
+
+        <p>
+            In the example, a missing end-of-statement symbol on Line 3 is flagged as a syntactic violation.
+        </p>
+
+        <h4>Parser Tools and Online Validators</h4>
+
+        <p>
+            Several tools exist for syntax validation:
+        </p>
+
+        <ul>
+            <li><strong>VRP</strong>: Parses RDF and RDFS serializations, stopping at the first error <a href="#ref-tolle2000">[2]</a>.</li>
+            <li><strong>Validation Service:</strong> A W3C online RDF validator <a href="https://www.w3.org/RDF/Validator/">[Online Tool]</a>.</li>
+            <li><strong>IDLab Turtle Validator:</strong> Offers extended support for literal types and is available online <a href="http://ttl.summerofcode.be/">[Online Tool]</a>.</li>
+        </ul>
+
+        <h4>Scalable Parsers with Correction Features</h4>
+
+        <p>
+            Some approaches focus not only on detection but also on large-scale correction:
+        </p>
+
+        <ul>
+            <li><strong>LOD Laundromat:</strong> Scales to large graphs and uses SWI Prolog <a href="#ref-beek2014">[3]</a>. It supports formats like Turtle, JSON-LD, and RDF/XML. It detects issues like:
+                <ul>
+                    <li>Missing punctuation (e.g., dots or semicolons)</li>
+                    <li>Undefined or malformed IRIs</li>
+                    <li>Missing or unmatched tags</li>
+                </ul>
+            </li>
+            <li><strong>RDF-Doctor:</strong> Segments graphs into chunks for parallel parsing. It reports corrected errors and those that remain unresolved <a href="#ref-hemid2019">[4]</a>.</li>
+        </ul>
+
+        <p>
+            While these tools work on KG serializations, no current approach directly validates or repairs entity-level syntax within the graph structure itself. This presents an opportunity for future research to eliminate the detour through serialization and address syntactic errors directly at the entity level.
+        </p>
+    </div>
+    <div>
+        <div class="fig_border" style="width: 550px;
+  word-break: break-word;
+  overflow-wrap: break-word;">
+            <div id="fig_syntactic"></div>
+            <p style="text-align: center"><strong>Figure: Parser-Based Syntax Validation</strong></p>
+            <p>Parser-based processing of knowledge graph serializations. A parser is configured (1) for a specific syntax specification. It (2) matches the input knowledge graph serialization from Figure against the specification. It reports detected violations in an error report (3). Optionally, a corrected version of the serialization is returned. </p>
+        </div>
+    </div>
+</div>

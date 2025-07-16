@@ -1,0 +1,45 @@
+<div>
+    <div>
+      <pre>
+          <code>:appDeFacto a :Approach ;
+  :hasDimension :dimData-driven ;
+  :hasDimension :dimDetection ;
+  :hasDimension :dimExternal ;
+  :hasDimension :dimKnowledge-driven ;
+  :isPublished :publDeFacto ;
+  :targetsError :errPVSem ;
+  :usesBackgroundKnowledge :extSrcWeb ;
+  :usesTechnique :tecVerbalization-based ;
+  :skos:prefLabel "appDeFacto"@en .
+
+:publDeFacto a terms:BibliographicResource ;
+  dc:source "https://github.com/DeFacto/DeFacto"@en ;
+  dc:title "DeFacto - Temporal and multilingual Deep Fact Validation"@en ;
+  terms:bibliographicCitation "Gerber, D., Esteves, D., Lehmann, J., B\"uhmann, L., Usbeck, R., Ngomo, A.-C. N., and Speck, R. (2015). Defacto-temporal and multilingual deep fact validation. Journal of Web Semantics, 35, 85--101."@en ;
+  terms:issued 2015^^xsd:date ;
+  skos:prefLabel "publDeFacto"@en .
+
+:extSrcWeb a :ExternalSource ;
+  skos:definition "The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation."@en ;
+  skos:prefLabel "extSrcWeb"@en ;
+  skos:narrower :extSrcWeb .
+
+:extSrcAny a :ExternalSource ;
+  skos:definition "An external source is any source outside of a given knowledge graph. This individual represents any of those sources."@en ;
+  skos:prefLabel "extSrcAny"@en .
+
+:tecVerbalization-based a Technique ;
+  skos:definition "Verbalization-based techniques are based on external natural language sources, such as the Web or documents. They validate property-value assertions by translating them, i.e., verbalizing, into a natural language claim. This process can, for example, use templates or machine learning. The claim is then used to search a given external source. The result is natural language evidence, which is then analyzed, using typically crowdsourcing or machine learning. This technique includes using any large-language model, like ChatGPT."@en ;
+  skos:prefLabel "tecVerbalization"@en ;
+  :usesBackgroundKnowledge :extSrcAny .
+
+:dimKnowledge-driven a :Dimension ;
+  skos:definition "The knowledge-driven dimension describes approaches and techniques that rely on domain knowledge—such as ontology-based reasoning or human expertise—to detect and correct errors."@en ;
+  skos:prefLabel "dimKnowledge-driven" .
+        </code>
+      </pre>
+    </div>
+    <div class="example-image">
+        <img src="your-image-url.jpg" alt="Illustration" />
+    </div>
+</div>

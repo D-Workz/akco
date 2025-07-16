@@ -1,0 +1,86 @@
+<h3>Verbalization-based</h3>
+
+<div class="two-columns">
+    <div>
+        <div>
+            <p>
+                Verbalization-based approaches validate property-value assertions using unstructured external sources, such as web documents or text corpora. The goal is to retrieve and analyze evidence that supports or contradicts the assertion.
+            </p>
+
+            <h4>Figure: Workflow for Verbalization-Based Validation</h4>
+
+            <p>
+                Figure 14 presents the workflow in three main steps:
+            </p>
+
+            <ol>
+                <li>
+                    <strong>Verbalize the Assertion:</strong> The assertion is translated into natural language using pattern libraries or neural models. Tools like <strong>DeFacto</strong> <a href="#ref-gerber2015">[1]</a> and <strong>FactCheck</strong> <a href="#ref-syed2018">[2]</a> use the BOA pattern library <a href="#ref-gerber2012">[3]</a> to generate variations of the assertion. However, most BOA patterns do not verbalize facts accurately <a href="#ref-esteves2018">[4]</a>, which highlights a key area for improvement. More recent verbalization techniques rely on neural networks and large language models <a href="#ref-zhang2023">[5]</a>, though none of the reviewed systems have integrated these yet.
+                </li>
+
+                <li>
+                    <strong>Search for Evidence:</strong> The verbalized sentence is searched in external sources. Approaches vary:
+                    <ul>
+                        <li><strong>FacTify:</strong> Uses embeddings and BM25 for semantic and exact matches <a href="#ref-ercan2019">[6]</a>.</li>
+                        <li><strong>S3K:</strong> Matches text via pre-built dictionaries <a href="#ref-metzger2011">[7]</a>.</li>
+                        <li><strong>FactCheck:</strong> Leverages Elasticsearch <a href="#ref-elastic2023">[8]</a>.</li>
+                        <li><strong>DeFacto:</strong> Uses search engines and filters results by topic coverage and reliability <a href="#ref-nakamura2007">[9]</a>.</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Analyze the Evidence:</strong> Retrieved documents are evaluated for consistency. Some tools (FacTify, S3K) return only the top-k results, requiring external validation. DeFacto and FactCheck go further:
+                    <ul>
+                        <li><strong>DeFacto:</strong> Computes a confidence score based on evidence quantity, quality, and probability of correctness.</li>
+                        <li><strong>FactCheck:</strong> Combines word coherence <a href="#ref-roder2015">[10]</a> and topic indicators <a href="#ref-nakamura2007">[9]</a> in a supervised model.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p>
+                The table in Figure 14 illustrates a key challenge: contradictory evidence. For example, web results indicate that “Sydney is in Florida, USA” and “Sydney is in New South Wales, Australia.” Both are true in isolation, but without contextual understanding, automated systems may misclassify the assertion. This emphasizes the need for contextual graph construction and contextual verbalization.
+            </p>
+
+            <h4>Limitations and Opportunities</h4>
+
+            <p>
+                Despite their potential, no current verbalization-based approaches validate assertions using Large Language Models (LLMs) like ChatGPT or T5. These models could assist in verbalization, search, or analysis but must overcome issues such as hallucination—producing plausible yet incorrect facts <a href="#ref-huang2025">[11]</a>. Addressing this would require mechanisms for grounding outputs and ensuring factual reliability.
+            </p>
+        </div>
+    </div>
+    <div class="fig_border">
+
+        <div id="fig_verbalization"></div>
+
+        <h4>Top 4 Search Results, Using the Search Engine Google from 03.03.2025</h4>
+        <table border="1" cellspacing="0" cellpadding="6">
+            <thead>
+            <tr>
+                <th>Evidence web page</th>
+                <th>Evidence sentence</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Sydney,_Florida">https://en.wikipedia.org/wiki/Sydney,_Florida</a></td>
+                <td>"Sydney is an unincorporated community in Hillsborough County, Florida, United States."</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Sydney">https://en.wikipedia.org/wiki/Sydney</a></td>
+                <td>"Sydney is the capital city of the state of New South Wales, and the most populous city in Australia."</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.britannica.com/place/Sydney-New-South-Wales">https://www.britannica.com/place/Sydney-New-South-Wales</a></td>
+                <td>"Sydney, city, capital of the state of New South Wales, Australia."</td>
+            </tr>
+            <tr>
+                <td><a href="https://geotargit.com/citiespercountry.php?qcountry_code=US&qcity=Sydney">https://geotargit.com/citiespercountry.php?qcountry_code=US&amp;qcity=Sydney</a></td>
+                <td>"There are 2 places named Sydney in America."</td>
+            </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center"><strong>Figure: Workflow for Verbalization-Based Validation</strong></p>
+        <p>Verbalization-based approaches generally involve three steps: (1) transforming, i.e., verbalizing, the assertion into natural language, (2) searching for evidence in external sources, and (3) analyzing the received evidence to validate the assertion. The table shows evidence sentences and sourcing web pages. The evidence from the different sources contradicts each other, highlighting the necessity of understanding the context of the assertion.</p>
+    </div>
+
+</div>

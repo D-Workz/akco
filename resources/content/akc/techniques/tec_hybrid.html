@@ -1,0 +1,67 @@
+<h3>Hybrid</h3>
+
+<div class="two-columns">
+    <div>
+        <div>
+            <p>
+                Hybrid approaches combine multiple knowledge graph cleaning techniques to produce more reliable results or to address complex tasks that exceed the scope of a single method. They are especially effective in scenarios involving context ambiguity, tail verticals, or systematic errors.
+            </p>
+
+            <h4>Figure: Symbolic Workflow of a Hybrid Approach</h4>
+
+            <p>
+                Figure 1 visualizes a generalized hybrid approach. These systems typically share two common features:
+            </p>
+
+            <ol>
+                <li>
+                    <strong>Parallel Application:</strong> Multiple cleaning techniques are applied in parallel. Each technique contributes additional context.
+                </li>
+                <li>
+                    <strong>Combined Evaluation:</strong> The individual results are merged to produce a final decision—usually a correctness score and a suggested correction.
+                </li>
+            </ol>
+
+            <p>
+                The illustrated example shows two independent validation results being combined to assess a single assertion. The integration step must reconcile possibly conflicting evidence, a key challenge for hybrid systems.
+            </p>
+
+            <h4>Hybrid Validation Approaches</h4>
+
+            <ul>
+                <li><strong>ExFaKT</strong> <a href="#ref-gad2019">[1]</a>: Combines rule mining (AMIE+) and verbalization with text corpora and another KG. It uses PATTY <a href="#ref-nakashole2012">[2]</a> for paraphrase dictionaries and alias detection.</li>
+                <li><strong>HybridFC</strong> <a href="#ref-qudus2022">[3]</a>: Integrates verbalization, path-based, and embedding-based approaches. It transforms evidence into vectors and uses a neural network to predict correctness scores.</li>
+            </ul>
+
+            <h4>Hybrid Correction Approaches</h4>
+
+            <ul>
+                <li><strong>MTM</strong> <a href="#ref-yu2014">[4]</a>: Merges the output of multiple methods, weighing them against the trustworthiness of external sources.</li>
+                <li><strong>Chen et al.</strong> <a href="#ref-chen2021">[5]</a>: Combines lexical similarity, embeddings, lookup services (e.g., DBpedia Lookup), and constraint-based validation.</li>
+                <li><strong>CoCKG</strong> <a href="#ref-melo2020">[6]</a>: Uses PaTyBRED <a href="#ref-melo2017">[7]</a> to detect errors, then corrects them using Wikipedia disambiguation pages and string matching.</li>
+                <li><strong>Fan et al.</strong> <a href="#ref-fan2019">[8]</a>: Combines reasoning, integrity constraints, and crowdsourcing. It defines instance identity using keys <a href="#ref-fan2015">[9]</a> and graph structure using GEDs <a href="#ref-fan2019b">[10]</a>.</li>
+            </ul>
+
+            <h4>Hybrid Approaches for Complex Tasks</h4>
+
+            <ul>
+                <li><strong>FACTY</strong>: Validates assertions in long-tail domains by combining evidence from KGs, web tables <a href="#ref-cafarella2008">[11]</a>, and Google query logs.</li>
+                <li><strong>TISCO</strong> <a href="#ref-rula2019">[12]</a>: Focuses on temporal scoping. It integrates DeFacto <a href="#ref-gerber2015">[13]</a>, DBpedia, and content negotiation <a href="#ref-fielding1999">[14]</a> to handle time-based assertions.</li>
+                <li><strong>Paulheim (2015)</strong> <a href="#ref-paulheim2015">[15]</a>: Targets systematic errors using ontology enrichment (via DOLCE-Zero <a href="#ref-masolo2003">[16]</a>), reasoning, clustering (Manhattan distance), and crowdsourcing.</li>
+            </ul>
+
+            <p>
+                These hybrid systems demonstrate the potential of combining multiple techniques to address a wider range of cleaning challenges. However, their complexity makes them harder to implement and maintain. Future work could aim to simplify data integration and orchestration in such frameworks.
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="fig_border">
+            <div id="fig_hybrid"></div>
+            <p style="text-align: center"><strong>Figure: Symbolic Workflow of a Hybrid Approach</strong></p>
+            <p style="width: 510px;">
+                Exemplary workflow of a hybrid approach that combines a verbalization-based and a path-based method. It combines the results to improve the reliability/trustworthiness of the final output. Two independent outputs are shown, one representing a detection the other a correction result.
+            </p>
+        </div>
+    </div>
+</div>

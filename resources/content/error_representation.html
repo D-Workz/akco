@@ -1,0 +1,70 @@
+
+
+
+<div class="table-annotation-box">
+    <div id="table-container">
+        <p>
+            Errors can be are modeled using <a href="#Error">akco:Error</a>.
+            A human readable description can be provided using <a href="https://www.w3.org/TR/rdf-schema/#ch_comment">rdfs:comment</a>.
+            An error is defined, by its error source, nature, and type, which can be defined using the properties:
+            <ul>
+                <li><a href="#errorSource">akco:errorSource</a></li>
+                <li><a href="#errorNature">akco:errorNature</a></li>
+                <li><a href="#errorType">akco:errorType</a></li>
+            </ul>
+        </p>
+        <table id="error-table" border="1" cellspacing="0" cellpadding="5">
+            <thead>
+            <tr>
+                <th rowspan="2">(Grouped) error Types</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-id="1">
+                <td><a href="#" onclick="event.preventDefault()" style="cursor: default"><strong>Instance</strong> uses not a proper instance identifier</a></td>
+            </tr>
+            <tr data-id="2">
+                <td><a href="#" onclick="event.preventDefault()" style="cursor: default"><strong>Entity</strong> is not an existing entity name</a></td>
+            </tr>
+            <tr data-id="3">
+                <td><a href="#" onclick="event.preventDefault()" style="cursor: default">Any type of <strong>assertion</strong> is semantically wrong</a></td>
+            </tr>
+            <tr data-id="6">
+                <td><a href="#" onclick="event.preventDefault()" style="cursor: default"><strong>Instance</strong> is not in any domain or range of a <strong>property</strong></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h5>Annotation of errors, using AKCO</h5>
+        <div id="code-box">
+            <pre class="backgroundBox"><code id="annotation-output">// Hover over a row to see annotation here</code></pre>
+        </div>
+        <p>The codeblock shows a preview of existing named individuals.</p>
+    </div>
+
+</div>
+
+<h5 class="question-heading">How can I represent more specific errors, like errors in tail verticals?</h5>
+
+<p><a href="#Error">akco:Error</a> are subclass of <a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept" target="_blank">skos:concept</a> to highlight the relatability of errors and their notion of being a concept within knowledge cleaning.
+    It is therefore possible to specify any type of more specific or general error class and relate them using <a href="https://www.w3.org/TR/skos-reference/#narrower" target="_blank"> skos:narrower</a> or <a href="https://www.w3.org/TR/skos-reference/#broader" target="_blank">skos:broader</a>.
+The following demonstrates the definition of an error inside a tail vertical domain. Therefore, one can define a new error of type tail vertical and then relate it via a matching skos property to an existing error.
+</p>
+
+<pre  style="width: fit-content" class="backgroundBox">
+    <code>
+:errPVSemSemWrong a :Error ;
+  rdfs:label "errPVSemSemWrong"@en ;
+  rdfs:comment "Error is of semantic nature, afflicting property-value assertions, and causing a semantically wrong property-value assertion."@en ;
+  :errorSource "Property-value assertion"@en ;
+  errorNature "Semantic"@en ;
+  errorType "Assertion is semantically wrong"@en ;
+  skos:narrower errTailVertical .
+
+errTailVertical a Error ;
+  rdfs:label "errTailVertical"@en ;
+  rdfs:comment "A tail vertical is a domain that is not well covered by a knowledge graph. Entities in these domains are typically sparse."@en ;
+  skos:broader errPVSemSemWrong .
+    </code>
+</pre>

@@ -1,0 +1,129 @@
+<h3>Example knowledge graph</h3>
+
+<section>
+    <p>
+        The example knowledge graph represents a geographical domain, defining a small ontology and assertions, shown in Figure 1.
+        It contains several errors, including:
+    </p>
+    <ul>
+        <li>The wrong type and <code>locatedIn</code> property of <code>sydney</code></li>
+        <li>A missing end-of-statement character in Line 4</li>
+        <li>A wrong literal type of the property <code>population</code> of <code>australia</code></li>
+        <li>A literal value instead of an IRI instance in the property <code>officialCurrency</code> of <code>houston</code></li>
+        <li>The <code>population</code> of <code>beijing</code> is the same as that of <code>china</code></li>
+    </ul>
+    <p>These errors are targeted and cleaned throughout the analysis.</p>
+</section>
+
+
+<div id="turtle-graph">
+    <div class="line-numbered prefix-block">
+        <div>@prefix : &lt;http://example.com/#&gt; .</div>
+        <div>@prefix ex1: &lt;http://example1.com/#&gt; .</div>
+        <div>@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</div>
+        <div>@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .</div>
+        <div>@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</div>
+    </div>
+
+    <div class="line-numbered main-block">
+        <div># Ontology</div>
+        <div>:Place a rdfs:Class .</div>
+        <div>:Person a rdfs:Class .</div>
+        <div>:Country </div>
+        <div>&nbsp;&nbsp;a rdfs:Class ;</div>
+        <div>&nbsp;&nbsp;rdfs:subClassOf :Place .</div>
+        <div>:Currency a rdfs:Class .</div>
+        <div>:City </div>
+        <div>&nbsp;&nbsp;a rdfs:Class ;</div>
+        <div>&nbsp;&nbsp;rdfs:subClassOf :Place .</div>
+        <div></div>
+        <div>:hasCapital </div>
+        <div>&nbsp;&nbsp;a rdf:Property ;</div>
+        <div>&nbsp;&nbsp;rdfs:domain :Country ;</div>
+        <div>&nbsp;&nbsp;rdfs:range :City .</div>
+        <div>:locatedIn </div>
+        <div>&nbsp;&nbsp;a rdf:Property ;</div>
+        <div>&nbsp;&nbsp;rdfs:domain :City ;</div>
+        <div>&nbsp;&nbsp;rdfs:range :Country .</div>
+        <div>:officialCurrency </div>
+        <div>&nbsp;&nbsp;a rdf:Property ;</div>
+        <div>&nbsp;&nbsp;rdfs:domain :Place ;</div>
+        <div>&nbsp;&nbsp;rdfs:range :Currency .</div>
+        <div>:population</div>
+        <div>&nbsp;&nbsp;a rdf:Property ;</div>
+        <div>&nbsp;&nbsp;rdfs:domain :Place ;</div>
+        <div>&nbsp;&nbsp;rdfs:range xsd:integer .</div>
+        <div></div>
+        <div># Assertions</div>
+        <div>:aud a :Currency .</div>
+        <div>:usd a :Currency .</div>
+        <div>:cny a :Currency .</div>
+        <div></div>
+        <div>:australia</div>
+        <div>&nbsp;&nbsp;a :Country ;</div>
+        <div>&nbsp;&nbsp;:hasCapital :canberra ;</div>
+        <div>&nbsp;&nbsp;:population "26832900y" ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :aud .</div>
+        <div>:melbourne</div>
+        <div>&nbsp;&nbsp;a :City ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :australia ;</div>
+        <div>&nbsp;&nbsp;:population 5031195 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :aud .</div>
+        <div>:perth</div>
+        <div>&nbsp;&nbsp;a :City ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :australia ;</div>
+        <div>&nbsp;&nbsp;:population 2192229 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :aud .</div>
+        <div>:canberra</div>
+        <div>&nbsp;&nbsp;a :City ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :australia ;</div>
+        <div>&nbsp;&nbsp;:population 456692 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :aud .</div>
+        <div>:sydney</div>
+        <div>&nbsp;&nbsp;a :Person ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :unitedStates ;</div>
+        <div>&nbsp;&nbsp;:population 5297089 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :aud .</div>
+        <div>:unitedStates</div>
+        <div>&nbsp;&nbsp;a :Country ;</div>
+        <div>&nbsp;&nbsp;:hasCapital :washington ;</div>
+        <div>&nbsp;&nbsp;:population 333287557 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :usd .</div>
+        <div>:washington</div>
+        <div>&nbsp;&nbsp;:locatedIn :unitedStates ;</div>
+        <div>&nbsp;&nbsp;:population 689545 ;</div>
+        <div>&nbsp;&nbsp;:sameAs ex1:washington ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :usd .</div>
+        <div>:newYork</div>
+        <div>&nbsp;&nbsp;a :City ;</div>
+        <div>&nbsp;&nbsp;:population 8804190 ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :unitedStates .</div>
+        <div>:houston</div>
+        <div>&nbsp;&nbsp;a :City ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :unitedStates ;</div>
+        <div>&nbsp;&nbsp;:population 2301572 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency "Dollar" .</div>
+        <div>:china</div>
+        <div>&nbsp;&nbsp;a :Country ;</div>
+        <div>&nbsp;&nbsp;:hasCapital :beijing ;</div>
+        <div>&nbsp;&nbsp;:population 1411750000 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :cny .</div>
+        <div>:beijing</div>
+        <div>&nbsp;&nbsp;a :City ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :china ;</div>
+        <div>&nbsp;&nbsp;:population 1411750000 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :cny .</div>
+        <div>:shanghai</div>
+        <div>&nbsp;&nbsp;a :City ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :china ;</div>
+        <div>&nbsp;&nbsp;:population 26875500 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :cny .</div>
+        <div>:hongkong</div>
+        <div>&nbsp;&nbsp;a :City ;</div>
+        <div>&nbsp;&nbsp;:locatedIn :china ;</div>
+        <div>&nbsp;&nbsp;:population 7333200 ;</div>
+        <div>&nbsp;&nbsp;:officialCurrency :cny .</div>
+    </div>
+
+    <div class="caption">Figure 1: Example knowledge graph, expressed in Turtle syntax.</div>
+</div>

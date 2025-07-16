@@ -1,0 +1,184 @@
+:root {
+  color-scheme: light;
+  --bg-status-box: rgb(0, 90, 156);
+  --background-color: white;
+  --border: navy;
+  --htag-text: #005A9C;
+  --bg-backlink: #F4FFFF;
+  --text-backlink: black;
+  --text-color: rgb(15 15 15);
+  --shadow-color: rgb(15 15 15 / 50%);
+  --accent-color: rgb(240 0 0 / 50%);
+  --owl-bg: #F9F9F9;
+  --link: #00c;
+  --link-visited: #609;
+  --link-active: #c00;
+  --href-hover: #ffa;
+  --bg-hlist: #F4FFFF;
+  --bg-description:rgb(242, 243, 244);
+  --literal:green;
+  --type-ap: maroon;
+  --type-op: navy;
+  --type-dp: green;
+  --type-ni: brown;
+}
+
+.question-heading, .activeB {
+  border-bottom: 2px solid #005A9C; /* match your accent color */
+}
+
+#embed_img {
+  background-image: url("../content/akc/embedding_plot_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:900px;
+  height: 600px;
+}
+
+#fig_crowd{
+  background-image: url("../content/akc/crowdsourcing_crowd_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:150px;
+  height: 150px;
+}
+
+#fig_expert{
+  background-image: url("../content/akc/crowdsourcing_scientist_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:150px;
+  height: 150px;
+}
+
+#fig_context{
+  background-image: url("../content/akc/context_plot_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:750px;
+  height: 580px;
+}
+
+#fig_ontology{
+  background-image: url("../content/akc/ontology.light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 770px;
+  height: 700px;
+}
+
+#fig_ruleM{
+  background-image: url("../content/akc/rule.light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 550px;
+  height: 400px;
+}
+
+.fig_border{
+  border: 1px solid; /* match your accent color */
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+#fig_path{
+  background-image: url("../content/akc/path_plot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 530px;
+  height: 410px;
+}
+
+#fig_verbalization {
+  background-image: url("../content/akc/verbalization.light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 800px;
+  height: 325px;
+}
+
+#fig_hybrid {
+  background-image: url("../content/akc/hybrid.light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 510px;
+  height: 400px;
+}
+
+#fig_syntactic {
+  background-image: url("../content/akc/syntactic.light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:550px;
+  height: 450px;
+}
+
+#visImage{
+  background-image: url("../content/AKCO_visualization_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 1000px;
+  height: 670px;
+  border-radius: 8px;
+  border: 1px solid #444;
+
+}
+
+#fig_statistical{
+  background-image: url("../content/akc/statistical.light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 800px;
+  height: 180px;
+}
+
+.menu-sidebar {
+  background-color: #F4FFFF;
+}
+
+.menu-sidebar li:hover, #exampleKGLink:hover, #menuToggle:hover {
+  background-color: #ffa;;
+}
+
+.menu-layout, #fig_tech_integrity_validation {
+
+  border: 1px solid #444;
+}
+
+.menu-content {
+  background-color: transparent;
+}
+
+li.activeLi {
+  background-color: #ffa;
+}
+
+.tooltip-link:hover::after {
+  background-color:  #F4FFFF;
+  color: black;
+}

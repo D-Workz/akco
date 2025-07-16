@@ -1,0 +1,99 @@
+
+
+
+<h3 class="list">Dimensions</h3>
+<section id="cleaning-dimensions-intro">
+
+    <p>
+        This section introduces various <strong>dimensions</strong>, i.e., characteristics, of knowledge graph cleaning approaches.
+        Each dimension has one or more <strong>variations</strong>, and individual approaches are not limited to a single variation.
+    </p>
+
+    <p>
+        For instance, <em>hybrid approaches</em> often combine different techniques and dimensions to achieve a more robust and adaptable cleaning workflow.
+        Such approaches may, for example, incorporate both <a href="#internal-vs-external">internal and external methods</a>.
+    </p>
+</section>
+
+<div class="menu-layout">
+    <aside class="menu-sidebar">
+        <ul class="tag-list-dim">
+            <li onclick="loadContent('dim_internalExternal.html', 'dim')" class="activeLi">1. Internal vs. ecternal method</li>
+            <li onclick="loadContent('dim_dataDKnowledgeD.html', 'dim')">2. Data vs. knowledge-driven</li>
+            <li onclick="loadContent('dim_detectionCorrection.html', 'dim')">3. Detection vs. correction</li>
+            <li onclick="loadContent('dim_targetedErr.html', 'dim')">4. Targeted error</li>
+        </ul>
+    </aside>
+
+    <section class="menu-content" id="content-area-dim">
+        <p>Select a section from the menu.</p>
+    </section>
+</div>
+<h3 class="list" id="sec_bgk">Background knowledge</h3>
+<section id="backgroundK">
+    <p>
+        Error detection and correction rely on <strong>background knowledge</strong>, which provides essential context for identifying or resolving errors.
+        This knowledge can come from different parts or features of a knowledge graph itself (i.e., <em>internal background knowledge</em>) or from
+        external supplementary sources (i.e., <em>external background knowledge</em>).
+    </p>
+
+    <p>
+        We distinguish seven types of background knowledge:
+    </p>
+</section>
+<div class="menu-layout medium">
+    <aside class="menu-sidebar">
+        <ul class="tag-list-bgk">
+            <li onclick="loadContent('bgk_contextualGraphs.html', 'bgk')" class="activeLi">1. Contextual Graphs</li>
+            <li onclick="loadContent('bgk_curatedTrainingD.html', 'bgk')">2. Curated / Training-data</li>
+            <li onclick="loadContent('bgk_externalSources.html', 'bgk')">3. External sources</li>
+            <li onclick="loadContent('bgk_formalSyntaxSpecifications.html', 'bgk')">4. Formal & Syntactic specifications</li>
+            <li onclick="loadContent('bgk_graphStructure.html', 'bgk')">5. Graph structure</li>
+            <li onclick="loadContent('bgk_humanExpert.html', 'bgk')">6. Human expertise</li>
+            <li onclick="loadContent('bgk_valuesOfPV.html', 'bgk')">7. Values of property-value assertions</li>
+
+        </ul>
+    </aside>
+
+    <section class="menu-content" id="content-area-bgk">
+        <p>Select a section from the menu.</p>
+    </section>
+</div>
+
+<h3 class="list" id="sec_tec">Cleaning techniques</h3>
+<p>
+    Approaches use different cleaning techniques to detect and correct errors. Each technique is characterized by a methodology focusing on specific insights and requirements.
+    It leverages background knowledge to address the cleaning task.
+    Each technique and related approaches are described, using an example knowledge graph, figures, and tables to visualize key insights.
+</p>
+<p>
+    We distinguish between eleven cleaning techniques:
+</p>
+<div class="menu-layout large" id="menuWrapper">
+    <!-- Toggle button sits just before the menu sidebar -->
+    <div >
+        <button id="menuToggle" onclick="toggleMenu()" title="Toggle Menu" style="font-size: 1rem">← Hide menu</button>
+        <aside class="menu-sidebar" id="menuSidebar">
+            <ul class="tag-list-kg">
+                <li onclick="loadContent('example_kg.html','tec')" class="activeLi" id="menu_exampleKG">Example knowledge graph</li>
+                <li onclick="loadContent('tec_context.html','tec')">1. Context-based</li>
+                <li onclick="loadContent('tec_crowd.html','tec')">2. Crowdsourcing-based</li>
+                <li onclick="loadContent('tec_embedding.html','tec')">3. Embedding & neural network-based</li>
+                <li onclick="loadContent('tec_integrity.html','tec')">4. Integrity constraint-based</li>
+                <li onclick="loadContent('tec_ontology.html','tec')">5. Ontology-based</li>
+                <li onclick="loadContent('tec_path.html','tec')">6. Path-based</li>
+                <li onclick="loadContent('tec_ruleMining.html','tec')">7. Rule mining-based</li>
+                <li onclick="loadContent('tec_statistical.html','tec')">8. Statistical</li>
+                <li onclick="loadContent('tec_syntactic.html','tec')">9. Syntactic</li>
+                <li onclick="loadContent('tec_verbalization.html','tec')">10. Verbalization-based</li>
+                <li onclick="loadContent('tec_hybrid.html','tec')">11. Hybrid</li>
+            </ul>
+
+        </aside>
+    </div>
+
+
+    <section class="menu-content" id="content-area-tec">
+        <p>Select a section from the menu.</p>
+    </section>
+</div>

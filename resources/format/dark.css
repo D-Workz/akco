@@ -1,0 +1,185 @@
+:root {
+  color-scheme: dark;
+  --bg-status-box: rgb(0, 90, 156);
+  --background-color: #3e3e42;
+  --border: white;
+  --htag-text: #83E9F0;
+  --bg-backlink: #6e6e67;
+  --text-backlink: white;
+  --text-color: rgb(240 240 240);
+  --shadow-color: rgb(240 240 240 / 50%);
+  --accent-color: rgb(0 0 240 / 50%);
+  --owl-bg-pre: rgb(15 15 15);
+  --link: #DDC1F2;
+  --link-visited: #BD7DEE;
+  --link-active: blue;
+  --href-hover: gray;
+  --bg-hlist: #67676E;
+  --bg-description: #535358;
+  --literal:#49C00D;
+  --type-ap: #EB4A4A;
+  --type-op: #75E1FC;
+  --type-dp: #75FA32;
+  --type-ni: #f3cdcd;
+}
+
+.question-heading, .activeB {
+  border-bottom: 2px solid #82E9F0; /* match your accent color */
+}
+
+.fig_border{
+  border: 1px solid; /* match your accent color */
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+
+#embed_img {
+  background-image: url("../content/akc/embedding_plot_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:900px;
+  height: 600px;
+}
+
+#fig_syntactic {
+  background-image: url("../content/akc/syntactic.dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:550px;
+  height: 450px;
+}
+
+#fig_verbalization {
+  background-image: url("../content/akc/verbalization.dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 800px;
+  height: 325px;
+}
+
+#fig_hybrid {
+  background-image: url("../content/akc/hybrid.dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 510px;
+  height: 400px;
+}
+
+#fig_crowd{
+  background-image: url("../content/akc/crowdsourcing_crowd_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:150px;
+  height: 150px;
+}
+
+#fig_expert{
+  background-image: url("../content/akc/crowdsourcing_scientist_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:150px;
+  height: 150px;
+}
+
+#fig_context{
+  background-image: url("../content/akc/context_plot_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:750px;
+  height: 580px;
+}
+
+#fig_ontology{
+  background-image: url("../content/akc/ontology.light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 770px;
+  height: 700px;
+}
+
+#fig_ruleM{
+  background-image: url("../content/akc/rule.dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 550px;
+  height: 400px;
+}
+
+#fig_statistical{
+  background-image: url("../content/akc/statistical.dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 800px;
+  height: 180px;
+}
+
+#fig_path{
+  background-image: url("../content/akc/path_plot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 530px;
+  height: 410px;
+}
+
+#visImage{
+  background-image: url("../content/AKCO_visualization_dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 1000px;
+  height: 670px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+
+
+.menu-sidebar {
+  background-color: #535358;
+}
+
+.menu-sidebar li:hover, #exampleKGLink:hover, #menuToggle:hover {
+  background-color: gray;;
+}
+
+.menu-layout, #fig_tech_integrity_validation {
+  border: 1px solid white;
+}
+
+.menu-content {
+  background-color: transparent;
+}
+
+li.activeLi {
+  background-color: grey;
+}
+
+.tooltip-link:hover::after {
+  background-color: #333;
+  color: #fff;
+}

@@ -1038,7 +1038,7 @@ webvowl.app =
 	    var zoomOutPos = height - 30;
 	    var sliderHeight = 150;
 	    
-	    // assuming DOM elements are generated in the index.html
+	    // assuming DOM elements are generated in the index-en.html
 	    // todo: refactor for independent usage of graph and app
 	    if ( fullHeight < 150 ) {
 	      // hide the slider button;

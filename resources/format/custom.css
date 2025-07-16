@@ -1,0 +1,319 @@
+
+#turtle-graph {
+    padding: 1em;
+    font-family: monospace;
+    font-size: 14px;
+    width: fit-content;
+}
+
+#turtle-graph .line-numbered {
+    counter-reset: line;
+}
+
+#turtle-graph .line-numbered div {
+    counter-increment: line;
+    padding-left: 3em;
+    position: relative;
+    break-inside: avoid;
+}
+
+#turtle-graph .line-numbered div::before {
+    content: counter(line);
+    position: absolute;
+    left: 0;
+    width: 2.5em;
+    text-align: right;
+}
+
+/* Prefix block: single column */
+#turtle-graph .prefix-block {
+    margin-bottom: 1em;
+}
+
+/* Main block: two columns */
+#turtle-graph .main-block {
+    column-count: 4;
+    column-gap: 0.1em;
+}
+
+#turtle-graph .caption {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    font-family: sans-serif;
+}
+.table-annotation-box {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    max-width: 100%;
+    overflow-x: auto;
+    min-height: 422px;
+}
+
+.table-annotation-box > div {
+    min-width: 0;           /* Allow content to shrink */
+    overflow-wrap: break-word; /* Wrap long content */
+    word-break: break-word;    /* Force breaking inside words if needed */
+}
+
+/* Optional: styling for code box */
+.table-annotation-box #code-box {
+    height: fit-content;
+    font-family: monospace;
+    width: 1000px;
+}
+
+#table-container{
+    width:550px;
+}
+
+.table-annotation-box pre {
+    margin: 0;
+    white-space: pre-wrap;       /* Allow wrapping */
+    word-break: break-word;      /* Break long words */
+    overflow-wrap: break-word;   /* Extra safety */
+    max-width: 95%;             /* Prevent overflow */
+    overflow-x: auto;
+}
+
+.question-heading {
+    font-weight: 600;
+    font-size: 1.2em;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+}
+
+
+.menu-layout {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 250px;
+
+}
+
+.menu-layout.large{
+    min-height: 900px;
+}
+.menu-layout.medium{
+    min-height: 400px;
+}
+
+.menu-sidebar {
+    width: 340px;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-sidebar li {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.menu-content {
+    flex: 1;
+    padding: 1rem;
+    overflow: scroll;
+}
+
+#visualizationBox{
+    height: 760px;
+}
+
+.two-columns {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+#fig_tech_integrity_constraints{
+    width: 520px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+#embed_vector{
+    width: 910px;
+}
+
+.content{
+    line-height: 1.6em;
+}
+
+#AKCBox{
+    margin-left: 20px;
+}
+
+pre {
+    white-space: pre-wrap;         /* Allows wrapping */
+    word-wrap: break-word;         /* For older support */
+    overflow-wrap: break-word;
+    line-height: 1.8 !important;
+}
+
+/* Stack the columns on smaller screens */
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+    }
+}
+
+.custom-ol {
+    list-style-type: none;
+    counter-reset: item;
+    padding-left: 1.5em; /* Indent list */
+}
+
+.custom-ol li {
+    counter-increment: item;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+.custom-ol li::before {
+    content: "(" counter(item) ") ";
+    position: absolute;
+    left: -1.5em;
+}
+
+
+button {
+    font-size: 1rem;        /* Increase font size (e.g., 16px) */
+    padding: 4px 8px;      /* Add inner spacing */
+    border-radius: 4px;     /* Optional: rounded corners */
+    margin: 4px;            /* Spacing between buttons */
+    cursor: pointer;
+}
+
+.technique-list {
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.technique-list li {
+    margin-bottom: 0.3rem;
+}
+
+#fig_tech_integrity_validation{
+    padding: 2em;
+    width: 820px;
+    word-break: break-word;      /* Break long words */
+    overflow-wrap: break-word;
+}
+
+#embed_img img{
+    width:900px;
+    height: auto;
+}
+
+.tooltip-link {
+    text-decoration: underline;
+    cursor: help;
+    position: relative;
+}
+
+.tooltip-link:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 100;
+    background-color: #333;
+    color: #fff;
+    padding: 0.4em 0.6em;
+    white-space: pre-line;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    max-width: 300px;
+}
+
+pre, code {
+    font-size: 1.1em !important;
+}
+
+table, #turtle-graph, .backgroundBox{
+    background-color: var(--bg-hlist);
+    border: 1px solid var(--border);
+    margin: 20px;
+    vertical-align: middle;
+}
+
+.image-wrapper {
+    display: block;
+    margin: auto;
+    /* vertical centering */
+}
+
+.three-columns {
+    display: flex;
+
+}
+
+.column {
+    flex: 1;
+}
+
+.brace {
+    font-size: 80px;
+    font-family: monospace;
+    line-height: 1;
+    padding: 0 10px;
+    align-self: center;
+}
+#fig_exampleKG{
+    background-image: url("../content/akc/knowledgeGraph_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 290px;
+    height: 250px;
+}
+
+.menu-layout.large {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Sidebar */
+.menu-sidebar {
+    width: 310px;
+    transition: width 0.3s ease;
+}
+
+/* Collapse sidebar when hidden */
+.menu-hidden .menu-sidebar {
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Content stretches to fill remaining space */
+.menu-content {
+    flex: 1;
+}
+
+/* Toggle button styling */
+#menuToggle {
+    background: transparent;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+/* Shrink space when menu is hidden */
+.menu-hidden #menuToggle {
+    margin-right: 0;
+}

@@ -5,64 +5,22 @@
       window.ontologyVersion = '1.1.0';
    </script>
    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-   <link rel="stylesheet" href="resources/primer.css" media="screen"/>
-   <link rel="stylesheet" href="resources/rec.css" media="screen"/>
-   <link rel="stylesheet" href="resources/extra.css" media="screen"/>
-   <link rel="stylesheet" href="resources/custom.css" media="screen"/>
-   <link rel="stylesheet" href="resources/owl.css" media="screen"/>
-   <link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
-   <link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
-   <link rel="stylesheet" href="resources/slider.css" media="screen"/>
+   <link rel="stylesheet" href="resources/format/primer.css" media="screen"/>
+   <link rel="stylesheet" href="resources/format/rec.css" media="screen"/>
+   <link rel="stylesheet" href="resources/format/extra.css" media="screen"/>
+   <link rel="stylesheet" href="resources/format/custom.css" media="screen"/>
+   <link rel="stylesheet" href="resources/format/owl.css" media="screen"/>
+   <link rel="stylesheet" href="resources/format/dark.css" media="(prefers-color-scheme: dark)"/>
+   <link rel="stylesheet" href="resources/format/light.css" media="(prefers-color-scheme: light)"/>
+   <link rel="stylesheet" href="resources/format/slider.css" media="screen"/>
    <meta name="color-scheme" content="dark light">
-   <script type="module" src="resources/dark-mode-toggle.mjs"></script>
-
-   <title>Anatomy of Knowledge Cleaning Ontology (AKCO)</title>
-
-   <!-- SCHEMA.ORG METADATA -->
-   <script src="resources/jquery.js"></script>
-   <script src="resources/marked.min.js"></script>
+   <script type="module" src="resources/format/dark-mode-toggle.mjs"></script>
+   <script src="resources/format/jquery.js"></script>
+   <script src="resources/format/marked.min.js"></script>
    <script id="MathJax-script" async
            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
    </script>
-   <script>
-      function loadHash() {
-         jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
-         var hash = location.hash;
-         if($(hash).offset()!=null){
-            $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
-         }
-         loadTOC();
-      }
-      function loadTOC(){
-         //process toc dynamically
-         var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
-         jQuery(".list").each(function(){
-            if(jQuery(this).is('h2')){
-               if(j>0){
-                  t+='</ul>';
-                  j=0;
-               }
-               t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-               i++;
-            }
-            if(jQuery(this).is('h3')){
-               if(j==0){
-                  t+='<ul>';
-               }
-               j++;
-               t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-            }
-         });
-         t+='</ul>';
-         $("#toc").html(t);
-      }
-      $(function(){
-         loadHash();
-      }); $.fn.ignore = function(sel){
-         return this.clone().find(sel||">*").remove().end();
-      };
-   </script>
-
+   <title>Anatomy of Knowledge Cleaning Ontology (AKCO)</title>
 </head>
 
 <body>
@@ -99,52 +57,33 @@
       </div>
    </div>
    <!-- ABSTRACT BLOCK BEGIN -->
-   <div id="abstract">
+   <div id="abstract" class="content">
       <h2>Abstract</h2>
-      <span class="markdown">
-
-The Anatomy of Knowledge Cleaning Ontology defines relevant aspects of knowledge cleaning.
-         It is based on a vast review of approaches, whose results compose the anatomy of knowledge cleaning.
-         This anatomy identifies relevant aspects, like background knowledge, dimensions, or cleaning techniques, and relates these concepts.
-         The AKCO is an ontology that represents these aspects. It adopts existing vocabularies,
-         and aims to support the analyzation of correlations in knowledge cleaning. the
-
-         contains definitions and instantiations of these defintions.
-
-
-      </span>
+      Knowledge cleaning, i.e., detecting and correcting assertion errors, in knowledge graphs, is essential for their successful application.
+      However, knowledge cleaning the various assertion errors is nontrivial.
+      It contains understanding the different errors, and the possibilities to process them, which involves understanding a vast array of specifications and workfloẃs.
+      The Anatomy of Knowledge Cleaning Ontology defines relevant aspects of knowledge cleaning, and streamlines various tasks, like gaining an overview of relevant aspects and their interactions.
+      It is based on a vast review of approaches, whose results compose the anatomy of knowledge cleaning.
+      This anatomy identifies relevant aspects, like background knowledge, dimensions, or cleaning techniques, and relates these concepts.
+      The AKCO is an ontology that represents these aspects. It adopts existing vocabularies, and aims to support the analyzation of correlations in knowledge cleaning.
+      The AKCO contains over 100 instances of various aspects, like dimensions, different types of background knowledge, and various differenc cleaning approaches.
    </div>
    <!-- ABSTRACT BLOCK END -->
 
    <div id="toc"></div>
 
    <!--INTRODUCTION SECTION-->
-   <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-      <span class="markdown">
+   <div id="introduction"><h2 id="intro" class="list content">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+      <p>Knowledge graphs are a well-established approach for representing information of any domain in a machine-readable format. One important quality measure for a successful application is the correctness of the assertions. These assertions represent the factual knowledge of the domain and make up the majority of a knowledge graph. Different types of assertions can have different errors, and various approaches have been developed to address these errors. Each approach targets a limited number of different error types and typically performs either error detection or correction.</p>
 
+      <p>Therefore, to clean a knowledge graph of the different errors, several approaches need to be selected. This selection should account for the various cleaning techniques and types of background knowledge available. Cleaning techniques describe a specific methodology that is followed during the processing of an assertion. These methodologies use background knowledge as context to compare an assertion in question to or identify replacements for erroneous entities. This background knowledge can be part of the knowledge graph itself, like other assertions, or external sources, like a text corpus. The adaptation of a cleaning technique by an approach results in different dimensions, i.e., characteristics of this approach. For example, using only a given knowledge graph classifies an approach as internal, whereas using external sources classifies it as external.</p>
 
-   The Anatomy of Knowledge Cleaning Ontology (AKCO) defines relevant aspects of knowledge cleaning.
-   Knowledge cleaning, i.e., error detection and correction, is an essential part of the life cycle of a knowledge graph, aiming to improve its correctness.
-   Thereby, knowledge graphs contain different types of errors, associated to the type of an assertion, and the nature of the error.
-   Assertions typically make up most of a knowledge graph, representing factual knowledge.
-   Most knowledge graphs use three different types of assertions, instance, property-value, and equality assertions.
-   These assertions can be afflicted by either a semantic or syntactic error, which is the error nature.
-   The assertions, if wrong are the error sources, and depending on the error nature, can have different error types.
-   Each assertion and error type has distinct characteristics, requiring a tailored cleaning approach.
-   Therefore, several approaches exist for targeting specific types of errors in different error sources.
-   There are typically several possibilities to target the same error.
-   However, these possibilities differ in the cleaning technique they use to process an error.
-   A cleaning technique can be described as a certain methodology that is followed.
-   All approaches that adopt the same technique use similar insights, and background knowledge.
-   Background knowledge refers to the context that is to compare an assertion to or identify an correction.
+      <p>Considering all these different aspects makes the selection of approaches nontrivial. A great deal of expertise is required to gain an understanding of the various concepts and their interdependencies. Therefore, the <strong>Anatomy of Knowledge Cleaning Ontology (AKCO)</strong> defines important concepts and their properties of knowledge cleaning. It enables one to gain insights into various aspects and select approaches based on specific features. It is based on an extensive literature review <em>[cite my paper]</em>. This survey provides the first qualitative analysis of knowledge cleaning. It introduces eleven cleaning techniques, seven types of background knowledge, four dimensions with at least two variations each, and various cleaning approaches. It follows a methodology for transparency. It employs a framework for context and structure, providing a discussion that highlights important insights into knowledge cleaning and potential future research areas.</p>
 
-   The Anatomy of Knowledge cleaning is designed to represent important concepts and relate those.
-         It adopts concepts form, skos, dc terms, and dqv.
-         It aims to represent the relevant aspects of knowledge cleaning and provide a source for understanding, comparing, and selecting cleaning approaches.
-         It not only provides definitions but also over one hundred named individuals that are based on the results of our literature review [cite].
-         It
+      <p>The AKCO defines important concepts and properties while also adapting established concepts from existing ontologies and defining over 100 instances. The concepts represent aspects like cleaning techniques, background knowledge, or cleaning approaches. Properties relate concepts such as <code>akco:usesBackgroundKnowledge</code>, which connect cleaning techniques and approaches with different types of background knowledge. Other properties define data values, such as <code>akco:errorSource</code>, which defines an assertion type as a literal value. Furthermore, three ontologies are adapted to highlight different features of the ontology, such as its function as a knowledge organization system, hence the adaptation of the <strong>Simple Knowledge Organization System (SKOS)</strong>. The <strong>Data Quality Vocabulary (DQV)</strong> highlights the structure of knowledge graphs and background knowledge as datasets that have different quality dimensions. <strong>Dublin Core</strong> provides a standardized way to represent bibliographic resources, which is a core aspect of this ontology.</p>
 
-      </span>
+      <p>The AKCO defines also over 100 instances (named individuals) that are the result of an extensive literature analysis. The instances represent various facts of knowledge cleaning, like different dimensions, errors, techniques, or approaches.</p>
+
       <div id="namespacedeclarations">
          <h3 id="ns" class="list">Namespace declarations</h3>
          <div id="ns" align="center">
@@ -152,124 +91,22 @@ The Anatomy of Knowledge Cleaning Ontology defines relevant aspects of knowledge
          </div>
       </div>
    </div>
-      <h2 class="list">The Anatomy of knowledge cleaning</h2>
-
-      <section id="anatomy-intro">
-
-         <p>
-            This part introduces the <strong>anatomy of knowledge cleaning</strong>, outlining and connecting key aspects relevant to cleaning knowledge graphs.
-            It addresses the first research question (see <a href="#section-1-1">Section&nbsp;1.1</a>).
-         </p>
-
-         <p>
-            These aspects include <strong>cleaning techniques</strong>, which define the specific strategies employed by different approaches.
-            The techniques depend on various forms of <strong>background knowledge</strong> for effective processing, and this section introduces the different types involved.
-         </p>
-
-         <p>
-            In addition, four sets of <strong>dimensions</strong> are discussed—each set characterizes particular properties of cleaning approaches and techniques.
-         </p>
-      </section>
-
-      <h3 class="list">Dimensions</h3>
-      <section id="cleaning-dimensions-intro">
-
-         <p>
-            This section introduces various <strong>dimensions</strong>, i.e., characteristics, of knowledge graph cleaning approaches.
-            Each dimension has one or more <strong>variations</strong>, and individual approaches are not limited to a single variation.
-         </p>
-
-         <p>
-            For instance, <em>hybrid approaches</em> often combine different techniques and dimensions to achieve a more robust and adaptable cleaning workflow.
-            Such approaches may, for example, incorporate both <a href="#internal-vs-external">internal and external methods</a>.
-         </p>
-      </section>
-
-      <div class="menu-layout">
-         <aside class="menu-sidebar">
-            <ul class="tag-list-dim">
-               <li onclick="loadContent('dim_internalExternal.html', 'dim')" class="activeLi">1. Internal vs. ecternal method</li>
-               <li onclick="loadContent('dim_dataDKnowledgeD.html', 'dim')">2. Data vs. knowledge-driven</li>
-               <li onclick="loadContent('dim_detectionCorrection.html', 'dim')">3. Detection vs. correction</li>
-               <li onclick="loadContent('dim_targetedErr.html', 'dim')">4. Targeted error</li>
-            </ul>
-         </aside>
-
-         <section class="menu-content" id="content-area-dim">
-            <p>Select a section from the menu.</p>
-         </section>
-      </div>
-      <h3 class="list" id="sec_bgk">Background knowledge</h3>
-      <section id="backgroundK">
-         <p>
-            Error detection and correction rely on <strong>background knowledge</strong>, which provides essential context for identifying or resolving errors.
-            This knowledge can come from different parts or features of a knowledge graph itself (i.e., <em>internal background knowledge</em>) or from
-            external supplementary sources (i.e., <em>external background knowledge</em>).
-         </p>
-
-         <p>
-            We distinguish seven types of background knowledge:
-         </p>
-      </section>
-      <div class="menu-layout medium">
-         <aside class="menu-sidebar">
-            <ul class="tag-list-bgk">
-               <li onclick="loadContent('bgk_contextualGraphs.html', 'bgk')" class="activeLi">1. Contextual Graphs</li>
-               <li onclick="loadContent('bgk_curatedTrainingD.html', 'bgk')">2. Curated / Training-data</li>
-               <li onclick="loadContent('bgk_externalSources.html', 'bgk')">3. External sources</li>
-               <li onclick="loadContent('bgk_formalSyntaxSpecifications.html', 'bgk')">4. Formal & Syntactic specifications</li>
-               <li onclick="loadContent('bgk_graphStructure.html', 'bgk')">5. Graph structure</li>
-               <li onclick="loadContent('bgk_humanExpert.html', 'bgk')">6. Human expertise</li>
-               <li onclick="loadContent('bgk_valuesOfPV.html', 'bgk')">7. Values of property-value assertions</li>
-
-            </ul>
-         </aside>
-
-         <section class="menu-content" id="content-area-bgk">
-            <p>Select a section from the menu.</p>
-         </section>
-      </div>
-
-      <h3 class="list" id="sec_tec">Cleaning techniques</h3>
+   <h2 class="list">The Anatomy of knowledge cleaning</h2>
+      <p>The <strong>anatomy of knowledge cleaning</strong> is the theoretical foundation to the AKCO. It introduces key aspects of knowledge cleaning assertion errrors in knowledge graphs.
+      It describes aspects like, cleaning techniques, discusses their possibilities and limitations, and highlights relations to other aspects. It is based on extensive literature analysis, which is detailed in [ref_to_my_paper].</p>
       <p>
-         Approaches use different cleaning techniques to detect and correct errors. Each technique is characterized by a methodology focusing on specific insights and requirements.
-         It leverages background knowledge to address the cleaning task.
-         Each technique and related approaches are described, using an example knowledge graph, figures, and tables to visualize key insights.
+         The anatomy of knowledge cleaning focuses on three main aspects of knowledge cleaning.
+         These three are <strong>cleaning techniques</strong>, <strong>background knowledge</strong>, and <strong>dimensions</strong>.
+         <strong>Cleaning techniques</strong> define a methodology that is employed to detect or correct assertion errors.
+         The techniques depend on various forms of <strong>background knowledge</strong> as context for processing.
+         <strong>Dimensions</strong> are characteristics of cleaning approaches, that describe a certain feature, like internal approaches use only a given knowledge graph as background knowledge, while external approaches use other sources.
       </p>
-      <p>
-         We distinguish between eleven cleaning techniques:
-      </p>
-   <div class="menu-layout large" id="menuWrapper">
-      <!-- Toggle button sits just before the menu sidebar -->
-      <div >
-         <button id="menuToggle" onclick="toggleMenu()" title="Toggle Menu">← Hide menu</button>
-         <aside class="menu-sidebar" id="menuSidebar">
-            <ul class="tag-list-kg">
-               <li onclick="loadContent('example_kg.html','tec')" class="activeLi" id="menu_exampleKG">Example knowledge graph</li>
-               <li onclick="loadContent('tec_context.html','tec')">1. Context-based</li>
-               <li onclick="loadContent('tec_crowd.html','tec')">2. Crowdsourcing-based</li>
-               <li onclick="loadContent('tec_embedding.html','tec')">3. Embedding & neural network-based</li>
-               <li onclick="loadContent('tec_integrity.html','tec')">4. Integrity constraint-based</li>
-               <li onclick="loadContent('tec_ontology.html','tec')">5. Ontology-based</li>
-               <li onclick="loadContent('tec_path.html','tec')">6. Path-based</li>
-               <li onclick="loadContent('tec_ruleMining.html','tec')">7. Rule mining-based</li>
-               <li onclick="loadContent('tec_statistical.html','tec')">8. Statistical</li>
-               <li onclick="loadContent('tec_syntactic.html','tec')">9. Syntactic</li>
-               <li onclick="loadContent('tec_verbalization.html','tec')">10. Verbalization-based</li>
-               <li onclick="loadContent('tec_hybrid.html','tec')">11. Hybrid</li>
-            </ul>
 
-         </aside>
-      </div>
+   <div id="akc-content"></div>
 
-
-         <section class="menu-content" id="content-area-tec">
-            <p>Select a section from the menu.</p>
-         </section>
-      </div>
-   </div>
-
+</div>
 <div id="overviewBox"></div>
+
 
 <!-- VISUALIZATION BLOCK BEGIN -->
 <h3 id="visualization_header" class="list">Visualization</h3>
@@ -284,14 +121,11 @@ The Anatomy of Knowledge Cleaning Ontology defines relevant aspects of knowledge
       <div class="content-box" id="visualizationBox">
 
          <div class="visualization" id="chowlk">
-            <div class="two-columns" >
-               <div style="width: 40em">
+
+            <div align="center" id="visBox">
                   <p>Visualization of the ontology, following the notation of the <a href="https://chowlk.linkeddata.es/notation.html" target="_blank">Chowlk Visual Notation </a> <a href="#ref_chavez">[Chávez-Feria, et al., 2021]</a>.</p>
                   <p>The classes and properties that are from external ontologies, are highlighted with different colors.</p>
-               </div>
-               <div align="center" id="visBox">
-                  <div id="visImage"></div>
-               </div>
+               <div id="visImage"></div>
             </div>
          </div>
 
@@ -312,7 +146,7 @@ The Anatomy of Knowledge Cleaning Ontology defines relevant aspects of knowledge
 The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes.</span></div>
 
    <!-- AKCO APPLICATION BLOCK BEGIN -->
-   <h2 id="akco_application" class="list">AKCO application</h2>
+   <h2 id="akco_application" class="list">Anatomy of Knowledge Cleaning Ontology (AKCO): Application</h2>
    <p>This section describes how the defined concepts and relations are used to (1) represent relevant aspects, and to (2) answer relevant questions to knowledge cleaning.</p>
    <!-- REPRESENTATION BLOCK BEGIN -->
    <h3 id="representation" class="list">Representing relevant aspects of knowledge cleaning</h3>
@@ -386,8 +220,7 @@ jojo`
          The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
    </div>
 
-
 </body>
 </html>
-<script src="resources/end_script.js"></script>
-<script src="resources/load-versioned-content.js"></script>
+<script src="resources/format/end_script.js"></script>
+<script src="resources/format/load-versioned-content.js"></script>
