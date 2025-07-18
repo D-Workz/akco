@@ -27,6 +27,10 @@
   border-bottom: 2px solid #005A9C; /* match your accent color */
 }
 
+.text code {
+  background-color: #f4f4f4;
+}
+
 #embed_img {
   background-image: url("../content/akc/embedding_plot_light.png");
   background-size: contain;

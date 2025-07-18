@@ -2,11 +2,11 @@
 <div class="two-columns">
     <div>
         <p>
-            Rule mining-based approaches analyze the structure of a knowledge graph to identify frequently occurring patterns—i.e., reoccurring subgraphs—and express these patterns as logic rules. These rules help verify or correct property-value assertions by generalizing observed correlations. The approach draws on ideas from grammar induction and association rule mining in databases <a href="#ref-agrawal1993mining">[1]</a>.
+            Rule mining-based approaches analyze the structure of a knowledge graph to identify frequently occurring patterns—i.e., reoccurring subgraphs—and express these patterns as logic rules. These rules help verify or correct property-value assertions by generalizing observed correlations. The approach draws on ideas from grammar induction and association rule mining in databases <a href="#ref_agrawal1993">[Agrawal et al., 1993]</a>.
         </p>
 
         <p>
-            Knowledge graphs present unique challenges for rule mining due to their large scale and the open-world assumption, which allows missing values to be interpreted as unknown. To address this, <strong>AMIE3</strong> introduces optimizations such as pruning, parallelization, and the Partial Completeness Assumption (PCA), which assumes that if some properties are known, all relevant ones are known <a href="#ref-lajus2020fast">[2]</a>.
+            Knowledge graphs present unique challenges for rule mining due to their large scale and the open-world assumption, which allows missing values to be interpreted as unknown. To address this, <strong>AMIE3</strong> introduces optimizations such as pruning, parallelization, and the Partial Completeness Assumption (PCA), which assumes that if some properties are known, all relevant ones are known <a href="#ref-lajus2020fast">[Lajus et al., 2020]]</a>.
         </p>
 
         <h4>Figure: Deriving Logic Rules from Subgraphs</h4>
@@ -28,7 +28,7 @@
         </blockquote>
 
         <p>
-            The ability to derive several plausible rules from a small subgraph increases the complexity of rule mining and necessitates efficient algorithms. These rules often take the form of <strong>Horn rules</strong>, which offer a good balance between expressivity and computational scalability <a href="#ref-krotzsch2013complexities">[3]</a>.
+            The ability to derive several plausible rules from a small subgraph increases the complexity of rule mining and necessitates efficient algorithms. These rules often take the form of <strong>Horn rules</strong>, which offer a good balance between expressivity and computational scalability <a href="#ref-krotzsch2013complexities">[Krötzsch et al., 2013]</a>.
         </p>
 
         <h4>Evaluating Rule Validity</h4>
@@ -38,7 +38,7 @@
         </p>
 
         <p>
-            One such counterexample is shown at the bottom of the figure: <code>sydney</code> is connected to <code>aud</code> and <code>unitedStates</code>, but <code>unitedStates</code> does not use <code>aud</code> as currency, violating the rule. Identifying such patterns under the open-world assumption is complex, as not all missing values are true negatives. Methods like KV-rule attempt to detect these inconsistencies reliably <a href="#ref-kim2021fact">[4]</a>.
+            One such counterexample is shown at the bottom of the figure: <code>sydney</code> is connected to <code>aud</code> and <code>unitedStates</code>, but <code>unitedStates</code> does not use <code>aud</code> as currency, violating the rule. Identifying such patterns under the open-world assumption is complex, as not all missing values are true negatives. Methods like KV-rule attempt to detect these inconsistencies reliably <a href="#ref-kim2021fact">[Kim et al., 2021]</a>.
         </p>
 
         <h4>Rule-Based Corrections</h4>
@@ -48,8 +48,8 @@
         </p>
 
         <ul>
-            <li><strong>CorHist</strong>: Learns correction patterns from the edit history of a knowledge graph <a href="#ref-pellissier2019learning">[5]</a>.</li>
-            <li><strong>GRR</strong>: Extends AMIE3 to handle incompleteness, conflicts, and redundancies in graph structures <a href="#ref-cheng2018rule">[6]</a>.</li>
+            <li><strong>CorHist</strong>: Learns correction patterns from the edit history of a knowledge graph <a href="#ref-pellissier2019learning">[Pellissier et al., 2019]</a>.</li>
+            <li><strong>GRR</strong>: Extends AMIE3 to handle incompleteness, conflicts, and redundancies in graph structures <a href="#ref-cheng2018rule">[Cheng et al., 2018]</a>.</li>
         </ul>
 
         <p>

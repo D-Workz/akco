@@ -15,16 +15,16 @@
 
             <ol>
                 <li>
-                    <strong>Verbalize the Assertion:</strong> The assertion is translated into natural language using pattern libraries or neural models. Tools like <strong>DeFacto</strong> <a href="#ref-gerber2015">[1]</a> and <strong>FactCheck</strong> <a href="#ref-syed2018">[2]</a> use the BOA pattern library <a href="#ref-gerber2012">[3]</a> to generate variations of the assertion. However, most BOA patterns do not verbalize facts accurately <a href="#ref-esteves2018">[4]</a>, which highlights a key area for improvement. More recent verbalization techniques rely on neural networks and large language models <a href="#ref-zhang2023">[5]</a>, though none of the reviewed systems have integrated these yet.
+                    <strong>Verbalize the Assertion:</strong> The assertion is translated into natural language using pattern libraries or neural models. Tools like <strong>DeFacto</strong> <a href="#ref-gerber2015">[Gerber et al., 2015]</a> and <strong>FactCheck</strong> <a href="#ref-syed2018">[Syed et al., 2018]</a> use the BOA pattern library <a href="#ref-gerber2012">[Gerber et al., 2012]</a> to generate variations of the assertion. However, most BOA patterns do not verbalize facts accurately <a href="#ref-esteves2018">[Esteves et al., 2018]</a>, which highlights a key area for improvement. More recent verbalization techniques rely on neural networks and large language models <a href="#ref-zhang2023">[Zhang et al., 2023]</a>, though none of the reviewed systems have integrated these yet.
                 </li>
 
                 <li>
                     <strong>Search for Evidence:</strong> The verbalized sentence is searched in external sources. Approaches vary:
                     <ul>
-                        <li><strong>FacTify:</strong> Uses embeddings and BM25 for semantic and exact matches <a href="#ref-ercan2019">[6]</a>.</li>
-                        <li><strong>S3K:</strong> Matches text via pre-built dictionaries <a href="#ref-metzger2011">[7]</a>.</li>
-                        <li><strong>FactCheck:</strong> Leverages Elasticsearch <a href="#ref-elastic2023">[8]</a>.</li>
-                        <li><strong>DeFacto:</strong> Uses search engines and filters results by topic coverage and reliability <a href="#ref-nakamura2007">[9]</a>.</li>
+                        <li><strong>FacTify:</strong> Uses embeddings and BM25 for semantic and exact matches <a href="#ref-ercan2019">[Ercan et al., 2019]</a>.</li>
+                        <li><strong>S3K:</strong> Matches text via pre-built dictionaries <a href="#ref-metzger2011">[Metzger et al., 2011]</a>.</li>
+                        <li><strong>FactCheck:</strong> Leverages Elasticsearch <a href="#ref-elastic2023">[Elastic, 2013]</a>.</li>
+                        <li><strong>DeFacto:</strong> Uses search engines and filters results by topic coverage and reliability <a href="#ref-nakamura2007">[Nakamura et al., 2007]</a>.</li>
                     </ul>
                 </li>
 
@@ -32,7 +32,7 @@
                     <strong>Analyze the Evidence:</strong> Retrieved documents are evaluated for consistency. Some tools (FacTify, S3K) return only the top-k results, requiring external validation. DeFacto and FactCheck go further:
                     <ul>
                         <li><strong>DeFacto:</strong> Computes a confidence score based on evidence quantity, quality, and probability of correctness.</li>
-                        <li><strong>FactCheck:</strong> Combines word coherence <a href="#ref-roder2015">[10]</a> and topic indicators <a href="#ref-nakamura2007">[9]</a> in a supervised model.</li>
+                        <li><strong>FactCheck:</strong> Combines word coherence <a href="#ref-roder2015">[Röder et al., 2015]</a> and topic indicators <a href="#ref-nakamura2007">[Nakamura et al., 2007]</a> in a supervised model.</li>
                     </ul>
                 </li>
             </ol>
@@ -44,7 +44,7 @@
             <h4>Limitations and Opportunities</h4>
 
             <p>
-                Despite their potential, no current verbalization-based approaches validate assertions using Large Language Models (LLMs) like ChatGPT or T5. These models could assist in verbalization, search, or analysis but must overcome issues such as hallucination—producing plausible yet incorrect facts <a href="#ref-huang2025">[11]</a>. Addressing this would require mechanisms for grounding outputs and ensuring factual reliability.
+                Despite their potential, no current verbalization-based approaches validate assertions using Large Language Models (LLMs) like ChatGPT or T5. These models could assist in verbalization, search, or analysis but must overcome issues such as hallucination—producing plausible yet incorrect facts <a href="#ref-huang2025">[Huang et al., 2025]</a>. Addressing this would require mechanisms for grounding outputs and ensuring factual reliability.
             </p>
         </div>
     </div>

@@ -1,112 +1,109 @@
 
 <h3>Integrity constraint-based</h3>
-<div style="min-height: 500px">
-    <div>
-        <p>
-            Integrity constraints validate knowledge graph (KG) assertions by checking them against expected semantic and syntactic features. These features include domain and range constraints, cardinalities, and supported entity types. Constraints are typically defined manually by domain experts.
-        </p>
+<div class="two-columns">
+    <div style="min-height: 500px" class="text">
+        <div>
+            <p>
+                Integrity constraints validate knowledge graph (KG) assertions by checking them against expected semantic and syntactic features. These features include domain and range constraints, cardinalities, and supported entity types. Constraints are typically defined manually by domain experts.
+            </p>
 
-        <h4>Figure: Expressing Constraints Using SHACL</h4>
+            <h4>Figure: Expressing Constraints Using SHACL</h4>
 
-        <p>
-            Figure <code>tech_integrity_constraints</code> demonstrates how SHACL constraints are defined in Turtle syntax for a knowledge graph (see Figure <code>lst:sample_kg</code>). The shape <code>CityConstraint</code> targets nodes of type <code>City</code> using <code>sh:NodeShape</code> and <code>sh:targetClass</code>. It includes:
-        </p>
+            <p>
+                <a href="#fig_tech_integrity_constraints">Figure 6: Manually defined integrity constraints</a> demonstrates how SHACL constraints are defined in Turtle syntax for a knowledge graph (see <a href="#" onclick="jumpToMenuItem('tag-list-kg','menu_exampleKG','example_kg.html','tec')" >Figure 1: Example KG</a>. The shape <code>CityConstraint</code> targets nodes of type <code>City</code> using <code>sh:NodeShape</code> and <code>sh:targetClass</code>. It includes:
+            </p>
 
-        <ul>
-            <li>
-                <strong>Range constraints:</strong> Defined using <code>sh:class</code> (IRI) or <code>sh:datatype</code> (e.g., <code>xsd:string</code>).
-            </li>
-            <li>
-                <strong>Cardinality constraints:</strong> Specified using <code>sh:minCount</code> and <code>sh:maxCount</code>.
-            </li>
-            <li>
-                <code>population</code> is optional, while <code>officialCurrency</code> is mandatory and must appear exactly once.
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <strong>Range constraints:</strong> Defined using <code>sh:class</code> (IRI) or <code>sh:datatype</code> (e.g., <code>xsd:string</code>).
+                </li>
+                <li>
+                    <strong>Cardinality constraints:</strong> Specified using <code>sh:minCount</code> and <code>sh:maxCount</code>.
+                </li>
+                <li>
+                    <code>population</code> is optional, while <code>officialCurrency</code> is mandatory and must appear exactly once.
+                </li>
+            </ul>
 
-        <h4>Constraint Languages and Tools</h4>
+            <h4>Constraint Languages and Tools</h4>
 
-        <p>
-            SHACL is a prominent constraint language supported by several tools:
-        </p>
+            <p>
+                SHACL is a prominent constraint language supported by several tools:
+            </p>
 
-        <ul>
-            <li>
-                <strong>RDFUnit</strong>: Translates SHACL constraints into Data Quality Test Patterns and then into SPARQL queries <a href="#kontokostas2014test">[1]</a>.
-            </li>
-            <li>
-                <strong>VeriGraph</strong>: Targets schema.org-based KGs using DomainSpecifications to extend or restrict ontology semantics <a href="#d312y2_mindlab">[2]</a>, <a href="#csimcsek2020domain">[3]</a>.
-            </li>
-            <li>
-                <strong>Validata</strong>: Uses ShEx and RDF Constraint Vocabulary (RDF-CV) to verify RDF data client-side <a href="#baungard2015validata">[4]</a>.
-            </li>
-            <li>
-                <strong>IDLab validatrr</strong>: Defines constraints using N3Logic rules and applies them via reasoning <a href="#de2021rdf">[5]</a>.
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <strong>RDFUnit</strong>: Translates SHACL constraints into Data Quality Test Patterns and then into SPARQL queries <a href="#ref_kontokostas2014test">[Kontokostas et al., 2014]</a>.
+                </li>
+                <li>
+                    <strong>VeriGraph</strong>: Targets schema.org-based KGs using DomainSpecifications to extend or restrict ontology semantics <a href="#ref_d312y2_mindlab">[Fensel et al., 2020a]</a>, <a href="#ref_csimcsek2020domain">[Simsek et al., 2020]</a>.
+                </li>
+                <li>
+                    <strong>Validata</strong>: Uses ShEx and RDF Constraint Vocabulary (RDF-CV) to verify RDF data client-side <a href="#ref_baungard2015validata">[Baungard et al., 2015]</a>.
+                </li>
+                <li>
+                    <strong>IDLab validatrr</strong>: Defines constraints using N3Logic rules and applies them via reasoning <a href="#ref_de2021rdf">[De Meester et al., 2021]</a>.
+                </li>
+            </ul>
 
-        <p>Other constraint languages include:</p>
+            <p>Other constraint languages include:</p>
 
-        <ul>
-            <li><strong>ReSh</strong>: Developed by IBM for validating server resource descriptions <a href="#ryman2013oslc">[6]</a>.</li>
-            <li><strong>ShEx</strong>: Focuses on human readability and compact syntax <a href="#boneva2014validating">[7]</a>, <a href="#prud2014shape">[8]</a>.</li>
-        </ul>
+            <ul>
+                <li><strong>ReSh</strong>: Developed by IBM for validating server resource descriptions <a href="#ref_ryman2013oslc">[Ryman et al., 2013]</a>.</li>
+                <li><strong>ShEx</strong>: Focuses on human readability and compact syntax <a href="#ref_boneva2014validating">[Boneva et al., 2014]</a>, <a href="#ref_prud2014shape">[Prud'Hommeaux et al., 2014]</a>.</li>
+            </ul>
 
-        <h4>Figure: Validation Report</h4>
+            <h4>Figure: Validation Report</h4>
 
-        <p>
-            Figure <code>tech_integrity_validation</code> presents the output of applying SHACL constraints (from Figure <code>tech_integrity_constraints</code>) to the knowledge graph (Figure <code>lst:sample_kg</code>) using SHACL Playground. The report includes:
-        </p>
+            <p>
+                Figure <code>tech_integrity_validation</code> presents the output of applying SHACL constraints (from Figure <code>tech_integrity_constraints</code>) to the knowledge graph (Figure <code>lst:sample_kg</code>) using SHACL Playground. The report includes:
+            </p>
 
-        <ul>
-            <li><code>sh:ValidationResult</code> objects for each violation</li>
-            <li><code>sh:focusNode</code>, <code>sh:resultPath</code>, and <code>sh:value</code> to identify the issue</li>
-            <li><code>sh:sourceShape</code> and <code>sh:sourceConstraintComponent</code> to explain the violated constraint</li>
-        </ul>
+            <ul>
+                <li><code>sh:ValidationResult</code> objects for each violation</li>
+                <li><code>sh:focusNode</code>, <code>sh:resultPath</code>, and <code>sh:value</code> to identify the issue</li>
+                <li><code>sh:sourceShape</code> and <code>sh:sourceConstraintComponent</code> to explain the violated constraint</li>
+            </ul>
 
-        <p>Examples of violations include:</p>
+            <p>Examples of violations include:</p>
 
-        <ol class="custom-ol">
-            <li>A range error due to a datatype instead of an IRI in the <code>officialCurrency</code> property.</li>
-            <li>A syntactic type mismatch for the <code>population</code> property.</li>
-            <li>A missing mandatory <code>officialCurrency</code> property for the node <code>newYork</code>.</li>
-        </ol>
+            <ol class="custom-ol">
+                <li>A range error due to a datatype instead of an IRI in the <code>officialCurrency</code> property.</li>
+                <li>A syntactic type mismatch for the <code>population</code> property.</li>
+                <li>A missing mandatory <code>officialCurrency</code> property for the node <code>newYork</code>.</li>
+            </ol>
 
-        <h4>Constraint Application</h4>
+            <h4>Constraint Application</h4>
 
-        <p>Constraints can be applied through different methods:</p>
+            <p>Constraints can be applied through different methods:</p>
 
-        <ul>
-            <li>
-                SPARQL-based validation (e.g., RDFUnit <a href="#kontokostas2014test">[1]</a>, VeriGraph <a href="#d312y2_mindlab">[2]</a>, Schema Validator Tool <a href="#simister2013simple">[9]</a>).
-            </li>
-            <li>
-                SPIN vocabulary for expressing constraints as SPARQL rules <a href="#knublauch2011spin">[10]</a>.
-            </li>
-            <li>
-                RDF-CV as an intermediate layer for ShEx tools <a href="#bosch2015guidance">[11]</a>, <a href="#hartmann2016validation">[12]</a>.
-            </li>
-            <li>
-                Reasoning (e.g., IDLab validatrr <a href="#de2021rdf">[5]</a>).
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    SPARQL-based validation (e.g., RDFUnit <a href="#ref_kontokostas2014test">[Kontokostas et al., 2014]</a>, VeriGraph <a href="#ref_d312y2_mindlab">[Fensel et al., 2020a]</a>, Schema Validator Tool <a href="#ref_simister2013simple">[Simister et al., 2013]</a>).
+                </li>
+                <li>
+                    SPIN vocabulary for expressing constraints as SPARQL rules <a href="#ref_knublauch2011spin">[Knublauch et al., 2011]</a>.
+                </li>
+                <li>
+                    RDF-CV as an intermediate layer for ShEx tools <a href="#ref_bosch2015guidance">[Eckert et al., 2015]</a>, <a href="#ref_hartmann2016validation">[Hartmann, 2016]</a>.
+                </li>
+                <li>
+                    Reasoning (e.g., IDLab validatrr <a href="#ref_de2021rdf">[De Meester et al., 2021]</a>).
+                </li>
+            </ul>
 
-        <p>
-            Value-clustered Graph Functional Dependencies (VGFD) present a data-driven alternative by mining constraints from value similarities <a href="#yu2011extending">[13]</a>.
-        </p>
+            <p>
+                Value-clustered Graph Functional Dependencies (VGFD) present a data-driven alternative by mining constraints from value similarities <a href="#ref_yu2011extending">[Yu et al., 2011]</a>.
+            </p>
 
-        <p>
-            Constraint validation typically ends with a report listing violations, useful for further cleaning or hybrid validation steps <a href="#chen2021correcting">[14]</a>.
-        </p>
+            <p>
+                Constraint validation typically ends with a report listing violations, useful for further cleaning or hybrid validation steps <a href="#ref_chen2021correcting">[Chen et al., 2021]</a>.
+            </p>
+        </div>
+
     </div>
-
-</div>
-<h4>Example: Verification using integrity constraints</h4>
-
-<div class="three-columns">
-    <div class="column">
-        <div class="fig_border">
-            <figure id="fig_tech_integrity_constraints">
+    <div class="fig_border">
+        <figure id="fig_tech_integrity_constraints">
             <pre class="backgroundBox">
                 <code>
 @prefix sh:&lt;http://www.w3.org/ns/shacl#&gt;.
@@ -133,11 +130,28 @@
   sh:minCount 1 ;
   sh:maxCount 1 .</code>
             </pre>
+            <figcaption style="  text-align: center;">
+                <p style="text-align: center"><strong>Figure 6: Manually defined integrity constraints</strong></p>
+                <p class="text">
+                    SHACL-based integrity constraints expressed in Turtle syntax. The constraints target the knowledge graph in <a href="#" onclick="jumpToMenuItem('tag-list-kg','menu_exampleKG','example_kg.html','tec')" >Figure 1: Example KG</a> and nodes of type <code>City</code>  (specified via <code>sh:NodeShape</code>) and their properties (via <code>sh:property</code>).
+                </p>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+<h4>Example: Verification using integrity constraints</h4>
+
+<div class="three-columns">
+    <div class="column" style="  margin-top: 300px;">
+        <div class="fig_border">
+            <figure>
+            <pre class="backgroundBox">
+                <code>
+                    Intergity constraints
+</code>
+            </pre>
                 <figcaption style="  text-align: center;">
                     <p style="text-align: center"><strong>Manually defined integrity constraints</strong></p>
-                    <p>
-                        SHACL-based integrity constraints expressed in Turtle syntax. The constraints target the knowledge graph in Figure \ref{lst:sample_kg} and nodes of type \texttt{City} (specified via \texttt{sh:NodeShape}) and their properties (via \texttt{sh:property}).
-                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -145,7 +159,7 @@
         <div align="center" style="padding-top: 1em">
             <div class="brace">+</div>
             <div class="fig_border">
-                <a href="#" onclick="jumpToExampleKnowledgeGraph()" >
+                <a href="#" onclick="jumpToMenuItem('tag-list-kg','menu_exampleKG','example_kg.html','tec')" >
                     <div id="exampleKGLink" style="width: fit-content">
                         <div id="fig_exampleKG"></div>
                         <p>Example Knowledge graph from Figure 1</p>

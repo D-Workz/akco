@@ -44,6 +44,7 @@
    <div class="head">
       <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
       <h1>Anatomy of Knowledge Cleaning Ontology (AKCO)</h1>
+      <h4>Representing and organizing relevant aspects of knowledge cleaning assertion errors in knowledge graphs</h4>
       <div id="releaseBox"></div>
 
 
@@ -81,12 +82,13 @@
 
          <p>Considering all these different aspects makes the selection of approaches nontrivial. A great deal of expertise is required to gain an understanding of the various concepts and their interdependencies. Therefore, the <strong>Anatomy of Knowledge Cleaning Ontology (AKCO)</strong> defines important concepts and their properties of knowledge cleaning. It enables one to gain insights into various aspects and select approaches based on specific features. It is based on an extensive literature review <em>[cite my paper]</em>. This survey provides the first qualitative analysis of knowledge cleaning. It introduces eleven cleaning techniques, seven types of background knowledge, four dimensions with at least two variations each, and various cleaning approaches. It follows a methodology for transparency. It employs a framework for context and structure, providing a discussion that highlights important insights into knowledge cleaning and potential future research areas.</p>
 
-         <p>The AKCO defines important concepts and properties while also adapting established concepts from existing ontologies and defining over 100 instances. The concepts represent aspects like cleaning techniques, background knowledge, or cleaning approaches. Properties relate concepts such as <code>akco:usesBackgroundKnowledge</code>, which connect cleaning techniques and approaches with different types of background knowledge. Other properties define data values, such as <code>akco:errorSource</code>, which defines an assertion type as a literal value. Furthermore, three ontologies are adapted to highlight different features of the ontology, such as its function as a knowledge organization system, hence the adaptation of the <strong>Simple Knowledge Organization System (SKOS)</strong>. The <strong>Data Quality Vocabulary (DQV)</strong> highlights the structure of knowledge graphs and background knowledge as datasets that have different quality dimensions. <strong>Dublin Core</strong> provides a standardized way to represent bibliographic resources, which is a core aspect of this ontology.</p>
+         <p>The AKCO defines important concepts and properties while also adapting established concepts from existing ontologies and defining over 100 instances. The concepts represent aspects like cleaning techniques, background knowledge, or cleaning approaches. Properties relate concepts such as <code>akco:usesBackgroundKnowledge</code>, which connect cleaning techniques and approaches with different types of background knowledge. Other properties define data values, such as <code>akco:errorSource</code>, which defines an assertion type as a literal value. Furthermore, three ontologies are adapted to highlight different features of the ontology, such as its function as a knowledge organization system, hence the adaptation of the <strong>Simple Knowledge Organization System (SKOS)</strong>. The <strong>Data Quality Vocabulary (DQV)</strong> highlights the structure of knowledge graphs and background knowledge as datasets that have different quality dimensions. <strong>Dublin Core</strong> provides a standardized way to represent bibliographic resources, which is a core aspect of this ontology.
+            Further, following the <strong>Findable Accessible, Interoperable, Reusable (FAIR)</strong> princibles, fhe metadata of the ontolgy is described, using <strong>Web Ontology Language (OWL)</strong> and <strong>VANN</strong> properties.</p>
 
          <p>The AKCO defines also over 100 instances (named individuals) that are the result of an extensive literature analysis. The instances represent various facts of knowledge cleaning, like different dimensions, errors, techniques, or approaches.</p>
       </div>
       <div id="namespacedeclarations">
-         <h3 id="ns" class="list">Namespace declarations</h3>
+         <h3 class="list">Namespace declarations</h3>
          <div id="ns" align="center">
             <div id="namespace-overview"></div>
          </div>
@@ -139,12 +141,7 @@
 </div>
 <!-- VISUALIZATION BLOCK END -->
 
-   <!--DESCRIPTION SECTION-->
-   <div id="description"><h2 id="desc" class="list">Anatomy of Knowledge Cleaning Ontology (AKCO): Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-
-      <span class="markdown">The anatomy of knowledge cleaning ontology represents important features of knowledge cleaning. These features include knowledge cleaning approaches, techniques and backgroundknowledge. It aims to provide the context from which knowledge cleaning can be performed.
-
-The ontology proviedes means to select approaches for a custom cleaning process, depending on for example, the knowledge graph and available additional cleaning sources. After the selection the approaches need to be applied, this application is represented by the Application algorithm and logic classes.</span></div>
+   <div id="descriptionBox"></div>
 
    <!-- AKCO APPLICATION BLOCK BEGIN -->
    <h2 id="akco_application" class="list">Anatomy of Knowledge Cleaning Ontology (AKCO): Application<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -208,12 +205,7 @@ jojo`
       <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
       <span class="markdown">
       </span>
-      <p id="ref_chavez">[Chávez-Feria, et al., 2021] Chávez-Feria, S., García-Castro, R., & Poveda-Villalón, M. (2021). Converting UML-based ontology conceptualizations to OWL with Chowlk. In European Semantic Web Conference (pp. 44–48). Springer. </p>
-      <p id="ref_bert">[BERT] Devlin, J., et al. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.</p>
-      <p id="ref_transe">[TransE] Bordes, A., et al. (2013). Translating Embeddings for Modeling Multi-relational Data.</p>
-      <p id="ref_paulheimRefine">[Paulheim, 2017] Heiko Paulheim. Knowledge graph refinement: A survey of approaches and evaluation methods. Semantic web, 8(3):489–508, 2017.</p>
-      <p id="ref_fensel2020">[Fensel et al., 2020] Dieter Fensel, Umutcan Şimşek, Kevin Angele, Elwin Huaman, Elias Kärle, Oleksandra Panasiuk, Ioan Toma, Jürgen Umbrich, and Alexander Wahler. Knowledge Graphs: Methodology, Tools and Selected Use Cases. Springer Nature, 2020.</p>
-      <p id="ref_crowd">[Acosta, et al., 2013] Maribel Acosta, Amrapali Zaveri, Elena Simperl, Dimitris Kontokostas, Sören Auer, and Jens Lehmann. Crowdsourcing linked data quality assessment. In International semantic web conference, pages 260–276. Springer, 2013.</p>
+      <div id="referenceBox"></div>
    </div>
    <div id="acknowledgments">
       <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

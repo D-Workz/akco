@@ -13,7 +13,7 @@
         </p>
 
         <ol>
-            <li><strong>Parser Configuration:</strong> The parser can be a standard tool like Apache Jena <a href="#ref-mcbride2002">[1]</a>, which supports various RDF formats (e.g., Turtle, RDF/XML), or a custom-built parser using tools such as CUP.</li>
+            <li><strong>Parser Configuration:</strong> The parser can be a standard tool like Apache Jena <a href="#ref-mcbride2002">[McBride, 2002]</a>, which supports various RDF formats (e.g., Turtle, RDF/XML), or a custom-built parser using tools such as CUP.</li>
             <li><strong>Parsing Input:</strong> A KG serialization is passed to the parser and matched against the syntax specification line by line.</li>
             <li><strong>Error Reporting:</strong> Violations are logged in a report. The parser may either continue checking or stop at the first detected error.</li>
         </ol>
@@ -29,7 +29,7 @@
         </p>
 
         <ul>
-            <li><strong>VRP</strong>: Parses RDF and RDFS serializations, stopping at the first error <a href="#ref-tolle2000">[2]</a>.</li>
+            <li><strong>VRP</strong>: Parses RDF and RDFS serializations, stopping at the first error <a href="#ref-tolle2000">[Tolle et al., 2000]</a>.</li>
             <li><strong>Validation Service:</strong> A W3C online RDF validator <a href="https://www.w3.org/RDF/Validator/">[Online Tool]</a>.</li>
             <li><strong>IDLab Turtle Validator:</strong> Offers extended support for literal types and is available online <a href="http://ttl.summerofcode.be/">[Online Tool]</a>.</li>
         </ul>
@@ -41,14 +41,14 @@
         </p>
 
         <ul>
-            <li><strong>LOD Laundromat:</strong> Scales to large graphs and uses SWI Prolog <a href="#ref-beek2014">[3]</a>. It supports formats like Turtle, JSON-LD, and RDF/XML. It detects issues like:
+            <li><strong>LOD Laundromat:</strong> Scales to large graphs and uses SWI Prolog <a href="#ref-beek2014">[Beek et al., 2014]</a>. It supports formats like Turtle, JSON-LD, and RDF/XML. It detects issues like:
                 <ul>
                     <li>Missing punctuation (e.g., dots or semicolons)</li>
                     <li>Undefined or malformed IRIs</li>
                     <li>Missing or unmatched tags</li>
                 </ul>
             </li>
-            <li><strong>RDF-Doctor:</strong> Segments graphs into chunks for parallel parsing. It reports corrected errors and those that remain unresolved <a href="#ref-hemid2019">[4]</a>.</li>
+            <li><strong>RDF-Doctor:</strong> Segments graphs into chunks for parallel parsing. It reports corrected errors and those that remain unresolved <a href="#ref-hemid2019">[Hemid et al., 2019]</a>.</li>
         </ul>
 
         <p>

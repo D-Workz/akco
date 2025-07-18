@@ -27,6 +27,10 @@
   border-bottom: 2px solid #82E9F0; /* match your accent color */
 }
 
+.text code {
+  background-color: grey;
+}
+
 .fig_border{
   border: 1px solid; /* match your accent color */
   border-radius: 4px;

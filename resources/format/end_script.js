@@ -29,15 +29,15 @@ function loadContent(file, cat, callback) {
         });
 }
 
-function jumpToExampleKnowledgeGraph() {
-    const menuItem = document.getElementById('menu_exampleKG');
+function jumpToMenuItem(menu, menuItem, content, cat) {
+    menuItem = document.getElementById(menuItem);
     if (!menuItem) return;
 
     // Deselect others
-    document.querySelectorAll('.tag-list-kg li').forEach(el => el.classList.remove('activeLi'));
+    document.querySelectorAll(`.${menu} li`).forEach(el => el.classList.remove('activeLi'));
     menuItem.classList.add('activeLi');
 
-    loadContent('example_kg.html', 'tec', function () {
+    loadContent(content, cat, function () {
         menuItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 }
@@ -278,13 +278,31 @@ function loadHash() {
     loadTOC();
 }
 
+function loadReferences () {
+    const file = "resources/content/references.html";
+    const displayArea = document.getElementById("referenceBox");
+    fetch(file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load ${file}`);
+            }
+            return response.text();
+        })
+        .then(html => {
+            displayArea.innerHTML = html;
+        })
+        .catch(error => {
+            document.getElementById('content-area').innerHTML = `<p>Error loading content: ${error.message}</p>`;
+        });
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const selector = document.getElementById('versionSelector');
     const defaultVersion = window.ontologyVersion || selector?.value || '1.0.0';
     window.ontologyVersion = defaultVersion;
     loadAKC();
-
+    loadReferences();
     function updateVersionedContent(version) {
         window.ontologyVersion = version;
 
@@ -338,6 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loadVersionedContent('#namespacedeclarations table', 'namespace-overview');
         loadVersionedContent('#crossref', 'crossref-box');
         loadVersionedContent('.container .head h2', 'releaseBox');
+        loadVersionedContent('#description', 'descriptionBox');
         loadVersionedContent('#overview', 'overviewBox', {
             transform: (content) => {
                 // Remove rogue iframe if it exists

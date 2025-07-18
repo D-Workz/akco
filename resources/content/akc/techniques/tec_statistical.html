@@ -20,7 +20,7 @@
     </ul>
 
     <p>
-        In the example, the city <code>beijing</code> exceeds the upper whisker and is therefore flagged as an outlier. Approaches like those by <a href="#ref-wienand2014">Wienand et al.</a> and <a href="#ref-fleischhacker2014">Fleischhacker et al.</a> apply this concept to detect numerical errors. Additional knowledge-driven methods, such as semantic grouping or comparison with external graphs, are used to validate whether the outlier is truly an error.
+        In the example, the city <code>beijing</code> exceeds the upper whisker and is therefore flagged as an outlier. Approaches like those by <a href="#ref-wienand2014">[Wienand et al., 2014]</a> and <a href="#ref-fleischhacker2014">[Fleischhacker et al., 2014]</a> apply this concept to detect numerical errors. Additional knowledge-driven methods, such as semantic grouping or comparison with external graphs, are used to validate whether the outlier is truly an error.
     </p>
 
     <h4>Figure: Structural Statistics for Outlier Detection and Type Prediction</h4>
@@ -34,18 +34,18 @@
     </p>
 
     <ul>
-        <li><strong>Outlier detection:</strong> Identifying instances or assertions that deviate from normal usage, such as in <a href="#ref-paulheim2014">SDValidate</a> or <a href="#ref-debattista2016">Debattista et al.</a>.</li>
+        <li><strong>Outlier detection:</strong> Identifying instances or assertions that deviate from normal usage, such as in SDValidate <a href="#ref-paulheim2014">[Paulheim et al., 2014]</a> or <a href="#ref-debattista2016">[Debattista et al., 2016]</a>.</li>
         <li><strong>Type prediction:</strong> Inferring the type of untyped nodes by comparing their relation patterns to known distributions. For example, if an untyped instance uses <code>hasCapital</code>, which is predominantly used by <code>Countries</code>, its type can be inferred as <code>Country</code>.</li>
     </ul>
 
     <p>
-        Approaches like <a href="#ref-paulheim2013">SDType</a>, <a href="#ref-sleeman2013">Sleeman et al.</a>, and <a href="#ref-melo2017">SLCN</a> use statistical measures (e.g., property frequencies, defining properties) and supervised learning to improve prediction accuracy. Some methods assign each class a dedicated classifier for better granularity.
+        Approaches like SDType <a href="#ref-paulheim2013">[Paulheim et al., 2013]</a>, <a href="#ref-sleeman2013">[Sleeman et al., 2013]</a>, and SLCN <a href="#ref-melo2017">[Melo et al., 2017]</a> use statistical measures (e.g., property frequencies, defining properties) and supervised learning to improve prediction accuracy. Some methods assign each class a dedicated classifier for better granularity.
     </p>
 
     <h4>Entity Mapping with Statistical Similarity</h4>
 
     <p>
-        The COLIBRI framework <a href="#ref-ngonga2014">[Ngonga et al.]</a> uses unsupervised machine learning to map entities across knowledge graphs. It uses a voting mechanism and average similarity to detect inconsistencies or suggest corrections for equality and property-value assertions.
+        The COLIBRI framework <a href="#ref-ngonga2014">[Ngonga et al., 2014]</a> uses unsupervised machine learning to map entities across knowledge graphs. It uses a voting mechanism and average similarity to detect inconsistencies or suggest corrections for equality and property-value assertions.
     </p>
 
     <p>
@@ -57,7 +57,7 @@
         <div class="fig_border">
             <div id="fig_statistical"></div>
             <p style="text-align: center"><strong>Figure: Detecting Outliers in Literal Values</strong></p>
-            <p style="width: 800px">Visualization of the population distribution for instances of type \texttt{City} from the example knowledge graph (Figure \ref{lst:sample_kg}). It shows the Interquartile Range (IQR), highlighting a potential way of detecting outliers. The box represents the middle 50\% of values, and the whiskers extend the range of valid values, capturing deviations in the data. The distance to \texttt{beijing} is too large, and therefore, it is classified as an outlier.</p>
+            <p style="width: 800px" class="text">Visualization of the population distribution for instances of type <code>City</code> from the example knowledge graph (<a href="#" onclick="jumpToMenuItem('tag-list-kg','menu_exampleKG','example_kg.html','tec')" >Figure 1: Example KG</a>). It shows the Interquartile Range (IQR), highlighting a potential way of detecting outliers. The box represents the middle 50\% of values, and the whiskers extend the range of valid values, capturing deviations in the data. The distance to <code>beijing</code> is too large, and therefore, it is classified as an outlier.</p>
         </div>
     </div>
     <div class="fig_border">
@@ -203,7 +203,7 @@
             </tfoot>
         </table>
         <p style="text-align: center"><strong>Figure: Structural Statistics for Outlier Detection and Type Prediction</strong></p>
-        <p style="width: 800px">Tables showing the subject and object types of properties from the example KG in Figure \ref{lst:sample_kg}. The matrices reflect the count (frequency) of instances of each type. Cleaning approaches use these insights to detect outliers or make predictions, like predicting the type of an untyped instance.</p>
+        <p style="width: 800px">Tables showing the subject and object types of properties from the example KG in <a href="#" onclick="jumpToMenuItem('tag-list-kg','menu_exampleKG','example_kg.html','tec')" >Figure 1: Example KG</a>. The matrices reflect the count (frequency) of instances of each type. Cleaning approaches use these insights to detect outliers or make predictions, like predicting the type of an untyped instance.</p>
     </div>
 </div>
 </div>
