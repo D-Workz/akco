@@ -2,7 +2,7 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://purl.archive.org/akco", "http://www.w3.org/ns/dqv", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://purl.org/linked-data/cube", "http://www.w3.org/2004/02/skos/core" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://purl.archive.org/akco", "http://www.w3.org/ns/dqv", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/dcat#Dataset", "http://www.w3.org/2004/02/skos/core" ],
     "title" : {
       "en" : "Anatomy of Knowledge Cleaning Ontology (AKCO)"
     },
@@ -3442,8 +3442,8 @@
     "attributes" : [ "external" ],
     "id" : "15"
   }, {
-    "iri" : "http://purl.org/linked-data/cube#DataSet",
-    "baseIri" : "http://purl.org/linked-data/cube",
+    "iri" : "http://www.w3.org/ns/dcat#Dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat#Dataset",
     "instances" : 0,
     "label" : {
       "IRI-based" : "DataSet"

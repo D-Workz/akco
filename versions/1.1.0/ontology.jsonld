@@ -150,7 +150,7 @@
   "@id" : "http://purl.org/dc/terms/type",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/linked-data/cube#DataSet",
+  "@id" : "http://www.w3.org/ns/dcat#Dataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://purl.archive.org/akco#BackgroundKnowledge"
@@ -449,7 +449,7 @@
     "@value" : "ExternalSource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/linked-data/cube#DataSet"
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   }, {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
@@ -465,7 +465,7 @@
     "@value" : "KnowledgeGraph"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/linked-data/cube#DataSet"
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#Technique",

@@ -426,10 +426,10 @@
     
 
 
-    <!-- http://purl.org/linked-data/cube#DataSet -->
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
 
 
-    <owl:Class rdf:about="http://purl.org/linked-data/cube#DataSet">
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
         <rdfs:subClassOf rdf:resource="https://purl.archive.org/akco#BackgroundKnowledge"/>
     </owl:Class>
     
@@ -514,7 +514,7 @@
 
 
     <owl:Class rdf:about="https://purl.archive.org/akco#ExternalSource">
-        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment xml:lang="en">An external source contains domain-relevant information that is not part of the given knowledge graph.</rdfs:comment>
         <rdfs:label xml:lang="en">ExternalSource</rdfs:label>
@@ -526,7 +526,7 @@
 
 
     <owl:Class rdf:about="https://purl.archive.org/akco#KnowledgeGraph">
-        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:comment xml:lang="en">A knowledge graph is a data structure that can represent any domain or subject area. It structures domain knowledge in a machine-processable manner. It is a semantic network, also known as a knowledge base.</rdfs:comment>
         <rdfs:label xml:lang="en">KnowledgeGraph</rdfs:label>
     </owl:Class>

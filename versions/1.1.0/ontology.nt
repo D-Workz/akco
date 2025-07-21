@@ -225,9 +225,9 @@
 # http://purl.org/dc/terms/BibliographicResource
 <http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# http://purl.org/linked-data/cube#DataSet
-<http://purl.org/linked-data/cube#DataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/linked-data/cube#DataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.archive.org/akco#BackgroundKnowledge> .
+# http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.archive.org/akco#BackgroundKnowledge> .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -271,14 +271,14 @@
 # 
 # https://purl.archive.org/akco#ExternalSource
 <https://purl.archive.org/akco#ExternalSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.archive.org/akco#ExternalSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DataSet> .
+<https://purl.archive.org/akco#ExternalSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
 <https://purl.archive.org/akco#ExternalSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://purl.archive.org/akco#ExternalSource> <http://www.w3.org/2000/01/rdf-schema#comment> "An external source contains domain-relevant information that is not part of the given knowledge graph."@en .
 <https://purl.archive.org/akco#ExternalSource> <http://www.w3.org/2000/01/rdf-schema#label> "ExternalSource"@en .
 # 
 # https://purl.archive.org/akco#KnowledgeGraph
 <https://purl.archive.org/akco#KnowledgeGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purl.archive.org/akco#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DataSet> .
+<https://purl.archive.org/akco#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
 <https://purl.archive.org/akco#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge graph is a data structure that can represent any domain or subject area. It structures domain knowledge in a machine-processable manner. It is a semantic network, also known as a knowledge base."@en .
 <https://purl.archive.org/akco#KnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#label> "KnowledgeGraph"@en .
 # 
