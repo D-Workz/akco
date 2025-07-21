@@ -21,9 +21,7 @@
 
 &lt;p&gt;The AKCO allows the representation of all relevant aspects of a cleaning process, providing insights into dependencies and relevant related aspects. This organization enables knowledge graph maintainers to focus solely on the aspects that are best suited for cleaning a knowledge graph, considering its features, user requirements, and additional knowledge sources.&lt;/p&gt;
 
-&lt;p&gt;The AKCO already contains over 100 instances (named individuals) that represent various facts of knowledge cleaning, including different types of background knowledge, cleaning techniques, dimensions, and a vast number of cleaning approaches. These instances provide a foundational understanding of the different aspects of knowledge cleaning and offer a selection of approaches.&lt;/p&gt;
-
-&lt;p&gt;The AKCO is published on &lt;a href=&apos;https://purl.archive.org/akco&apos; target=&apos;_blank&apos;&gt;https://purl.archive.org/akco&lt;/a&gt;, which includes more detailed documentation.&lt;/p&gt;</terms:description>
+&lt;p&gt;The AKCO already contains over 100 instances (named individuals) that represent various facts of knowledge cleaning, including different types of background knowledge, cleaning techniques, dimensions, and a vast number of cleaning approaches. These instances provide a foundational understanding of the different aspects of knowledge cleaning and offer a selection of approaches.&lt;/p&gt;</terms:description>
         <terms:language xml:lang="en">English</terms:language>
         <terms:license rdf:datatype="http://purl.org/dc/terms/URI">https://creativecommons.org/licenses/by/4.0/</terms:license>
         <terms:title xml:lang="en">Anatomy of Knowledge Cleaning Ontology (AKCO)</terms:title>

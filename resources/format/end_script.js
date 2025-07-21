@@ -296,6 +296,27 @@ function loadReferences () {
         });
 }
 
+function highlightRefFromHash() {
+    // Clear any previously bolded reference
+    document.querySelectorAll('p[id^="ref_"]').forEach(p => {
+        p.style.fontWeight = 'normal';
+    });
+
+    const anchor = window.location.hash;
+    if (anchor.startsWith('#ref_')) {
+        const refElement = document.querySelector(anchor);
+        if (refElement) {
+            refElement.style.fontWeight = 'bold';
+            refElement.style.fontSize = '1.2em';
+            refElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+}
+
+window.addEventListener('DOMContentLoaded', highlightRefFromHash);
+
+// Trigger when the anchor/hash changes
+window.addEventListener('hashchange', highlightRefFromHash);
 
 document.addEventListener('DOMContentLoaded', () => {
     const selector = document.getElementById('versionSelector');
@@ -373,6 +394,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial load
     updateVersionedContent(window.ontologyVersion);
+
+
 
     // Version change listener
     if (selector) {
