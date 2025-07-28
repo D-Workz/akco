@@ -158,10 +158,6 @@
     line-height: 1.6em;
 }
 
-#AKCBox{
-    margin-left: 20px;
-}
-
 pre {
     white-space: pre-wrap;         /* Allows wrapping */
     word-wrap: break-word;         /* For older support */

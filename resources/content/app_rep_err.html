@@ -1,0 +1,77 @@
+<h5 class="question-heading">How can different errors be represented?</h5>
+<div class="two-columns">
+    <div style="width: 40%">
+        <p>
+            Errors can be are modeled using <a href="#Error">akco:Error</a>.
+            A human readable description can be provided using <a href="https://www.w3.org/TR/rdf-schema/#ch_comment">rdfs:comment</a>.
+            An error is defined, by its error source, nature, and type, which can be defined using the properties:
+        </p>
+            <ul>
+                <li><a href="#errorSource">akco:errorSource</a>, denotes the type of assertion that is erroneous, e.g., wrong instance, property-value, or equality assertion.</li>
+                <li><a href="#errorNature">akco:errorNature</a>, denotes if an error is of semantic or syntactic nature.</li>
+                <li><a href="#errorType">akco:errorType</a>, denotes the actual type of error, resulting from source, and nature.</li>
+            </ul>
+        <div class="text">
+            <p>The Error identifiers use the following syntax: "err"+<code>ErrorSource</code>+<code>ErrorNature</code>+<code>ErrorType</code></p>
+            <ul>
+                <li><code>ErrorSource</code> can have the values:
+                    <ul>
+                        <li><code>PV</code>(Property-value)</li>
+                        <li> <code>I</code> (Instance)</li>
+                        <li><code>E</code> (Equality)</li>
+                    </ul>
+                </li>
+                <li><code>ErrorNature</code> can have the values:
+                    <ul>
+                        <li><code>Sem</code>(Semantic)</li>
+                        <li><code>Syn</code> (Syntactic)</li>
+                    </ul>
+                </li>
+                <li><code>ErrorType</code> can have values, like:
+                    <ul>
+                        <li><code>SemWrong</code>(Semantically wrong)</li>
+                        <li><code>NotPIdentID</code> (Not a proper instance identifier)</li>
+                        <li><code>NotADomain</code> (The type of the instance is not supported by the domain specification of a property)</li>
+                        <li><code>NotEType</code> (Not an existing type name)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <pre  class="backgroundBox">
+    <code>akco:errPVSemSemWrong a :Error ;
+         rdfs:label "errPVSemSemWrong"@en ;
+        rdfs:comment "Error is of semantic nature, afflicting property-value assertions, and causing a semantically wrong property-value assertion."@en ;
+         akco:errorSource "Property-value assertion"@en ;
+         akco:errorNature "Semantic"@en ;
+         akco:errorType "Assertion is semantically wrong"@en.</code>
+</pre>
+        <p style="display: block; text-align: center">An instance representing a semantical error in a property value assertion, causing the assertion to be semantically wrong.</p>
+    </div>
+
+</div>
+
+<h5 class="question-heading">How can more specific errors be represented, like errors in tail verticals?</h5>
+
+<div class="two-columns">
+    <div style="width: 40%">
+        <p>To represent a dynamic hierarchical relation of different errors, the class <a href="#Error">akco:Error</a> is subclass of <a href="https://www.w3.org/2009/08/skos-reference/skos.html#Concept" target="_blank">skos:concept</a>.
+            An error is also a concept that can be related to other concepts.
+            It is therefore possible to specify any type of more specific or general error class and relate them using <a href="https://www.w3.org/TR/skos-reference/#narrower" target="_blank"> skos:narrower</a> or <a href="https://www.w3.org/TR/skos-reference/#broader" target="_blank">skos:broader</a>.</p>
+
+             <p>To represent a tail vertical one can define a new error of type tail vertical and then relate it via a matching skos property to an existing error.</p>
+    </div>
+    <div>
+        <pre  class="backgroundBox">
+    <code>akco:errTailVertical a Error ;
+         rdfs:label "errTailVertical"@en ;
+        rdfs:comment "A tail vertical is a domain that is not well covered by a knowledge graph. Entities in these domains are typically sparse."@en ;
+         skos:broader errPVSemSemWrong .</code>
+</pre>
+        <p style="display: block; text-align: center" class="text">A tail vertical error can be expressed as a more specific type of a semantic error, which can be annotated using <code>SKOS</code> properties.</p>
+    </div>
+</div>
+
+
+

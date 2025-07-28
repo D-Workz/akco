@@ -1,0 +1,104 @@
+<h5 class="question-heading">How can relevant features of a knowledge graph be represented?</h5>
+<div class="two-columns">
+    <div style="width: 50%" class="text">
+        <p>
+            The AKCO needs to represent various knowledge graph features, which have an influence on applicable cleaning techniques and approaches.
+            These features can. for example, include the average number of properties of instances, i.e., the density of a knowledge graph, or how well an ontology covers the instances.
+
+            To represent these features the class <code>akco:KnowledgeGrpah</code> is subclass of <code>dcat:DataSet</code>.
+            Therefore, a knowledge graph can have various <code>dqv:QualityMeasurement</code> associated to it, using the property <code>dqv:hasQualityMeasurement</code>.</p>
+        <p>
+            The <a href="https://www.w3.org/TR/vocab-dqv/" target="_blank">Data Quality Vocabulary</a> is a W3 recommendation for annotating the quality of a dataset.
+        </p>
+    </div>
+    <div>
+      <pre  class="backgroundBox">
+<code>akco:MyKnowledgeGraph a akco:KnowledgeGraph ;
+  dqv:hasQualityMeasurement :densityMeasurement .</code>
+</pre>
+        <p style="text-align: center; display: block">Annotation of an knowledge graph, with an associated quality measurement.</p>
+        <pre  class="backgroundBox">
+<code>akco:graphDensity a dqv:Metric ;
+   rdfs:label "Instance Density"@en ;
+   rdfs:description "A metric that quantifies how dense an instance in the knowledge graph is connected, e.g., via the average number of outgoing and incoming edges."@en .
+
+akco:densityMeasurement a dqv:QualityMeasurement ;
+  dqv:metric akco:graphDensity ;
+  dqv:value "0.15"^^xsd:decimal ;
+  dqv:computedOn akco:MyKnowledgeGraph .
+</code>
+</pre>
+        <p style="text-align: center; display: block">Definition and annotation of a density quality measurement for the knowledge graph.</p>
+    </div>
+</div>
+
+<h5 class="question-heading">How are cleaning techniques and background knowledge represented?</h5>
+<div class="two-columns">
+    <div style="width: 60%">
+        <p class="text">
+            Background knowledge is an important aspect for cleaning assertion errors in knowledge graphs.
+            It provides the context from which techniques and approaches use.
+            Therefore, <code>akco:Technique</code> amd <code>akco:Approach</code> are in the domain of <code>akco:usesBackgroundKnowledge</code>, with range <code>akco:BackgroundKnowledge</code>.
+            The idea is that <code>akco:Technique</code> relates to a broad concept of background knowledge, that is in generally used by all approaches of this technique.
+            For example, the integrity constraints are generally used by integrity constraint-based approaches.
+            However, approaches can also include additional or more specific background knowledge. Therefore, new instances can be created, and related to an approach.
+            Further, <code>akco:BackgroundKnowledge</code> is sublass of <code>skos:Concept</code>, which enables a hierarchical classification of background knowledge.
+        </p>
+    </div>
+    <div>
+        <pre  class="backgroundBox">
+<code>akco:tecIntegrityConstraint-based a akco:Technique ;
+   rdfs:label "Tourism domain expertise"@en ;
+   rdfs;description "Integrity constraint-based techniques use constraints to verify the correctness of assertions, i.e., detect errors. Integrity constraints can be provided, for example, via SHACL shapes..."@en ;
+   akco:usesBackgroundKnowledge akco:extSrcFormalAndSyntaxSpecifications .
+
+akco:extSrcFormalAndSyntaxSpecifications a akco:ExternalSource ;
+    rdfs:description "Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph. ..."@en .</code>
+        </pre>
+    </div>
+</div>
+
+<h5 class="question-heading">How can the quality of different types of background knowledge be defined? </h5>
+<div class="two-columns">
+    <div style="width: 60%" class="text">
+        <p>
+            The annotation for quality measures of background knowledge depends, on the type of the background knowledge.</p>
+        <p>Internal background knowledge is the given knowledge graph, and quality measures should be defined according to the first question.</p>
+        <p>External background knowledge can be differentiated in either being provided by a human domain expert, or an external dataset.
+            The class <code>akco:BackgroundKnowledge</code> has one subclass of type <code>dcat:DataSet</code>, which has a subclass <code>akco:ExternalSource</code>.
+            This hierarchy allows to define the quality of external background knowledge that is of type dataset, using the Data Quality Vocabulary.
+            Further a flexibel hierarchical relation of background knowledge can be represented using <code>skos</code> properties, since <code>akco:BackgroundKnowledge</code> is subclass of <code>skos:Concept</code>.
+            The other type of background knowledge is human expertise, which should be flexibly annotated, using individual instances of type <code>akco:HumanExpertise</code>.
+            These instances are associated to a knowledge-driven dimension of a cleaning approach.
+            For example, integrity constraints need typically domain expertise to define the correct specifications of properties and classes.
+            This additional type of background knowledge then can be added via the <code>akco:usesBackgroundKnowledge</code> property to an approach.
+        </p>
+    </div>
+    <div>
+    <pre  class="backgroundBox">
+<code>akco:tourismDomainExpertise a akco:HumanExpertise ;
+   rdfs:label "Tourism domain expertise"@en ;
+   rdfs;description "Expertise about the tourism sector in Tirol, Austria and the configuration of integrity constraints."@en .
+
+akco:domainSpecification a akco:ExternalSource ;
+  rdfs:label "Domain Specification"@en ;
+  rdfs:comment "A Domain Specification is a set of SHACL-based integrity constraints."@en ;
+  skos:narrower akco:tourismDomainExpertise ;
+  skos:broader akco:extSrcFormalAndSyntaxSpecifications .
+
+akco:completenessOfConstraints a dqv:Metric ;
+   rdfs:label "Completeness of integrity constraints"@en ;
+   rdfs:description "A metric that measures the coverage of integrity constraints, regarding a given knowledge graph."@en .
+
+akco:completenessMeasurement a dqv:QualityMeasurement ;
+  dqv:metric akco:completenessOfConstraints ;
+  dqv:value "0.75"^^xsd:decimal ;
+  dqv:computedOn akco:domainSpecification .
+</code>
+</pre>
+        <p style="text-align: center; display: block">Different types of background knowledge are defined, and related.
+            Domain Specifications are SHACL-based constraints, which need to be created and maintained, using human expertise.
+            Further, the quality of the specifications can be measured, for example their completeness.
+        </p>
+    </div>
+</div>

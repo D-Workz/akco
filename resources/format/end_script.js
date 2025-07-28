@@ -9,24 +9,43 @@ function loadContent(file, cat, callback) {
     } else if (cat==="bgk"){
         file = "resources/content/akc/backgroundKnowledge/"+file;
         displayArea = document.getElementById('content-area-bgk');
+    } else if (cat==="app_rep"){
+        file = "resources/content/"+file;
+        displayArea = document.getElementById('content-area-app_rep');
+    }else if (cat==="vis"){
+        displayArea = document.getElementById('content-area-vis');
+        if(file==="webvowl"){
+            displayArea.innerHTML="";
+
+            const iframe = document.createElement('iframe');
+            iframe.src = `webvowl/index.html?url=../versions/${window.ontologyVersion}/ontology.json&ts=${Date.now()}`;
+            iframe.width = '100%';
+            iframe.height = '600';
+            iframe.loading = 'lazy';
+            iframe.style.border = 'none';
+            displayArea.append(iframe);
+        }else {
+            file = "resources/content/"+file;
+        }
     }
-    fetch(file)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to load ${file}`);
-            }
-            return response.text();
-        })
-        .then(html => {
-            displayArea.innerHTML = html;
-            MathJax.typesetPromise([displayArea]);
-            if (callback) {
-                callback(); // run the scroll after content is loaded
-            }
-        })
-        .catch(error => {
-            document.getElementById('content-area').innerHTML = `<p>Error loading content: ${error.message}</p>`;
-        });
+    if((cat==="vis"&&file!=="webvowl")||cat!=="vis"){
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${file}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                displayArea.innerHTML = html;
+                MathJax.typesetPromise([displayArea]);
+                if (callback) {
+                    callback(); // run the scroll after content is loaded
+                }
+            })
+            .catch(error => {
+            });
+    }
 }
 
 function jumpToMenuItem(menu, menuItem, content, cat) {
@@ -41,15 +60,6 @@ function jumpToMenuItem(menu, menuItem, content, cat) {
         menuItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 }
-
-const representations = {
-    approaches: `<h5 class="question-heading">How can I represent everything important about a cleaning approach?</h5>
-                    <div id="approach-container" >Loading...</div>`,
-    errors: `<h5 class="question-heading">How can I represent different errors?</h5>
-                    <div id="error-container" >Loading...</div>`,
-    knowledgeGraph: `<h5 class="question-heading">How can I represent relevant features of my knowledge graph?</h5>
-                    <div id="kg-container" >Loading...</div>`
-};
 
 function toggleMenu() {
     const wrapper = document.getElementById('menuWrapper');
@@ -107,61 +117,6 @@ function showContent(key) {
     }
 }
 
-
-
-function showContentVisualization(key) {
-    // Hide all visualizations
-    const allVisuals = document.querySelectorAll('#visualizationBox .visualization');
-    allVisuals.forEach(div => {
-        div.style.display = 'none';
-
-        // 🧹 Optional: Clean up lingering iframes (like stale WebVOWL views)
-        const iframe = div.querySelector('iframe');
-        if (iframe) iframe.remove();
-    });
-
-    // Show the selected one
-    const selected = document.getElementById(key);
-    if (selected) {
-        selected.style.display = 'block';
-
-        // ♻️ Reinject WebVOWL iframe only if needed
-        if (key === 'webvowl') {
-            const container = selected.querySelector('#webvowl-container');
-            if (container) {
-                // Clean up container again to be safe
-                container.innerHTML = '';
-                const iframe = document.createElement('iframe');
-                iframe.src = `webvowl/index.html?url=../versions/${window.ontologyVersion}/ontology.json&ts=${Date.now()}`;
-                iframe.width = '100%';
-                iframe.height = '600';
-                iframe.loading = 'lazy';
-                iframe.style.border = 'none';
-                container.appendChild(iframe);
-            }
-        }
-    }
-}
-
-
-// Formating
-
-const visButtons = document.querySelector('.visBtnGrp');
-const repBtnGrp = document.querySelector('.repBtnGrp');
-
-visButtons.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON') {
-        visButtons.querySelectorAll('button').forEach(btn => btn.classList.remove('activeB'));
-        e.target.classList.add('activeB');
-    }
-});
-repBtnGrp.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON') {
-        repBtnGrp.querySelectorAll('button').forEach(btn => btn.classList.remove('activeB'));
-        e.target.classList.add('activeB');
-    }
-});
-
 function loadChangelog(version) {
     const changelogPath = `versions/${version}/changelog.html`;
     fetch(changelogPath)
@@ -201,7 +156,6 @@ function loadAKC() {
             loadAKC_content();
         })
         .catch(() => {
-            document.getElementById('AKCBox').style.display = 'none';
         });
 }
 
@@ -278,6 +232,22 @@ function loadHash() {
     loadTOC();
 }
 
+const tagItemsVis = document.querySelectorAll('.tag-list-vis li');
+tagItemsVis.forEach(item => {
+    item.addEventListener('click', () => {
+        tagItemsVis.forEach(i => i.classList.remove('activeLi'));
+        item.classList.add('activeLi');
+    });
+});
+
+const tagItemsAppRep = document.querySelectorAll('.tag-list-app_rep li');
+tagItemsAppRep.forEach(item => {
+    item.addEventListener('click', () => {
+        tagItemsAppRep.forEach(i => i.classList.remove('activeLi'));
+        item.classList.add('activeLi');
+    });
+});
+
 function loadReferences () {
     const file = "resources/content/references.html";
     const displayArea = document.getElementById("referenceBox");
@@ -326,39 +296,10 @@ document.addEventListener('DOMContentLoaded', () => {
     loadReferences();
     function updateVersionedContent(version) {
         window.ontologyVersion = version;
-
-        const webvowlContainer = document.getElementById('webvowl-container');
-        webvowlContainer.innerHTML = '';
         loadChangelog(version);
-        const loadingMsg = document.createElement('p');
-        loadingMsg.textContent = `Loading WebVOWL visualization for version ${version}...`;
-        loadingMsg.style.color = 'gray';
-        webvowlContainer.appendChild(loadingMsg);
 
-        fetch(`versions/${version}/ontology.json`)
-            .then(res => {
-                if (!res.ok) throw new Error("ontology.json not found or invalid");
-
-                webvowlContainer.innerHTML = '';
-
-                const iframe = document.createElement('iframe');
-                iframe.src = `webvowl/index.html?url=../versions/${version}/ontology.json&ts=${Date.now()}`;
-                iframe.width = '100%';
-                iframe.height = '600';
-                iframe.loading = 'lazy';
-                iframe.style.border = 'none';
-
-                webvowlContainer.appendChild(iframe);
-            })
-            .catch(err => {
-                console.error("WebVOWL loading failed:", err);
-                webvowlContainer.innerHTML = `<p style="color:red;">Failed to load WebVOWL for version ${version}</p>`;
-            });
-
-        // ✅ Reload metadata script block
         loadVersionedContent('script[type="application/ld+json"]', 'schema-metadata');
 
-        // ✅ Reload metadata list block and rewrite links
         loadVersionedContent('.container .head dl', 'versioned-info', {
             transform: (content) => {
                 content.querySelectorAll('a[href]').forEach(link => {
@@ -373,7 +314,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // ✅ Reload other versioned content
         loadVersionedContent('#namespacedeclarations table', 'namespace-overview');
         loadVersionedContent('#crossref', 'crossref-box');
         loadVersionedContent('.container .head h2', 'releaseBox');
@@ -389,15 +329,10 @@ document.addEventListener('DOMContentLoaded', () => {
             loadHash(); // Now safe to call
         });
     }
-
-
-
-    // Initial load
+    loadContent('vis_chowlk.html', 'vis');
+    loadContent('app_rep_err.html', 'app_rep')
     updateVersionedContent(window.ontologyVersion);
 
-
-
-    // Version change listener
     if (selector) {
         selector.value = window.ontologyVersion;
         selector.addEventListener('change', (e) => {

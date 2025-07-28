@@ -1,0 +1,66 @@
+<h5 class="question-heading">How can a cleaning approach be represented?</h5>
+<div class="two-columns">
+  <div class="text">
+    <p>
+      A cleaning approach is a specific solution for detecting or correcting a certain type of error.
+      Most instances of the ontology are annotated approaches.
+      To capture the characteristics of an approach, different instances of type <code>akco:Dimension</code> are created and related via <code>akco:hasDimension</code>.
+      To relate the targeted errors of an approach, the property <code>akco:targetsError</code> can be used.
+      To annotate information about the publication and potential implementations, a <code>dcterms:BibliographicResource</code> can be created and related via <code>akco:inSpublished</code>.
+      <code>dcterms:source</code> can be used for implementation details, like GitHub repositories.
+      <code>dcterms:bibliographicCitation</code> currently uses APA style formating, to reference publications.
+    </p>
+
+    <p>
+      The example describes the cleaning approach DeFacto <a href="#ref-gerber2015">[Gerber et al., 2015]</a>.
+      It highlights the structure of the approach overall, and how selected properties and related instances can be represented.
+      For a complete picture, the ontology, contains a complete set of instances for DeFacto.
+    </p>
+  </div>
+  <div >
+          <pre style="width: 500px;" class="backgroundBox">
+  <code>akco:appDeFacto a :Approach ;
+    akco:hasDimension akco:dimData-driven ;
+    akco:hasDimension akco:dimDetection ;
+    akco:hasDimension akco:dimExternal ;
+    akco:hasDimension akco:dimKnowledge-driven ;
+    akco:isPublished akco:publDeFacto ;
+    akco:targetsError akco:errPVSemSemWrong ;
+    akco:usesBackgroundKnowledge akco:extSrcWeb ;
+    akco:usesTechnique akco:tecVerbalization-based ;
+    rdfs:label "appDeFacto"@en .</code>
+      </pre>
+    <p>  DeFacto  is a external, data-and knowledge-driven, verbalization-based approach that targets semantically wrong property-value assertions, using the Web as background knowledge.</p>
+  </div>
+</div>
+
+
+<div class="two-columns">
+    <div>
+
+      <pre class="backgroundBox" style="width:700px">
+<code>akco:publDeFacto a dcterms:BibliographicResource ;
+  dcterms:source "https://github.com/DeFacto/DeFacto"@en ;
+  dcterms:title "DeFacto - Temporal and multilingual Deep Fact Validation"@en ;
+  dcterms:bibliographicCitation "Gerber, D., Esteves, D., Lehmann, J., B\"uhmann, L., Usbeck, R., Ngomo, A.-C. N., and Speck, R. (2015). Defacto-temporal and multilingual deep fact validation. Journal of Web Semantics, 35, 85--101."@en ;
+  dcterms:issued 2015^^xsd:date ;
+  rdfs:label "publDeFacto"@en .</code>
+      </pre>
+<p style="display: block; text-align: center">The publication of DeFacto can be annotated using a BibliographicResource.</p>
+
+    </div>
+    <div class="example-image">
+
+      <pre class="backgroundBox">
+<code>:tecVerbalization-based a Technique ;
+  rdfs:comment "Verbalization-based techniques are based on external natural language sources, such as the Web or documents...."@en ;
+  rdfs:label "tecVerbalization"@en ;
+  :usesBackgroundKnowledge :extSrcAny .
+
+:dimKnowledge-driven a :Dimension ;
+  rdfs:comment "The knowledge-driven dimension describes approaches and techniques that rely on domain knowledge—such as ontology-based reasoning or human expertise—to detect and correct errors."@en ;
+  rdfs:label "dimKnowledge-driven" .</code>
+      </pre>
+      <p style="display: block; text-align: center">DeFacto uses verbalization and is knowledge-driven.</p>
+    </div>
+</div>
