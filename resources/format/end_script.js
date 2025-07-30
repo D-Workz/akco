@@ -165,29 +165,6 @@ function loadAKC_content(){
     loadContent('dim_internalExternal.html', 'dim');
     loadContent('bgk_contextualGraphs.html', 'bgk');
     showContent('errors');
-    const tagItemsDim = document.querySelectorAll('.tag-list-dim li');
-    tagItemsDim.forEach(item => {
-        item.addEventListener('click', () => {
-            tagItemsDim.forEach(i => i.classList.remove('activeLi'));
-            item.classList.add('activeLi');
-        });
-    });
-
-    const tagItemsKG = document.querySelectorAll('.tag-list-kg li');
-    tagItemsKG.forEach(item => {
-        item.addEventListener('click', () => {
-            tagItemsKG.forEach(i => i.classList.remove('activeLi'));
-            item.classList.add('activeLi');
-        });
-    });
-
-    const tagItems = document.querySelectorAll('.tag-list-bgk li');
-    tagItems.forEach(item => {
-        item.addEventListener('click', () => {
-            tagItems.forEach(i => i.classList.remove('activeLi'));
-            item.classList.add('activeLi');
-        });
-    });
 }
 
 $.fn.ignore = function(sel){
@@ -232,22 +209,6 @@ function loadHash() {
     loadTOC();
 }
 
-const tagItemsVis = document.querySelectorAll('.tag-list-vis li');
-tagItemsVis.forEach(item => {
-    item.addEventListener('click', () => {
-        tagItemsVis.forEach(i => i.classList.remove('activeLi'));
-        item.classList.add('activeLi');
-    });
-});
-
-const tagItemsAppRep = document.querySelectorAll('.tag-list-app_rep li');
-tagItemsAppRep.forEach(item => {
-    item.addEventListener('click', () => {
-        tagItemsAppRep.forEach(i => i.classList.remove('activeLi'));
-        item.classList.add('activeLi');
-    });
-});
-
 function loadReferences () {
     const file = "resources/content/references.html";
     const displayArea = document.getElementById("referenceBox");
@@ -281,6 +242,14 @@ function highlightRefFromHash() {
             refElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     }
+}
+
+function handleClick(element, url, type) {
+    const menu = "tag-list-"+type;
+    document.querySelectorAll(`.${menu} li`)
+        .forEach(i => i.classList.remove('activeLi'));
+    element.classList.add('activeLi');
+    loadContent(url, type);
 }
 
 window.addEventListener('DOMContentLoaded', highlightRefFromHash);
@@ -339,6 +308,8 @@ document.addEventListener('DOMContentLoaded', () => {
             updateVersionedContent(e.target.value);
         });
     }
+
+
 });
 
 

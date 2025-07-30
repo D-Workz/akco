@@ -3,7 +3,7 @@
     padding: 1em;
     font-family: monospace;
     font-size: 14px;
-    width: fit-content;
+    width: max-content;
 }
 
 #turtle-graph .line-numbered {

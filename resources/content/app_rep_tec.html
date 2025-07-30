@@ -1,6 +1,6 @@
 <h5 class="question-heading">How can relevant features of a knowledge graph be represented?</h5>
 <div class="two-columns">
-    <div style="width: 50%" class="text">
+    <div style="width: 50%; min-width: 650px" class="text">
         <p>
             The AKCO needs to represent various knowledge graph features, which have an influence on applicable cleaning techniques and approaches.
             These features can. for example, include the average number of properties of instances, i.e., the density of a knowledge graph, or how well an ontology covers the instances.
@@ -11,7 +11,7 @@
             The <a href="https://www.w3.org/TR/vocab-dqv/" target="_blank">Data Quality Vocabulary</a> is a W3 recommendation for annotating the quality of a dataset.
         </p>
     </div>
-    <div>
+    <div style="min-width: 720px">
       <pre  class="backgroundBox">
 <code>akco:MyKnowledgeGraph a akco:KnowledgeGraph ;
   dqv:hasQualityMeasurement :densityMeasurement .</code>
@@ -34,8 +34,9 @@ akco:densityMeasurement a dqv:QualityMeasurement ;
 
 <h5 class="question-heading">How are cleaning techniques and background knowledge represented?</h5>
 <div class="two-columns">
-    <div style="width: 60%">
-        <p class="text">
+    <div style="width: 60%; min-width: 650px" class="text">
+
+    <p class="text">
             Background knowledge is an important aspect for cleaning assertion errors in knowledge graphs.
             It provides the context from which techniques and approaches use.
             Therefore, <code>akco:Technique</code> amd <code>akco:Approach</code> are in the domain of <code>akco:usesBackgroundKnowledge</code>, with range <code>akco:BackgroundKnowledge</code>.
@@ -45,22 +46,22 @@ akco:densityMeasurement a dqv:QualityMeasurement ;
             Further, <code>akco:BackgroundKnowledge</code> is sublass of <code>skos:Concept</code>, which enables a hierarchical classification of background knowledge.
         </p>
     </div>
-    <div>
+    <div style="min-width: 720px">
         <pre  class="backgroundBox">
 <code>akco:tecIntegrityConstraint-based a akco:Technique ;
-   rdfs:label "Tourism domain expertise"@en ;
-   rdfs;description "Integrity constraint-based techniques use constraints to verify the correctness of assertions, i.e., detect errors. Integrity constraints can be provided, for example, via SHACL shapes..."@en ;
-   akco:usesBackgroundKnowledge akco:extSrcFormalAndSyntaxSpecifications .
+  rdfs:label "Tourism domain expertise"@en ;
+  rdfs;description "Integrity constraint-based techniques use constraints to verify the correctness of assertions, i.e., detect errors. Integrity constraints can be provided, for example, via SHACL shapes..."@en ;
+  akco:usesBackgroundKnowledge akco:extSrcFormalAndSyntaxSpecifications .
 
 akco:extSrcFormalAndSyntaxSpecifications a akco:ExternalSource ;
-    rdfs:description "Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph. ..."@en .</code>
+  rdfs:description "Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph. ..."@en .</code>
         </pre>
     </div>
 </div>
 
 <h5 class="question-heading">How can the quality of different types of background knowledge be defined? </h5>
 <div class="two-columns">
-    <div style="width: 60%" class="text">
+    <div style="width: 60%; min-width: 650px" class="text">
         <p>
             The annotation for quality measures of background knowledge depends, on the type of the background knowledge.</p>
         <p>Internal background knowledge is the given knowledge graph, and quality measures should be defined according to the first question.</p>
@@ -74,7 +75,7 @@ akco:extSrcFormalAndSyntaxSpecifications a akco:ExternalSource ;
             This additional type of background knowledge then can be added via the <code>akco:usesBackgroundKnowledge</code> property to an approach.
         </p>
     </div>
-    <div>
+    <div style="min-width: 720px;">
     <pre  class="backgroundBox">
 <code>akco:tourismDomainExpertise a akco:HumanExpertise ;
    rdfs:label "Tourism domain expertise"@en ;

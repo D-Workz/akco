@@ -73,24 +73,46 @@
       <div class="content">
 
          <h4>Motivation</h4>
-         <p>Knowledge graphs are a well-established approach for representing information of any domain in a machine-readable format. One important quality measure for a successful application is the correctness of the assertions. These assertions represent the factual knowledge of the domain and make up the majority of a knowledge graph. Different types of assertions can have different errors, and various approaches have been developed to address these errors. Each approach targets a limited number of different error types and typically performs either error detection or correction.</p>
+         <p>Knowledge graphs are a well-established approach for representing information of any domain in a machine-readable format.
+            One important quality measure for a successful application is the correctness of the assertions.
+            Knowledge cleaning, i.e., error detection and correction, improves the correctness of a knowledge graph.
+            These assertions represent the factual knowledge of the domain and make up the majority of a knowledge graph.
+            Different types of assertions can have different errors, and various approaches have been developed to address these errors.
+            Each approach targets a limited number of different error types and typically performs either error detection or correction.</p>
 
-         <p>Therefore, to clean a knowledge graph of the different errors, several approaches need to be selected. This selection should account for the various cleaning techniques and types of background knowledge available. Cleaning techniques describe a specific methodology that is followed during the processing of an assertion. These methodologies use background knowledge as context to compare an assertion in question to or identify replacements for erroneous entities. This background knowledge can be part of the knowledge graph itself, like other assertions, or external sources, like a text corpus. The adaptation of a cleaning technique by an approach results in different dimensions, i.e., characteristics of this approach. For example, using only a given knowledge graph classifies an approach as internal, whereas using external sources classifies it as external.
-            Considering all these different aspects makes the selection of approaches nontrivial. A great deal of expertise is required to gain an understanding of the various concepts and their interdependencies. </p>
+         <p>Therefore, to clean a knowledge graph of the different errors, several approaches need to be selected.
+            This selection should account for the various cleaning techniques and types of background knowledge available.
+            Cleaning techniques describe a specific methodology that is followed during the processing of an assertion.
+            These methodologies use background knowledge as context to compare an assertion in question to or identify replacements for erroneous entities.
+            This background knowledge can be part of the knowledge graph itself, like other assertions, or external sources, like a text corpus.
+            The adaptation of a cleaning technique by an approach results in different dimensions, i.e., characteristics of this approach.
+            For example, using only a given knowledge graph classifies an approach as internal, whereas using external sources classifies it as external.
+            Considering all these different aspects makes the selection of approaches nontrivial.
+            A great deal of expertise is required to gain an understanding of the various concepts and their interdependencies. </p>
 
          <h4>Overview</h4>
          <p>To address these challenges, the <strong>Anatomy of Knowledge Cleaning Ontology (AKCO)</strong> defines important concepts and their properties of knowledge cleaning. It enables one to gain insights into various aspects and select approaches based on specific features. It is based on an extensive literature review <a href="#ref_dsommer2025">[Sommer et al., 2025]</a>. It is designed using the design principles discussed in "Ontology 101: A guide to creating your first ontology" <a href="#ref_noy2001">[Noy et al., 2001]</a> and "Best practices for implementing fair vocabularies and ontologies on the web" <a href="#ref_garijo2020">[Garijo et al., 2020]</a> </p>
+         <p>The ontology streamlines the process of gaining important insights into possibilities, limitations, and dependencies of cleaning assertion errors in a given knowledge graph.</p>
 
          <h4>Foundation: the Anatomy of Knowledge Cleaning</h4>
          <p>Relevant aspects of knowledge cleaning are discussed in the survey <a href="#ref_dsommer2025">[Sommer et al., 2025]</a>.  It provides the first qualitative analysis of knowledge cleaning. It introduces eleven cleaning techniques, seven types of background knowledge, four dimensions with at least two variations each, and various cleaning approaches. It follows a methodology for transparency. It employs a framework for context and structure, providing a discussion that highlights important insights into knowledge cleaning and potential future research areas. The <strong>Anatomy of Knowledge Cleaning</strong>, which is introduced in <a href="#akc">Section 2</a>, captures the most important aspects of this publication. </p>
 
          <h4>Ontology Design Methodology</h4>
-         <p>The design principles of <a href="#ref_noy2001">[Noy et al., 2001]</a> include defining basic specifications, like the domain of the ontology, which are concepts and relations between those concepts that represent relevant aspects of knowledge cleaning. The final ontology streamlines the process of gaining important insights into possibilities, limitations, and dependencies of cleaning assertion errors in a given knowledge graph. Therefore, it provides semantics for representing and relating different knowledge graph features, assertion errors, types of background knowledge, dimensions, cleaning techniques, and cleaning approaches. The resulting instances (named individuals) will support answering questions such as:</p>
+         <p>The design principles of <a href="#ref_noy2001">[Noy et al., 2001]</a> include defining basic specifications, like the domain of the ontology.
+            The AKCO covers concepts and relations between those concepts that are relevant aspects of knowledge cleaning.
+            It provides semantics for representing and relating different knowledge graph features, assertion errors, types of background knowledge, dimensions, cleaning techniques, and cleaning approaches.
+            The instances (named individuals) of the concepts factualize knowledge cleaning.
+            They provide insights into dependencies and support answering questions such as:</p>
          <ul>
             <li>Without domain knowledge, which cleaning techniques are feasible to be applied?</li>
             <li>Which errors can be targeted using a specific cleaning technique, like path-based approaches?</li>
             <li>What types of background knowledge are needed for cleaning assertion errors without domain knowledge?</li>
             <li>Should internal or external approaches be chosen for cleaning a knowledge graph?</li>
+            <li>Which approaches target semantic errors in property-value assertions?</li>
+            <li>How can a text document be used for error detection?</li>
+            <li>What types of background knowledge can be used to target property-value assertions?</li>
+            <li>Which approaches can be used to detect errors in property-value assertions that best support the features of a given knowledge graph?</li>
+            <li>What are knowledge-driven approaches for detecting errors in property-value assertions? </li>
          </ul>
 
          <h5>Vocabulary Reuse and Alignment</h5>
@@ -110,17 +132,17 @@
          </div>
 
 
-         <h5>Ontology Structure: Classes and Hierarchies</h5>
+         <h6>Ontology Structure: Classes and Hierarchies</h6>
          <p> The AKCO can be interpreted as a taxonomy of concepts relevant to knowledge cleaning. Therefore, it makes the classes, <code>error</code>, <code>technique</code>, and <code>approach</code> subclasses of <code>skos:Concept</code>. This adoption allows these concepts to express hierarchical classifications. For example, an error in a tail vertical domain can be represented using <code>skos:narrower</code> relating to a more general semantic error, or the relation between different cleaning approaches or techniques can be defined. </p>
 
-         <h5>Knowledge Graph and Background Knowledge modeling</h5>
+         <h6>Knowledge Graph and Background Knowledge modeling</h6>
          <p>The AKCO also needs to represent various quality measures of a knowledge graph and the associated background knowledge. Therefore, the DQV is adopted. It allows one to represent these quality measures flexibly. Therefore, the concept <code>akco:BackgroundKnowledge</code> has two generally different subtypes. One can be represented as a <code>dcat:DataSet</code>, which contains knowledge graphs and various external sources, such as documents or databases. The other type is human expertise, which cannot be classified in the same manner. Here, individual instances should be created, representing various forms of human expertise. </p>
 
-         <h5>Approach metadata modeling</h5>
+         <h6>Approach metadata modeling</h6>
          <p>Another integral part of the AKCO must be its ability to capture the specification of various cleaning approaches. Therefore, the AKCO adopts the DCTerms vocabulary. It introduces a new property <code>akco:isPublished</code>, which has as a domain <code>akco:Approach</code> and as a range </code>dcterms:BibliographicResource</code>, which describes an approach using <code>dcterms:title</code>, <code>dcterms:source</code>, <code>dcterms:issued</code>, and <code>dcterms:bibliographicCitation</code>. The source can be used to define implementation sources, such as Git repositories, and APA style citations or similar can be defined using the citation property. </p>
 
          <h5>Enumerated terms and instances</h5>
-         <p> The design principles for an ontology suggested by <a href="#ref_noy2001">[Noy et al., 2001]</a> also include the enumeration of important terms. These terms can be taken from the <strong>Anatomy of Knowledge Cleaning</strong> (see <a href="#akc">Section 2</a>). They include concepts such as techniques and errors, and extend to instances, including semantic errors, as well as various cleaning techniques, such as integrity constraint-based and embedding-based. </p>
+         <p>The design principles for an ontology suggested by <a href="#ref_noy2001">[Noy et al., 2001]</a> also include the enumeration of important terms. These terms can be taken from the <strong>Anatomy of Knowledge Cleaning</strong> (see <a href="#akc">Section 2</a>). They include concepts such as techniques and errors, and extend to instances, including semantic errors, as well as various cleaning techniques, such as integrity constraint-based and embedding-based. </p>
 
          <h5>Defined classes and hierarchy</h5>
          <p>The AKCO defines eight classes, which are (1) <code>akco:Approach</code>, (2) <code>akco:BackgroundKnowledge</code>, (3) <code>akco:Dimension</code>, (4) <code>akco:Error</code>, (5) <code> akco:ExternalSource</code>, (6) <code>akco:HumanExpertise</code>, (7)<code>akco:KnowledgeGraph</code>, and (8) <code>akco:Technique</code>. These classes are all part of the Anatomy of Knowledge Cleaning. The AKCO uses a simple class hierarchy, which was already discussed as part of the adoption of other ontologies. It comprises subclass relations of <code>Approach</code>, <code>Technique</code>, and <code>Error</code> to be subclasses of <code>skos:Concept</code>. The other hierarchical component is the relation to the DQV, where <code>akco:BackgroundKnowledge</code> has as a subclass <code>dcat:DataSet</code>, and <code>akco:KnowledgeGraph</code> and <code>akco:ExternalSource</code> are subclasses of it. These relations are also shown in the visualization (see <a href="#visualization_header">Section 3.1</a>). </p>
@@ -129,11 +151,10 @@
          <p>The AKCO introduces six new object properties, which are (1) <code>akco:isPublishes</code>, (2) <code>akco:hasError</code>, (3) <code> akco:targetsError</code>, (4) <code> akco:usesBackgroundKnowledge</code>, (5) <code>akco:usesTechnique</code>, and (6) <code>akco:hasDimension</code>. (1) defines the bibliographic resource of a <code>akco:Approach</code>. (2) defines the types of errors in a <code>akco:KnowledgeGraph</code>. (3) defines which types of errors a <code>akco:Approach</code> can target. (4) defines which <code>akco:BackgroundKnowledge</code> is used by an <code>akco:Approach</code> or a <code>akco:Technique</code>. (5) defines which <code>akco:Technique</code> is used by an <code>akco:Approach</code>. (6) defines which <code>akco:Dimension</code> an <code>akco:Approach</code> has. The AKCO also introduces three new datatype properties, which are (1) <code> akco:errorNature</code>, (2) <code> akco:errorSource</code>, and (3) <code>akco:errorType</code>. Each of those properties uses a <code>xsd:string</code> as a value. Further, <code>akco:Approach</code>, <code>akco:Error</code>, and <code>akco:Technique</code> are subclasses of <code>skos:Concept</code>, which allows them to be related with hierarchical properties. </p>
 
          <h5>Defined instances</h5>
-         <p>The AKCO also contains over one hundred instances of various real-world knowledge cleaning concepts, such as eleven cleaning techniques, seven types of background knowledge, multiple different dimensions and errors, and close to one hundred different cleaning approaches. Each instance is also taken from the insights provided by the <strong>Anatomy of Knowledge Cleaning</strong> (see <a href="#akc">Section 2</a>).
-         </p>
+         <p>The AKCO also contains over one hundred instances of various real-world knowledge cleaning concepts, such as eleven cleaning techniques, seven types of background knowledge, multiple different dimensions and errors, and close to one hundred different cleaning approaches. Each instance is also taken from the insights provided by the <strong>Anatomy of Knowledge Cleaning</strong> (see <a href="#akc">Section 2</a>).</p>
 
          <h5>Support for FAIR Principles</h5>
-         <p>The AKCO also adopts the insights from another ontology specification proposal. It follows the suggestions of <a href="#ref_garijo2020">[Garijo et al., 2020]</a>, who propose best practices for implementing <strong>Findable Accessible, Interoperable, Reusable (FAIR)</strong> ontologies. As part of implementing these practices, the ontology documentation now includes the first update to the ontology, with version <code>1.1.0</code>. This version included various metadata semantics into the AKCO. It included the integration of <strong>VANN</strong> properties, which is a vocabulary for annotating vocabulary descriptions. The AKCO uses it for defining namespace definitions, by adopting <code>vann:preferredNamespaceURI</code> and <code>vann:preferredNamespacePrefix</code>. Another update was the support of versioning the ontology, which included recording changes and providing a mechanism to obtain previous versions. During this measure, the AKCO also adopted the properties <code>owl:priorVersion</code>, and <code>owl:versionIRI</code>. Both properties are provided by the <strong>Web Ontology Language (OWL)</strong>. Otherwise, the update also improved the <code>dcterms:description</code> property, changing the format for the values of <code>dcterms:creator</code> and <code>dcterms:contributor</code> to IRI instances, rather than literal values. The AKCO now contains all recommended metadata for supporting the FAIR principles.
+         <p>The AKCO also adopts the insights from another ontology specification proposal. It follows the suggestions of <a href="#ref_garijo2020">[Garijo et al., 2020]</a>, who propose best practices for implementing <strong>Findable Accessible, Interoperable, Reusable (FAIR)</strong> ontologies. As part of implementing these practices, the ontology documentation now includes the first update to the ontology, with version <code>1.1.0</code>. This version included various metadata semantics into the AKCO. It included the integration of <strong>VANN</strong> properties, which is a vocabulary for annotating vocabulary descriptions. The AKCO uses it for defining namespace definitions, by adopting <code>vann:preferredNamespaceURI</code> and <code>vann:preferredNamespacePrefix</code>. Another update was the support of versioning the ontology, which included recording changes and providing a mechanism to obtain previous versions. During this measure, the AKCO also adopted the properties <code>owl:priorVersion</code>, and <code>owl:versionIRI</code>. Both properties are provided by the <strong>Web Ontology Language (OWL)</strong>. Otherwise, the update also improved the <code>dcterms:description</code> property, changing the format for the values of <code>dcterms:creator</code> and <code>dcterms:contributor</code> to IRI instances, rather than literal values. The AKCO now contains all recommended metadata for supporting the FAIR principles.</p>
 
          <h5>Documentation features</h5>
          <p>
@@ -147,6 +168,9 @@
          <h4>Structure of the Documentation</h4>
          <p> The following sections of this documentation contain the Anatomy of Knowledge Cleaning, the theoretical foundation of the AKCO. An overview of classes, properties, and instances, including the visualizations of the ontology. Next, it is followed by a description of the AKCO and an application section. This application section shows how the ontology can be applied, for example, to answer the four questions from the introduction. The final section shows the cross-references for all classes, properties, and instances. </p>
       </div>
+
+      <!--Namespaces SECTION-->
+
       <div id="namespacedeclarations">
          <h3 class="list">Namespace declarations</h3>
          <div id="ns" align="center">
@@ -154,6 +178,9 @@
          </div>
       </div>
    </div>
+
+   <!--Anatomy of knowledge cleaning SECTION-->
+
    <h2 class="list" id="akc">The Anatomy of Knowledge Cleaning<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
       <p>The <strong>anatomy of knowledge cleaning</strong> is the theoretical foundation to the AKCO. It introduces key aspects of knowledge cleaning assertion errrors in knowledge graphs.
       It describes aspects like, cleaning techniques, discusses their possibilities and limitations, and highlights relations to other aspects. It is based on extensive literature analysis, which is detailed in [ref_to_my_paper].</p>
@@ -168,18 +195,21 @@
    <div id="akc-content"></div>
 
 </div>
+
+<!-- Overview BLOCK -->
+
 <div id="overviewBox"></div>
 
 
-<!-- VISUALIZATION BLOCK BEGIN -->
+<!-- VISUALIZATION BLOCK -->
 <h3 id="visualization_header" class="list">Visualization</h3>
 
 
 <div class="menu-layout medium">
    <aside class="menu-sidebar">
       <ul class="tag-list-vis">
-         <li onclick="loadContent('vis_chowlk.html', 'vis')" class="activeLi" id="menu_vis_chowlk">Chowlk Visual Notation</li>
-         <li onclick="loadContent('webvowl', 'vis')" id="menu_vis_webvowl">WebVowl</li>
+         <li onclick="handleClick(this,'vis_chowlk.html', 'vis')" class="activeLi" id="menu_vis_chowlk">Chowlk Visual Notation</li>
+         <li onclick="handleClick(this,'webvowl', 'vis')" id="menu_vis_webvowl">WebVowl</li>
       </ul>
    </aside>
 
@@ -211,10 +241,10 @@
 <div class="menu-layout medium">
    <aside class="menu-sidebar">
       <ul class="tag-list-app_rep">
-         <li onclick="loadContent('app_rep_err.html', 'app_rep')" class="activeLi" id="menu_app_rep_err">Errors</li>
-         <li onclick="loadContent('app_rep_tec.html', 'app_rep')" id="menu_app_rep_tec">Cleaning techniques & Background Knowledge & Knowledge Graph</li>
+         <li onclick="handleClick(this,'app_rep_err.html', 'app_rep')" class="activeLi" id="menu_app_rep_err">Errors</li>
+         <li onclick="handleClick(this,'app_rep_tec.html', 'app_rep')" id="menu_app_rep_tec">Cleaning techniques & Background Knowledge & Knowledge Graph</li>
          <!--<li onclick="loadContent('app_rep_kg.html', 'app_rep')" id="menu_app_rep_kg">KnowledgeGraph & Background Knowledge</li>-->
-        <li onclick="loadContent('app_rep_app.html', 'app_rep')" id="menu_app_rep_app">Approaches</li>
+        <li onclick="handleClick(this,'app_rep_app.html', 'app_rep')" id="menu_app_rep_app">Approaches</li>
      </ul>
   </aside>
 
