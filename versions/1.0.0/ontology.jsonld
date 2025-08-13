@@ -100,6 +100,9 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -367,13 +370,15 @@
     "@type" : "http://purl.org/dc/terms/URI",
     "@value" : "Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco"
   } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "https://orcid.org/0009-0009-8524-9182"
+  } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "13.08.2025"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@language" : "en",
-    "@value" : "Dennis Sommer"
+    "@value" : "https://orcid.org/0009-0009-8524-9182"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
