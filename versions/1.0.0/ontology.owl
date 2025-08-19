@@ -12,7 +12,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://purl.archive.org/akco#">
-        <terms:bibliographicCitation rdf:datatype="http://purl.org/dc/terms/URI">Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco</terms:bibliographicCitation>
+        <terms:bibliographicCitation xml:lang="en">D. Sommer. U. Serles, Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco</terms:bibliographicCitation>
         <terms:contributor>https://orcid.org/0009-0009-8524-9182</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">13.08.2025</terms:created>
         <terms:creator>https://orcid.org/0009-0009-8524-9182</terms:creator>
@@ -28,6 +28,7 @@ The AKCO already contains over 100 instances (named individuals) that represent 
         <terms:title xml:lang="en">Anatomy of Knowledge Cleaning Ontology (AKCO)</terms:title>
         <vann:preferredNamespacePrefix xml:lang="en">akco</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://purl.org/dc/terms/URI">https://purl.archive.org/akco</vann:preferredNamespaceUri>
+        <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#date">https://d-workz.github.io/akco/versions/1.0.0/</owl:priorVersion>
         <owl:versionIRI rdf:datatype="http://www.w3.org/2001/XMLSchema#date">https://d-workz.github.io/akco/versions/1.0.0/</owl:versionIRI>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1.0.0</owl:versionInfo>
     </owl:Ontology>
@@ -844,7 +845,7 @@ The AKCO already contains over 100 instances (named individuals) that represent 
         <hasDimension rdf:resource="https://purl.archive.org/akco#dimInternal"/>
         <isPublished rdf:resource="https://purl.archive.org/akco#publCoCKG"/>
         <targetedError rdf:resource="https://purl.archive.org/akco#errPVSemSemWrong"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcWikipedia"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcWikipedia"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecHybrid"/>
         <rdfs:label xml:lang="en">appCoCKG</rdfs:label>
     </owl:NamedIndividual>
@@ -914,7 +915,7 @@ The AKCO already contains over 100 instances (named individuals) that represent 
         <hasDimension rdf:resource="https://purl.archive.org/akco#dimKnowledge-driven"/>
         <isPublished rdf:resource="https://purl.archive.org/akco#publDeFacto"/>
         <targetedError rdf:resource="https://purl.archive.org/akco#errPVSemSemWrong"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcWeb"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcWeb"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecVerbalization-based"/>
         <rdfs:label xml:lang="en">appDeFacto</rdfs:label>
     </owl:NamedIndividual>
@@ -949,7 +950,7 @@ The AKCO already contains over 100 instances (named individuals) that represent 
         <hasDimension rdf:resource="https://purl.archive.org/akco#dimInternal"/>
         <isPublished rdf:resource="https://purl.archive.org/akco#publDeanCoTyErinOpKnGrUsSeReofEn"/>
         <targetedError rdf:resource="https://purl.archive.org/akco#errISemSemWrong"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcWikipedia"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcWikipedia"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based"/>
         <rdfs:label xml:lang="en">appDeanCoTyErinOpKnGrUsSeReofEn</rdfs:label>
     </owl:NamedIndividual>
@@ -1020,9 +1021,9 @@ The AKCO already contains over 100 instances (named individuals) that represent 
         <hasDimension rdf:resource="https://purl.archive.org/akco#dimKnowledge-driven"/>
         <isPublished rdf:resource="https://purl.archive.org/akco#publExfakt"/>
         <targetedError rdf:resource="https://purl.archive.org/akco#errPVSemSemWrong"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcHornClauses"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcKnowledgeGraph"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcWeb"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcHornClauses"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcWeb"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecHybrid"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecRuleMining-based"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecVerbalization-based"/>
@@ -1043,9 +1044,9 @@ The AKCO already contains over 100 instances (named individuals) that represent 
         <isPublished rdf:resource="https://purl.archive.org/akco#publFACTY"/>
         <targetedError rdf:resource="https://purl.archive.org/akco#errPVSemSemWrong"/>
         <targetedError rdf:resource="https://purl.archive.org/akco#errTailVertical"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcKnowledgeGraph"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcQueryLogs"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcWeb"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcQueryLogs"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcWeb"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecHybrid"/>
         <rdfs:label xml:lang="en">appFACTY</rdfs:label>
     </owl:NamedIndividual>
@@ -1128,8 +1129,8 @@ The AKCO already contains over 100 instances (named individuals) that represent 
         <hasDimension rdf:resource="https://purl.archive.org/akco#dimKnowledge-driven"/>
         <isPublished rdf:resource="https://purl.archive.org/akco#publFactCheck"/>
         <targetedError rdf:resource="https://purl.archive.org/akco#errPVSemSemWrong"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcTextCorpus"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcWikipedia"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcTextCorpus"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcWikipedia"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecVerbalization-based"/>
         <rdfs:label xml:lang="en">appFactCheck</rdfs:label>
     </owl:NamedIndividual>
@@ -1857,7 +1858,7 @@ The AKCO already contains over 100 instances (named individuals) that represent 
         <hasDimension rdf:resource="https://purl.archive.org/akco#dimKnowledge-driven"/>
         <isPublished rdf:resource="https://purl.archive.org/akco#publTISCO"/>
         <targetedError rdf:resource="https://purl.archive.org/akco#errPVSemSemWrong"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcDBpedia"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcDBpedia"/>
         <usesTechnique rdf:resource="https://purl.archive.org/akco#tecHybrid"/>
         <rdfs:label xml:lang="en">appTISCO</rdfs:label>
     </owl:NamedIndividual>
@@ -2094,13 +2095,157 @@ The AKCO already contains over 100 instances (named individuals) that represent 
 
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcAny">
         <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:narrower rdf:resource="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"/>
-        <skos:narrower rdf:resource="https://purl.archive.org/akco#extSrcKnowledgeGraph"/>
-        <skos:narrower rdf:resource="https://purl.archive.org/akco#extSrcQueryLogs"/>
-        <skos:narrower rdf:resource="https://purl.archive.org/akco#extSrcTextCorpus"/>
-        <skos:narrower rdf:resource="https://purl.archive.org/akco#extSrcWeb"/>
+        <skos:narrower rdf:resource="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"/>
+        <skos:narrower rdf:resource="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph"/>
+        <skos:narrower rdf:resource="https://purl.archive.org/akco#bgkExtSrcQueryLogs"/>
+        <skos:narrower rdf:resource="https://purl.archive.org/akco#bgkExtSrcTextCorpus"/>
+        <skos:narrower rdf:resource="https://purl.archive.org/akco#bgkExtSrcWeb"/>
         <rdfs:comment xml:lang="en">An external source is any source outside of a given knowledge graph. This individual represents any of those sources.</rdfs:comment>
         <rdfs:label xml:lang="en">Any external source</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkExtSrcDBpedia -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcDBpedia">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
+        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph"/>
+        <rdfs:comment xml:lang="en">DBpedia is the central knowledge graph of the Linked Open Data cloud. Its source is Wikipedia.</rdfs:comment>
+        <rdfs:label xml:lang="en">DBpedia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
+        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
+        <rdfs:comment xml:lang="en">Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph.  The aspects can include an expected graph structure, like cardinality, syntax rules of the domain and modeling language, or semantic features of a property. Specifications are independent of the quality of the assertions. Typical formal specifications are ontologies, integrity constraints, and logic rules. Typical syntax specifications are the RDF specification , or Turtle specification .</rdfs:comment>
+        <rdfs:label xml:lang="en">Formal and syntax specifications</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkExtSrcHornClauses -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcHornClauses">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
+        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
+        <rdfs:comment xml:lang="en">Horn clauses, obtain from rule mining, that rewrite a fact into a set of easier-to-spot facts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Horn clauses</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
+        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
+        <skos:narrower rdf:resource="https://purl.archive.org/akco#bgkExtSrcDBpedia"/>
+        <rdfs:comment xml:lang="en">Another Knowledge graph not yet part of the given knowledge graph, in a related domain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Knowledge graph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkExtSrcQueryLogs -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcQueryLogs">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
+        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
+        <rdfs:comment xml:lang="en">Query logs represent the context of entities, generated by a user.</rdfs:comment>
+        <rdfs:label xml:lang="en">Query logs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkExtSrcTextCorpus -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcTextCorpus">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
+        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
+        <rdfs:comment xml:lang="en">A text corpus that contains information about the domain of a given knowledge graph.</rdfs:comment>
+        <rdfs:label xml:lang="en">Text corpus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkExtSrcWeb -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcWeb">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
+        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
+        <skos:narrower rdf:resource="https://purl.archive.org/akco#bgkExtSrcWikipedia"/>
+        <rdfs:comment xml:lang="en">The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation.</rdfs:comment>
+        <rdfs:label xml:lang="en">The Web</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkExtSrcWikipedia -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkExtSrcWikipedia">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
+        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcWeb"/>
+        <rdfs:comment xml:lang="en">Wikipedia is a free online encyclopedia that is written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. It provides structured (tables, annotations) and unstructured information about many domains.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wikipedia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkHumanExpertise -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkHumanExpertise">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#HumanExpertise"/>
+        <rdfs:comment xml:lang="en">Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for
+validation where additional contextual knowledge might be required. Human interaction is typically included to allow for semi-automatic cleaning in combination with various cleaning techniques.</rdfs:comment>
+        <rdfs:label xml:lang="en">extSrcDomaInExpertise</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkKGContextualGraph -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkKGContextualGraph">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#KnowledgeGraph"/>
+        <rdfs:comment xml:lang="en">Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge.
+A contextual graph can also be be beneficial to provide a context for clarifying the domain of an assertion during error detection. They are generated in various ways, for example, by selecting all assertions conforming to specific semantics, such as transitive properties, or constructing it as an undirected identity network (Raad, Beek, Harmelen, et al., 2018).</rdfs:comment>
+        <rdfs:label xml:lang="en">Contextual graph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkKGGraphStructure -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkKGGraphStructure">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#KnowledgeGraph"/>
+        <rdfs:comment xml:lang="en">Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp;amp; completeness) of the overall KG since it is typically used with data-driven measures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Graph structure</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.archive.org/akco#bgkKGValuesOfPV -->
+
+
+    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#bgkKGValuesOfPV">
+        <rdf:type rdf:resource="https://purl.archive.org/akco#KnowledgeGraph"/>
+        <rdfs:comment xml:lang="en">The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches.</rdfs:comment>
+        <rdfs:label xml:lang="en">Values of property-value assertions</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2389,156 +2534,12 @@ The AKCO already contains over 100 instances (named individuals) that represent 
     
 
 
-    <!-- https://purl.archive.org/akco#extSrcDBpedia -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcDBpedia">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:broader rdf:resource="https://purl.archive.org/akco#extSrcKnowledgeGraph"/>
-        <rdfs:comment xml:lang="en">DBpedia is the central knowledge graph of the Linked Open Data cloud. Its source is Wikipedia.</rdfs:comment>
-        <rdfs:label xml:lang="en">DBpedia</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#extSrcDomaInExpertise -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcDomaInExpertise">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#HumanExpertise"/>
-        <rdfs:comment xml:lang="en">Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for
-validation where additional contextual knowledge might be required. Human interaction is typically included to allow for semi-automatic cleaning in combination with various cleaning techniques.</rdfs:comment>
-        <rdfs:label xml:lang="en">extSrcDomaInExpertise</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://purl.archive.org/akco#extSrcExternalSources -->
 
 
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcExternalSources">
         <rdfs:comment xml:lang="en">External sources are any sources outside the KG. Typical background knowledge is websites, large language models, documents, other knowledge graphs, and databases. The success of using the sources for knowledge cleaning depends on the quality of the sources and the acquisition process. The latter includes the alignment of the assertion(s) with the external source and the correct interpretation of the received results.</rdfs:comment>
         <rdfs:label xml:lang="en">extSrcExternalSources</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
-        <rdfs:comment xml:lang="en">Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph.  The aspects can include an expected graph structure, like cardinality, syntax rules of the domain and modeling language, or semantic features of a property. Specifications are independent of the quality of the assertions. Typical formal specifications are ontologies, integrity constraints, and logic rules. Typical syntax specifications are the RDF specification , or Turtle specification .</rdfs:comment>
-        <rdfs:label xml:lang="en">Formal and syntax specifications</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#extSrcHornClauses -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcHornClauses">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
-        <rdfs:comment xml:lang="en">Horn clauses, obtain from rule mining, that rewrite a fact into a set of easier-to-spot facts.</rdfs:comment>
-        <rdfs:label xml:lang="en">Horn clauses</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#extSrcKnowledgeGraph -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcKnowledgeGraph">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
-        <skos:narrower rdf:resource="https://purl.archive.org/akco#extSrcDBpedia"/>
-        <rdfs:comment xml:lang="en">Another Knowledge graph not yet part of the given knowledge graph, in a related domain.</rdfs:comment>
-        <rdfs:label xml:lang="en">Knowledge graph</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#extSrcQueryLogs -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcQueryLogs">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
-        <rdfs:comment xml:lang="en">Query logs represent the context of entities, generated by a user.</rdfs:comment>
-        <rdfs:label xml:lang="en">Query logs</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#extSrcTextCorpus -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcTextCorpus">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
-        <rdfs:comment xml:lang="en">A text corpus that contains information about the domain of a given knowledge graph.</rdfs:comment>
-        <rdfs:label xml:lang="en">Text corpus</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#extSrcWeb -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcWeb">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:broader rdf:resource="https://purl.archive.org/akco#bgkExtSrcAny"/>
-        <skos:narrower rdf:resource="https://purl.archive.org/akco#extSrcWikipedia"/>
-        <rdfs:comment xml:lang="en">The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation.</rdfs:comment>
-        <rdfs:label xml:lang="en">The Web</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#extSrcWikipedia -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#extSrcWikipedia">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#ExternalSource"/>
-        <skos:broader rdf:resource="https://purl.archive.org/akco#extSrcWeb"/>
-        <rdfs:comment xml:lang="en">Wikipedia is a free online encyclopedia that is written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. It provides structured (tables, annotations) and unstructured information about many domains.</rdfs:comment>
-        <rdfs:label xml:lang="en">Wikipedia</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#kGContextualGraph -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#kGContextualGraph">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#KnowledgeGraph"/>
-        <rdfs:comment xml:lang="en">Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge.
-A contextual graph can also be be beneficial to provide a context for clarifying the domain of an assertion during error detection. They are generated in various ways, for example, by selecting all assertions conforming to specific semantics, such as transitive properties, or constructing it as an undirected identity network (Raad, Beek, Harmelen, et al., 2018).</rdfs:comment>
-        <rdfs:label xml:lang="en">Contextual graph</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#kGGraphStructure -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#kGGraphStructure">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#KnowledgeGraph"/>
-        <rdfs:comment xml:lang="en">Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp;amp; completeness) of the overall KG since it is typically used with data-driven measures.</rdfs:comment>
-        <rdfs:label xml:lang="en">Graph structure</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.archive.org/akco#kGValuesOfPV -->
-
-
-    <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#kGValuesOfPV">
-        <rdf:type rdf:resource="https://purl.archive.org/akco#KnowledgeGraph"/>
-        <rdfs:comment xml:lang="en">The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches.</rdfs:comment>
-        <rdfs:label xml:lang="en">Values of property-value assertions</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3687,7 +3688,7 @@ A contextual graph can also be be beneficial to provide a context for clarifying
 
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#tecCrowdsourcing-based">
         <rdf:type rdf:resource="https://purl.archive.org/akco#Technique"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcDomaInExpertise"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkHumanExpertise"/>
         <rdfs:comment xml:lang="en">Crowdsourcing-based techniques incorporate human interaction into the knowledge-cleaning process. A crowd can be engaged to detect and correct errors, leveraging either (1) domain experts or (2) anonymous contributors. Domain experts are capable of setting up and maintaining the cleaning process as well as handling complex, domain-specific issues. Anonymous crowds, on the other hand, excel at completing simpler, more generalized tasks that typically involve common knowledge and do not require specialized expertise. The technique allows to target all types of assertions, i.e., instance-, property-value -, and equality assertions.</rdfs:comment>
         <rdfs:label xml:lang="en">tecCrowdsourcing-based</rdfs:label>
     </owl:NamedIndividual>
@@ -3699,8 +3700,8 @@ A contextual graph can also be be beneficial to provide a context for clarifying
 
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based">
         <rdf:type rdf:resource="https://purl.archive.org/akco#Technique"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkKGGraphStructure"/>
         <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcExternalSources"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#kGGraphStructure"/>
         <rdfs:comment xml:lang="en">Embedding- and neural network-based techniques use supervised machine-learning, involving a training phase and an inference phase. In the training phase, a curated dataset is used to train a model for a specific cleaning task, i.e., error detection or correction of a specific type of error. During inference, the trained model is applied to unseen data to perform the trained task. Neural networks that process knowledge graphs embed the graph into a lower-dimensional vector space, also known as knowledge graph embeddings. This embedding process is based on selected features—for example, a node’s incoming and outgoing relationships as in TransE. The technique allows to target any type of assertion, i.e., instance -, property-value -, and equality assertion.</rdfs:comment>
         <rdfs:label xml:lang="en">tecEmbeddingAndNeuralNetwork-based</rdfs:label>
     </owl:NamedIndividual>
@@ -3712,12 +3713,12 @@ A contextual graph can also be be beneficial to provide a context for clarifying
 
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#tecHybrid">
         <rdf:type rdf:resource="https://purl.archive.org/akco#Technique"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcDomaInExpertise"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkHumanExpertise"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkKGContextualGraph"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkKGGraphStructure"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkKGValuesOfPV"/>
         <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcExternalSources"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#kGContextualGraph"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#kGGraphStructure"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#kGValuesOfPV"/>
         <rdfs:comment xml:lang="en">Hybrid techniques combine multiple other methods to detect and correct errors in any type of assertion— instance, property-value, or equality. They merge outputs from independent processes into a single evaluation, enhancing accuracy and increasing complexity due to the need to maintain and integrate multiple techniques.</rdfs:comment>
         <rdfs:label xml:lang="en">tecHybrid</rdfs:label>
     </owl:NamedIndividual>
@@ -3729,7 +3730,7 @@ A contextual graph can also be be beneficial to provide a context for clarifying
 
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#tecIntegrityConstraint-based">
         <rdf:type rdf:resource="https://purl.archive.org/akco#Technique"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"/>
         <rdfs:comment xml:lang="en">Integrity constraint-based techniques use constraints to verify the correctness of assertions, i.e., detect errors. Integrity constraints can be provided, for example, via SHACL shapes, or generated from the ontology. They define a desired graph structure and the detection process verifies that the assertions conform to this structure. This technique allows to target instance - and property-value assertions.</rdfs:comment>
         <rdfs:label xml:lang="en">tecIntegrityConstraint-based</rdfs:label>
     </owl:NamedIndividual>
@@ -3742,7 +3743,7 @@ A contextual graph can also be be beneficial to provide a context for clarifying
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#tecOntology-based">
         <rdf:type rdf:resource="https://purl.archive.org/akco#Technique"/>
         <skos:related rdf:resource="https://purl.archive.org/akco#tecIntegrityConstraint-based"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"/>
         <rdfs:label xml:lang="en">tecOntology-based</rdfs:label>
         <owl:backwardCompatibleWith xml:lang="en">Ontology-based techniques use an ontology that describes assertions in order to detect and correct errors. Error detection typically involves reasoning over the ontology and the associated assertions. To identify inconsistencies, the ontology must include &amp;amp;apos;negative inclusions&amp;amp;apos; (disjoint axioms) that specify which entities or classes cannot co-occur—for example, the classes Human and Boat are usually mutually exclusive, so no individual should be assigned both types. When correcting errors in equality assertions, new or more appropriate relations may be introduced into the ontology if two instances are not semantically identical. This technique allows to target any type of assertion, i.e., instance -, property-value -, and equality assertion.</owl:backwardCompatibleWith>
     </owl:NamedIndividual>
@@ -3755,8 +3756,8 @@ A contextual graph can also be be beneficial to provide a context for clarifying
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#tecPath-based">
         <rdf:type rdf:resource="https://purl.archive.org/akco#Technique"/>
         <skos:related rdf:resource="https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#kGContextualGraph"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#kGGraphStructure"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkKGContextualGraph"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkKGGraphStructure"/>
         <rdfs:comment xml:lang="en">Path-based techniques use a knowledge graph&amp;amp;apos;s structure or semantic features to detect errors, focusing on both property-value and equality assertions.
 
 To validate property-value assertions, these techniques identify alternative paths between the relation’s two nodes, considering measures such as path length and path count. The paths can also be constrained by semantic attributes or direction.
@@ -3773,7 +3774,7 @@ To validate equality assertions, path-based techniques construct contextual subg
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#tecRuleMining-based">
         <rdf:type rdf:resource="https://purl.archive.org/akco#Technique"/>
         <skos:related rdf:resource="https://purl.archive.org/akco#tecOntology-based"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#kGGraphStructure"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkKGGraphStructure"/>
         <rdfs:comment xml:lang="en">Rule mining-based techniques can detect and correct errors in both property-value and instance assertions by identifying recurring patterns in the knowledge graph’s structure. These patterns serve as the contextual ‘rules’ for detecting or correcting errors. For example, it may be typical for a Human entity to have a social security number and a date of birth; these attributes can then be used as a rule for a common graph structure around humans. In this case, counterexamples are humans that do not conform to this common structure. These examples could indicate errors or exceptions to the rule.</rdfs:comment>
         <rdfs:label xml:lang="en">tecRuleMining-based</rdfs:label>
     </owl:NamedIndividual>
@@ -3796,7 +3797,7 @@ To validate equality assertions, path-based techniques construct contextual subg
 
     <owl:NamedIndividual rdf:about="https://purl.archive.org/akco#tecSyntactic">
         <rdf:type rdf:resource="https://purl.archive.org/akco#Technique"/>
-        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"/>
+        <usesBackgroundKnowledge rdf:resource="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"/>
         <rdfs:comment xml:lang="en">Syntactic techniques take advantage of syntax specifications to parse knowledge graph serializations. Serializations are &amp;amp;quot;downloaded&amp;amp;quot; versions of a knowledge graph, i.e., a Resource Description Framework graph. Typical formats are Turtle or OWL/RDF. The syntax specifications define expected symbols and their arrangement. A parser loads a specification and then parses an input, for example, a Turtle file. It reports violations, i.e., detects syntactic errors; sometimes, a correction is attempted by updating a specific syntax part.</rdfs:comment>
         <rdfs:label xml:lang="en">tecSyntactic</rdfs:label>
     </owl:NamedIndividual>

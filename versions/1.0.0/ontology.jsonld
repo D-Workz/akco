@@ -367,8 +367,8 @@
   "@id" : "https://purl.archive.org/akco#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
-    "@type" : "http://purl.org/dc/terms/URI",
-    "@value" : "Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco"
+    "@language" : "en",
+    "@value" : "D. Sommer. U. Serles, Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco"
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "https://orcid.org/0009-0009-8524-9182"
@@ -403,6 +403,10 @@
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@type" : "http://purl.org/dc/terms/URI",
     "@value" : "https://purl.archive.org/akco"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "https://d-workz.github.io/akco/versions/1.0.0/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -816,7 +820,7 @@
     "@id" : "https://purl.archive.org/akco#errPVSemSemWrong"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcWikipedia"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWikipedia"
   } ],
   "https://purl.archive.org/akco#usesTechnique" : [ {
     "@id" : "https://purl.archive.org/akco#tecHybrid"
@@ -933,7 +937,7 @@
     "@id" : "https://purl.archive.org/akco#errPVSemSemWrong"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcWeb"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWeb"
   } ],
   "https://purl.archive.org/akco#usesTechnique" : [ {
     "@id" : "https://purl.archive.org/akco#tecVerbalization-based"
@@ -992,7 +996,7 @@
     "@id" : "https://purl.archive.org/akco#errISemSemWrong"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcWikipedia"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWikipedia"
   } ],
   "https://purl.archive.org/akco#usesTechnique" : [ {
     "@id" : "https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based"
@@ -1111,11 +1115,11 @@
     "@id" : "https://purl.archive.org/akco#errPVSemSemWrong"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcHornClauses"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcHornClauses"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcKnowledgeGraph"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcWeb"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWeb"
   } ],
   "https://purl.archive.org/akco#usesTechnique" : [ {
     "@id" : "https://purl.archive.org/akco#tecHybrid"
@@ -1152,11 +1156,11 @@
     "@id" : "https://purl.archive.org/akco#errTailVertical"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcKnowledgeGraph"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcQueryLogs"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcQueryLogs"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcWeb"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWeb"
   } ],
   "https://purl.archive.org/akco#usesTechnique" : [ {
     "@id" : "https://purl.archive.org/akco#tecHybrid"
@@ -1293,9 +1297,9 @@
     "@id" : "https://purl.archive.org/akco#errPVSemSemWrong"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcTextCorpus"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcTextCorpus"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcWikipedia"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWikipedia"
   } ],
   "https://purl.archive.org/akco#usesTechnique" : [ {
     "@id" : "https://purl.archive.org/akco#tecVerbalization-based"
@@ -2493,7 +2497,7 @@
     "@id" : "https://purl.archive.org/akco#errPVSemSemWrong"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcDBpedia"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcDBpedia"
   } ],
   "https://purl.archive.org/akco#usesTechnique" : [ {
     "@id" : "https://purl.archive.org/akco#tecHybrid"
@@ -2885,15 +2889,213 @@
     "@value" : "Any external source"
   } ],
   "http://www.w3.org/2004/02/skos/core#narrower" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcKnowledgeGraph"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcQueryLogs"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcQueryLogs"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcTextCorpus"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcTextCorpus"
   }, {
-    "@id" : "https://purl.archive.org/akco#extSrcWeb"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWeb"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkExtSrcDBpedia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#ExternalSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "DBpedia is the central knowledge graph of the Linked Open Data cloud. Its source is Wikipedia."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DBpedia"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#ExternalSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph.  The aspects can include an expected graph structure, like cardinality, syntax rules of the domain and modeling language, or semantic features of a property. Specifications are independent of the quality of the assertions. Typical formal specifications are ontologies, integrity constraints, and logic rules. Typical syntax specifications are the RDF specification , or Turtle specification ."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Formal and syntax specifications"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkExtSrcHornClauses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#ExternalSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Horn clauses, obtain from rule mining, that rewrite a fact into a set of easier-to-spot facts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Horn clauses"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#ExternalSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Another Knowledge graph not yet part of the given knowledge graph, in a related domain."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Knowledge graph"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcDBpedia"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkExtSrcQueryLogs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#ExternalSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Query logs represent the context of entities, generated by a user."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Query logs"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkExtSrcTextCorpus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#ExternalSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A text corpus that contains information about the domain of a given knowledge graph."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Text corpus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkExtSrcWeb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#ExternalSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "The Web"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWikipedia"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkExtSrcWikipedia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#ExternalSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Wikipedia is a free online encyclopedia that is written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. It provides structured (tables, annotations) and unstructured information about many domains."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wikipedia"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcWeb"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkHumanExpertise",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#HumanExpertise"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for\nvalidation where additional contextual knowledge might be required. Human interaction is typically included to allow for semi-automatic cleaning in combination with various cleaning techniques."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "extSrcDomaInExpertise"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkKGContextualGraph",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#KnowledgeGraph"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge.\nA contextual graph can also be be beneficial to provide a context for clarifying the domain of an assertion during error detection. They are generated in various ways, for example, by selecting all assertions conforming to specific semantics, such as transitive properties, or constructing it as an undirected identity network (Raad, Beek, Harmelen, et al., 2018)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contextual graph"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkKGGraphStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#KnowledgeGraph"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp; completeness) of the overall KG since it is typically used with data-driven measures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Graph structure"
+  } ]
+}, {
+  "@id" : "https://purl.archive.org/akco#bgkKGValuesOfPV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://purl.archive.org/akco#KnowledgeGraph"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Values of property-value assertions"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#dimCorrection",
@@ -3415,37 +3617,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://purl.archive.org/akco#extSrcDBpedia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#ExternalSource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "DBpedia is the central knowledge graph of the Linked Open Data cloud. Its source is Wikipedia."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "DBpedia"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcKnowledgeGraph"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#extSrcDomaInExpertise",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#HumanExpertise"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for\nvalidation where additional contextual knowledge might be required. Human interaction is typically included to allow for semi-automatic cleaning in combination with various cleaning techniques."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "extSrcDomaInExpertise"
-  } ]
-}, {
   "@id" : "https://purl.archive.org/akco#extSrcExternalSources",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3455,131 +3626,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "extSrcExternalSources"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#ExternalSource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph.  The aspects can include an expected graph structure, like cardinality, syntax rules of the domain and modeling language, or semantic features of a property. Specifications are independent of the quality of the assertions. Typical formal specifications are ontologies, integrity constraints, and logic rules. Typical syntax specifications are the RDF specification , or Turtle specification ."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Formal and syntax specifications"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#extSrcHornClauses",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#ExternalSource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Horn clauses, obtain from rule mining, that rewrite a fact into a set of easier-to-spot facts."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Horn clauses"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#extSrcKnowledgeGraph",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#ExternalSource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Another Knowledge graph not yet part of the given knowledge graph, in a related domain."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Knowledge graph"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcDBpedia"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#extSrcQueryLogs",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#ExternalSource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Query logs represent the context of entities, generated by a user."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Query logs"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#extSrcTextCorpus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#ExternalSource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A text corpus that contains information about the domain of a given knowledge graph."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Text corpus"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#extSrcWeb",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#ExternalSource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "The Web"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://purl.archive.org/akco#bgkExtSrcAny"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcWikipedia"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#extSrcWikipedia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#ExternalSource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Wikipedia is a free online encyclopedia that is written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. It provides structured (tables, annotations) and unstructured information about many domains."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Wikipedia"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#broader" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcWeb"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#hasDimension",
@@ -3635,48 +3681,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://purl.org/dc/terms/BibliographicResource"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#kGContextualGraph",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#KnowledgeGraph"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge.\nA contextual graph can also be be beneficial to provide a context for clarifying the domain of an assertion during error detection. They are generated in various ways, for example, by selecting all assertions conforming to specific semantics, such as transitive properties, or constructing it as an undirected identity network (Raad, Beek, Harmelen, et al., 2018)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Contextual graph"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#kGGraphStructure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#KnowledgeGraph"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp; completeness) of the overall KG since it is typically used with data-driven measures."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Graph structure"
-  } ]
-}, {
-  "@id" : "https://purl.archive.org/akco#kGValuesOfPV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://purl.archive.org/akco#KnowledgeGraph"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Values of property-value assertions"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#publADianReFrfoDLKB",
@@ -5831,7 +5835,7 @@
     "@value" : "tecCrowdsourcing-based"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcDomaInExpertise"
+    "@id" : "https://purl.archive.org/akco#bgkHumanExpertise"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based",
@@ -5848,9 +5852,9 @@
     "@value" : "tecEmbeddingAndNeuralNetwork-based"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcExternalSources"
+    "@id" : "https://purl.archive.org/akco#bgkKGGraphStructure"
   }, {
-    "@id" : "https://purl.archive.org/akco#kGGraphStructure"
+    "@id" : "https://purl.archive.org/akco#extSrcExternalSources"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#tecHybrid",
@@ -5867,17 +5871,17 @@
     "@value" : "tecHybrid"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcDomaInExpertise"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"
+  }, {
+    "@id" : "https://purl.archive.org/akco#bgkHumanExpertise"
+  }, {
+    "@id" : "https://purl.archive.org/akco#bgkKGContextualGraph"
+  }, {
+    "@id" : "https://purl.archive.org/akco#bgkKGGraphStructure"
+  }, {
+    "@id" : "https://purl.archive.org/akco#bgkKGValuesOfPV"
   }, {
     "@id" : "https://purl.archive.org/akco#extSrcExternalSources"
-  }, {
-    "@id" : "https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"
-  }, {
-    "@id" : "https://purl.archive.org/akco#kGContextualGraph"
-  }, {
-    "@id" : "https://purl.archive.org/akco#kGGraphStructure"
-  }, {
-    "@id" : "https://purl.archive.org/akco#kGValuesOfPV"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#tecIntegrityConstraint-based",
@@ -5894,7 +5898,7 @@
     "@value" : "tecIntegrityConstraint-based"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#tecOntology-based",
@@ -5914,7 +5918,7 @@
     "@id" : "https://purl.archive.org/akco#tecIntegrityConstraint-based"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#tecPath-based",
@@ -5934,9 +5938,9 @@
     "@id" : "https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#kGContextualGraph"
+    "@id" : "https://purl.archive.org/akco#bgkKGContextualGraph"
   }, {
-    "@id" : "https://purl.archive.org/akco#kGGraphStructure"
+    "@id" : "https://purl.archive.org/akco#bgkKGGraphStructure"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#tecRuleMining-based",
@@ -5956,7 +5960,7 @@
     "@id" : "https://purl.archive.org/akco#tecOntology-based"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#kGGraphStructure"
+    "@id" : "https://purl.archive.org/akco#bgkKGGraphStructure"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#tecStatistical",
@@ -5987,7 +5991,7 @@
     "@value" : "tecSyntactic"
   } ],
   "https://purl.archive.org/akco#usesBackgroundKnowledge" : [ {
-    "@id" : "https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications"
+    "@id" : "https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications"
   } ]
 }, {
   "@id" : "https://purl.archive.org/akco#tecVerbalization-based",

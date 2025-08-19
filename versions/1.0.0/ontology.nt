@@ -1,5 +1,5 @@
 <https://purl.archive.org/akco#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://purl.archive.org/akco#> <http://purl.org/dc/terms/bibliographicCitation> "Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco"^^<http://purl.org/dc/terms/URI> .
+<https://purl.archive.org/akco#> <http://purl.org/dc/terms/bibliographicCitation> "D. Sommer. U. Serles, Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco"@en .
 <https://purl.archive.org/akco#> <http://purl.org/dc/terms/contributor> "https://orcid.org/0009-0009-8524-9182" .
 <https://purl.archive.org/akco#> <http://purl.org/dc/terms/created> "13.08.2025"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://purl.archive.org/akco#> <http://purl.org/dc/terms/creator> "https://orcid.org/0009-0009-8524-9182" .
@@ -9,6 +9,7 @@
 <https://purl.archive.org/akco#> <http://purl.org/dc/terms/title> "Anatomy of Knowledge Cleaning Ontology (AKCO)"@en .
 <https://purl.archive.org/akco#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "akco"@en .
 <https://purl.archive.org/akco#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://purl.archive.org/akco"^^<http://purl.org/dc/terms/URI> .
+<https://purl.archive.org/akco#> <http://www.w3.org/2002/07/owl#priorVersion> "https://d-workz.github.io/akco/versions/1.0.0/"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://purl.archive.org/akco#> <http://www.w3.org/2002/07/owl#versionIRI> "https://d-workz.github.io/akco/versions/1.0.0/"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://purl.archive.org/akco#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"^^<http://www.w3.org/2001/XMLSchema#date> .
 # 
@@ -473,7 +474,7 @@
 <https://purl.archive.org/akco#appCoCKG> <https://purl.archive.org/akco#hasDimension> <https://purl.archive.org/akco#dimInternal> .
 <https://purl.archive.org/akco#appCoCKG> <https://purl.archive.org/akco#isPublished> <https://purl.archive.org/akco#publCoCKG> .
 <https://purl.archive.org/akco#appCoCKG> <https://purl.archive.org/akco#targetedError> <https://purl.archive.org/akco#errPVSemSemWrong> .
-<https://purl.archive.org/akco#appCoCKG> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcWikipedia> .
+<https://purl.archive.org/akco#appCoCKG> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcWikipedia> .
 <https://purl.archive.org/akco#appCoCKG> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecHybrid> .
 <https://purl.archive.org/akco#appCoCKG> <http://www.w3.org/2000/01/rdf-schema#label> "appCoCKG"@en .
 # 
@@ -523,7 +524,7 @@
 <https://purl.archive.org/akco#appDeFacto> <https://purl.archive.org/akco#hasDimension> <https://purl.archive.org/akco#dimKnowledge-driven> .
 <https://purl.archive.org/akco#appDeFacto> <https://purl.archive.org/akco#isPublished> <https://purl.archive.org/akco#publDeFacto> .
 <https://purl.archive.org/akco#appDeFacto> <https://purl.archive.org/akco#targetedError> <https://purl.archive.org/akco#errPVSemSemWrong> .
-<https://purl.archive.org/akco#appDeFacto> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcWeb> .
+<https://purl.archive.org/akco#appDeFacto> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcWeb> .
 <https://purl.archive.org/akco#appDeFacto> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecVerbalization-based> .
 <https://purl.archive.org/akco#appDeFacto> <http://www.w3.org/2000/01/rdf-schema#label> "appDeFacto"@en .
 # 
@@ -548,7 +549,7 @@
 <https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn> <https://purl.archive.org/akco#hasDimension> <https://purl.archive.org/akco#dimInternal> .
 <https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn> <https://purl.archive.org/akco#isPublished> <https://purl.archive.org/akco#publDeanCoTyErinOpKnGrUsSeReofEn> .
 <https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn> <https://purl.archive.org/akco#targetedError> <https://purl.archive.org/akco#errISemSemWrong> .
-<https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcWikipedia> .
+<https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcWikipedia> .
 <https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> .
 <https://purl.archive.org/akco#appDeanCoTyErinOpKnGrUsSeReofEn> <http://www.w3.org/2000/01/rdf-schema#label> "appDeanCoTyErinOpKnGrUsSeReofEn"@en .
 # 
@@ -599,9 +600,9 @@
 <https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#hasDimension> <https://purl.archive.org/akco#dimKnowledge-driven> .
 <https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#isPublished> <https://purl.archive.org/akco#publExfakt> .
 <https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#targetedError> <https://purl.archive.org/akco#errPVSemSemWrong> .
-<https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcHornClauses> .
-<https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcKnowledgeGraph> .
-<https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcWeb> .
+<https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcHornClauses> .
+<https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> .
+<https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcWeb> .
 <https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecHybrid> .
 <https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecRuleMining-based> .
 <https://purl.archive.org/akco#appExfakt> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecVerbalization-based> .
@@ -617,9 +618,9 @@
 <https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#isPublished> <https://purl.archive.org/akco#publFACTY> .
 <https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#targetedError> <https://purl.archive.org/akco#errPVSemSemWrong> .
 <https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#targetedError> <https://purl.archive.org/akco#errTailVertical> .
-<https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcKnowledgeGraph> .
-<https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcQueryLogs> .
-<https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcWeb> .
+<https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> .
+<https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcQueryLogs> .
+<https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcWeb> .
 <https://purl.archive.org/akco#appFACTY> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecHybrid> .
 <https://purl.archive.org/akco#appFACTY> <http://www.w3.org/2000/01/rdf-schema#label> "appFACTY"@en .
 # 
@@ -677,8 +678,8 @@
 <https://purl.archive.org/akco#appFactCheck> <https://purl.archive.org/akco#hasDimension> <https://purl.archive.org/akco#dimKnowledge-driven> .
 <https://purl.archive.org/akco#appFactCheck> <https://purl.archive.org/akco#isPublished> <https://purl.archive.org/akco#publFactCheck> .
 <https://purl.archive.org/akco#appFactCheck> <https://purl.archive.org/akco#targetedError> <https://purl.archive.org/akco#errPVSemSemWrong> .
-<https://purl.archive.org/akco#appFactCheck> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcTextCorpus> .
-<https://purl.archive.org/akco#appFactCheck> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcWikipedia> .
+<https://purl.archive.org/akco#appFactCheck> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcTextCorpus> .
+<https://purl.archive.org/akco#appFactCheck> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcWikipedia> .
 <https://purl.archive.org/akco#appFactCheck> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecVerbalization-based> .
 <https://purl.archive.org/akco#appFactCheck> <http://www.w3.org/2000/01/rdf-schema#label> "appFactCheck"@en .
 # 
@@ -1191,7 +1192,7 @@
 <https://purl.archive.org/akco#appTISCO> <https://purl.archive.org/akco#hasDimension> <https://purl.archive.org/akco#dimKnowledge-driven> .
 <https://purl.archive.org/akco#appTISCO> <https://purl.archive.org/akco#isPublished> <https://purl.archive.org/akco#publTISCO> .
 <https://purl.archive.org/akco#appTISCO> <https://purl.archive.org/akco#targetedError> <https://purl.archive.org/akco#errPVSemSemWrong> .
-<https://purl.archive.org/akco#appTISCO> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcDBpedia> .
+<https://purl.archive.org/akco#appTISCO> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcDBpedia> .
 <https://purl.archive.org/akco#appTISCO> <https://purl.archive.org/akco#usesTechnique> <https://purl.archive.org/akco#tecHybrid> .
 <https://purl.archive.org/akco#appTISCO> <http://www.w3.org/2000/01/rdf-schema#label> "appTISCO"@en .
 # 
@@ -1358,13 +1359,95 @@
 # https://purl.archive.org/akco#bgkExtSrcAny
 <https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> .
-<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#extSrcKnowledgeGraph> .
-<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#extSrcQueryLogs> .
-<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#extSrcTextCorpus> .
-<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#extSrcWeb> .
+<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> .
+<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> .
+<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#bgkExtSrcQueryLogs> .
+<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#bgkExtSrcTextCorpus> .
+<https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#bgkExtSrcWeb> .
 <https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2000/01/rdf-schema#comment> "An external source is any source outside of a given knowledge graph. This individual represents any of those sources."@en .
 <https://purl.archive.org/akco#bgkExtSrcAny> <http://www.w3.org/2000/01/rdf-schema#label> "Any external source"@en .
+# 
+# https://purl.archive.org/akco#bgkExtSrcDBpedia
+<https://purl.archive.org/akco#bgkExtSrcDBpedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkExtSrcDBpedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
+<https://purl.archive.org/akco#bgkExtSrcDBpedia> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> .
+<https://purl.archive.org/akco#bgkExtSrcDBpedia> <http://www.w3.org/2000/01/rdf-schema#comment> "DBpedia is the central knowledge graph of the Linked Open Data cloud. Its source is Wikipedia."@en .
+<https://purl.archive.org/akco#bgkExtSrcDBpedia> <http://www.w3.org/2000/01/rdf-schema#label> "DBpedia"@en .
+# 
+# https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications
+<https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
+<https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
+<https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> <http://www.w3.org/2000/01/rdf-schema#comment> "Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph.  The aspects can include an expected graph structure, like cardinality, syntax rules of the domain and modeling language, or semantic features of a property. Specifications are independent of the quality of the assertions. Typical formal specifications are ontologies, integrity constraints, and logic rules. Typical syntax specifications are the RDF specification , or Turtle specification ."@en .
+<https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> <http://www.w3.org/2000/01/rdf-schema#label> "Formal and syntax specifications"@en .
+# 
+# https://purl.archive.org/akco#bgkExtSrcHornClauses
+<https://purl.archive.org/akco#bgkExtSrcHornClauses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkExtSrcHornClauses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
+<https://purl.archive.org/akco#bgkExtSrcHornClauses> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
+<https://purl.archive.org/akco#bgkExtSrcHornClauses> <http://www.w3.org/2000/01/rdf-schema#comment> "Horn clauses, obtain from rule mining, that rewrite a fact into a set of easier-to-spot facts."@en .
+<https://purl.archive.org/akco#bgkExtSrcHornClauses> <http://www.w3.org/2000/01/rdf-schema#label> "Horn clauses"@en .
+# 
+# https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph
+<https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
+<https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
+<https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#bgkExtSrcDBpedia> .
+<https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Another Knowledge graph not yet part of the given knowledge graph, in a related domain."@en .
+<https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge graph"@en .
+# 
+# https://purl.archive.org/akco#bgkExtSrcQueryLogs
+<https://purl.archive.org/akco#bgkExtSrcQueryLogs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkExtSrcQueryLogs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
+<https://purl.archive.org/akco#bgkExtSrcQueryLogs> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
+<https://purl.archive.org/akco#bgkExtSrcQueryLogs> <http://www.w3.org/2000/01/rdf-schema#comment> "Query logs represent the context of entities, generated by a user."@en .
+<https://purl.archive.org/akco#bgkExtSrcQueryLogs> <http://www.w3.org/2000/01/rdf-schema#label> "Query logs"@en .
+# 
+# https://purl.archive.org/akco#bgkExtSrcTextCorpus
+<https://purl.archive.org/akco#bgkExtSrcTextCorpus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkExtSrcTextCorpus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
+<https://purl.archive.org/akco#bgkExtSrcTextCorpus> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
+<https://purl.archive.org/akco#bgkExtSrcTextCorpus> <http://www.w3.org/2000/01/rdf-schema#comment> "A text corpus that contains information about the domain of a given knowledge graph."@en .
+<https://purl.archive.org/akco#bgkExtSrcTextCorpus> <http://www.w3.org/2000/01/rdf-schema#label> "Text corpus"@en .
+# 
+# https://purl.archive.org/akco#bgkExtSrcWeb
+<https://purl.archive.org/akco#bgkExtSrcWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkExtSrcWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
+<https://purl.archive.org/akco#bgkExtSrcWeb> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
+<https://purl.archive.org/akco#bgkExtSrcWeb> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#bgkExtSrcWikipedia> .
+<https://purl.archive.org/akco#bgkExtSrcWeb> <http://www.w3.org/2000/01/rdf-schema#comment> "The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation."@en .
+<https://purl.archive.org/akco#bgkExtSrcWeb> <http://www.w3.org/2000/01/rdf-schema#label> "The Web"@en .
+# 
+# https://purl.archive.org/akco#bgkExtSrcWikipedia
+<https://purl.archive.org/akco#bgkExtSrcWikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkExtSrcWikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
+<https://purl.archive.org/akco#bgkExtSrcWikipedia> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcWeb> .
+<https://purl.archive.org/akco#bgkExtSrcWikipedia> <http://www.w3.org/2000/01/rdf-schema#comment> "Wikipedia is a free online encyclopedia that is written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. It provides structured (tables, annotations) and unstructured information about many domains."@en .
+<https://purl.archive.org/akco#bgkExtSrcWikipedia> <http://www.w3.org/2000/01/rdf-schema#label> "Wikipedia"@en .
+# 
+# https://purl.archive.org/akco#bgkHumanExpertise
+<https://purl.archive.org/akco#bgkHumanExpertise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkHumanExpertise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#HumanExpertise> .
+<https://purl.archive.org/akco#bgkHumanExpertise> <http://www.w3.org/2000/01/rdf-schema#comment> "Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for\nvalidation where additional contextual knowledge might be required. Human interaction is typically included to allow for semi-automatic cleaning in combination with various cleaning techniques."@en .
+<https://purl.archive.org/akco#bgkHumanExpertise> <http://www.w3.org/2000/01/rdf-schema#label> "extSrcDomaInExpertise"@en .
+# 
+# https://purl.archive.org/akco#bgkKGContextualGraph
+<https://purl.archive.org/akco#bgkKGContextualGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkKGContextualGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#KnowledgeGraph> .
+<https://purl.archive.org/akco#bgkKGContextualGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge.\nA contextual graph can also be be beneficial to provide a context for clarifying the domain of an assertion during error detection. They are generated in various ways, for example, by selecting all assertions conforming to specific semantics, such as transitive properties, or constructing it as an undirected identity network (Raad, Beek, Harmelen, et al., 2018)."@en .
+<https://purl.archive.org/akco#bgkKGContextualGraph> <http://www.w3.org/2000/01/rdf-schema#label> "Contextual graph"@en .
+# 
+# https://purl.archive.org/akco#bgkKGGraphStructure
+<https://purl.archive.org/akco#bgkKGGraphStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkKGGraphStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#KnowledgeGraph> .
+<https://purl.archive.org/akco#bgkKGGraphStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp; completeness) of the overall KG since it is typically used with data-driven measures."@en .
+<https://purl.archive.org/akco#bgkKGGraphStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Graph structure"@en .
+# 
+# https://purl.archive.org/akco#bgkKGValuesOfPV
+<https://purl.archive.org/akco#bgkKGValuesOfPV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://purl.archive.org/akco#bgkKGValuesOfPV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#KnowledgeGraph> .
+<https://purl.archive.org/akco#bgkKGValuesOfPV> <http://www.w3.org/2000/01/rdf-schema#comment> "The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches."@en .
+<https://purl.archive.org/akco#bgkKGValuesOfPV> <http://www.w3.org/2000/01/rdf-schema#label> "Values of property-value assertions"@en .
 # 
 # https://purl.archive.org/akco#dimCorrection
 <https://purl.archive.org/akco#dimCorrection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1540,92 +1623,10 @@
 <https://purl.archive.org/akco#errTailVertical> <http://www.w3.org/2000/01/rdf-schema#comment> "A tail vertical is a domain that is not well covered by a knowledge graph. Entities in these domains are typically sparse."@en .
 <https://purl.archive.org/akco#errTailVertical> <http://www.w3.org/2000/01/rdf-schema#label> "errTailVertical"@en .
 # 
-# https://purl.archive.org/akco#extSrcDBpedia
-<https://purl.archive.org/akco#extSrcDBpedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcDBpedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#extSrcDBpedia> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#extSrcKnowledgeGraph> .
-<https://purl.archive.org/akco#extSrcDBpedia> <http://www.w3.org/2000/01/rdf-schema#comment> "DBpedia is the central knowledge graph of the Linked Open Data cloud. Its source is Wikipedia."@en .
-<https://purl.archive.org/akco#extSrcDBpedia> <http://www.w3.org/2000/01/rdf-schema#label> "DBpedia"@en .
-# 
-# https://purl.archive.org/akco#extSrcDomaInExpertise
-<https://purl.archive.org/akco#extSrcDomaInExpertise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcDomaInExpertise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#HumanExpertise> .
-<https://purl.archive.org/akco#extSrcDomaInExpertise> <http://www.w3.org/2000/01/rdf-schema#comment> "Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for\nvalidation where additional contextual knowledge might be required. Human interaction is typically included to allow for semi-automatic cleaning in combination with various cleaning techniques."@en .
-<https://purl.archive.org/akco#extSrcDomaInExpertise> <http://www.w3.org/2000/01/rdf-schema#label> "extSrcDomaInExpertise"@en .
-# 
 # https://purl.archive.org/akco#extSrcExternalSources
 <https://purl.archive.org/akco#extSrcExternalSources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#extSrcExternalSources> <http://www.w3.org/2000/01/rdf-schema#comment> "External sources are any sources outside the KG. Typical background knowledge is websites, large language models, documents, other knowledge graphs, and databases. The success of using the sources for knowledge cleaning depends on the quality of the sources and the acquisition process. The latter includes the alignment of the assertion(s) with the external source and the correct interpretation of the received results."@en .
 <https://purl.archive.org/akco#extSrcExternalSources> <http://www.w3.org/2000/01/rdf-schema#label> "extSrcExternalSources"@en .
-# 
-# https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications
-<https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
-<https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> <http://www.w3.org/2000/01/rdf-schema#comment> "Formal - and syntax specifications are a particular type of external background knowledge.  Both are designed to explicitly define desired aspects of a knowledge graph.  The aspects can include an expected graph structure, like cardinality, syntax rules of the domain and modeling language, or semantic features of a property. Specifications are independent of the quality of the assertions. Typical formal specifications are ontologies, integrity constraints, and logic rules. Typical syntax specifications are the RDF specification , or Turtle specification ."@en .
-<https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> <http://www.w3.org/2000/01/rdf-schema#label> "Formal and syntax specifications"@en .
-# 
-# https://purl.archive.org/akco#extSrcHornClauses
-<https://purl.archive.org/akco#extSrcHornClauses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcHornClauses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#extSrcHornClauses> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
-<https://purl.archive.org/akco#extSrcHornClauses> <http://www.w3.org/2000/01/rdf-schema#comment> "Horn clauses, obtain from rule mining, that rewrite a fact into a set of easier-to-spot facts."@en .
-<https://purl.archive.org/akco#extSrcHornClauses> <http://www.w3.org/2000/01/rdf-schema#label> "Horn clauses"@en .
-# 
-# https://purl.archive.org/akco#extSrcKnowledgeGraph
-<https://purl.archive.org/akco#extSrcKnowledgeGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcKnowledgeGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#extSrcKnowledgeGraph> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
-<https://purl.archive.org/akco#extSrcKnowledgeGraph> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#extSrcDBpedia> .
-<https://purl.archive.org/akco#extSrcKnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Another Knowledge graph not yet part of the given knowledge graph, in a related domain."@en .
-<https://purl.archive.org/akco#extSrcKnowledgeGraph> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge graph"@en .
-# 
-# https://purl.archive.org/akco#extSrcQueryLogs
-<https://purl.archive.org/akco#extSrcQueryLogs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcQueryLogs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#extSrcQueryLogs> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
-<https://purl.archive.org/akco#extSrcQueryLogs> <http://www.w3.org/2000/01/rdf-schema#comment> "Query logs represent the context of entities, generated by a user."@en .
-<https://purl.archive.org/akco#extSrcQueryLogs> <http://www.w3.org/2000/01/rdf-schema#label> "Query logs"@en .
-# 
-# https://purl.archive.org/akco#extSrcTextCorpus
-<https://purl.archive.org/akco#extSrcTextCorpus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcTextCorpus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#extSrcTextCorpus> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
-<https://purl.archive.org/akco#extSrcTextCorpus> <http://www.w3.org/2000/01/rdf-schema#comment> "A text corpus that contains information about the domain of a given knowledge graph."@en .
-<https://purl.archive.org/akco#extSrcTextCorpus> <http://www.w3.org/2000/01/rdf-schema#label> "Text corpus"@en .
-# 
-# https://purl.archive.org/akco#extSrcWeb
-<https://purl.archive.org/akco#extSrcWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#extSrcWeb> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#bgkExtSrcAny> .
-<https://purl.archive.org/akco#extSrcWeb> <http://www.w3.org/2004/02/skos/core#narrower> <https://purl.archive.org/akco#extSrcWikipedia> .
-<https://purl.archive.org/akco#extSrcWeb> <http://www.w3.org/2000/01/rdf-schema#comment> "The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation."@en .
-<https://purl.archive.org/akco#extSrcWeb> <http://www.w3.org/2000/01/rdf-schema#label> "The Web"@en .
-# 
-# https://purl.archive.org/akco#extSrcWikipedia
-<https://purl.archive.org/akco#extSrcWikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#extSrcWikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#ExternalSource> .
-<https://purl.archive.org/akco#extSrcWikipedia> <http://www.w3.org/2004/02/skos/core#broader> <https://purl.archive.org/akco#extSrcWeb> .
-<https://purl.archive.org/akco#extSrcWikipedia> <http://www.w3.org/2000/01/rdf-schema#comment> "Wikipedia is a free online encyclopedia that is written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. It provides structured (tables, annotations) and unstructured information about many domains."@en .
-<https://purl.archive.org/akco#extSrcWikipedia> <http://www.w3.org/2000/01/rdf-schema#label> "Wikipedia"@en .
-# 
-# https://purl.archive.org/akco#kGContextualGraph
-<https://purl.archive.org/akco#kGContextualGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#kGContextualGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#KnowledgeGraph> .
-<https://purl.archive.org/akco#kGContextualGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge.\nA contextual graph can also be be beneficial to provide a context for clarifying the domain of an assertion during error detection. They are generated in various ways, for example, by selecting all assertions conforming to specific semantics, such as transitive properties, or constructing it as an undirected identity network (Raad, Beek, Harmelen, et al., 2018)."@en .
-<https://purl.archive.org/akco#kGContextualGraph> <http://www.w3.org/2000/01/rdf-schema#label> "Contextual graph"@en .
-# 
-# https://purl.archive.org/akco#kGGraphStructure
-<https://purl.archive.org/akco#kGGraphStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#kGGraphStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#KnowledgeGraph> .
-<https://purl.archive.org/akco#kGGraphStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp; completeness) of the overall KG since it is typically used with data-driven measures."@en .
-<https://purl.archive.org/akco#kGGraphStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Graph structure"@en .
-# 
-# https://purl.archive.org/akco#kGValuesOfPV
-<https://purl.archive.org/akco#kGValuesOfPV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://purl.archive.org/akco#kGValuesOfPV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#KnowledgeGraph> .
-<https://purl.archive.org/akco#kGValuesOfPV> <http://www.w3.org/2000/01/rdf-schema#comment> "The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches."@en .
-<https://purl.archive.org/akco#kGValuesOfPV> <http://www.w3.org/2000/01/rdf-schema#label> "Values of property-value assertions"@en .
 # 
 # https://purl.archive.org/akco#publADianReFrfoDLKB
 <https://purl.archive.org/akco#publADianReFrfoDLKB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2364,34 +2365,34 @@
 # https://purl.archive.org/akco#tecCrowdsourcing-based
 <https://purl.archive.org/akco#tecCrowdsourcing-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#tecCrowdsourcing-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#Technique> .
-<https://purl.archive.org/akco#tecCrowdsourcing-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcDomaInExpertise> .
+<https://purl.archive.org/akco#tecCrowdsourcing-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkHumanExpertise> .
 <https://purl.archive.org/akco#tecCrowdsourcing-based> <http://www.w3.org/2000/01/rdf-schema#comment> "Crowdsourcing-based techniques incorporate human interaction into the knowledge-cleaning process. A crowd can be engaged to detect and correct errors, leveraging either (1) domain experts or (2) anonymous contributors. Domain experts are capable of setting up and maintaining the cleaning process as well as handling complex, domain-specific issues. Anonymous crowds, on the other hand, excel at completing simpler, more generalized tasks that typically involve common knowledge and do not require specialized expertise. The technique allows to target all types of assertions, i.e., instance-, property-value -, and equality assertions."@en .
 <https://purl.archive.org/akco#tecCrowdsourcing-based> <http://www.w3.org/2000/01/rdf-schema#label> "tecCrowdsourcing-based"@en .
 # 
 # https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based
 <https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#Technique> .
+<https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkKGGraphStructure> .
 <https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcExternalSources> .
-<https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#kGGraphStructure> .
 <https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> <http://www.w3.org/2000/01/rdf-schema#comment> "Embedding- and neural network-based techniques use supervised machine-learning, involving a training phase and an inference phase. In the training phase, a curated dataset is used to train a model for a specific cleaning task, i.e., error detection or correction of a specific type of error. During inference, the trained model is applied to unseen data to perform the trained task. Neural networks that process knowledge graphs embed the graph into a lower-dimensional vector space, also known as knowledge graph embeddings. This embedding process is based on selected features—for example, a node’s incoming and outgoing relationships as in TransE. The technique allows to target any type of assertion, i.e., instance -, property-value -, and equality assertion."@en .
 <https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> <http://www.w3.org/2000/01/rdf-schema#label> "tecEmbeddingAndNeuralNetwork-based"@en .
 # 
 # https://purl.archive.org/akco#tecHybrid
 <https://purl.archive.org/akco#tecHybrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#tecHybrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#Technique> .
-<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcDomaInExpertise> .
+<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> .
+<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkHumanExpertise> .
+<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkKGContextualGraph> .
+<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkKGGraphStructure> .
+<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkKGValuesOfPV> .
 <https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcExternalSources> .
-<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> .
-<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#kGContextualGraph> .
-<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#kGGraphStructure> .
-<https://purl.archive.org/akco#tecHybrid> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#kGValuesOfPV> .
 <https://purl.archive.org/akco#tecHybrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Hybrid techniques combine multiple other methods to detect and correct errors in any type of assertion— instance, property-value, or equality. They merge outputs from independent processes into a single evaluation, enhancing accuracy and increasing complexity due to the need to maintain and integrate multiple techniques."@en .
 <https://purl.archive.org/akco#tecHybrid> <http://www.w3.org/2000/01/rdf-schema#label> "tecHybrid"@en .
 # 
 # https://purl.archive.org/akco#tecIntegrityConstraint-based
 <https://purl.archive.org/akco#tecIntegrityConstraint-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#tecIntegrityConstraint-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#Technique> .
-<https://purl.archive.org/akco#tecIntegrityConstraint-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> .
+<https://purl.archive.org/akco#tecIntegrityConstraint-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> .
 <https://purl.archive.org/akco#tecIntegrityConstraint-based> <http://www.w3.org/2000/01/rdf-schema#comment> "Integrity constraint-based techniques use constraints to verify the correctness of assertions, i.e., detect errors. Integrity constraints can be provided, for example, via SHACL shapes, or generated from the ontology. They define a desired graph structure and the detection process verifies that the assertions conform to this structure. This technique allows to target instance - and property-value assertions."@en .
 <https://purl.archive.org/akco#tecIntegrityConstraint-based> <http://www.w3.org/2000/01/rdf-schema#label> "tecIntegrityConstraint-based"@en .
 # 
@@ -2399,7 +2400,7 @@
 <https://purl.archive.org/akco#tecOntology-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#tecOntology-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#Technique> .
 <https://purl.archive.org/akco#tecOntology-based> <http://www.w3.org/2004/02/skos/core#related> <https://purl.archive.org/akco#tecIntegrityConstraint-based> .
-<https://purl.archive.org/akco#tecOntology-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> .
+<https://purl.archive.org/akco#tecOntology-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> .
 <https://purl.archive.org/akco#tecOntology-based> <http://www.w3.org/2000/01/rdf-schema#label> "tecOntology-based"@en .
 <https://purl.archive.org/akco#tecOntology-based> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> "Ontology-based techniques use an ontology that describes assertions in order to detect and correct errors. Error detection typically involves reasoning over the ontology and the associated assertions. To identify inconsistencies, the ontology must include &amp;apos;negative inclusions&amp;apos; (disjoint axioms) that specify which entities or classes cannot co-occur—for example, the classes Human and Boat are usually mutually exclusive, so no individual should be assigned both types. When correcting errors in equality assertions, new or more appropriate relations may be introduced into the ontology if two instances are not semantically identical. This technique allows to target any type of assertion, i.e., instance -, property-value -, and equality assertion."@en .
 # 
@@ -2407,8 +2408,8 @@
 <https://purl.archive.org/akco#tecPath-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#tecPath-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#Technique> .
 <https://purl.archive.org/akco#tecPath-based> <http://www.w3.org/2004/02/skos/core#related> <https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based> .
-<https://purl.archive.org/akco#tecPath-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#kGContextualGraph> .
-<https://purl.archive.org/akco#tecPath-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#kGGraphStructure> .
+<https://purl.archive.org/akco#tecPath-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkKGContextualGraph> .
+<https://purl.archive.org/akco#tecPath-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkKGGraphStructure> .
 <https://purl.archive.org/akco#tecPath-based> <http://www.w3.org/2000/01/rdf-schema#comment> "Path-based techniques use a knowledge graph&amp;apos;s structure or semantic features to detect errors, focusing on both property-value and equality assertions.\n\nTo validate property-value assertions, these techniques identify alternative paths between the relation’s two nodes, considering measures such as path length and path count. The paths can also be constrained by semantic attributes or direction.\n\nTo validate equality assertions, path-based techniques construct contextual subgraphs around the involved instances—based, for example, on distance or on semantic properties such as transitivity. These subgraphs are then compared against each other to determine whether the two instances truly represent the same object of discourse."@en .
 <https://purl.archive.org/akco#tecPath-based> <http://www.w3.org/2000/01/rdf-schema#label> "tecPath-based"@en .
 # 
@@ -2416,7 +2417,7 @@
 <https://purl.archive.org/akco#tecRuleMining-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#tecRuleMining-based> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#Technique> .
 <https://purl.archive.org/akco#tecRuleMining-based> <http://www.w3.org/2004/02/skos/core#related> <https://purl.archive.org/akco#tecOntology-based> .
-<https://purl.archive.org/akco#tecRuleMining-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#kGGraphStructure> .
+<https://purl.archive.org/akco#tecRuleMining-based> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkKGGraphStructure> .
 <https://purl.archive.org/akco#tecRuleMining-based> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule mining-based techniques can detect and correct errors in both property-value and instance assertions by identifying recurring patterns in the knowledge graph’s structure. These patterns serve as the contextual ‘rules’ for detecting or correcting errors. For example, it may be typical for a Human entity to have a social security number and a date of birth; these attributes can then be used as a rule for a common graph structure around humans. In this case, counterexamples are humans that do not conform to this common structure. These examples could indicate errors or exceptions to the rule."@en .
 <https://purl.archive.org/akco#tecRuleMining-based> <http://www.w3.org/2000/01/rdf-schema#label> "tecRuleMining-based"@en .
 # 
@@ -2429,7 +2430,7 @@
 # https://purl.archive.org/akco#tecSyntactic
 <https://purl.archive.org/akco#tecSyntactic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://purl.archive.org/akco#tecSyntactic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://purl.archive.org/akco#Technique> .
-<https://purl.archive.org/akco#tecSyntactic> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications> .
+<https://purl.archive.org/akco#tecSyntactic> <https://purl.archive.org/akco#usesBackgroundKnowledge> <https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications> .
 <https://purl.archive.org/akco#tecSyntactic> <http://www.w3.org/2000/01/rdf-schema#comment> "Syntactic techniques take advantage of syntax specifications to parse knowledge graph serializations. Serializations are &amp;quot;downloaded&amp;quot; versions of a knowledge graph, i.e., a Resource Description Framework graph. Typical formats are Turtle or OWL/RDF. The syntax specifications define expected symbols and their arrangement. A parser loads a specification and then parses an input, for example, a Turtle file. It reports violations, i.e., detects syntactic errors; sometimes, a correction is attempted by updating a specific syntax part."@en .
 <https://purl.archive.org/akco#tecSyntactic> <http://www.w3.org/2000/01/rdf-schema#label> "tecSyntactic"@en .
 # 

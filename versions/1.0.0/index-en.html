@@ -72,6 +72,8 @@ $(function(){
 <dl>
 <dt>Latest version:</dt>
 <dd><a href="https://purl.archive.org/akco">https://purl.archive.org/akco</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://d-workz.github.io/akco/versions/1.0.0/">https://d-workz.github.io/akco/versions/1.0.0/</a></dd>
 <dt>Revision:</dt>
 <dd>1.0.0</dd>
 <dt>Authors:</dt>
@@ -83,7 +85,7 @@ $(function(){
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Dennis Sommer. Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco</dd>
+<dd>D. Sommer. U. Serles, Anatomy of Knowledge Cleaning Ontology (AKCO), 2025, https://purl.archive.org/akco</dd>
 </dl>
 
 <hr/>
@@ -488,10 +490,11 @@ This ontology has the following classes and properties.</span>
          title="https://purl.archive.org/akco#appWhEvlidahewiaquthclupDB">appWhEvlidahewiaquthclupDB</a>
    </li>
    <li>
-      <a href="#kGContextualGraph" title="https://purl.archive.org/akco#kGContextualGraph">Contextual graph</a>
+      <a href="#bgkKGContextualGraph"
+         title="https://purl.archive.org/akco#bgkKGContextualGraph">Contextual graph</a>
    </li>
    <li>
-      <a href="#extSrcDBpedia" title="https://purl.archive.org/akco#extSrcDBpedia">DBpedia</a>
+      <a href="#bgkExtSrcDBpedia" title="https://purl.archive.org/akco#bgkExtSrcDBpedia">DBpedia</a>
    </li>
    <li>
       <a href="#dimCorrection" title="https://purl.archive.org/akco#dimCorrection">dimCorrection</a>
@@ -562,26 +565,27 @@ This ontology has the following classes and properties.</span>
       <a href="#errTailVertical" title="https://purl.archive.org/akco#errTailVertical">errTailVertical</a>
    </li>
    <li>
-      <a href="#extSrcDomaInExpertise"
-         title="https://purl.archive.org/akco#extSrcDomaInExpertise">extSrcDomaInExpertise</a>
+      <a href="#bgkHumanExpertise" title="https://purl.archive.org/akco#bgkHumanExpertise">extSrcDomaInExpertise</a>
    </li>
    <li>
       <a href="#extSrcExternalSources"
          title="https://purl.archive.org/akco#extSrcExternalSources">extSrcExternalSources</a>
    </li>
    <li>
-      <a href="#extSrcFormalAndSyntaxSpecifications"
-         title="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a>
+      <a href="#bgkExtSrcFormalAndSyntaxSpecifications"
+         title="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a>
    </li>
    <li>
-      <a href="#kGGraphStructure" title="https://purl.archive.org/akco#kGGraphStructure">Graph structure</a>
+      <a href="#bgkKGGraphStructure"
+         title="https://purl.archive.org/akco#bgkKGGraphStructure">Graph structure</a>
    </li>
    <li>
-      <a href="#extSrcHornClauses" title="https://purl.archive.org/akco#extSrcHornClauses">Horn clauses</a>
+      <a href="#bgkExtSrcHornClauses"
+         title="https://purl.archive.org/akco#bgkExtSrcHornClauses">Horn clauses</a>
    </li>
    <li>
-      <a href="#extSrcKnowledgeGraph"
-         title="https://purl.archive.org/akco#extSrcKnowledgeGraph">Knowledge graph</a>
+      <a href="#bgkExtSrcKnowledgeGraph"
+         title="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph">Knowledge graph</a>
    </li>
    <li>
       <a href="#publADianReFrfoDLKB"
@@ -847,7 +851,8 @@ This ontology has the following classes and properties.</span>
          title="https://purl.archive.org/akco#publWhEvlidahewiaquthclupDB">publWhEvlidahewiaquthclupDB</a>
    </li>
    <li>
-      <a href="#extSrcQueryLogs" title="https://purl.archive.org/akco#extSrcQueryLogs">Query logs</a>
+      <a href="#bgkExtSrcQueryLogs"
+         title="https://purl.archive.org/akco#bgkExtSrcQueryLogs">Query logs</a>
    </li>
    <li>
       <a href="#dimStructured" title="https://purl.archive.org/akco#dimStructured">Strcutured data</a>
@@ -893,19 +898,21 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#extSrcTextCorpus" title="https://purl.archive.org/akco#extSrcTextCorpus">Text corpus</a>
+      <a href="#bgkExtSrcTextCorpus"
+         title="https://purl.archive.org/akco#bgkExtSrcTextCorpus">Text corpus</a>
    </li>
    <li>
-      <a href="#extSrcWeb" title="https://purl.archive.org/akco#extSrcWeb">The Web</a>
+      <a href="#bgkExtSrcWeb" title="https://purl.archive.org/akco#bgkExtSrcWeb">The Web</a>
    </li>
    <li>
       <a href="#dimUnstructured" title="https://purl.archive.org/akco#dimUnstructured">Unstructured data</a>
    </li>
    <li>
-      <a href="#kGValuesOfPV" title="https://purl.archive.org/akco#kGValuesOfPV">Values of property-value assertions</a>
+      <a href="#bgkKGValuesOfPV" title="https://purl.archive.org/akco#bgkKGValuesOfPV">Values of property-value assertions</a>
    </li>
    <li>
-      <a href="#extSrcWikipedia" title="https://purl.archive.org/akco#extSrcWikipedia">Wikipedia</a>
+      <a href="#bgkExtSrcWikipedia"
+         title="https://purl.archive.org/akco#bgkExtSrcWikipedia">Wikipedia</a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
 </div>
@@ -1125,7 +1132,7 @@ This section provides details for each class and property defined by Anatomy of 
     has members
    </dt>
    <dd>
-    <a href="#bgkExtSrcAny" title="https://purl.archive.org/akco#bgkExtSrcAny">Any external source</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#extSrcDBpedia" title="https://purl.archive.org/akco#extSrcDBpedia">DBpedia</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#extSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#extSrcHornClauses" title="https://purl.archive.org/akco#extSrcHornClauses">Horn clauses</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#extSrcKnowledgeGraph" title="https://purl.archive.org/akco#extSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#extSrcQueryLogs" title="https://purl.archive.org/akco#extSrcQueryLogs">Query logs</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#extSrcTextCorpus" title="https://purl.archive.org/akco#extSrcTextCorpus">Text corpus</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#extSrcWeb" title="https://purl.archive.org/akco#extSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#extSrcWikipedia" title="https://purl.archive.org/akco#extSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#bgkExtSrcAny" title="https://purl.archive.org/akco#bgkExtSrcAny">Any external source</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkExtSrcDBpedia" title="https://purl.archive.org/akco#bgkExtSrcDBpedia">DBpedia</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkExtSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkExtSrcHornClauses" title="https://purl.archive.org/akco#bgkExtSrcHornClauses">Horn clauses</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkExtSrcKnowledgeGraph" title="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkExtSrcQueryLogs" title="https://purl.archive.org/akco#bgkExtSrcQueryLogs">Query logs</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkExtSrcTextCorpus" title="https://purl.archive.org/akco#bgkExtSrcTextCorpus">Text corpus</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkExtSrcWeb" title="https://purl.archive.org/akco#bgkExtSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkExtSrcWikipedia" title="https://purl.archive.org/akco#bgkExtSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -1146,7 +1153,7 @@ This section provides details for each class and property defined by Anatomy of 
     has members
    </dt>
    <dd>
-    <a href="#extSrcDomaInExpertise" title="https://purl.archive.org/akco#extSrcDomaInExpertise">extSrcDomaInExpertise</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#bgkHumanExpertise" title="https://purl.archive.org/akco#bgkHumanExpertise">extSrcDomaInExpertise</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -1173,7 +1180,7 @@ This section provides details for each class and property defined by Anatomy of 
     has members
    </dt>
    <dd>
-    <a href="#kGContextualGraph" title="https://purl.archive.org/akco#kGContextualGraph">Contextual graph</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#kGGraphStructure" title="https://purl.archive.org/akco#kGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#kGValuesOfPV" title="https://purl.archive.org/akco#kGValuesOfPV">Values of property-value assertions</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#bgkKGContextualGraph" title="https://purl.archive.org/akco#bgkKGContextualGraph">Contextual graph</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkKGGraphStructure" title="https://purl.archive.org/akco#bgkKGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#bgkKGValuesOfPV" title="https://purl.archive.org/akco#bgkKGValuesOfPV">Values of property-value assertions</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -1619,8 +1626,8 @@ This section provides details for each class and property defined by Anatomy of 
   <li><a href="#appVRP" title="https://purl.archive.org/akco#appVRP">appVRP</a></li>
   <li><a href="#appWhenowl" title="https://purl.archive.org/akco#appWhenowl">appWhenowl</a></li>
   <li><a href="#appWhEvlidahewiaquthclupDB" title="https://purl.archive.org/akco#appWhEvlidahewiaquthclupDB">appWhEvlidahewiaquthclupDB</a></li>
-  <li><a href="#kGContextualGraph" title="https://purl.archive.org/akco#kGContextualGraph">Contextual graph</a></li>
-  <li><a href="#extSrcDBpedia" title="https://purl.archive.org/akco#extSrcDBpedia">DBpedia</a></li>
+  <li><a href="#bgkKGContextualGraph" title="https://purl.archive.org/akco#bgkKGContextualGraph">Contextual graph</a></li>
+  <li><a href="#bgkExtSrcDBpedia" title="https://purl.archive.org/akco#bgkExtSrcDBpedia">DBpedia</a></li>
   <li><a href="#dimCorrection" title="https://purl.archive.org/akco#dimCorrection">dimCorrection</a></li>
   <li><a href="#dimData-driven" title="https://purl.archive.org/akco#dimData-driven">dimData-driven</a></li>
   <li><a href="#dimDetection" title="https://purl.archive.org/akco#dimDetection">dimDetection</a></li>
@@ -1641,12 +1648,12 @@ This section provides details for each class and property defined by Anatomy of 
   <li><a href="#errPVSynNotPIdentIR" title="https://purl.archive.org/akco#errPVSynNotPIdentIR">errPVSynNotPIdentIR</a></li>
   <li><a href="#errSystematic" title="https://purl.archive.org/akco#errSystematic">errSystematic</a></li>
   <li><a href="#errTailVertical" title="https://purl.archive.org/akco#errTailVertical">errTailVertical</a></li>
-  <li><a href="#extSrcDomaInExpertise" title="https://purl.archive.org/akco#extSrcDomaInExpertise">extSrcDomaInExpertise</a></li>
+  <li><a href="#bgkHumanExpertise" title="https://purl.archive.org/akco#bgkHumanExpertise">extSrcDomaInExpertise</a></li>
   <li><a href="#extSrcExternalSources" title="https://purl.archive.org/akco#extSrcExternalSources">extSrcExternalSources</a></li>
-  <li><a href="#extSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a></li>
-  <li><a href="#kGGraphStructure" title="https://purl.archive.org/akco#kGGraphStructure">Graph structure</a></li>
-  <li><a href="#extSrcHornClauses" title="https://purl.archive.org/akco#extSrcHornClauses">Horn clauses</a></li>
-  <li><a href="#extSrcKnowledgeGraph" title="https://purl.archive.org/akco#extSrcKnowledgeGraph">Knowledge graph</a></li>
+  <li><a href="#bgkExtSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a></li>
+  <li><a href="#bgkKGGraphStructure" title="https://purl.archive.org/akco#bgkKGGraphStructure">Graph structure</a></li>
+  <li><a href="#bgkExtSrcHornClauses" title="https://purl.archive.org/akco#bgkExtSrcHornClauses">Horn clauses</a></li>
+  <li><a href="#bgkExtSrcKnowledgeGraph" title="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph">Knowledge graph</a></li>
   <li><a href="#publADianReFrfoDLKB" title="https://purl.archive.org/akco#publADianReFrfoDLKB">publADianReFrfoDLKB</a></li>
   <li><a href="#publAPE" title="https://purl.archive.org/akco#publAPE">publAPE</a></li>
   <li><a href="#publAPrInToImLiDaQuUsDiOuDe" title="https://purl.archive.org/akco#publAPrInToImLiDaQuUsDiOuDe">publAPrInToImLiDaQuUsDiOuDe</a></li>
@@ -1728,7 +1735,7 @@ This section provides details for each class and property defined by Anatomy of 
   <li><a href="#publVRP" title="https://purl.archive.org/akco#publVRP">publVRP</a></li>
   <li><a href="#publWhenowl" title="https://purl.archive.org/akco#publWhenowl">publWhenowl</a></li>
   <li><a href="#publWhEvlidahewiaquthclupDB" title="https://purl.archive.org/akco#publWhEvlidahewiaquthclupDB">publWhEvlidahewiaquthclupDB</a></li>
-  <li><a href="#extSrcQueryLogs" title="https://purl.archive.org/akco#extSrcQueryLogs">Query logs</a></li>
+  <li><a href="#bgkExtSrcQueryLogs" title="https://purl.archive.org/akco#bgkExtSrcQueryLogs">Query logs</a></li>
   <li><a href="#dimStructured" title="https://purl.archive.org/akco#dimStructured">Strcutured data</a></li>
   <li><a href="#tecCrowdsourcing-based" title="https://purl.archive.org/akco#tecCrowdsourcing-based">tecCrowdsourcing-based</a></li>
   <li><a href="#tecEmbeddingAndNeuralNetwork-based" title="https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based">tecEmbeddingAndNeuralNetwork-based</a></li>
@@ -1741,11 +1748,11 @@ This section provides details for each class and property defined by Anatomy of 
   <li><a href="#tecSyntactic" title="https://purl.archive.org/akco#tecSyntactic">tecSyntactic</a></li>
   <li><a href="#tecVerbalization-based" title="https://purl.archive.org/akco#tecVerbalization-based">tecVerbalization-based</a></li>
   <li><a href="#http://purl.org/dc/terms/" title="http://purl.org/dc/terms/"> <span>terms:</span> </a></li>
-  <li><a href="#extSrcTextCorpus" title="https://purl.archive.org/akco#extSrcTextCorpus">Text corpus</a></li>
-  <li><a href="#extSrcWeb" title="https://purl.archive.org/akco#extSrcWeb">The Web</a></li>
+  <li><a href="#bgkExtSrcTextCorpus" title="https://purl.archive.org/akco#bgkExtSrcTextCorpus">Text corpus</a></li>
+  <li><a href="#bgkExtSrcWeb" title="https://purl.archive.org/akco#bgkExtSrcWeb">The Web</a></li>
   <li><a href="#dimUnstructured" title="https://purl.archive.org/akco#dimUnstructured">Unstructured data</a></li>
-  <li><a href="#kGValuesOfPV" title="https://purl.archive.org/akco#kGValuesOfPV">Values of property-value assertions</a></li>
-  <li><a href="#extSrcWikipedia" title="https://purl.archive.org/akco#extSrcWikipedia">Wikipedia</a></li>
+  <li><a href="#bgkKGValuesOfPV" title="https://purl.archive.org/akco#bgkKGValuesOfPV">Values of property-value assertions</a></li>
+  <li><a href="#bgkExtSrcWikipedia" title="https://purl.archive.org/akco#bgkExtSrcWikipedia">Wikipedia</a></li>
  </ul>
  <div class="entity" id="bgkExtSrcAny">
   <h3>Any external source<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
@@ -1764,19 +1771,19 @@ This section provides details for each class and property defined by Anatomy of 
     has facts
    </dt>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcKnowledgeGraph" title="https://purl.archive.org/akco#extSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcKnowledgeGraph" title="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcQueryLogs" title="https://purl.archive.org/akco#extSrcQueryLogs">Query logs</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcQueryLogs" title="https://purl.archive.org/akco#bgkExtSrcQueryLogs">Query logs</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcTextCorpus" title="https://purl.archive.org/akco#extSrcTextCorpus">Text corpus</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcTextCorpus" title="https://purl.archive.org/akco#bgkExtSrcTextCorpus">Text corpus</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWeb" title="https://purl.archive.org/akco#extSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWeb" title="https://purl.archive.org/akco#bgkExtSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -2079,7 +2086,7 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#targetedError" title="https://purl.archive.org/akco#targetedError">targeted error</a> <sup class="type-op" title="object property">op</sup> <a href="#errPVSemSemWrong" title="https://purl.archive.org/akco#errPVSemSemWrong">errPVSemSemWrong</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWikipedia" title="https://purl.archive.org/akco#extSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWikipedia" title="https://purl.archive.org/akco#bgkExtSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#usesTechnique" title="https://purl.archive.org/akco#usesTechnique">uses technique</a> <sup class="type-op" title="object property">op</sup> <a href="#tecHybrid" title="https://purl.archive.org/akco#tecHybrid">tecHybrid</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -2271,7 +2278,7 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#targetedError" title="https://purl.archive.org/akco#targetedError">targeted error</a> <sup class="type-op" title="object property">op</sup> <a href="#errISemSemWrong" title="https://purl.archive.org/akco#errISemSemWrong">errISemSemWrong</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWikipedia" title="https://purl.archive.org/akco#extSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWikipedia" title="https://purl.archive.org/akco#bgkExtSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#usesTechnique" title="https://purl.archive.org/akco#usesTechnique">uses technique</a> <sup class="type-op" title="object property">op</sup> <a href="#tecEmbeddingAndNeuralNetwork-based" title="https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based">tecEmbeddingAndNeuralNetwork-based</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -2421,7 +2428,7 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#targetedError" title="https://purl.archive.org/akco#targetedError">targeted error</a> <sup class="type-op" title="object property">op</sup> <a href="#errPVSemSemWrong" title="https://purl.archive.org/akco#errPVSemSemWrong">errPVSemSemWrong</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWeb" title="https://purl.archive.org/akco#extSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWeb" title="https://purl.archive.org/akco#bgkExtSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#usesTechnique" title="https://purl.archive.org/akco#usesTechnique">uses technique</a> <sup class="type-op" title="object property">op</sup> <a href="#tecVerbalization-based" title="https://purl.archive.org/akco#tecVerbalization-based">tecVerbalization-based</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -2529,13 +2536,13 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#targetedError" title="https://purl.archive.org/akco#targetedError">targeted error</a> <sup class="type-op" title="object property">op</sup> <a href="#errPVSemSemWrong" title="https://purl.archive.org/akco#errPVSemSemWrong">errPVSemSemWrong</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcHornClauses" title="https://purl.archive.org/akco#extSrcHornClauses">Horn clauses</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcHornClauses" title="https://purl.archive.org/akco#bgkExtSrcHornClauses">Horn clauses</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcKnowledgeGraph" title="https://purl.archive.org/akco#extSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcKnowledgeGraph" title="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWeb" title="https://purl.archive.org/akco#extSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWeb" title="https://purl.archive.org/akco#bgkExtSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#usesTechnique" title="https://purl.archive.org/akco#usesTechnique">uses technique</a> <sup class="type-op" title="object property">op</sup> <a href="#tecHybrid" title="https://purl.archive.org/akco#tecHybrid">tecHybrid</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -2613,10 +2620,10 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#targetedError" title="https://purl.archive.org/akco#targetedError">targeted error</a> <sup class="type-op" title="object property">op</sup> <a href="#errPVSemSemWrong" title="https://purl.archive.org/akco#errPVSemSemWrong">errPVSemSemWrong</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcTextCorpus" title="https://purl.archive.org/akco#extSrcTextCorpus">Text corpus</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcTextCorpus" title="https://purl.archive.org/akco#bgkExtSrcTextCorpus">Text corpus</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWikipedia" title="https://purl.archive.org/akco#extSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWikipedia" title="https://purl.archive.org/akco#bgkExtSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#usesTechnique" title="https://purl.archive.org/akco#usesTechnique">uses technique</a> <sup class="type-op" title="object property">op</sup> <a href="#tecVerbalization-based" title="https://purl.archive.org/akco#tecVerbalization-based">tecVerbalization-based</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -2691,13 +2698,13 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#targetedError" title="https://purl.archive.org/akco#targetedError">targeted error</a> <sup class="type-op" title="object property">op</sup> <a href="#errTailVertical" title="https://purl.archive.org/akco#errTailVertical">errTailVertical</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcKnowledgeGraph" title="https://purl.archive.org/akco#extSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcKnowledgeGraph" title="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcQueryLogs" title="https://purl.archive.org/akco#extSrcQueryLogs">Query logs</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcQueryLogs" title="https://purl.archive.org/akco#bgkExtSrcQueryLogs">Query logs</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWeb" title="https://purl.archive.org/akco#extSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWeb" title="https://purl.archive.org/akco#bgkExtSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#usesTechnique" title="https://purl.archive.org/akco#usesTechnique">uses technique</a> <sup class="type-op" title="object property">op</sup> <a href="#tecHybrid" title="https://purl.archive.org/akco#tecHybrid">tecHybrid</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -4341,7 +4348,7 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#targetedError" title="https://purl.archive.org/akco#targetedError">targeted error</a> <sup class="type-op" title="object property">op</sup> <a href="#errPVSemSemWrong" title="https://purl.archive.org/akco#errPVSemSemWrong">errPVSemSemWrong</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcDBpedia" title="https://purl.archive.org/akco#extSrcDBpedia">DBpedia</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcDBpedia" title="https://purl.archive.org/akco#bgkExtSrcDBpedia">DBpedia</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#usesTechnique" title="https://purl.archive.org/akco#usesTechnique">uses technique</a> <sup class="type-op" title="object property">op</sup> <a href="#tecHybrid" title="https://purl.archive.org/akco#tecHybrid">tecHybrid</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -4792,9 +4799,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="kGContextualGraph">
+ <div class="entity" id="bgkKGContextualGraph">
   <h3>Contextual graph<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#kGContextualGraph</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkKGContextualGraph</p>
   <div class="comment">
    <span class="markdown">Contextual graphs are subgraphs of relevant assertions. Assertions are relevant if they are part of the context, which is used within error detection or correction. For example, the context could identify an instance to validate equality assertions, or it is identified as part of reasoning, and contains contradicting knowledge. A contextual graph can also be be beneficial to provide a context for clarifying the domain of an assertion during error detection. They are generated in various ways, for example, by selecting all assertions conforming to specific semantics, such as transitive properties, or constructing it as an undirected identity network (Raad, Beek, Harmelen, et al., 2018).</span>
   </div>
@@ -4807,9 +4814,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="extSrcDBpedia">
+ <div class="entity" id="bgkExtSrcDBpedia">
   <h3>DBpedia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcDBpedia</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkExtSrcDBpedia</p>
   <div class="comment">
    <span class="markdown">DBpedia is the central knowledge graph of the Linked Open Data cloud. Its source is Wikipedia.</span>
   </div>
@@ -4824,7 +4831,7 @@ This section provides details for each class and property defined by Anatomy of 
     has facts
    </dt>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">has broader</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcKnowledgeGraph" title="https://purl.archive.org/akco#extSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">has broader</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcKnowledgeGraph" title="https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph">Knowledge graph</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -5302,9 +5309,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="extSrcDomaInExpertise">
+ <div class="entity" id="bgkHumanExpertise">
   <h3>extSrcDomaInExpertise<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcDomaInExpertise</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkHumanExpertise</p>
   <div class="comment">
    <span class="markdown">Human interaction is another particular type of external source. It is versatile and uses human expertise to perform any cleaning task, including setting up and maintaining more elaborate cleaning approaches. It is mostly independent of the quality of the KG, except for validation where additional contextual knowledge might be required. Human interaction is typically included to allow for semi-automatic cleaning in combination with various cleaning techniques.</span>
   </div>
@@ -5324,9 +5331,9 @@ This section provides details for each class and property defined by Anatomy of 
    <span class="markdown">External sources are any sources outside the KG. Typical background knowledge is websites, large language models, documents, other knowledge graphs, and databases. The success of using the sources for knowledge cleaning depends on the quality of the sources and the acquisition process. The latter includes the alignment of the assertion(s) with the external source and the correct interpretation of the received results.</span>
   </div>
  </div>
- <div class="entity" id="extSrcFormalAndSyntaxSpecifications">
+ <div class="entity" id="bgkExtSrcFormalAndSyntaxSpecifications">
   <h3>Formal and syntax specifications<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications</p>
   <div class="comment">
    <span class="markdown">Formal - and syntax specifications are a particular type of external background knowledge. Both are designed to explicitly define desired aspects of a knowledge graph. The aspects can include an expected graph structure, like cardinality, syntax rules of the domain and modeling language, or semantic features of a property. Specifications are independent of the quality of the assertions. Typical formal specifications are ontologies, integrity constraints, and logic rules. Typical syntax specifications are the RDF specification , or Turtle specification .</span>
   </div>
@@ -5345,9 +5352,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="kGGraphStructure">
+ <div class="entity" id="bgkKGGraphStructure">
   <h3>Graph structure<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#kGGraphStructure</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkKGGraphStructure</p>
   <div class="comment">
    <span class="markdown">Knowledge graphs represent knowledge as a collection of entities (nodes) and relations (edges) between the entities. The graph structure is used by various cleaning techniques as background knowledge. It is an internal type of background knowledge. It is independent of assertion type and formal semantics of assertions. However, it depends on the overall quality (correctness &amp;amp;amp; completeness) of the overall KG since it is typically used with data-driven measures.</span>
   </div>
@@ -5360,9 +5367,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="extSrcHornClauses">
+ <div class="entity" id="bgkExtSrcHornClauses">
   <h3>Horn clauses<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcHornClauses</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkExtSrcHornClauses</p>
   <div class="comment">
    <span class="markdown">Horn clauses, obtain from rule mining, that rewrite a fact into a set of easier-to-spot facts.</span>
   </div>
@@ -5381,9 +5388,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="extSrcKnowledgeGraph">
+ <div class="entity" id="bgkExtSrcKnowledgeGraph">
   <h3>Knowledge graph<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcKnowledgeGraph</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkExtSrcKnowledgeGraph</p>
   <div class="comment">
    <span class="markdown">Another Knowledge graph not yet part of the given knowledge graph, in a related domain.</span>
   </div>
@@ -5401,7 +5408,7 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">has broader</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcAny" title="https://purl.archive.org/akco#bgkExtSrcAny">Any external source</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcDBpedia" title="https://purl.archive.org/akco#extSrcDBpedia">DBpedia</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcDBpedia" title="https://purl.archive.org/akco#bgkExtSrcDBpedia">DBpedia</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8170,9 +8177,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="extSrcQueryLogs">
+ <div class="entity" id="bgkExtSrcQueryLogs">
   <h3>Query logs<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcQueryLogs</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkExtSrcQueryLogs</p>
   <div class="comment">
    <span class="markdown">Query logs represent the context of entities, generated by a user.</span>
   </div>
@@ -8220,7 +8227,7 @@ This section provides details for each class and property defined by Anatomy of 
     has facts
    </dt>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcDomaInExpertise" title="https://purl.archive.org/akco#extSrcDomaInExpertise">extSrcDomaInExpertise</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkHumanExpertise" title="https://purl.archive.org/akco#bgkHumanExpertise">extSrcDomaInExpertise</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8241,10 +8248,10 @@ This section provides details for each class and property defined by Anatomy of 
     has facts
    </dt>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcExternalSources" title="https://purl.archive.org/akco#extSrcExternalSources">extSrcExternalSources</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkKGGraphStructure" title="https://purl.archive.org/akco#bgkKGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#kGGraphStructure" title="https://purl.archive.org/akco#kGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcExternalSources" title="https://purl.archive.org/akco#extSrcExternalSources">extSrcExternalSources</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8265,22 +8272,22 @@ This section provides details for each class and property defined by Anatomy of 
     has facts
    </dt>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcDomaInExpertise" title="https://purl.archive.org/akco#extSrcDomaInExpertise">extSrcDomaInExpertise</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkHumanExpertise" title="https://purl.archive.org/akco#bgkHumanExpertise">extSrcDomaInExpertise</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkKGContextualGraph" title="https://purl.archive.org/akco#bgkKGContextualGraph">Contextual graph</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkKGGraphStructure" title="https://purl.archive.org/akco#bgkKGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkKGValuesOfPV" title="https://purl.archive.org/akco#bgkKGValuesOfPV">Values of property-value assertions</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcExternalSources" title="https://purl.archive.org/akco#extSrcExternalSources">extSrcExternalSources</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#kGContextualGraph" title="https://purl.archive.org/akco#kGContextualGraph">Contextual graph</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#kGGraphStructure" title="https://purl.archive.org/akco#kGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#kGValuesOfPV" title="https://purl.archive.org/akco#kGValuesOfPV">Values of property-value assertions</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8301,7 +8308,7 @@ This section provides details for each class and property defined by Anatomy of 
     has facts
    </dt>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8330,7 +8337,7 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">has related</a> <sup class="type-op" title="object property">op</sup> <a href="#tecIntegrityConstraint-based" title="https://purl.archive.org/akco#tecIntegrityConstraint-based">tecIntegrityConstraint-based</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="http://www.w3.org/2002/07/owl#backwardCompatibleWith" target="_blank" title="http://www.w3.org/2002/07/owl#backwardCompatibleWith">backward Compatible With</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Ontology-based techniques use an ontology that describes assertions in order to detect and correct errors. Error detection typically involves reasoning over the ontology and the associated assertions. To identify inconsistencies, the ontology must include &amp;amp;apos;negative inclusions&amp;amp;apos; (disjoint axioms) that specify which entities or classes cannot co-occur—for example, the classes Human and Boat are usually mutually exclusive, so no individual should be assigned both types. When correcting errors in equality assertions, new or more appropriate relations may be introduced into the ontology if two instances are not semantically identical. This technique allows to target any type of assertion, i.e., instance -, property-value -, and equality assertion."@en</span>
@@ -8357,10 +8364,10 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">has related</a> <sup class="type-op" title="object property">op</sup> <a href="#tecEmbeddingAndNeuralNetwork-based" title="https://purl.archive.org/akco#tecEmbeddingAndNeuralNetwork-based">tecEmbeddingAndNeuralNetwork-based</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#kGContextualGraph" title="https://purl.archive.org/akco#kGContextualGraph">Contextual graph</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkKGContextualGraph" title="https://purl.archive.org/akco#bgkKGContextualGraph">Contextual graph</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#kGGraphStructure" title="https://purl.archive.org/akco#kGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkKGGraphStructure" title="https://purl.archive.org/akco#bgkKGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8384,7 +8391,7 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#http://www.w3.org/2004/02/skos/core#related" title="http://www.w3.org/2004/02/skos/core#related">has related</a> <sup class="type-op" title="object property">op</sup> <a href="#tecOntology-based" title="https://purl.archive.org/akco#tecOntology-based">tecOntology-based</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#kGGraphStructure" title="https://purl.archive.org/akco#kGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkKGGraphStructure" title="https://purl.archive.org/akco#bgkKGGraphStructure">Graph structure</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8420,7 +8427,7 @@ This section provides details for each class and property defined by Anatomy of 
     has facts
    </dt>
    <dd>
-    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#extSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#usesBackgroundKnowledge" title="https://purl.archive.org/akco#usesBackgroundKnowledge">uses background Knowledge</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcFormalAndSyntaxSpecifications" title="https://purl.archive.org/akco#bgkExtSrcFormalAndSyntaxSpecifications">Formal and syntax specifications</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8457,9 +8464,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="extSrcTextCorpus">
+ <div class="entity" id="bgkExtSrcTextCorpus">
   <h3>Text corpus<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcTextCorpus</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkExtSrcTextCorpus</p>
   <div class="comment">
    <span class="markdown">A text corpus that contains information about the domain of a given knowledge graph.</span>
   </div>
@@ -8478,9 +8485,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="extSrcWeb">
+ <div class="entity" id="bgkExtSrcWeb">
   <h3>The Web<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcWeb</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkExtSrcWeb</p>
   <div class="comment">
    <span class="markdown">The World Wide Web is a rich source of information on almost any topic. It can be accessed, for example, using search engines or direct calls to websites. The resulting information can include different types of noise, ranging from contradicting information to misinformation.</span>
   </div>
@@ -8498,7 +8505,7 @@ This section provides details for each class and property defined by Anatomy of 
     <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">has broader</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcAny" title="https://purl.archive.org/akco#bgkExtSrcAny">Any external source</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWikipedia" title="https://purl.archive.org/akco#extSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#narrower" title="http://www.w3.org/2004/02/skos/core#narrower">has narrower</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWikipedia" title="https://purl.archive.org/akco#bgkExtSrcWikipedia">Wikipedia</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8517,9 +8524,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="kGValuesOfPV">
+ <div class="entity" id="bgkKGValuesOfPV">
   <h3>Values of property-value assertions<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#kGValuesOfPV</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkKGValuesOfPV</p>
   <div class="comment">
    <span class="markdown">The values of property-value assertions include numerical literal values and URI instances. They are an internal type of background knowledge and depend on the relevant subset of the KG for a target property-value assertion. The values are targeted using statistical approaches.</span>
   </div>
@@ -8532,9 +8539,9 @@ This section provides details for each class and property defined by Anatomy of 
    </dd>
   </dl>
  </div>
- <div class="entity" id="extSrcWikipedia">
+ <div class="entity" id="bgkExtSrcWikipedia">
   <h3>Wikipedia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://purl.archive.org/akco#extSrcWikipedia</p>
+  <p><strong>IRI:</strong> https://purl.archive.org/akco#bgkExtSrcWikipedia</p>
   <div class="comment">
    <span class="markdown">Wikipedia is a free online encyclopedia that is written and maintained by a community of volunteers, known as Wikipedians, through open collaboration and the wiki software MediaWiki. It provides structured (tables, annotations) and unstructured information about many domains.</span>
   </div>
@@ -8549,7 +8556,7 @@ This section provides details for each class and property defined by Anatomy of 
     has facts
    </dt>
    <dd>
-    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">has broader</a> <sup class="type-op" title="object property">op</sup> <a href="#extSrcWeb" title="https://purl.archive.org/akco#extSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader">has broader</a> <sup class="type-op" title="object property">op</sup> <a href="#bgkExtSrcWeb" title="https://purl.archive.org/akco#bgkExtSrcWeb">The Web</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -8571,6 +8578,149 @@ This section provides details for each class and property defined by Anatomy of 
 <span class="markdown">
 Add your references here. It is recommended to have them as a list.</span>
 
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog"><div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/BibliographicResource">http://purl.org/dc/terms/BibliographicResource</a>
+</li>
+<li><a href="#http://purl.org/linked-data/cube#DataSet">http://purl.org/linked-data/cube#DataSet</a>
+<ul>
+<li>Added: SubClass of https://purl.archive.org/akco#BackgroundKnowledge</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2004/02/skos/core#Concept">http://www.w3.org/2004/02/skos/core#Concept</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dqv#QualityMeasurement">http://www.w3.org/ns/dqv#QualityMeasurement</a>
+</li>
+<li><a href="#Approach">https://purl.archive.org/akco#Approach</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://purl.archive.org/akco#Approach&gt; &lt;https://purl.archive.org/akco#Technique&gt;)</li>
+<li>Added: SubClass of http://www.w3.org/2004/02/skos/core#Concept</li>
+</ul>
+</li>
+<li><a href="#BackgroundKnowledge">https://purl.archive.org/akco#BackgroundKnowledge</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/2004/02/skos/core#Concept</li>
+</ul>
+</li>
+<li><a href="#Dimension">https://purl.archive.org/akco#Dimension</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/2004/02/skos/core#Concept</li>
+</ul>
+</li>
+<li><a href="#Error">https://purl.archive.org/akco#Error</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/2004/02/skos/core#Concept</li>
+</ul>
+</li>
+<li><a href="#ExternalSource">https://purl.archive.org/akco#ExternalSource</a>
+<ul>
+<li>Added: SubClass of http://purl.org/linked-data/cube#DataSet</li>
+</ul>
+</li>
+<li><a href="#HumanExpertise">https://purl.archive.org/akco#HumanExpertise</a>
+<ul>
+<li>Added: SubClass of https://purl.archive.org/akco#BackgroundKnowledge</li>
+</ul>
+</li>
+<li><a href="#KnowledgeGraph">https://purl.archive.org/akco#KnowledgeGraph</a>
+<ul>
+<li>Added: SubClass of http://purl.org/linked-data/cube#DataSet</li>
+</ul>
+</li>
+<li><a href="#Technique">https://purl.archive.org/akco#Technique</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://purl.archive.org/akco#Approach&gt; &lt;https://purl.archive.org/akco#Technique&gt;)</li>
+<li>Added: SubClass of http://www.w3.org/2004/02/skos/core#Concept</li>
+</ul>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#http://www.w3.org/2004/02/skos/core#broader">http://www.w3.org/2004/02/skos/core#broader</a>
+</li>
+<li><a href="#http://www.w3.org/2004/02/skos/core#narrower">http://www.w3.org/2004/02/skos/core#narrower</a>
+</li>
+<li><a href="#http://www.w3.org/2004/02/skos/core#related">http://www.w3.org/2004/02/skos/core#related</a>
+<ul>
+<li>Added: SymmetricObjectProperty SymmetricObjectProperty(&lt;http://www.w3.org/2004/02/skos/core#related&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/dqv#hasQualityMeasurement">http://www.w3.org/ns/dqv#hasQualityMeasurement</a>
+<ul>
+<li>Added: Range http://www.w3.org/ns/dqv#QualityMeasurement</li>
+<li>Added: domain https://purl.archive.org/akco#BackgroundKnowledge</li>
+</ul>
+</li>
+<li><a href="#hasDimension">https://purl.archive.org/akco#hasDimension</a>
+<ul>
+<li>Added: domain https://purl.archive.org/akco#BackgroundKnowledge</li>
+<li>Added: domain https://purl.archive.org/akco#Approach</li>
+<li>Added: Range https://purl.archive.org/akco#Dimension</li>
+<li>Added: domain https://purl.archive.org/akco#Technique</li>
+</ul>
+</li>
+<li><a href="#hasError">https://purl.archive.org/akco#hasError</a>
+<ul>
+<li>Added: domain https://purl.archive.org/akco#KnowledgeGraph</li>
+<li>Added: Range https://purl.archive.org/akco#Error</li>
+</ul>
+</li>
+<li><a href="#isPublished">https://purl.archive.org/akco#isPublished</a>
+<ul>
+<li>Added: domain https://purl.archive.org/akco#Approach</li>
+<li>Added: Range http://purl.org/dc/terms/BibliographicResource</li>
+</ul>
+</li>
+<li><a href="#targetedError">https://purl.archive.org/akco#targetedError</a>
+<ul>
+<li>Added: domain https://purl.archive.org/akco#Approach</li>
+<li>Added: Range https://purl.archive.org/akco#Error</li>
+</ul>
+</li>
+<li><a href="#usesBackgroundKnowledge">https://purl.archive.org/akco#usesBackgroundKnowledge</a>
+<ul>
+<li>Added: Range https://purl.archive.org/akco#BackgroundKnowledge</li>
+<li>Added: domain https://purl.archive.org/akco#Technique</li>
+</ul>
+</li>
+<li><a href="#usesTechnique">https://purl.archive.org/akco#usesTechnique</a>
+<ul>
+<li>Added: Range https://purl.archive.org/akco#Technique</li>
+<li>Added: domain https://purl.archive.org/akco#Approach</li>
+</ul>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/bibliographicCitation">http://purl.org/dc/terms/bibliographicCitation</a>
+</li>
+<li><a href="#http://purl.org/dc/terms/issued">http://purl.org/dc/terms/issued</a>
+</li>
+<li><a href="#http://purl.org/dc/terms/title">http://purl.org/dc/terms/title</a>
+</li>
+<li><a href="#errorNature">https://purl.archive.org/akco#errorNature</a>
+<ul>
+<li>Added: Domain https://purl.archive.org/akco#Error</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#errorSource">https://purl.archive.org/akco#errorSource</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://purl.archive.org/akco#Error</li>
+</ul>
+</li>
+<li><a href="#errorType">https://purl.archive.org/akco#errorType</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://purl.archive.org/akco#Error</li>
+</ul>
+</li>
+</ul></details></div>
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
